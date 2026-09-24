@@ -1,0 +1,7 @@
+{
+  "name": "super-productivity-planner-sync",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "dependencies": { "login-zju": "1.0.9" }
+}
