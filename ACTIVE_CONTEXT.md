@@ -6,7 +6,7 @@ This file records current short-horizon priorities. It is context for planning, 
 
 ## Current-week special priorities
 
-### Qizhen / Cephalo-side project
+### Qizhen project
 - Start printing the needed 3D-printed parts; preferably start the print in the afternoon. This only needs a short reminder block rather than reserving the entire print duration.
 - Watch the motion-capture system operation/training videos and produce concise operating notes.
 - Study how to place suitable markers on the undulating fin so that the motion-capture system can robustly reconstruct the fin's relevant angles.
