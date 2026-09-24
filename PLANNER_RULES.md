@@ -98,3 +98,10 @@ Before that phrase, analyze and negotiate only.
 - For ordinary course homework, schedule **no more than 2.5 hours total per assignment** by default.
 - Keep homework analysis concise and execution-oriented; do not spend a large fraction of the budget on planning.
 - If the available evidence strongly suggests an assignment cannot be completed responsibly within 2.5 hours, do not silently exceed the cap; tell the user and renegotiate.
+
+## Evening work preference
+
+- Prefer using **19:00-22:00** as a normal task window on most days.
+- Do not leave large portions of the evening empty by default; place suitable coursework, review, planning, or research there.
+- Keep the user's protected meal/recovery time and the extra unscheduled English hour elsewhere in the day when practical.
+- On holidays, keep the morning light, but the evening may still contain normal work blocks unless the user asks for a fully relaxed holiday.
