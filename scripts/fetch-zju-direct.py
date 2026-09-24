@@ -17,6 +17,7 @@ import requests
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
+MATERIALS_DIR = ROOT / "course_materials"
 TODOS_FILE = DATA_DIR / "zju_todos.json"
 CHANGES_FILE = DATA_DIR / "zju_changes.json"
 
@@ -238,6 +239,54 @@ def api_json(s: requests.Session, url: str):
     return r.json()
 
 
+def safe_path_part(value: str) -> str:
+    value = re.sub(r'[\\/:*?"<>|]+', "_", str(value)).strip().strip(".")
+    return value[:120] or "unnamed"
+
+
+def download_assignment_attachments(
+    s: requests.Session,
+    course_name: str,
+    todo_id,
+    refs: list[dict],
+) -> list[dict]:
+    downloaded = []
+    if todo_id is None:
+        return downloaded
+
+    out_dir = MATERIALS_DIR / safe_path_part(course_name or "unknown_course") / "homework" / str(todo_id)
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    for ref in refs:
+        upload_id = ref.get("id") or ref.get("upload_id")
+        name = ref.get("detected_name") or ref.get("name") or ref.get("filename")
+        if not upload_id or not name:
+            continue
+        target = out_dir / safe_path_part(name)
+        try:
+            r = s.get(
+                f"https://courses.zju.edu.cn/api/uploads/{upload_id}/blob",
+                allow_redirects=True,
+                timeout=60,
+            )
+            r.raise_for_status()
+            target.write_bytes(r.content)
+            downloaded.append({
+                "upload_id": upload_id,
+                "name": name,
+                "repo_path": target.relative_to(ROOT).as_posix(),
+                "bytes": len(r.content),
+            })
+            print("Downloaded attachment:", target.relative_to(ROOT).as_posix(), len(r.content))
+        except Exception as exc:
+            downloaded.append({
+                "upload_id": upload_id,
+                "name": name,
+                "error": f"{type(exc).__name__}: {exc}"[:500],
+            })
+    return downloaded
+
+
 def normalize_todo(s: requests.Session, todo: dict) -> dict:
     detail = None
     detail_error = None
@@ -255,6 +304,13 @@ def normalize_todo(s: requests.Session, todo: dict) -> dict:
             detail_error = f"{type(exc).__name__}: {exc}"[:500]
 
     course_id = todo.get("course_id")
+    attachment_refs = collect_attachment_refs(detail)[:50]
+    downloaded_attachments = download_assignment_attachments(
+        s,
+        todo.get("course_name") or "unknown_course",
+        todo_id,
+        attachment_refs,
+    )
     return {
         "source_id": todo_id,
         "course_id": course_id,
@@ -266,8 +322,9 @@ def normalize_todo(s: requests.Session, todo: dict) -> dict:
         "is_locked": todo.get("is_locked"),
         "detail_text": " ".join(collect_text(detail))[:6000] or None,
         "attachment_names": collect_attachments(detail)[:50],
-        "attachment_refs": collect_attachment_refs(detail)[:50],
+        "attachment_refs": attachment_refs,
         "attachment_contexts": collect_file_contexts(detail)[:50],
+        "downloaded_attachments": downloaded_attachments,
         "detail_fetch_error": detail_error,
         "source_url": (
             f"https://courses.zju.edu.cn/course/{course_id}/learning-activity#/{todo_id}"
