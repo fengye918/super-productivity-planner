@@ -197,6 +197,37 @@ def collect_attachment_refs(node, out=None, depth=0):
     return out
 
 
+def collect_file_contexts(node, path="$", out=None, depth=0):
+    """Keep only the local scalar context around file-looking strings."""
+    if out is None:
+        out = []
+    if depth > 12 or node is None:
+        return out
+    blocked = ("token", "cookie", "password", "secret", "session", "phone", "email", "user")
+    if isinstance(node, list):
+        for i, item in enumerate(node):
+            collect_file_contexts(item, f"{path}[{i}]", out, depth + 1)
+    elif isinstance(node, dict):
+        scalars = {}
+        for k, v in node.items():
+            kl = str(k).lower()
+            if any(word in kl for word in blocked):
+                continue
+            if isinstance(v, (str, int, float, bool)) or v is None:
+                if isinstance(v, str) and len(v) > 600:
+                    scalars[k] = v[:600]
+                else:
+                    scalars[k] = v
+        for k, v in node.items():
+            if isinstance(v, str) and re.search(r"\\.(pptx?|pdf|docx?|xlsx?|zip)$", v.strip(), flags=re.I):
+                item = {"path": f"{path}.{k}", "filename": v.strip(), "container": scalars}
+                if item not in out:
+                    out.append(item)
+            if isinstance(v, (dict, list)):
+                collect_file_contexts(v, f"{path}.{k}", out, depth + 1)
+    return out
+
+
 def api_json(s: requests.Session, url: str):
     r = s.get(url, timeout=30, headers={"Accept": "application/json, text/plain, */*"})
     print("API", url.split("courses.zju.edu.cn")[-1].split("?")[0], r.status_code)
@@ -236,6 +267,7 @@ def normalize_todo(s: requests.Session, todo: dict) -> dict:
         "detail_text": " ".join(collect_text(detail))[:6000] or None,
         "attachment_names": collect_attachments(detail)[:50],
         "attachment_refs": collect_attachment_refs(detail)[:50],
+        "attachment_contexts": collect_file_contexts(detail)[:50],
         "detail_fetch_error": detail_error,
         "source_url": (
             f"https://courses.zju.edu.cn/course/{course_id}/learning-activity#/{todo_id}"
