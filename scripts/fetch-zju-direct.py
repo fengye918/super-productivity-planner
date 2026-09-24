@@ -176,7 +176,7 @@ def collect_attachment_refs(node, out=None, depth=0):
         file_name = None
         for key in ("name", "filename", "file_name", "title"):
             value = node.get(key)
-            if isinstance(value, str) and re.search(r"\\.(pptx?|pdf|docx?|xlsx?|zip)$", value.strip(), flags=re.I):
+            if isinstance(value, str) and re.search(r"\.(pptx?|pdf|docx?|xlsx?|zip)$", value.strip(), flags=re.I):
                 file_name = value.strip()
                 break
         if file_name:
@@ -219,7 +219,7 @@ def collect_file_contexts(node, path="$", out=None, depth=0):
                 else:
                     scalars[k] = v
         for k, v in node.items():
-            if isinstance(v, str) and re.search(r"\\.(pptx?|pdf|docx?|xlsx?|zip)$", v.strip(), flags=re.I):
+            if isinstance(v, str) and re.search(r"\.(pptx?|pdf|docx?|xlsx?|zip)$", v.strip(), flags=re.I):
                 item = {"path": f"{path}.{k}", "filename": v.strip(), "container": scalars}
                 if item not in out:
                     out.append(item)
