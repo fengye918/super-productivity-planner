@@ -23,3 +23,13 @@ Before that phrase, analyze and negotiate only.
 ## Research
 - Research blocks must name a concrete output/evidence.
 - Cephalo-Ring and underwater MARL should both keep progressing, with weekly weight adjusted to current state and deadlines.
+
+## Course documents and solution PDFs
+
+- Course documents and homework attachments may be stored publicly in this repository when useful for automated planning.
+- Prefer automatic retrieval over asking the user to upload files manually.
+- For each captured homework, use the assignment statement plus relevant course PPT/PDF material when available.
+- Before scheduling, produce a short analysis of scope, difficulty, likely solution path, and a realistic time estimate.
+- For problem-set style homework, generate a polished solution PDF when requested or when it materially helps execution.
+- The solution PDF should read like a formal exam answer: clear derivation, standard notation, necessary formulas, concise reasoning, numbered subproblems, final answers clearly marked, and no conversational filler.
+- If a source document is incomplete or unavailable, state that limitation rather than inventing requirements.
