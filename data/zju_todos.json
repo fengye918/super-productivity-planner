@@ -66,6 +66,14 @@
           }
         }
       ],
+      "downloaded_attachments": [
+        {
+          "upload_id": 21730979,
+          "name": "作业2(2).ppt",
+          "repo_path": "course_materials/过程控制工程/homework/1190908/作业2(2).ppt",
+          "bytes": 295424
+        }
+      ],
       "detail_fetch_error": null,
       "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1190908"
     },
@@ -82,6 +90,7 @@
       "attachment_names": [],
       "attachment_refs": [],
       "attachment_contexts": [],
+      "downloaded_attachments": [],
       "detail_fetch_error": null,
       "source_url": "https://courses.zju.edu.cn/course/99632/learning-activity#/1158554"
     }
