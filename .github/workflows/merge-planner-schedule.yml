@@ -1,0 +1,42 @@
+name: Merge planner schedule
+
+on:
+  push:
+    paths:
+      - "planner_events.ics"
+      - "scripts/merge-planner-events.py"
+      - ".github/workflows/merge-planner-schedule.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: planner-schedule-merge
+  cancel-in-progress: true
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Merge planner events
+        run: python scripts/merge-planner-events.py
+
+      - name: Commit schedule
+        shell: bash
+        run: |
+          if git diff --quiet -- schedule.ics; then
+            echo "schedule.ics already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add schedule.ics
+          git commit -m "chore(schedule): merge weekly planner events"
+          git pull --rebase origin main
+          git push origin HEAD:main
