@@ -78,3 +78,23 @@ Before that phrase, analyze and negotiate only.
 - Keep a preferred **1-hour English development block per day** when schedule capacity allows.
 - This is separate from the user's English Habit: the Habit keeps continuity, while the one-hour block is for deliberate practice such as technical listening, project speaking, terminology output, writing/translation, or CET-6 weakness repair.
 - English time is movable within the day and should not displace urgent deadlines or critical experiments.
+
+## Holidays
+
+- On public holidays, the earliest planned work start is **08:30** instead of 08:00.
+- Holiday mornings should default to lighter, lower-friction work unless the user explicitly asks for an intensive block.
+- Preserve additional rest space on holidays rather than using the later start merely to compress the same workload.
+
+
+## Daily unscheduled reserve
+
+- Do **not** put routine English practice on the Schedule by default.
+- In addition to the existing requirement to keep at least 3 hours for meals, entertainment, and recovery, leave **one extra hour unscheduled each day** so the user can use it for English practice.
+- This English reserve is protected free capacity, not a calendar event, unless the user explicitly asks to schedule English.
+
+
+## Homework time cap
+
+- For ordinary course homework, schedule **no more than 2.5 hours total per assignment** by default.
+- Keep homework analysis concise and execution-oriented; do not spend a large fraction of the budget on planning.
+- If the available evidence strongly suggests an assignment cannot be completed responsibly within 2.5 hours, do not silently exceed the cap; tell the user and renegotiate.
