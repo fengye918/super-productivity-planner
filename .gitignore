@@ -1,0 +1,7 @@
+.env
+.env.*
+node_modules/
+cookies/
+auth/
+*.cookie
+*.cookies
