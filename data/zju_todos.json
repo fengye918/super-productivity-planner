@@ -13,8 +13,59 @@
       "attachment_names": [
         "作业2(2).ppt"
       ],
-      "attachment_refs": [],
-      "attachment_contexts": [],
+      "attachment_refs": [
+        {
+          "id": 21730979,
+          "upload_id": null,
+          "name": "作业2(2).ppt",
+          "filename": null,
+          "file_name": null,
+          "title": null,
+          "url": null,
+          "download_url": null,
+          "size": 295424,
+          "mime_type": null,
+          "content_type": null,
+          "type": "document",
+          "detected_name": "作业2(2).ppt"
+        }
+      ],
+      "attachment_contexts": [
+        {
+          "path": "$.uploads[0].name",
+          "filename": "作业2(2).ppt",
+          "container": {
+            "allow_aliyun_office_view": false,
+            "allow_download": true,
+            "allow_private_wps_office_view": true,
+            "audio": null,
+            "can_auto_relate_knowledge_node": false,
+            "created_at": "2026-09-23T04:37:41Z",
+            "created_by_id": 193551,
+            "deleted": false,
+            "enable_set_h5_courseware_completion": true,
+            "id": 21730979,
+            "is_cc_video": false,
+            "key": "49ffba6f122f4ccfbe46b2ec9e81d4386f76bc44",
+            "link": null,
+            "name": "作业2(2).ppt",
+            "origin_allow_download": true,
+            "owner_id": 0,
+            "reference_id": 18076479,
+            "referenced_at": "2026-09-23T04:38:19Z",
+            "scorm": null,
+            "size": 295424,
+            "sort": 0,
+            "source": "",
+            "status": "ready",
+            "third_part_referrer_id": 0,
+            "thumbnail": null,
+            "type": "document",
+            "updated_at": "2026-09-23T04:37:49Z",
+            "video_src_type": "video/mp4"
+          }
+        }
+      ],
       "detail_fetch_error": null,
       "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1190908"
     },
