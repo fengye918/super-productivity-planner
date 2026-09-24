@@ -52,3 +52,29 @@ Before that phrase, analyze and negotiate only.
 - Planning should deliberately give stages 1-4 enough uninterrupted time; they are not treated as a quick preface to the "real work".
 - Default allocation for a substantial open-ended assignment: roughly **30–40% of the estimated total effort** goes to requirements analysis, framing, architecture, alternative comparison, innovation design, and a feasibility check before committing to the main implementation. Adjust only when the rubric or deadline clearly calls for a different split.
 - Innovation should be tied to an explicit benefit (better performance, clearer methodology, stronger evidence, lower complexity, better robustness, or a more insightful comparison) and should have a way to verify whether it actually helped.
+
+## Weekly scheduling horizon
+
+- When the user authorizes **落到日程**, only create or modify Schedule blocks inside the **current Monday-Sunday calendar week** by default.
+- Do not pre-fill future weeks merely because there is free space.
+- Exception: a major assignment / course project / report may receive preparatory blocks in a later week only when the current estimate shows that restricting work to the current week would make timely completion unrealistic, or when the task has long-lead dependencies.
+- A deadline or exam in a future week may still justify review/preparation blocks **inside the current week**; the horizon rule restricts the dates being written, not the planning awareness.
+
+## Exam review
+
+- Every known exam must receive dedicated review time before the exam.
+- Review blocks must be content-specific, not generic titles such as “复习考试”.
+- When past papers are available, use them to calibrate topic weights, recurring question types, standard solution procedures, time pressure, and common traps.
+- Default review progression:
+  1. rebuild the tested knowledge map and formula/definition checklist;
+  2. representative problems by topic;
+  3. timed past-paper or mock-paper practice;
+  4. error classification and targeted patching;
+  5. final concise recall sheet / high-frequency procedures.
+- If an exam is within the next 14 days, the current week's plan should normally include at least one exam-oriented review block unless the user explicitly deprioritizes it.
+
+## Daily English reserve
+
+- Keep a preferred **1-hour English development block per day** when schedule capacity allows.
+- This is separate from the user's English Habit: the Habit keeps continuity, while the one-hour block is for deliberate practice such as technical listening, project speaking, terminology output, writing/translation, or CET-6 weakness repair.
+- English time is movable within the day and should not displace urgent deadlines or critical experiments.
