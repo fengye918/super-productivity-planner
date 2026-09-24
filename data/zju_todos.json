@@ -14,6 +14,7 @@
         "作业2(2).ppt"
       ],
       "attachment_refs": [],
+      "attachment_contexts": [],
       "detail_fetch_error": null,
       "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1190908"
     },
@@ -29,6 +30,7 @@
       "detail_text": "Ø 1. 写出岭回归与 Lasso 引入正则化的共同目的。 Ø 2. 为什么 Lasso 能做特征选择、岭回归通常不能？ Ø 3. 对于岭回归与 Lasso 回归， λ 变大，对模型会有什么一般性影响？ Ø 4. 什么时候更偏向用岭回归，什么时候更偏向用 Lasso ？ Ø 5. 训练前为什么要对特征做标准化？",
       "attachment_names": [],
       "attachment_refs": [],
+      "attachment_contexts": [],
       "detail_fetch_error": null,
       "source_url": "https://courses.zju.edu.cn/course/99632/learning-activity#/1158554"
     }
