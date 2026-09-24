@@ -163,6 +163,40 @@ def collect_attachments(node, out=None, depth=0):
     return out
 
 
+def collect_attachment_refs(node, out=None, depth=0):
+    """Collect only file-like attachment metadata, never unrelated activity data."""
+    if out is None:
+        out = []
+    if depth > 10 or node is None:
+        return out
+    if isinstance(node, list):
+        for item in node:
+            collect_attachment_refs(item, out, depth + 1)
+    elif isinstance(node, dict):
+        file_name = None
+        for key in ("name", "filename", "file_name", "title"):
+            value = node.get(key)
+            if isinstance(value, str) and re.search(r"\\.(pptx?|pdf|docx?|xlsx?|zip)$", value.strip(), flags=re.I):
+                file_name = value.strip()
+                break
+        if file_name:
+            keep = {}
+            for key in (
+                "id", "upload_id", "name", "filename", "file_name", "title",
+                "url", "download_url", "size", "mime_type", "content_type", "type"
+            ):
+                value = node.get(key)
+                if isinstance(value, (str, int, float, bool)) or value is None:
+                    keep[key] = value
+            keep["detected_name"] = file_name
+            if keep not in out:
+                out.append(keep)
+        for value in node.values():
+            if isinstance(value, (dict, list)):
+                collect_attachment_refs(value, out, depth + 1)
+    return out
+
+
 def api_json(s: requests.Session, url: str):
     r = s.get(url, timeout=30, headers={"Accept": "application/json, text/plain, */*"})
     print("API", url.split("courses.zju.edu.cn")[-1].split("?")[0], r.status_code)
@@ -201,6 +235,7 @@ def normalize_todo(s: requests.Session, todo: dict) -> dict:
         "is_locked": todo.get("is_locked"),
         "detail_text": " ".join(collect_text(detail))[:6000] or None,
         "attachment_names": collect_attachments(detail)[:50],
+        "attachment_refs": collect_attachment_refs(detail)[:50],
         "detail_fetch_error": detail_error,
         "source_url": (
             f"https://courses.zju.edu.cn/course/{course_id}/learning-activity#/{todo_id}"
