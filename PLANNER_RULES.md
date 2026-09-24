@@ -105,3 +105,10 @@ Before that phrase, analyze and negotiate only.
 - Do not leave large portions of the evening empty by default; place suitable coursework, review, planning, or research there.
 - Keep the user's protected meal/recovery time and the extra unscheduled English hour elsewhere in the day when practical.
 - On holidays, keep the morning light, but the evening may still contain normal work blocks unless the user asks for a fully relaxed holiday.
+
+## Weekly course catch-up cap
+
+- For a course that needs catch-up/reinforcement because lectures were not fully absorbed, schedule **no more than about 2 hours of dedicated catch-up per course per week** by default.
+- Prefer one focused 90-120 minute reconstruction block over several scattered review blocks.
+- Ordinary homework time is tracked separately under the homework cap; do not inflate catch-up time by relabeling homework as review.
+- If a course genuinely needs more than 2 hours of catch-up in a week, explain why and renegotiate before adding more.
