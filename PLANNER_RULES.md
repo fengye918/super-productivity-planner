@@ -33,3 +33,20 @@ Before that phrase, analyze and negotiate only.
 - For problem-set style homework, generate a polished solution PDF when requested or when it materially helps execution.
 - The solution PDF should read like a formal exam answer: clear derivation, standard notation, necessary formulas, concise reasoning, numbered subproblems, final answers clearly marked, and no conversational filler.
 - If a source document is incomplete or unavailable, state that limitation rather than inventing requirements.
+
+## Major assignments and innovation
+
+- For major assignments, reports, course projects, and design work, allocate extra time to the **problem framing / architecture / preliminary design** stage before implementation.
+- The early stage should explicitly consider: task requirements, grading criteria, constraints, alternative approaches, technical risk, available course material, and where a defensible element of originality can be introduced.
+- Do not force novelty for its own sake. Prefer small but meaningful innovation that is technically justified, testable, and compatible with the assignment requirements.
+- When several approaches are plausible, compare them before committing and reserve time for a short feasibility check or prototype.
+- For major deliverables, the default milestone order is:
+  1. understand requirements and grading target;
+  2. collect relevant PPT/PDF/material;
+  3. design the approach and identify possible innovation;
+  4. feasibility check / prototype;
+  5. implementation / derivation / experiment;
+  6. draft;
+  7. revision and validation;
+  8. final submission.
+- Planning should deliberately give stages 1-4 enough uninterrupted time; they are not treated as a quick preface to the "real work".
