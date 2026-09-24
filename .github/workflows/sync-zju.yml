@@ -22,16 +22,11 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,9 +34,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: |
-          npm install --ignore-scripts --no-audit --no-fund
-          python -m pip install --disable-pip-version-check -r requirements-zju.txt
+        run: python -m pip install --disable-pip-version-check -r requirements-zju.txt
 
       - name: Fetch 学在浙大 todos
         env:
@@ -50,19 +43,11 @@ jobs:
         shell: bash
         run: |
           set +e
-          node scripts/fetch-zju.mjs
-          node_status=$?
+          python scripts/fetch-zju-direct.py
+          direct_status=$?
 
-          if [ "$node_status" -ne 0 ]; then
-            echo "login-zju failed; trying browser-like direct authentication."
-            python scripts/fetch-zju-direct.py
-            direct_status=$?
-          else
-            direct_status=0
-          fi
-
-          if [ "$node_status" -ne 0 ] && [ "$direct_status" -ne 0 ]; then
-            echo "Direct authentication failed; trying Zhejiang University WebVPN."
+          if [ "$direct_status" -ne 0 ]; then
+            echo "Browser-like direct authentication failed; trying Zhejiang University WebVPN."
             python scripts/fetch-zju-webvpn.py
             vpn_status=$?
           else
@@ -70,7 +55,7 @@ jobs:
           fi
           set -e
 
-          if [ "$node_status" -ne 0 ] && [ "$direct_status" -ne 0 ] && [ "$vpn_status" -ne 0 ]; then
+          if [ "$direct_status" -ne 0 ] && [ "$vpn_status" -ne 0 ]; then
             echo "All ZJU authentication paths failed."
             exit 1
           fi
@@ -78,13 +63,13 @@ jobs:
       - name: Commit changed todo data
         shell: bash
         run: |
-          if git diff --quiet -- data/zju_todos.json data/zju_changes.json; then
+          if git diff --quiet -- data; then
             echo "No todo changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/zju_todos.json data/zju_changes.json
+          git add data
           git commit -m "chore(zju): sync assignments"
           git pull --rebase origin main
           git push origin HEAD:main
