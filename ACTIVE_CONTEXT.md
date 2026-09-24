@@ -25,9 +25,10 @@ This file records current short-horizon priorities. It is context for planning, 
 - Until exact PPT content is synced, do not invent chapter-specific review topics.
 
 ### Artificial Intelligence and Machine Learning
-- Needs dedicated reinforcement.
+- The user reports that the recent lecture content was essentially not absorbed, so this needs **catch-up**, not just light review.
+- Allocate at least **1.5 hours** for the next catch-up block.
 - Current known homework topic is linear models, especially Ridge/Lasso, regularization strength, feature selection, standardization, and method choice.
-- Review should combine concept reconstruction, objective-function/geometry intuition, answering the current questions without notes, and at least one small concrete example or experiment.
+- Use reconstruction review: objective functions -> geometric/intuitive difference between L1/L2 -> effect of lambda -> standardization -> method choice -> answer the five current homework questions without notes.
 
 ### Big Data Analytics and Application Introduction — major assignment exploration
 Teacher-provided assignment requirements visible in the supplied slide:
