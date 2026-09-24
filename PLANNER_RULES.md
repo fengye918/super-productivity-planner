@@ -50,3 +50,5 @@ Before that phrase, analyze and negotiate only.
   7. revision and validation;
   8. final submission.
 - Planning should deliberately give stages 1-4 enough uninterrupted time; they are not treated as a quick preface to the "real work".
+- Default allocation for a substantial open-ended assignment: roughly **30–40% of the estimated total effort** goes to requirements analysis, framing, architecture, alternative comparison, innovation design, and a feasibility check before committing to the main implementation. Adjust only when the rubric or deadline clearly calls for a different split.
+- Innovation should be tied to an explicit benefit (better performance, clearer methodology, stronger evidence, lower complexity, better robustness, or a more insightful comparison) and should have a way to verify whether it actually helped.
