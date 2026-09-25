@@ -1,0 +1,37 @@
+name: Extract process-control homework
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/extract-process-trigger"
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install catdoc
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq catdoc
+      - name: Extract PPT text
+        shell: bash
+        run: |
+          mkdir -p data/extracted
+          catppt -d utf-8 "course_materials/过程控制工程/homework/1190908/作业2(2).ppt" > data/extracted/process_hw2.txt || true
+          sed -n '1,500p' data/extracted/process_hw2.txt
+      - name: Commit extraction
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/extracted/process_hw2.txt
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "chore: extract process-control homework text"
+          git push
