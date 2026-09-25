@@ -1,23 +1,5 @@
 {
-  "added": [
-    {
-      "source_id": 1191902,
-      "course_id": 100211,
-      "course_name": "现代控制理论",
-      "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
-      "title": "第2周作业",
-      "type": "homework",
-      "end_time": "2026-09-29T04:00:00Z",
-      "is_locked": false,
-      "detail_text": "文件见群",
-      "attachment_names": [],
-      "attachment_refs": [],
-      "attachment_contexts": [],
-      "downloaded_attachments": [],
-      "detail_fetch_error": null,
-      "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1191902"
-    }
-  ],
+  "added": [],
   "updated": [],
   "removed": []
 }
