@@ -9,8 +9,8 @@ This file records current short-horizon priorities. It is context for planning, 
 ### Qizhen project
 - Start printing the needed 3D-printed parts; preferably start the print in the afternoon. This only needs a short reminder block rather than reserving the entire print duration.
 - Watch the motion-capture system operation/training videos and produce concise operating notes.
-- Study how to place suitable markers on the undulating fin so that the motion-capture system can robustly reconstruct the fin's relevant angles.
-- Marker work should consider: visibility/occlusion, marker identity, rigid vs deforming geometry, number/placement of points, angle reconstruction definition, coordinate frames, calibration, and whether the measurement survives fin oscillation without markers detaching or disturbing motion.
+- Current short-horizon priority has shifted from a staged marker-design exercise to **experiment-chain completion**.
+- Focus on getting the practical chain into a minimum usable state: mechanical/3D-printed parts readiness, motion-capture acquisition, angle-output linkage, interface checks, and a first end-to-end trial with recorded blockers/results.
 
 ### Underwater MARL
 - Reserve one substantial deep-work block for the user to design a complete MARL scenario independently.
@@ -45,3 +45,8 @@ Planning principle:
 - First explore the problem/data pair and what “zero-shot / semantic” means operationally before choosing a model.
 - A promising class of directions to investigate is industrial fault/anomaly analysis where fault classes or operating conditions have meaningful semantic descriptions, so an ordinary supervised baseline can be compared with a semantic or unseen-class generalization extension.
 - Do not commit to novelty before checking dataset suitability and whether the claim can be tested cleanly.
+
+### Modern Control homework
+- 学在浙大 now lists **现代控制理论｜第2周作业**, due **2026-09-29 12:00 Asia/Shanghai**.
+- The activity detail only says **“文件见群”**; no homework attachment is available from 学在浙大 itself.
+- Current-week plan allocates a 2-hour homework block on Sunday evening. If the actual group file shows the assignment cannot fit the normal homework cap, renegotiate rather than silently extending it.
