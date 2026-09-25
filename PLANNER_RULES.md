@@ -112,3 +112,13 @@ Before that phrase, analyze and negotiate only.
 - Prefer one focused 90-120 minute reconstruction block over several scattered review blocks.
 - Ordinary homework time is tracked separately under the homework cap; do not inflate catch-up time by relabeling homework as review.
 - If a course genuinely needs more than 2 hours of catch-up in a week, explain why and renegotiate before adding more.
+
+## Solution repository organization
+
+- Generated homework solution PDFs should be stored directly in this GitHub repository by course, not left only as chat attachments.
+- Canonical layout:
+  - `course_materials/<课程名>/solutions/<作业名>_标准解答.pdf`
+  - editable LaTeX/source files go under `course_materials/<课程名>/solutions/source/`
+  - optional first-page visual QA previews go under `course_materials/<课程名>/solutions/preview/`
+- Maintain `course_materials/README.md` as the cross-course solution index.
+- When a new formal homework solution is generated, update the corresponding course folder and the index automatically unless the user explicitly asks otherwise.
