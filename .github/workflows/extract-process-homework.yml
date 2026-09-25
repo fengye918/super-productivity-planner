@@ -12,26 +12,32 @@ permissions:
 jobs:
   extract:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Install catdoc
+      - name: Install render tools
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq catdoc
-      - name: Extract PPT text
+          sudo apt-get install -y -qq libreoffice-impress poppler-utils
+      - name: Render PPT to PDF and PNG
         shell: bash
         run: |
-          mkdir -p data/extracted
-          catppt -d utf-8 "course_materials/过程控制工程/homework/1190908/作业2(2).ppt" > data/extracted/process_hw2.txt || true
-          sed -n '1,500p' data/extracted/process_hw2.txt
+          mkdir -p data/extracted/process_hw2_pages /tmp/process_hw2
+          libreoffice --headless --convert-to pdf --outdir /tmp/process_hw2 "course_materials/过程控制工程/homework/1190908/作业2(2).ppt"
+          PDF="$(find /tmp/process_hw2 -maxdepth 1 -name '*.pdf' | head -n 1)"
+          cp "$PDF" data/extracted/process_hw2.pdf
+          pdftotext -layout "$PDF" data/extracted/process_hw2.txt || true
+          rm -f data/extracted/process_hw2_pages/*.png
+          pdftoppm -png -r 160 "$PDF" data/extracted/process_hw2_pages/page
+          ls -lh data/extracted/process_hw2.pdf data/extracted/process_hw2_pages/*
       - name: Commit extraction
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/extracted/process_hw2.txt
+          git add data/extracted/process_hw2.txt data/extracted/process_hw2.pdf data/extracted/process_hw2_pages
           if git diff --cached --quiet; then
             exit 0
           fi
-          git commit -m "chore: extract process-control homework text"
+          git commit -m "chore: render process-control homework"
           git push
