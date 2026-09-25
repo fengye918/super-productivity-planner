@@ -1,0 +1,242 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,bm,geometry,fancyhdr,enumitem,booktabs}
+\geometry{left=22mm,right=22mm,top=22mm,bottom=22mm}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{过程控制工程·第二周作业标准解答}
+\rhead{习题 2-1 / 2-2 / 仿真作业 \#1}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 过程控制工程·第二周作业标准解答}\\[4pt]
+{\large 双容过程、一阶时间常数、单容非线性仿真}
+\end{center}
+
+\section*{习题 2-1：双容液位过程的稳态点与线性化传递函数}
+原非线性模型
+\[
+A_1\frac{dH_1}{dt}=Q_i-Q_1,\qquad
+A_2\frac{dH_2}{dt}=Q_1-Q_2,
+\]
+且
+\[
+Q_1=k_1\sqrt{H_1},\qquad Q_2=k_2\sqrt{H_2}.
+\]
+因此
+\[
+A_1\frac{dH_1}{dt}=Q_i-k_1\sqrt{H_1},\qquad
+A_2\frac{dH_2}{dt}=k_1\sqrt{H_1}-k_2\sqrt{H_2}.
+\]
+
+\subsection*{(1) 稳态工作点}
+稳态时 $dH_1/dt=dH_2/dt=0$，故
+\[
+Q_i^0=k_1\sqrt{H_1^0},\qquad
+k_1\sqrt{H_1^0}=k_2\sqrt{H_2^0}.
+\]
+所以
+\[
+\boxed{Q_i^0=k_1\sqrt{H_1^0}=k_2\sqrt{H_2^0}},
+\]
+并有
+\[
+\boxed{H_1^0=\left(\frac{Q_i^0}{k_1}\right)^2},\qquad
+\boxed{H_2^0=\left(\frac{Q_i^0}{k_2}\right)^2}.
+\]
+
+\subsection*{(2) 稳态点附近线性化}
+定义偏差变量
+\[
+q_i=Q_i-Q_i^0,\qquad h_1=H_1-H_1^0,\qquad h_2=H_2-H_2^0.
+\]
+对流量关系一阶泰勒展开：
+\[
+Q_1-Q_1^0\approx
+\left.\frac{d(k_1\sqrt{H_1})}{dH_1}\right|_{H_1^0}h_1
+=
+\frac{k_1}{2\sqrt{H_1^0}}h_1,
+\]
+\[
+Q_2-Q_2^0\approx
+\frac{k_2}{2\sqrt{H_2^0}}h_2.
+\]
+定义液阻
+\[
+R_1=\frac{2\sqrt{H_1^0}}{k_1},\qquad
+R_2=\frac{2\sqrt{H_2^0}}{k_2},
+\]
+则线性化模型为
+\[
+A_1\frac{dh_1}{dt}=q_i-\frac{h_1}{R_1},
+\qquad
+A_2\frac{dh_2}{dt}=\frac{h_1}{R_1}-\frac{h_2}{R_2}.
+\]
+零初始条件下拉普拉斯变换：
+\[
+\left(A_1s+\frac1{R_1}\right)H_1(s)=Q_i(s),
+\]
+\[
+\left(A_2s+\frac1{R_2}\right)H_2(s)=\frac1{R_1}H_1(s).
+\]
+故
+\[
+\frac{H_1(s)}{Q_i(s)}=\frac{R_1}{A_1R_1s+1},
+\qquad
+\frac{H_2(s)}{H_1(s)}=\frac{R_2/R_1}{A_2R_2s+1}.
+\]
+两式相乘得到
+\[
+\boxed{
+\frac{H_2(s)}{Q_i(s)}
+=
+\frac{R_2}{(A_1R_1s+1)(A_2R_2s+1)}
+}.
+\]
+若
+\[
+T_1=A_1R_1,\qquad T_2=A_2R_2,
+\]
+则
+\[
+\boxed{
+\frac{H_2(s)}{Q_i(s)}
+=
+\frac{R_2}{(T_1s+1)(T_2s+1)}
+}.
+\]
+由稳态关系还可写为
+\[
+R_1=\frac{2Q_i^0}{k_1^2},\qquad
+R_2=\frac{2Q_i^0}{k_2^2},\qquad
+T_1=\frac{2A_1Q_i^0}{k_1^2},\qquad
+T_2=\frac{2A_2Q_i^0}{k_2^2}.
+\]
+
+\section*{习题 2-2：为什么一阶时间常数对应 63.2\% 响应时间？}
+标准一阶过程
+\[
+G(s)=\frac{K}{Ts+1}.
+\]
+若在 $t=t_0$ 时输入幅值为 $\Delta u$ 的阶跃，则
+\[
+y(t)-y_0=K\Delta u\left(1-e^{-(t-t_0)/T}\right),\qquad t\ge t_0.
+\]
+最终总变化量
+\[
+\Delta y_\infty=K\Delta u.
+\]
+当 $t-t_0=T$ 时，
+\[
+\frac{y(t_0+T)-y_0}{\Delta y_\infty}
+=1-e^{-1}\approx0.6321.
+\]
+因此
+\[
+\boxed{T=t_{63.2\%}-t_0}.
+\]
+
+\section*{仿真作业 \#1：单容液位非线性模型、线性化模型与阶跃辨识}
+题给机理模型
+\[
+A\frac{dH}{dt}=Q_i-Q_o,\qquad Q_o=k\sqrt{H},
+\]
+即
+\[
+A\frac{dH}{dt}=Q_i-k\sqrt H.
+\]
+
+\subsection*{(1) Simulink 机理模型及初始运行状态}
+若选定初始稳态液位 $H_0$，则
+\[
+Q_i^0=k\sqrt{H_0}.
+\]
+Simulink 中建立信号链
+\[
+Q_i-Q_o \longrightarrow \frac1A \longrightarrow \int \longrightarrow H
+\longrightarrow \sqrt{\cdot}\longrightarrow k\longrightarrow Q_o,
+\]
+并将 $Q_o$ 负反馈到求和点。积分器初值设为 $H_0$，输入初值设为 $Q_i^0$，即可从稳态开始运行。
+
+\subsection*{(2) 线性化模型及阶跃响应比较}
+令
+\[
+h=H-H_0,\qquad q_i=Q_i-Q_i^0.
+\]
+在 $H_0$ 附近
+\[
+k\sqrt H\approx k\sqrt{H_0}+\frac{k}{2\sqrt{H_0}}h.
+\]
+利用 $Q_i^0=k\sqrt{H_0}$，
+\[
+A\frac{dh}{dt}=q_i-\frac{k}{2\sqrt{H_0}}h.
+\]
+定义
+\[
+R=\frac{2\sqrt{H_0}}{k},\qquad
+T=AR=\frac{2A\sqrt{H_0}}{k},
+\]
+则
+\[
+T\frac{dh}{dt}+h=Rq_i,
+\]
+线性化传递函数
+\[
+\boxed{
+G_L(s)=\frac{H(s)}{Q_i(s)}
+=\frac{R}{Ts+1}
+}.
+\]
+对输入阶跃 $\Delta Q_i$，线性模型预测
+\[
+\Delta H_L=R\Delta Q_i.
+\]
+非线性模型新稳态
+\[
+H_{\infty,N}=\left(\frac{Q_i^0+\Delta Q_i}{k}\right)^2,
+\]
+故
+\[
+\Delta H_N=
+\left(\frac{Q_i^0+\Delta Q_i}{k}\right)^2-H_0.
+\]
+小扰动时忽略高阶项，
+\[
+\Delta H_N\approx \frac{2Q_i^0}{k^2}\Delta Q_i
+=\frac{2\sqrt{H_0}}{k}\Delta Q_i=R\Delta Q_i.
+\]
+因此：
+\begin{enumerate}[leftmargin=2em]
+\item 小扰动条件下，线性化模型能较准确描述原非线性过程；
+\item 输入阶跃幅值越大，线性化误差通常越明显；
+\item 由于 $Q_o=k\sqrt H$ 非线性，局部增益与时间常数随工作点变化。
+\end{enumerate}
+
+\subsection*{(3) 用阶跃测试法辨识一阶对象模型}
+记录输入变化量 $\Delta Q_i$ 和输出最终变化量 $\Delta H_\infty$，则
+\[
+K_p=\frac{\Delta H_\infty}{\Delta Q_i}.
+\]
+在响应曲线上找到
+\[
+H_{63.2\%}=H_0+0.632\Delta H_\infty.
+\]
+若输入阶跃时刻为 $t_0$，达到该液位时刻为 $t_{63.2\%}$，则
+\[
+T_p=t_{63.2\%}-t_0.
+\]
+于是
+\[
+\boxed{G_{id}(s)=\frac{K_p}{T_ps+1}}.
+\]
+将 $G_{id}(s)$、线性化模型 $G_L(s)$ 与原非线性模型作同图比较。小幅阶跃时应有
+\[
+K_p\approx R,\qquad T_p\approx T.
+\]
+
+\subsection*{仿真结果应整理的内容}
+题目未给定 $A,k,H_0$ 以及各阶跃幅值的具体数值，因此不能唯一生成数值曲线。正式提交时应记录所选参数，并至少比较：小幅正阶跃、较大正阶跃、负阶跃（可选）。
+
+建议图中同时绘制非线性机理模型、线性化模型与阶跃辨识一阶模型三条响应曲线，并标明输入阶跃幅值。
+\end{document}
