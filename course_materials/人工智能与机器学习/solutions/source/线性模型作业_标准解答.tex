@@ -1,0 +1,84 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,bm,geometry,fancyhdr,enumitem}
+\geometry{left=22mm,right=22mm,top=22mm,bottom=22mm}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{人工智能与机器学习·线性模型作业标准解答}
+\rhead{Ridge / Lasso}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 人工智能与机器学习·线性模型作业标准解答}\\[4pt]
+{\large Ridge 回归与 Lasso 回归}
+\end{center}
+
+\section*{1. 岭回归与 Lasso 引入正则化的共同目的}
+普通线性回归例如采用最小二乘：
+\[
+\min_{\bm\beta}\|\bm y-X\bm\beta\|_2^2.
+\]
+岭回归与 Lasso 分别为
+\[
+\text{Ridge: }\min_{\bm\beta}\|\bm y-X\bm\beta\|_2^2+\lambda\|\bm\beta\|_2^2,
+\]
+\[
+\text{Lasso: }\min_{\bm\beta}\|\bm y-X\bm\beta\|_2^2+\lambda\|\bm\beta\|_1.
+\]
+二者共同目的都是限制参数规模，抑制模型复杂度，从而减小过拟合风险，提高对未见数据的泛化能力；同时也可缓解多重共线性引起的参数不稳定。
+
+\textbf{答：}通过正则化约束参数规模，降低模型复杂度和方差，缓解过拟合与参数不稳定，提高泛化能力。
+
+\section*{2. 为什么 Lasso 能做特征选择，而岭回归通常不能？}
+Lasso 使用 $L_1$ 正则项
+\[
+\lambda\sum_{j=1}^{p}|\beta_j|.
+\]
+其约束区域在坐标轴方向有尖角，最优点容易落在坐标轴上，使部分系数精确等于 0，从而直接剔除相应特征，得到稀疏模型。
+
+岭回归使用 $L_2$ 正则项
+\[
+\lambda\sum_{j=1}^{p}\beta_j^2.
+\]
+其约束区域光滑，通常只会连续压缩系数，使其接近 0，但一般不会精确变为 0。
+
+\textbf{答：}Lasso 的 $L_1$ 惩罚具有稀疏性，可将部分系数压缩为精确的 0；岭回归的 $L_2$ 惩罚通常只使系数缩小而不变为精确的 0。
+
+\section*{3. 当 $\lambda$ 变大时，模型会发生什么变化？}
+$\lambda$ 控制正则化强度。随着 $\lambda$ 增大，参数受到更强约束。
+
+对岭回归，各系数绝对值通常进一步减小；对 Lasso，不仅系数整体减小，而且更多系数可能直接被压缩为 0。因此模型复杂度降低、方差通常减小，而偏差通常增大。若 $\lambda$ 过大，则会导致欠拟合。
+
+\textbf{答：}$\lambda$ 越大，正则化越强，系数越趋近于 0；Lasso 中会有更多系数变为 0。模型复杂度降低、方差减小、偏差增大，过大时产生欠拟合。
+
+\section*{4. 什么时候更偏向使用岭回归，什么时候更偏向使用 Lasso？}
+更偏向岭回归的情况：
+\begin{itemize}[leftmargin=2em]
+\item 大多数特征都可能对输出有一定贡献，希望保留全部特征；
+\item 特征之间存在较强相关性，希望稳定参数估计；
+\item 更关注预测稳定性，而不是显式变量筛选。
+\end{itemize}
+
+更偏向 Lasso 的情况：
+\begin{itemize}[leftmargin=2em]
+\item 认为真正有用的特征只占少数，即模型具有稀疏性；
+\item 希望自动进行特征选择，获得更简洁、更易解释的模型；
+\item 特征维度较高，希望通过稀疏化降低有效模型规模。
+\end{itemize}
+
+当多个特征高度相关时，Lasso 可能在相关特征之间做出不稳定选择；若既希望稀疏又希望对相关特征更稳定，可考虑 Elastic Net。
+
+\textbf{答：}特征普遍有效、相关性强且希望稳定保留变量时优先岭回归；认为只有少数特征重要、需要变量筛选和稀疏解释时优先 Lasso。
+
+\section*{5. 训练前为什么要对特征做标准化？}
+Ridge 与 Lasso 的正则项直接作用于回归系数。若不同特征的量纲和数值尺度差异很大，则同样大小的系数对应的实际影响不同，正则化会对各特征产生不公平的惩罚。
+
+通常将第 $j$ 个特征标准化为
+\[
+x'_j=\frac{x_j-\mu_j}{\sigma_j}.
+\]
+这样各特征尺度近似一致，系数大小更具可比性，$\lambda$ 对各特征的惩罚更公平，同时也有利于数值优化的稳定性和收敛速度。
+
+\textbf{答：}标准化可消除量纲和尺度差异，使正则项对不同特征的惩罚具有可比性，并提高数值优化稳定性。否则尺度较大的特征可能因系数较小而受到相对较弱的惩罚。
+\end{document}
