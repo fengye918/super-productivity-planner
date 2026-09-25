@@ -1,0 +1,261 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,bm,geometry,fancyhdr,enumitem}
+\geometry{left=22mm,right=22mm,top=22mm,bottom=22mm}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{现代控制理论·第二周作业标准解答}
+\rhead{习题七}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 现代控制理论·第二周作业标准解答}\\[4pt]
+{\large 习题七：7-9，7-10(a)(c)，7-12(a)，7-15，7-17}
+\end{center}
+
+\section*{7-9}
+已知
+\[
+G(z)=\frac{Y(z)}{U(z)}=\frac{z+1}{z^2-1.4z+0.48},
+\]
+输入为单位阶跃，故
+\[
+U(z)=\frac{z}{z-1}.
+\]
+系统极点满足
+\[
+z^2-1.4z+0.48=(z-0.8)(z-0.6),
+\]
+均位于单位圆内，因此可用离散终值定理：
+\[
+\begin{aligned}
+y(\infty)
+&=\lim_{z\to1}\frac{z-1}{z}Y(z)\\
+&=\lim_{z\to1}\frac{z-1}{z}G(z)\frac{z}{z-1}
+=G(1)\\
+&=\frac{1+1}{1-1.4+0.48}=25.
+\end{aligned}
+\]
+\[
+\boxed{y(\infty)=25}
+\]
+
+\section*{7-10(a)}
+记连续环节 $F(s)$ 的脉冲传递函数为
+\[
+F(z)=\mathcal Z\left\{\mathcal L^{-1}[F(s)]\big|_{t=kT}\right\}.
+\]
+设主采样器输出为 $E(z)$。由前向通道
+\[
+Y(z)=H(z)E(z).
+\]
+反馈支路中，$H(s)$ 与 $G_2(s)$ 之间没有采样器，因此二者应先在 $s$ 域相乘后再作 $z$ 变换，记
+\[
+HG_2(z)=\mathcal Z\{H(s)G_2(s)\},
+\]
+则
+\[
+V(z)=HG_2(z)E(z).
+\]
+经过反馈支路采样器后，$G_1(s)$ 与前级之间被采样器隔开，故
+\[
+B(z)=G_1(z)V(z)=G_1(z)HG_2(z)E(z).
+\]
+主采样点满足
+\[
+E(z)=R(z)-B(z),
+\]
+故
+\[
+E(z)\big[1+G_1(z)HG_2(z)\big]=R(z).
+\]
+于是闭环脉冲传递函数
+\[
+\boxed{\frac{Y(z)}{R(z)}
+=\frac{H(z)}{1+G_1(z)HG_2(z)}}.
+\]
+
+\section*{7-10(c)}
+定义
+\[
+G_{01}(z)=\mathcal Z\{H_0(s)G_1(s)\},\qquad
+G_{012}(z)=\mathcal Z\{H_0(s)G_1(s)G_2(s)\}.
+\]
+设数字控制器输入为 $E(z)$，则
+\[
+D(z)=G_D(z)E(z).
+\]
+由结构得
+\[
+C(z)=G_{01}(z)D(z),\qquad
+Y(z)=G_{012}(z)D(z).
+\]
+两个反馈均为负反馈，故
+\[
+E(z)=X(z)-C(z)-Y(z).
+\]
+代入可得
+\[
+E(z)=X(z)-G_D(z)G_{01}(z)E(z)-G_D(z)G_{012}(z)E(z),
+\]
+即
+\[
+E(z)=\frac{X(z)}
+{1+G_D(z)G_{01}(z)+G_D(z)G_{012}(z)}.
+\]
+所以
+\[
+\boxed{
+\frac{Y(z)}{X(z)}
+=
+\frac{G_D(z)G_{012}(z)}
+{1+G_D(z)G_{01}(z)+G_D(z)G_{012}(z)}
+}.
+\]
+
+\section*{7-12(a)}
+记
+\[
+G_1(z)=\mathcal Z\{G_1(s)\},\qquad
+G_3(z)=\mathcal Z\{G_3(s)\},\qquad
+G_{12}(z)=\mathcal Z\{G_1(s)G_2(s)\}.
+\]
+由于 $G_1(s)$ 与 $G_2(s)$ 之间没有采样器，内反馈通道应使用整体脉冲传递函数 $G_{12}(z)$。
+
+设第一个采样器输出为 $A(z)$，第二个加法点送入 $G_1(s)$ 的采样序列为 $Q(z)$。内环满足
+\[
+Q(z)=A(z)-G_{12}(z)Q(z),
+\]
+故
+\[
+A(z)=[1+G_{12}(z)]Q(z).
+\]
+输出采样值为
+\[
+C(z)=G_1(z)Q(z).
+\]
+外反馈支路满足
+\[
+A(z)=R(z)-G_3(z)C(z)
+=R(z)-G_3(z)G_1(z)Q(z).
+\]
+联立得
+\[
+[1+G_{12}(z)+G_1(z)G_3(z)]Q(z)=R(z).
+\]
+因此
+\[
+\boxed{
+\frac{C(z)}{R(z)}
+=
+\frac{G_1(z)}
+{1+G_{12}(z)+G_1(z)G_3(z)}
+}.
+\]
+
+\section*{7-15}
+连续状态方程
+\[
+\dot{\bm x}(t)=A\bm x(t)+B u(t),\qquad y(t)=C\bm x(t),
+\]
+其中
+\[
+A=\begin{bmatrix}0&1\\0&0\end{bmatrix},\quad
+B=\begin{bmatrix}0\\1\end{bmatrix},\quad
+C=\begin{bmatrix}1&0\end{bmatrix}.
+\]
+采样周期为 $T$，零阶保持输入下
+\[
+\bm x(k+1)=\Phi\bm x(k)+\Gamma u(k),
+\]
+其中
+\[
+\Phi=e^{AT},\qquad
+\Gamma=\int_0^T e^{A\tau}B\,d\tau.
+\]
+因为 $A^2=0$，
+\[
+e^{A\tau}=I+A\tau=
+\begin{bmatrix}1&\tau\\0&1\end{bmatrix},
+\]
+故
+\[
+\Phi=
+\begin{bmatrix}1&T\\0&1\end{bmatrix},
+\]
+并且
+\[
+\Gamma=
+\int_0^T
+\begin{bmatrix}1&\tau\\0&1\end{bmatrix}
+\begin{bmatrix}0\\1\end{bmatrix}d\tau
+=
+\int_0^T\begin{bmatrix}\tau\\1\end{bmatrix}d\tau
+=
+\begin{bmatrix}T^2/2\\T\end{bmatrix}.
+\]
+因此离散状态方程为
+\[
+\boxed{
+\bm x(k+1)=
+\begin{bmatrix}1&T\\0&1\end{bmatrix}\bm x(k)
++
+\begin{bmatrix}T^2/2\\T\end{bmatrix}u(k)
+},
+\qquad
+\boxed{y(k)=\begin{bmatrix}1&0\end{bmatrix}\bm x(k)}.
+\]
+
+\section*{7-17}
+已知
+\[
+\bm x(k+1)=A\bm x(k)+Bu(k),\qquad y(k)=C\bm x(k),
+\]
+其中
+\[
+A=\begin{bmatrix}1&1\\0&1\end{bmatrix},\quad
+B=\begin{bmatrix}1/2\\1\end{bmatrix},\quad
+C=\begin{bmatrix}1&0\end{bmatrix},\quad D=0.
+\]
+零初始条件下
+\[
+G(z)=C(zI-A)^{-1}B+D.
+\]
+有
+\[
+zI-A=
+\begin{bmatrix}z-1&-1\\0&z-1\end{bmatrix},
+\]
+所以
+\[
+(zI-A)^{-1}=
+\begin{bmatrix}
+\dfrac{1}{z-1}&\dfrac{1}{(z-1)^2}\\[6pt]
+0&\dfrac{1}{z-1}
+\end{bmatrix}.
+\]
+于是
+\[
+\begin{aligned}
+G(z)
+&=
+\begin{bmatrix}1&0\end{bmatrix}
+\begin{bmatrix}
+\dfrac{1}{z-1}&\dfrac{1}{(z-1)^2}\\
+0&\dfrac{1}{z-1}
+\end{bmatrix}
+\begin{bmatrix}1/2\\1\end{bmatrix}\\
+&=\frac{1}{2(z-1)}+\frac{1}{(z-1)^2}
+=\frac{z+1}{2(z-1)^2}.
+\end{aligned}
+\]
+因此
+\[
+\boxed{
+G(z)=\frac{Y(z)}{U(z)}
+=\frac{z+1}{2(z-1)^2}
+=\frac{0.5z+0.5}{z^2-2z+1}
+}.
+\]
+\end{document}
