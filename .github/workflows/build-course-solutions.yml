@@ -1,0 +1,67 @@
+name: Build course solution PDFs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "course_materials/**/solutions/source/*.tex"
+      - ".github/workflows/build-course-solutions.yml"
+      - ".github/build-solutions-trigger"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-course-solutions
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TeX and render tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-xetex texlive-lang-chinese texlive-latex-extra fonts-noto-cjk poppler-utils
+
+      - name: Build PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          build_one() {
+            src="$1"
+            out_pdf="$2"
+            preview="$3"
+            work="$(mktemp -d)"
+            xelatex -interaction=nonstopmode -halt-on-error -output-directory "$work" "$src" >/tmp/xelatex.log
+            xelatex -interaction=nonstopmode -halt-on-error -output-directory "$work" "$src" >>/tmp/xelatex.log
+            mkdir -p "$(dirname "$out_pdf")" "$(dirname "$preview")"
+            cp "$work/$(basename "${src%.tex}.pdf")" "$out_pdf"
+            pdftoppm -f 1 -singlefile -png -r 120 "$out_pdf" "${preview%.png}"
+            rm -rf "$work"
+          }
+
+          build_one             "course_materials/现代控制理论/solutions/source/第二周作业_标准解答.tex"             "course_materials/现代控制理论/solutions/第二周作业_标准解答.pdf"             "course_materials/现代控制理论/solutions/preview/第二周作业_标准解答.png"
+
+          build_one             "course_materials/过程控制工程/solutions/source/第二周作业_标准解答.tex"             "course_materials/过程控制工程/solutions/第二周作业_标准解答.pdf"             "course_materials/过程控制工程/solutions/preview/第二周作业_标准解答.png"
+
+          build_one             "course_materials/人工智能与机器学习/solutions/source/线性模型作业_标准解答.tex"             "course_materials/人工智能与机器学习/solutions/线性模型作业_标准解答.pdf"             "course_materials/人工智能与机器学习/solutions/preview/线性模型作业_标准解答.png"
+
+          find course_materials \( -path "*/solutions/*.pdf" -o -path "*/solutions/preview/*.png" \) -print | sort
+
+      - name: Commit generated PDFs
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add course_materials
+          if git diff --cached --quiet; then
+            echo "Solution PDFs already up to date."
+            exit 0
+          fi
+          git commit -m "docs: build categorized course solution PDFs"
+          git pull --rebase origin main
+          git push origin HEAD:main
