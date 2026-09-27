@@ -3,21 +3,21 @@
   "updated": [],
   "removed": [
     {
-      "source_id": 1158554,
-      "course_id": 99632,
-      "course_name": "人工智能与机器学习",
-      "course_code": "(2026-2027-1)-CSE3002M-0014045-1",
-      "title": "线性模型",
+      "source_id": 1191902,
+      "course_id": 100211,
+      "course_name": "现代控制理论",
+      "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
+      "title": "第2周作业",
       "type": "homework",
-      "end_time": "2026-10-08T15:59:00Z",
+      "end_time": "2026-09-29T04:00:00Z",
       "is_locked": false,
-      "detail_text": "Ø 1. 写出岭回归与 Lasso 引入正则化的共同目的。 Ø 2. 为什么 Lasso 能做特征选择、岭回归通常不能？ Ø 3. 对于岭回归与 Lasso 回归， λ 变大，对模型会有什么一般性影响？ Ø 4. 什么时候更偏向用岭回归，什么时候更偏向用 Lasso ？ Ø 5. 训练前为什么要对特征做标准化？",
+      "detail_text": "文件见群",
       "attachment_names": [],
       "attachment_refs": [],
       "attachment_contexts": [],
       "downloaded_attachments": [],
       "detail_fetch_error": null,
-      "source_url": "https://courses.zju.edu.cn/course/99632/learning-activity#/1158554"
+      "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1191902"
     }
   ]
 }
