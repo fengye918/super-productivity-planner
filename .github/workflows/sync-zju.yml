@@ -6,7 +6,6 @@ on:
     paths:
       - ".github/zju-sync-trigger"
   schedule:
-    # UTC = Asia/Shanghai - 8h
     - cron: "15 0 * * *"
     - cron: "45 4 * * *"
     - cron: "15 10 * * *"
@@ -40,31 +39,13 @@ jobs:
         env:
           ZJU_USERNAME: ${{ secrets.ZJU_USERNAME }}
           ZJU_PASSWORD: ${{ secrets.ZJU_PASSWORD }}
-        shell: bash
-        run: |
-          set +e
-          python scripts/fetch-zju-direct.py
-          direct_status=$?
+        run: python scripts/fetch-zju-direct.py
 
-          if [ "$direct_status" -ne 0 ]; then
-            echo "Browser-like direct authentication failed; trying Zhejiang University WebVPN."
-            python scripts/fetch-zju-webvpn.py
-            vpn_status=$?
-          else
-            vpn_status=0
-          fi
-          set -e
-
-          if [ "$direct_status" -ne 0 ] && [ "$vpn_status" -ne 0 ]; then
-            echo "All ZJU authentication paths failed."
-            exit 1
-          fi
-
-      - name: Commit changed todo data
+      - name: Commit changed data/materials
         shell: bash
         run: |
           if git diff --quiet -- data course_materials; then
-            echo "No todo changes."
+            echo "No changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
