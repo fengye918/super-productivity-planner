@@ -44,3 +44,16 @@
   - editable source under `course_materials/<课程>/solutions/source/`
 - Keep `course_materials/README.md` as the cross-course index.
 - Formal solution style: standard exam-answer format, clear derivation, numbered subproblems, concise reasoning, final answers clearly marked.
+
+## Personal development exploration
+- Reserve about **1 hour every week** for deliberate exploration of the user's longer-term study/research/career direction.
+- This should be a real Schedule block by default, not merely hidden free time.
+- The block is for open exploration rather than immediate deliverables: new robotics directions, research questions, tools, technical trends, or possible future project areas.
+- Keep it lightweight and curiosity-driven; do not let it crowd out urgent coursework or active project milestones.
+
+## Interest learning
+- When the week still has genuine spare capacity after fixed courses, deadlines, current research priorities, rest, and the protected English hour, optional blocks may be used for personal-interest learning.
+- Current interest areas include:
+  - **智能语音 / voice assistant project**
+  - **网络层学习**
+- Interest blocks should stay optional and should preferably produce a small concrete result (prototype, note, experiment, or concept map) rather than passive browsing.
