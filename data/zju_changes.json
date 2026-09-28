@@ -1,5 +1,83 @@
 {
-  "added": [],
+  "added": [
+    {
+      "source_id": 1192488,
+      "course_id": 100211,
+      "course_name": "现代控制理论",
+      "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
+      "title": "第3周作业",
+      "type": "homework",
+      "end_time": "2026-10-19T15:59:00Z",
+      "is_locked": false,
+      "detail_text": null,
+      "attachment_names": [
+        "秋第三周作业.pdf"
+      ],
+      "attachment_refs": [
+        {
+          "id": 17454815,
+          "upload_id": null,
+          "name": "秋第三周作业.pdf",
+          "filename": null,
+          "file_name": null,
+          "title": null,
+          "url": null,
+          "download_url": null,
+          "size": 138374,
+          "mime_type": null,
+          "content_type": null,
+          "type": "document",
+          "detected_name": "秋第三周作业.pdf"
+        }
+      ],
+      "attachment_contexts": [
+        {
+          "path": "$.uploads[0].name",
+          "filename": "秋第三周作业.pdf",
+          "container": {
+            "allow_aliyun_office_view": false,
+            "allow_download": true,
+            "allow_private_wps_office_view": true,
+            "audio": null,
+            "can_auto_relate_knowledge_node": false,
+            "created_at": "2025-09-29T05:34:22Z",
+            "created_by_id": 1261,
+            "deleted": false,
+            "enable_set_h5_courseware_completion": true,
+            "id": 17454815,
+            "is_cc_video": false,
+            "key": "29e78bd358c3ebbc3bbef801de501c3bdeb0be08",
+            "link": null,
+            "name": "秋第三周作业.pdf",
+            "origin_allow_download": true,
+            "owner_id": 0,
+            "reference_id": 18128308,
+            "referenced_at": "2026-09-28T04:35:12Z",
+            "scorm": null,
+            "size": 138374,
+            "sort": 0,
+            "source": "",
+            "status": "ready",
+            "third_part_referrer_id": 0,
+            "thumbnail": null,
+            "type": "document",
+            "updated_at": "2025-09-29T05:35:06Z",
+            "video_src_type": "video/mp4"
+          }
+        }
+      ],
+      "downloaded_attachments": [
+        {
+          "upload_id": 17454815,
+          "name": "秋第三周作业.pdf",
+          "repo_path": "course_materials/现代控制理论/homework/1192488/秋第三周作业.pdf",
+          "bytes": 138374
+        }
+      ],
+      "detail_fetch_error": null,
+      "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1192488"
+    }
+  ],
   "updated": [],
   "removed": []
 }
