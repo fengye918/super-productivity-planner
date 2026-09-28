@@ -41,3 +41,13 @@ Updated: 2026-09-27
 - Every Modern Control Theory class actually attended should receive a **1.5-hour post-class review/understanding block**.
 - Big Data Analytics class time may be repurposed to investigate the major project because the remaining course priority is the major assignment.
 - For the next three days, useful research reading may be scheduled when it directly supports MARL or the Big Data major-project direction.
+
+### Personal future-direction exploration
+- Reserve about 1 hour each week for open-ended exploration of the user's future development direction.
+- This is intentionally broader than current Cephalo / MARL / coursework priorities and should remain exploratory rather than prematurely converging.
+
+### Personal-interest learning
+- If the weekly schedule has spare capacity, optional interest blocks may be used for:
+  - a personal **intelligent voice / voice assistant** idea;
+  - **network-layer / networking** learning.
+- These are lower priority than current coursework and research deliverables, but are preferred uses of true spare time over filling the calendar with low-value busywork.
