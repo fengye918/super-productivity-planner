@@ -12,6 +12,8 @@ import json
 import os
 import re
 from pathlib import Path
+from datetime import datetime, timezone
+from urllib.parse import urlencode
 
 import requests
 
@@ -374,6 +376,128 @@ def save(todos: list[dict]) -> None:
     print(f"Synced {len(todos)} todos; added={len(added)}, updated={len(updated)}, removed={len(removed)}")
 
 
+
+def parse_iso_time(value):
+    if not isinstance(value, str) or not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
+def fetch_reliable_homework_todos(s: requests.Session):
+    """Enumerate current-course homework so future-start assignments are not missed by /api/todos."""
+    submitted_ids = set()
+    candidates = []
+
+    try:
+        sem_payload = api_json(
+            s,
+            "https://courses.zju.edu.cn/api/my-semesters?fields=id,name,sort,is_active,code",
+        )
+        semesters = sem_payload.get("semesters", []) if isinstance(sem_payload, dict) else []
+        active_semester_ids = []
+        for sem in semesters:
+            if isinstance(sem, dict) and sem.get("is_active") and isinstance(sem.get("id"), int):
+                sid = sem["id"]
+                active_semester_ids.extend([sid, sid + 1, sid + 2])
+        active_semester_ids = sorted(set(active_semester_ids))
+        if not active_semester_ids:
+            return candidates, submitted_ids
+
+        params = {
+            "page": 1,
+            "page_size": 1000,
+            "sort": "all",
+            "normal": json.dumps({"version": 7, "apiVersion": "1.1.0"}, ensure_ascii=False),
+            "conditions": json.dumps(
+                {
+                    "role": [],
+                    "semester_id": active_semester_ids,
+                    "academic_year_id": [],
+                    "status": ["ongoing", "notStarted"],
+                    "course_type": [],
+                    "effectiveness": [],
+                    "published": [],
+                    "display_studio_list": False,
+                },
+                ensure_ascii=False,
+            ),
+            "fields": "id,name,course_code",
+        }
+        course_payload = api_json(
+            s,
+            "https://courses.zju.edu.cn/api/my-courses?" + urlencode(params),
+        )
+        course_list = course_payload.get("courses", []) if isinstance(course_payload, dict) else []
+    except Exception as exc:
+        print("Reliable homework course enumeration failed:", type(exc).__name__, str(exc)[:200])
+        return candidates, submitted_ids
+
+    unique_courses = {}
+    for course in course_list:
+        if isinstance(course, dict) and course.get("id") is not None:
+            unique_courses[course["id"]] = course
+
+    now = datetime.now(timezone.utc)
+
+    for course in unique_courses.values():
+        cid = course.get("id")
+        try:
+            activities_payload = api_json(s, f"https://courses.zju.edu.cn/api/courses/{cid}/activities")
+            activities = activities_payload.get("activities", []) if isinstance(activities_payload, dict) else []
+        except Exception as exc:
+            print("Activities scan failed:", cid, type(exc).__name__)
+            activities = []
+
+        try:
+            status_payload = api_json(
+                s,
+                f"https://courses.zju.edu.cn/api/course/{cid}/homework/submission-status?no-intercept=true",
+            )
+            statuses = status_payload.get("homework_activities", []) if isinstance(status_payload, dict) else []
+        except Exception as exc:
+            print("Homework status scan failed:", cid, type(exc).__name__)
+            statuses = []
+
+        course_submitted = {
+            item.get("id")
+            for item in statuses
+            if isinstance(item, dict) and item.get("status_code") == "submitted"
+        }
+        submitted_ids.update(x for x in course_submitted if x is not None)
+
+        for activity in activities:
+            if not isinstance(activity, dict):
+                continue
+            if str(activity.get("type", "")).lower() != "homework":
+                continue
+            if activity.get("published") is False:
+                continue
+            aid = activity.get("id")
+            if aid is None or aid in course_submitted:
+                continue
+            end_dt = parse_iso_time(activity.get("end_time"))
+            if end_dt is not None and end_dt <= now:
+                continue
+
+            candidates.append(
+                {
+                    "id": aid,
+                    "course_id": cid,
+                    "course_name": course.get("name"),
+                    "course_code": course.get("course_code"),
+                    "title": activity.get("title"),
+                    "type": "homework",
+                    "end_time": activity.get("end_time"),
+                    "is_locked": activity.get("is_locked", False),
+                }
+            )
+
+    return candidates, submitted_ids
+
+
 def main() -> None:
     s = requests.Session()
     s.headers.update({
@@ -386,7 +510,24 @@ def main() -> None:
 
     payload = api_json(s, "https://courses.zju.edu.cn/api/todos?no-intercept=true")
     raw = payload.get("todo_list", []) if isinstance(payload, dict) else []
-    todos = [normalize_todo(s, x) for x in raw if isinstance(x, dict)]
+
+    reliable_homeworks, submitted_homework_ids = fetch_reliable_homework_todos(s)
+
+    combined = {}
+    for item in raw:
+        if not isinstance(item, dict):
+            continue
+        item_id = item.get("id")
+        if str(item.get("type", "")).lower() == "homework" and item_id in submitted_homework_ids:
+            continue
+        combined[str(item_id or item.get("title") or "")] = item
+
+    # Course enumeration supplements /api/todos, including published homework
+    # whose start time is still in the future.
+    for item in reliable_homeworks:
+        combined[str(item.get("id") or item.get("title") or "")] = item
+
+    todos = [normalize_todo(s, x) for x in combined.values()]
     todos.sort(key=lambda x: (
         x.get("end_time") or "9999-12-31T23:59:59Z",
         x.get("course_name") or "",
