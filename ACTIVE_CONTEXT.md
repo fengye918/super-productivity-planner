@@ -3,9 +3,11 @@
 Updated: 2026-09-27
 
 ## Assignment status
-- **All currently known course homework has been completed and submitted** (user-confirmed).
-- 学在浙大 may still temporarily return an old todo after submission; treat user-confirmed completion as authoritative for planning.
-- Do not schedule the previously known Modern Control / Process Control / AI-ML homework again unless a new task appears.
+- Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
+- **No new homework was found.**
+- The only todo still returned is **过程控制工程｜第二周作业**, due 2026-09-30 23:59, but the user has already completed and submitted it.
+- Treat that item as stale platform state: do not add it back into this week's Schedule and do not regenerate duplicate work.
+- Existing formal solution PDFs for Modern Control, Process Control, and AI/ML remain in `course_materials/<课程>/solutions/`.
 
 ## Next-week priorities
 
