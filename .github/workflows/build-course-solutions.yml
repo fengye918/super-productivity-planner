@@ -27,24 +27,27 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq texlive-xetex texlive-lang-chinese texlive-latex-extra fonts-noto-cjk
 
-      - name: Build PDFs
+      - name: Build all solution PDFs
         shell: bash
         run: |
           set -euo pipefail
-          build_one() {
-            src="$1"
-            out_pdf="$2"
+          found=0
+          while IFS= read -r -d '' src; do
+            found=1
+            solutions_dir="$(dirname "$(dirname "$src")")"
+            name="$(basename "${src%.tex}")"
+            out_pdf="$solutions_dir/$name.pdf"
             work="$(mktemp -d)"
+            echo "Building $src -> $out_pdf"
             xelatex -interaction=nonstopmode -halt-on-error -output-directory "$work" "$src" >/tmp/xelatex.log
             xelatex -interaction=nonstopmode -halt-on-error -output-directory "$work" "$src" >>/tmp/xelatex.log
-            mkdir -p "$(dirname "$out_pdf")"
-            cp "$work/$(basename "${src%.tex}.pdf")" "$out_pdf"
+            cp "$work/$name.pdf" "$out_pdf"
             rm -rf "$work"
-          }
+          done < <(find course_materials -type f -path "*/solutions/source/*.tex" -print0 | sort -z)
 
-          build_one "course_materials/现代控制理论/solutions/source/第二周作业_标准解答.tex" "course_materials/现代控制理论/solutions/第二周作业_标准解答.pdf"
-          build_one "course_materials/过程控制工程/solutions/source/第二周作业_标准解答.tex" "course_materials/过程控制工程/solutions/第二周作业_标准解答.pdf"
-          build_one "course_materials/人工智能与机器学习/solutions/source/线性模型作业_标准解答.tex" "course_materials/人工智能与机器学习/solutions/线性模型作业_标准解答.pdf"
+          if [ "$found" -eq 0 ]; then
+            echo "No solution source files found."
+          fi
 
       - name: Commit generated PDFs
         shell: bash
