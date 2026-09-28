@@ -1,0 +1,42 @@
+name: Extract Modern Control Week3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/modern-week3-extract-trigger"
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+      - name: Extract and render
+        shell: bash
+        run: |
+          set -euo pipefail
+          src="course_materials/现代控制理论/homework/1192488/秋第三周作业.pdf"
+          mkdir -p data/modern_week3_pages
+          pdftotext -layout "$src" data/modern_week3_extracted.txt
+          rm -f data/modern_week3_pages/*.png
+          pdftoppm -png -r 180 "$src" data/modern_week3_pages/page
+          wc -l data/modern_week3_extracted.txt
+          ls -lh data/modern_week3_pages
+      - name: Commit extraction
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/modern_week3_extracted.txt data/modern_week3_pages
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "chore: extract modern-control week3 homework"
+          git pull --rebase origin main
+          git push origin HEAD:main
