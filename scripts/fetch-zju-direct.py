@@ -440,6 +440,19 @@ def fetch_reliable_homework_todos(s: requests.Session):
         if isinstance(course, dict) and course.get("id") is not None:
             unique_courses[course["id"]] = course
 
+    # Some short/irregular courses are omitted by the active-semester query even
+    # though their homework is published. Keep a tiny explicit watch list for
+    # courses the planner actively tracks.
+    watched_courses = {
+        100211: {
+            "id": 100211,
+            "name": "现代控制理论",
+            "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
+        },
+    }
+    for cid, meta in watched_courses.items():
+        unique_courses.setdefault(cid, meta)
+
     now = datetime.now(timezone.utc)
 
     for course in unique_courses.values():
