@@ -33,3 +33,11 @@ Updated: 2026-09-27
 ## Holiday intensity
 - Holiday days can be more study-heavy than the previous draft.
 - Still keep the protected meal/recovery time and the unscheduled English hour.
+
+## 2026-09-28 to 2026-09-30 constraints
+- 2026-09-28 21:00-22:30: fixed group meeting; no work after 22:30.
+- 2026-09-28 Mao Zedong Thought / Theory course is skipped; its 13:25-15:50 slot is available for planned work.
+- 2026-09-29 Modern Control Theory class at 16:15-17:50 is skipped this week.
+- Every Modern Control Theory class actually attended should receive a **1.5-hour post-class review/understanding block**.
+- Big Data Analytics class time may be repurposed to investigate the major project because the remaining course priority is the major assignment.
+- For the next three days, useful research reading may be scheduled when it directly supports MARL or the Big Data major-project direction.
