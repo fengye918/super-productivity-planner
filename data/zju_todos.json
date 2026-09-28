@@ -70,7 +70,8 @@
         {
           "upload_id": 21730979,
           "name": "作业2(2).ppt",
-          "error": "ReadTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Read timed out. (read timeout=60)"
+          "repo_path": "course_materials/过程控制工程/homework/1190908/作业2(2).ppt",
+          "bytes": 295424
         }
       ],
       "detail_fetch_error": null,
