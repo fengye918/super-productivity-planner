@@ -70,8 +70,7 @@
         {
           "upload_id": 21730979,
           "name": "作业2(2).ppt",
-          "repo_path": "course_materials/过程控制工程/homework/1190908/作业2(2).ppt",
-          "bytes": 295424
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/49ffba6f122f4ccfbe46b2ec9e81d4386f76bc44?timestamp=1790708400&nonce=b6187a0fbc4f42c0ba8bac0570037ede&token=10e2333389ce924f55aad9fd77603001&name=%E4%BD%9C%E4%B8%9A2%282%29.ppt (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7fbb8cba2660>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60)'))"
         }
       ],
       "detail_fetch_error": null,
