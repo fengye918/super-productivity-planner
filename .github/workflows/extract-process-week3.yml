@@ -1,0 +1,43 @@
+name: Extract Process Control Week3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/process-week3-extract-trigger"
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libreoffice-impress poppler-utils
+      - name: Extract and render
+        shell: bash
+        run: |
+          set -euo pipefail
+          src="course_materials/过程控制工程/homework/1193679/作业3(2).pptx"
+          mkdir -p data/process_week3_pages /tmp/process_week3
+          libreoffice --headless --convert-to pdf --outdir /tmp/process_week3 "$src"
+          pdf="$(find /tmp/process_week3 -maxdepth 1 -name '*.pdf' | head -n 1)"
+          pdftotext -layout "$pdf" data/process_week3_extracted.txt
+          rm -f data/process_week3_pages/*.png
+          pdftoppm -png -r 170 "$pdf" data/process_week3_pages/page
+          ls -lh data/process_week3_pages
+      - name: Commit extraction
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/process_week3_extracted.txt data/process_week3_pages
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "chore: extract process-control week3 homework"
+          git pull --rebase origin main
+          git push origin HEAD:main
