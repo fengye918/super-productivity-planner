@@ -208,4 +208,80 @@ ACTION:DISPLAY
 DESCRIPTION:开始 MARL baseline
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261001T031500Z
+DTSTAMP:20261001T031500Z
+DTSTART;TZID=Asia/Shanghai:20261003T093000
+DTEND;TZID=Asia/Shanghai:20261003T110000
+LAST-MODIFIED:20261001T031500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[过控小测] 概念与控制方向复习
+DESCRIPTION:第一轮只做概念和判断逻辑：串级控制结构、气开/气关阀安全选择、控制器正反作用、选择/超驰控制、积分饱和与防积分饱和、分程控制。要求每个方向判断都写出因果链，不背结论。参考：course_materials/过程控制工程/solutions/小测题型分析与标准答案.pdf
+CATEGORIES:Course,ProcessControl,Quiz,Review
+TRANSP:OPAQUE
+UID:planner-20261003-0930-process-quiz-concepts@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始过控小测概念复习
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261001T031500Z
+DTSTAMP:20261001T031500Z
+DTSTART;TZID=Asia/Shanghai:20261004T143000
+DTEND;TZID=Asia/Shanghai:20261004T170000
+LAST-MODIFIED:20261001T031500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[过程控制] 第三周作业
+DESCRIPTION:完成管式换热器开环阶跃辨识与 PID 整定作业。流程：先独立辨识 K、T、tau，再完成 ZN 和 Lambda 整定；最后用标准解答核对。标准解答：course_materials/过程控制工程/solutions/第三周作业_标准解答.pdf。若无明显问题，建议本次直接提交，不拖到截止前。
+CATEGORIES:Course,ProcessControl,Homework
+TRANSP:OPAQUE
+UID:planner-20261004-1430-process-hw3@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始过程控制第三周作业
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261001T031500Z
+DTSTAMP:20261001T031500Z
+DTSTART;TZID=Asia/Shanghai:20261007T093000
+DTEND;TZID=Asia/Shanghai:20261007T110000
+LAST-MODIFIED:20261001T031500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[过控小测] 历年小测闭卷训练
+DESCRIPTION:使用 2024/2025 小测资料闭卷限时做题，不边做边看答案。重点记录三类问题：不会、做错、做慢。优先覆盖：串级控制+方向判断、阶跃辨识+ZN/Lambda、选择/超驰、防积分饱和、分程控制。完成后只标错因，不立刻展开大段复习。
+CATEGORIES:Course,ProcessControl,Quiz,Practice
+TRANSP:OPAQUE
+UID:planner-20261007-0930-process-quiz-paper@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始过控历年小测闭卷训练
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261001T031500Z
+DTSTAMP:20261001T031500Z
+DTSTART;TZID=Asia/Shanghai:20261009T190000
+DTEND;TZID=Asia/Shanghai:20261009T200000
+LAST-MODIFIED:20261001T031500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[过控小测] 错题修补 + 一页速查表
+DESCRIPTION:只处理 10/7 暴露的问题：方向判断链、选择器逻辑、28.3%/63.2% 两点辨识、ZN/Lambda 公式与单位。最后压成一页考前速查表：高频结构、标准判断步骤、易错点、关键公式。参考：course_materials/过程控制工程/solutions/小测题型分析与标准答案.pdf
+CATEGORIES:Course,ProcessControl,Quiz,Review
+TRANSP:OPAQUE
+UID:planner-20261009-1900-process-quiz-repair@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始过控小测错题修补
+END:VALARM
+END:VEVENT
 END:VCALENDAR
