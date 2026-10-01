@@ -67,3 +67,12 @@ Updated: 2026-09-27
   2. timed past-paper / previous-question practice;
   3. error repair and compact recall sheet before class.
 - The Process Control third-week homework can double as applied review, but its homework budget remains separate from dedicated quiz review.
+
+## 2026-10-01 override
+- **2026-10-01 and 2026-10-02 are protected relaxation days.** Do not schedule study/research blocks on these two days unless the user later overrides this.
+- 现代控制理论第一次实验（PID校正）has already been completed. Do not schedule preparation or execution for it again.
+- 过程控制工程第三周作业 remains due **2026-10-09 23:59 Asia/Shanghai**.
+- The next Process Control Engineering class is **2026-10-10 10:00-12:25** and will include a quiz.
+- The user supplied a 2024/2025 quiz PDF; use it as the primary source for quiz-pattern review.
+- Preferred quiz flow: concept + direction-chain review -> timed past-quiz practice -> error repair + one-page recall sheet.
+- Keep the Process Control third-week homework solution and quiz-type analysis/standard-answer PDF in the course solution archive.
