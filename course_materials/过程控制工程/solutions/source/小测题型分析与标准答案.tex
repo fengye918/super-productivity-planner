@@ -1,0 +1,187 @@
+\documentclass[UTF8,a4paper,10.5pt]{ctexart}
+\usepackage{amsmath,amssymb,bm,geometry,fancyhdr,booktabs,array,enumitem}
+\geometry{left=21mm,right=21mm,top=20mm,bottom=21mm}
+\pagestyle{fancy}\fancyhf{}
+\lhead{过程控制工程·小测题型分析与标准答案框架}
+\rhead{基于 2024/2025 小测}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.28em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 过程控制工程·小测题型分析与标准答案框架}\\[4pt]
+{\large 基于所给 2024/2025 小测资料}
+\end{center}
+
+\section*{0. 本次应优先复习什么}
+资料中的“第一次小测 2024\&2025”集中考察：
+\begin{enumerate}[leftmargin=2em,itemsep=2pt]
+\item 串级控制方块图与信号方向；
+\item 气开/气关阀的安全选择；
+\item 控制器正、反作用判断；
+\item 阶跃响应的 $28.3\%$--$63.2\%$ 两点辨识；
+\item 用 ZN / Lambda 进行离线 PID 整定。
+\end{enumerate}
+因此若下一次课的小测对应当前进度，以上五类应作为第一优先级。资料后半部分第二次小测还出现比值/交叉限幅、选择控制、抗积分饱和和分程控制，可作为第二层准备。
+
+\section*{1. 第一次小测代表题：串级温度-流量控制}
+反应器温度 $T$ 为主变量，冷却水流量 $F_w$ 为副变量；外环 TC21 给内环 FC31 的设定值 $F_{sp}$。
+
+\subsection*{1.1 方块图标准写法}
+\[
+T_{sp}\rightarrow \boxed{TC21}\rightarrow F_{sp}
+\rightarrow \boxed{FC31}\rightarrow u
+\rightarrow \boxed{冷却水阀}\rightarrow F_w
+\rightarrow \boxed{反应器}\rightarrow T.
+\]
+内环流量测量 $FT31$ 负反馈到 FC31；温度测量 $TT21$ 负反馈到 TC21。答题时必须把每个方块的输入、输出变量名标清。
+
+\subsection*{1.2 阀门气开/气关}
+这是放热反应器冷却回路。失气/失信号时，希望冷却水保持大流量以降低过热风险，所以应使阀门故障开，即课程术语中的\textbf{气关阀}。
+
+\subsection*{1.3 控制器正反作用}
+\textbf{FC31：正作用。}
+气关阀满足
+\[
+u\uparrow\Rightarrow \text{阀开度}\downarrow\Rightarrow F_w\downarrow.
+\]
+若 $F_w$ 偏高，应令 $u$ 增大关小阀，因此 $F_w\uparrow\Rightarrow u\uparrow$。
+
+\textbf{TC21：正作用。}
+外环满足
+\[
+F_{sp}\uparrow\Rightarrow F_w\uparrow\Rightarrow T\downarrow.
+\]
+若 $T$ 偏高，应增大 $F_{sp}$ 加强冷却，因此 $T\uparrow\Rightarrow F_{sp}\uparrow$。
+
+\paragraph{考场模板}
+先写“控制器输出增大后，阀门/操纵量怎么变”，一路推到被控量；再从被控量偏差反推控制器输出应该往哪边动。
+
+\subsection*{1.4 阶跃辨识：28.3\%--63.2\% 两点法}
+资料中的阶跃为 $F_{sp}:18\rightarrow14\,\mathrm{T/hr}$，温度约由 $70^\circ\mathrm C$ 上升到 $80^\circ\mathrm C$，阶跃发生在 $t_0=10\,\mathrm{min}$。量程归一化后
+\[
+K=\frac{(80-70)/200}{(14-18)/40}=-0.5.
+\]
+特征输出
+\[
+y_{28.3\%}=72.83,\qquad y_{63.2\%}=76.32.
+\]
+由图读得近似
+\[
+t_{28.3\%}\approx15.5\,\mathrm{min},\qquad
+t_{63.2\%}\approx19.0\,\mathrm{min}.
+\]
+于是
+\[
+T=1.5(t_{63.2\%}-t_{28.3\%})=5.25\,\mathrm{min},
+\]
+\[
+\tau=t_{63.2\%}-T-t_0=3.75\,\mathrm{min},
+\]
+从而
+\[
+G(s)\approx\frac{-0.5e^{-3.75s}}{5.25s+1}.
+\]
+
+\subsection*{1.5 ZN / Lambda 整定模板}
+资料手写答案采用
+\[
+K_c=\frac{1}{K}\frac{T}{\tau},\qquad T_i=2\tau,\qquad T_d=\frac{\tau}{2},
+\]
+所以 ZN 参数为
+\[
+K_c=-2.80,\qquad T_i=7.50\,\mathrm{min},\qquad T_d=1.875\,\mathrm{min}.
+\]
+若已单独说明正作用，也可把 $|K_c|=2.80$ 作为增益大小，并说明符号由作用方向实现。
+
+Lambda 的关键不是背最终数字，而是先写课程给定的 $\lambda$ 选择规则，再代入
+\[
+K_c=\frac{1}{K}\frac{T}{\tau+\lambda},\qquad T_i=T,\qquad T_d=\frac{\tau}{2}.
+\]
+
+\section*{2. 高频题型二：比值控制 + 交叉限幅}
+锅炉空气/燃料质量比要求 $R_A/R_F=18:1$，量程分别为燃料 $0$--$5\,\mathrm{T/hr}$、空气 $0$--$100\,\mathrm{T/hr}$，仪表信号均归一化为 $0$--$100\%$。乘法系数
+\[
+\boxed{K_{FA}=\frac{R_F}{R_A}\frac{R_{A,\max}}{R_{F,\max}}
+=\frac{1}{18}\frac{100}{5}=\frac{10}{9}}.
+\]
+LS 取较小值给燃料设定值，HS 取较大值给空气设定值，本质是交叉限幅：
+\begin{itemize}[leftmargin=2em]
+\item 负荷增加时空气先增加，确认空气已跟上后燃料再增加；
+\item 负荷减小时燃料先减少，空气随后下降；
+\item 目的：避免瞬间燃料过量形成富燃料危险工况。
+\end{itemize}
+资料中 PC22 标为\textbf{反作用}。
+
+\section*{3. 高频题型三：选择/超驰控制 + 防积分饱和}
+2024 的精馏塔约束控制与 2025 的氨冷却器液位超限，本质都是“正常控制目标 + 安全约束目标共用一个执行器”。
+
+\subsection*{3.1 选择器}
+以 2025 氨冷却器为例：TC31 调液氨维持出口温度；液位高时必须减少液氨。气开阀满足
+\[
+u\downarrow\Rightarrow \text{阀开度}\downarrow\Rightarrow R_a\downarrow.
+\]
+因此高液位保护在危险时应给出更小信号，TC31 与高液位 LC 输出进入\textbf{低选器 LS}。
+
+\subsection*{3.2 作用方向}
+\textbf{TC31 正作用：}
+\[
+T\uparrow\Rightarrow \text{需要更多液氨}\Rightarrow u_T\uparrow.
+\]
+\textbf{高液位 LC 反作用：}
+\[
+L\uparrow\Rightarrow \text{必须减少液氨}\Rightarrow u_L\downarrow.
+\]
+于是
+\[
+u=\min(u_T,u_L).
+\]
+
+\subsection*{3.3 防积分饱和}
+未被选择器选中的 PI 控制器虽然不能操纵阀门，积分器仍可能继续累积误差。标准措施为\textbf{外部复位/跟踪或 back-calculation}：把选择器后的实际控制信号反馈到两个控制器的积分/跟踪通道，使未选中的控制器内部输出跟踪真实执行器命令，实现近似无扰切换。
+
+\subsection*{3.4 异常过程描述}
+入口温度突然升高：
+\begin{enumerate}[leftmargin=2em,itemsep=1pt]
+\item $T$ 上升，TC31 输出增大，液氨阀开大；
+\item 液氨流量增加使液位逐渐升高；
+\item 液位接近上限时，高液位控制器输出降低；
+\item 一旦 $u_L<u_T$，LS 切换到液位约束信号，阀门被关小；
+\item 温度可暂时偏离；液位恢复后平滑切回温度控制。
+\end{enumerate}
+
+\section*{4. 高频题型四：分程控制}
+2025 油罐氮封题中，A 为氮气进气\textbf{气开阀}，B 为排空\textbf{气关阀}。压力低时开 A 补氮，压力高时开 B 排气，正常压力附近两阀关闭。令压力控制器输出 $u\in[0,100]\%$：
+\[
+u_1=\begin{cases}
+0,&0\le u\le50,\\
+2(u-50),&50<u\le100,
+\end{cases}
+\]
+其中 $u_1$ 作用于 A；
+\[
+u_2=\begin{cases}
+2u,&0\le u<50,\\
+100,&50\le u\le100,
+\end{cases}
+\]
+其中 $u_2$ 作用于 B。
+因此压力控制器应为\textbf{反作用}：
+\[
+P\uparrow\Rightarrow u\downarrow.
+\]
+环境温度突然下降时，气相收缩使 $P\downarrow$，PC 输出 $u\uparrow$，A 阀逐渐开启补氮，压力恢复后再关小。
+
+\section*{5. 小测真正要练的答题动作}
+\begin{enumerate}[leftmargin=2em,itemsep=3pt]
+\item \textbf{方块图：}变量名写全，反馈线不要漏；
+\item \textbf{正反作用：}必须写一条方向链；
+\item \textbf{选择器：}先问危险时阀门该开大还是关小，再决定 HS/LS；
+\item \textbf{积分饱和：}想到未选控制器的积分器是否仍在累积；
+\item \textbf{辨识：}先算 $K$，再算 $28.3\%$、$63.2\%$ 特征值和时刻，最后得 $T,\tau$；
+\item \textbf{整定：}公式、代数、单位、作用方向四项都写。
+\end{enumerate}
+
+\paragraph{建议临考顺序}
+概念与方向链 $\rightarrow$ 选择/分程逻辑 $\rightarrow$ 一道完整阶跃辨识与整定 $\rightarrow$ 闭卷做历年小测 $\rightarrow$ 只修错题与易错方向。
+\end{document}
