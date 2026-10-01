@@ -53,3 +53,17 @@ Updated: 2026-09-27
   - a personal **intelligent voice / voice assistant** idea;
   - **network-layer / networking** learning.
 - These are lower priority than current coursework and research deliverables, but are preferred uses of true spare time over filling the calendar with low-value busywork.
+
+## 2026-10-01 planning update
+- Latest 学在浙大 refresh confirms a new **过程控制工程｜第三周作业**, activity 1193679, due **2026-10-09 23:59 Asia/Shanghai**. Attachment: `course_materials/过程控制工程/homework/1193679/作业3(2).pptx`.
+- 现代控制理论 currently also has:
+  - 第三周作业, due **2026-10-19 23:59**;
+  - 第一次实验（固高实物实验1_PID校正）, API time converts to **2026-10-16 05:59 Asia/Shanghai**;
+  - 第二次实验（根轨迹校正）, API time converts to **2026-10-24 05:59**;
+  - 第三次实验（状态反馈）, 第四次实验（Matlab实验1）, 第五次实验（Matlab实验2）, API time converts to **2026-11-04 06:59**.
+- User states the **next Process Control Engineering class will include a quiz**. The next imported Process Control class is **2026-10-10 10:00-12:25**.
+- Quiz preparation should be split rather than crammed:
+  1. concept/systematic review;
+  2. timed past-paper / previous-question practice;
+  3. error repair and compact recall sheet before class.
+- The Process Control third-week homework can double as applied review, but its homework budget remains separate from dedicated quiz review.
