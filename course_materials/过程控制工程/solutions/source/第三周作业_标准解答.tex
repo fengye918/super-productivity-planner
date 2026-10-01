@@ -1,0 +1,136 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,bm,geometry,fancyhdr,booktabs,array}
+\geometry{left=22mm,right=22mm,top=22mm,bottom=22mm}
+\pagestyle{fancy}\fancyhf{}
+\lhead{过程控制工程·第三周作业标准解答}
+\rhead{PID 整定：ZN 与 Lambda}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 过程控制工程·第三周作业标准解答}\\[4pt]
+{\large 管式换热器开环阶跃试验与 PID 参数整定}
+\end{center}
+
+\section*{1. 已知数据与控制对象}
+蒸汽压力由 $18\,\mathrm{psig}$ 阶跃到 $20\,\mathrm{psig}$，故
+\[
+\Delta P_s=2\,\mathrm{psi}.
+\]
+温度变送器输出由约 $12.0\,\mathrm{mA}$ 上升到约 $17.0\,\mathrm{mA}$，故
+\[
+\Delta T_{2m}=5.0\,\mathrm{mA}.
+\]
+因此换热器与测量环节从蒸汽压力到温度测量信号的稳态增益为
+\[
+K_p=\frac{\Delta T_{2m}}{\Delta P_s}=\frac{5}{2}=2.5\;\mathrm{mA/psi}.
+\]
+给定
+\[
+K_{IP}=0.75\;\mathrm{psi/mA},\qquad K_v=0.9\;\mathrm{psi/psi},
+\]
+则从控制器输出到温度测量信号的总稳态增益为
+\[
+\boxed{K=K_{IP}K_vK_p=0.75\times0.9\times2.5=1.6875}.
+\]
+
+\section*{2. 由阶跃响应辨识一阶惯性纯滞后模型}
+采用课程小测中使用的 $28.3\%$--$63.2\%$ 两点法。初值与终值为
+\[
+y_0=12.0,\qquad y_\infty\approx17.0,\qquad \Delta y=5.0.
+\]
+因此
+\[
+y_{28.3\%}=12+0.283\times5=13.415\,\mathrm{mA},
+\]
+\[
+y_{63.2\%}=12+0.632\times5=15.160\,\mathrm{mA}.
+\]
+由表中线性插值得
+\[
+t_{28.3\%}\approx3+\frac{13.415-13.1}{14.0-13.1}=3.35\,\mathrm{min},
+\]
+\[
+t_{63.2\%}\approx5+\frac{15.160-14.8}{15.4-14.8}=5.60\,\mathrm{min}.
+\]
+按课程两点公式
+\[
+T=1.5\left(t_{63.2\%}-t_{28.3\%}\right)
+=1.5(5.60-3.35)=3.375\,\mathrm{min},
+\]
+\[
+\tau=t_{63.2\%}-T=5.60-3.375=2.225\,\mathrm{min}.
+\]
+故
+\[
+\boxed{G(s)=\frac{1.6875e^{-2.225s}}{3.375s+1}}.
+\]
+
+\section*{3. Ziegler--Nichols 法}
+按课程小测使用的 ZN 形式
+\[
+K_c=\frac{1}{K}\frac{T}{\tau},\qquad
+T_i=2\tau,\qquad
+T_d=0.5\tau.
+\]
+代入得
+\[
+K_c=0.899,\qquad
+T_i=4.450\,\mathrm{min},\qquad
+T_d=1.113\,\mathrm{min}.
+\]
+因此
+\[
+\boxed{K_c^{ZN}=0.899,\qquad T_i^{ZN}=4.45\,\mathrm{min},\qquad T_d^{ZN}=1.11\,\mathrm{min}}.
+\]
+若采用理想 PID
+\[
+G_c(s)=K_c\left(1+\frac{1}{T_i s}+T_d s\right),
+\]
+则
+\[
+\boxed{G_c^{ZN}(s)=0.899\left(1+\frac{1}{4.45s}+1.113s\right)}.
+\]
+
+\section*{4. Lambda 法}
+按课程小测给出的规则取
+\[
+\lambda=0.2T=0.675\,\mathrm{min}.
+\]
+整定公式为
+\[
+K_c=\frac{1}{K}\frac{T}{\tau+\lambda},\qquad
+T_i=T,\qquad
+T_d=\frac{\tau}{2}.
+\]
+故
+\[
+K_c=0.690,\qquad
+T_i=3.375\,\mathrm{min},\qquad
+T_d=1.113\,\mathrm{min}.
+\]
+因此
+\[
+\boxed{K_c^{\lambda}=0.690,\qquad T_i^{\lambda}=3.375\,\mathrm{min},\qquad T_d^{\lambda}=1.113\,\mathrm{min}}.
+\]
+相应控制器为
+\[
+\boxed{G_c^{\lambda}(s)=0.690\left(1+\frac{1}{3.375s}+1.113s\right)}.
+\]
+
+\section*{5. 汇总}
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+方法 & $K_c$ & $T_i$/min & $T_d$/min\\
+\midrule
+ZN & 0.899 & 4.45 & 1.11\\
+Lambda ($\lambda=0.2T$) & 0.690 & 3.375 & 1.11\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{说明}
+若课堂对 Lambda 参数 $\lambda$ 指定其他取值，保留已辨识的 $K,T,\tau$，重新代入 Lambda 公式即可。
+\end{document}
