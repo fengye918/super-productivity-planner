@@ -147,8 +147,7 @@
         {
           "upload_id": 17454815,
           "name": "秋第三周作业.pdf",
-          "repo_path": "course_materials/现代控制理论/homework/1192488/秋第三周作业.pdf",
-          "bytes": 138374
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/29e78bd358c3ebbc3bbef801de501c3bdeb0be08?timestamp=1791046800&nonce=00edc7a147ae476abd34cebcbd6e4252&token=047a3d53ed58113e3d0acb734fda6f82&name=%E7%A7%8B%E7%AC%AC%E4%B8%89%E5%91%A8%E4%BD%9C%E4%B8%9A.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f217a662b40>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60)'))"
         }
       ],
       "detail_fetch_error": null,
