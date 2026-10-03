@@ -57,3 +57,9 @@
   - **智能语音 / voice assistant project**
   - **网络层学习**
 - Interest blocks should stay optional and should preferably produce a small concrete result (prototype, note, experiment, or concept map) rather than passive browsing.
+
+## Modern Control Theory review
+- Every **Modern Control Theory class actually attended** should receive a separate **1.5-hour post-class review/understanding block**.
+- Do not merge that review block into homework time. Homework and post-class understanding are separate purposes.
+- Preferred review flow: closed-book knowledge skeleton -> check PPT/notes -> hand-derive key formulas -> 1 representative problem -> remaining-gap list.
+- If a Modern Control class is explicitly skipped/cancelled, do not create a post-class review block for that class.
