@@ -493,4 +493,61 @@ ACTION:DISPLAY
 DESCRIPTION:开始未来方向探索
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261003T023500Z
+DTSTAMP:20261003T023500Z
+DTSTART;TZID=Asia/Shanghai:20261003T111500
+DTEND;TZID=Asia/Shanghai:20261003T121500
+LAST-MODIFIED:20261003T023500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[兴趣学习] 瓦力语音系统：整体链路入门
+DESCRIPTION:先补系统认知，不急着买更多硬件/写大工程。围绕 ReSpeaker/XVF3000/Orin 梳理：麦克风阵列→AEC/波束形成/降噪→VAD→ASR→意图/LLM→TTS→扬声器。目标：弄懂 AEC、VAD、ASR、TTS 各自解决什么问题，并画一张“瓦力语音系统 V0”架构图，记录仍不懂的术语与下一步最小实验。
+CATEGORIES:Personal,Interest,Voice,Robotics
+TRANSP:OPAQUE
+UID:planner-20261003-1115-wall-e-voice@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始瓦力语音系统学习
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261003T023500Z
+DTSTAMP:20261003T023500Z
+DTSTART;TZID=Asia/Shanghai:20261004T204500
+DTEND;TZID=Asia/Shanghai:20261004T221500
+LAST-MODIFIED:20261003T023500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] Zero-shot 语义故障诊断文献地图
+DESCRIPTION:只做前期设计，不急着堆模型。重点看三条路线：1) FDAT：Fault Description Based Attribute Transfer for Zero-Sample Industrial Fault Diagnosis https://ieeexplore.ieee.org/document/9072621 ；2) DSECMR-VAE：工业过程 generalized zero-shot + 语义属性对齐 https://www.sciencedirect.com/science/article/pii/S0957582023006869 ；3) S2S-FDD：工业时序→自然语言语义→可解释 zero-shot 诊断 https://arxiv.org/abs/2603.08048 。输出一页对照：数据是什么、语义怎么构造、seen/unseen 怎么分、映射怎么做、哪些部分适合两周课程项目。
+CATEGORIES:Course,BigData,Project,Reading
+TRANSP:OPAQUE
+UID:planner-20261004-2045-bigdata-literature@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始大数据大作业文献调研
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261003T023500Z
+DTSTAMP:20261003T023500Z
+DTSTART;TZID=Asia/Shanghai:20261006T193000
+DTEND;TZID=Asia/Shanghai:20261006T220000
+LAST-MODIFIED:20261003T023500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 项目框架 + 数据可行性验证
+DESCRIPTION:把文献转成自己的两周课程项目。优先候选：工业时序“动态语义原语”驱动的 zero-shot fault diagnosis。产出必须包含：候选数据集；预处理/窗口化；seen/unseen split；故障语义来源（上升/下降/突变/振荡/变量关联等 + 文本描述）；监督 baseline；简单 zero-shot semantic baseline；评价指标；第一项可证伪实验。目标是决定“做不做得成”，而不是当天开始训练复杂 VAE/GAN/LLM。
+CATEGORIES:Course,BigData,Project,Design
+TRANSP:OPAQUE
+UID:planner-20261006-1930-bigdata-framing@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始大数据大作业框架设计
+END:VALARM
+END:VEVENT
 END:VCALENDAR
