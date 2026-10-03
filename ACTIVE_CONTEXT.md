@@ -76,3 +76,17 @@ Updated: 2026-09-27
 - The user supplied a 2024/2025 quiz PDF; use it as the primary source for quiz-pattern review.
 - Preferred quiz flow: concept + direction-chain review -> timed past-quiz practice -> error repair + one-page recall sheet.
 - Keep the Process Control third-week homework solution and quiz-type analysis/standard-answer PDF in the course solution archive.
+
+## 2026-10-03 big-data and interest update
+- 2026-10-03 to 2026-10-07 is intentionally a fuller work block after the protected Oct 1-2 rest days.
+- Big Data major-project exploration now has two concrete blocks:
+  - **2026-10-04 20:45-22:15** literature map;
+  - **2026-10-06 19:30-22:00** project framing + data feasibility.
+- Current candidate direction: industrial time-series **dynamic semantic primitives + zero-shot fault diagnosis**.
+- Useful references for project framing:
+  - Fault Description Based Attribute Transfer for Zero-Sample Industrial Fault Diagnosis (FDAT);
+  - DSECMR-VAE for generalized zero-shot industrial process diagnosis;
+  - S2S-FDD for converting industrial time series into natural-language semantics and explainable zero-shot diagnosis;
+  - hybrid semantic attribute ZSL under unknown working conditions as an optional comparison.
+- Keep the course project simpler than these papers: prefer a supervised baseline + a simple semantic zero-shot baseline + one testable extension, rather than reproducing a large VAE/GAN/LLM stack.
+- Personal-interest block added: **2026-10-03 11:15-12:15**, WALL-E voice-system architecture learning (audio front-end -> VAD -> ASR -> intent/LLM -> TTS).
