@@ -107,3 +107,19 @@ Updated: 2026-09-27
   - 2026-10-08 19:00-20:10: mock quiz 01 closed-book;
   - 2026-10-08 20:20-21:00: answer check + error classification;
   - 2026-10-09: final error repair + one-page recall sheet.
+
+## 2026-10-04 status update
+- User reports **all 2026-10-03 planned tasks were not completed on time**.
+- By 2026-10-04 12:22, user has already completed:
+  - Modern Control review/understanding;
+  - Process Control quiz concept review.
+  These should **not** be scheduled again.
+- Missed 10/03 Qizhen work is folded into the **2026-10-05 evening** Qizhen end-to-end block.
+- Missed 10/03 WALL-E voice learning is moved to **2026-10-04 19:30-20:30**.
+- Missed 10/04 morning MARL block is moved into an extended **2026-10-05 08:30-12:00** block.
+- A new Process Control **First Quiz Mock A** and its standard answer have been generated from the 2024/2025 first-quiz structure.
+- Mock practice schedule:
+  - **2026-10-08 19:00-20:00** closed-book Mock A;
+  - **2026-10-08 20:10-20:50** answer check + error classification;
+  - errors feed into the existing **2026-10-09 19:00-20:00** final repair/recall-sheet block.
+- Modern Control class on **2026-10-10 08:00-09:35** receives a separate **19:00-20:30** review block.
