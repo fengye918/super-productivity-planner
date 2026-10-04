@@ -1,0 +1,218 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,bm,geometry,fancyhdr,tikz,xcolor,array,booktabs,enumitem}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+\geometry{left=21mm,right=21mm,top=19mm,bottom=20mm}
+\definecolor{navy}{RGB}{35,63,112}
+\definecolor{soft}{RGB}{242,245,249}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\color{navy}\bfseries 过程控制工程·第一次小测模拟卷 A}
+\rhead{标准答案}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.32em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 过程控制工程·第一次小测模拟卷 A·标准答案}\\[4pt]
+{\large 标准解题流程与得分点}
+\end{center}
+\noindent\colorbox{soft}{\parbox{0.94\linewidth}{\textbf{核心原则：}本题不是考“背正反作用结论”，而是考能否从执行器特性和过程物理方向推回控制器动作；动态部分按课程的量程归一化与 $28.3\%$--$63.2\%$ 两点法作答。}}
+
+\section*{(1) 串级控制方块图（20 分）}
+标准结构为
+\[
+T_{sp}\rightarrow \boxed{TC21}\rightarrow F_{sp}
+\rightarrow \boxed{FC31}\rightarrow u
+\rightarrow \boxed{蒸汽阀/流量通道}\rightarrow F_s
+\rightarrow \boxed{加热过程}\rightarrow T.
+\]
+温度测量支路：
+\[
+T\rightarrow \boxed{TT21}\rightarrow T_m\rightarrow TC21
+\]
+构成主回路负反馈；流量测量支路：
+\[
+F_s\rightarrow \boxed{FT31}\rightarrow F_m\rightarrow FC31
+\]
+构成副回路负反馈。
+
+\paragraph{得分点}
+主回路与副回路层次正确；$F_{sp}$ 是 TC21 输出、FC31 设定值；$u$ 是 FC31 输出；两条测量反馈线不能漏。
+
+\section*{(2) 蒸汽阀选择（15 分）}
+应选\textbf{气开阀（air-to-open，失气关）}。
+
+理由：这是加热过程。仪表气源或控制信号故障时，若蒸汽阀继续打开，存在物料过热风险。安全状态应使蒸汽切断，因此阀门应在失气时关闭，即选气开阀。
+
+\[
+\boxed{\text{蒸汽阀：气开阀，故障时关断蒸汽}}
+\]
+
+\section*{(3) TC21、FC31 的正反作用（20 分）}
+\subsection*{FC31}
+气开阀满足
+\[
+u\uparrow\Rightarrow \text{阀开度}\uparrow\Rightarrow F_s\uparrow.
+\]
+若测得 $F_s$ 偏高，为恢复设定值，控制器必须使输出 $u$ 降低：
+\[
+F_m\uparrow\Rightarrow u\downarrow.
+\]
+故 FC31 为\textbf{反作用}。
+\[
+\boxed{FC31：反作用}
+\]
+
+\subsection*{TC21}
+外环过程方向为
+\[
+F_{sp}\uparrow\Rightarrow F_s\uparrow\Rightarrow T\uparrow.
+\]
+若 $T_m$ 偏高，为使温度下降，应减小蒸汽流量设定值：
+\[
+T_m\uparrow\Rightarrow F_{sp}\downarrow.
+\]
+故 TC21 也为\textbf{反作用}。
+\[
+\boxed{TC21：反作用}
+\]
+
+\paragraph{考场标准写法}
+不要只写“正/反作用”。至少写一条“输出 $\rightarrow$ 阀门/流量 $\rightarrow$ 被控量”的方向链，再反推 PV 偏高时控制器输出该如何变化。
+
+\section*{(4) 广义对象辨识（20 分）}
+\subsection*{1. 输入与输出}
+TC21 所对应广义对象的输入为
+\[
+\boxed{F_{sp}}
+\]
+输出为温度测量信号（或等价写被控温度）
+\[
+\boxed{T_m\;(T)}.
+\]
+
+\subsection*{2. 稳态增益 $K$}
+温度变化：
+\[
+\Delta T=75-60=15^{\circ}\mathrm C,
+\]
+量程为 $0\sim150^{\circ}\mathrm C$，归一化输出变化为
+\[
+\Delta y=\frac{15}{150}=0.10.
+\]
+蒸汽流量设定值变化：
+\[
+\Delta F_{sp}=15-12=3\,\mathrm{t/h},
+\]
+量程为 $0\sim30\,\mathrm{t/h}$，归一化输入变化为
+\[
+\Delta u=\frac{3}{30}=0.10.
+\]
+故
+\[
+\boxed{K=\frac{\Delta y}{\Delta u}=1.0}.
+\]
+
+\subsection*{3. $28.3\%$--$63.2\%$ 两点法}
+初值 $y_0=60$，终值 $y_\infty=75$，总变化量 $\Delta y_T=15$。
+\[
+y_{28.3\%}=60+0.283\times15=64.245^{\circ}\mathrm C,
+\]
+\[
+y_{63.2\%}=60+0.632\times15=69.48^{\circ}\mathrm C.
+\]
+由图读得
+\[
+t_{28.3\%}\approx8.0\,\mathrm{min},\qquad
+t_{63.2\%}\approx12.0\,\mathrm{min}.
+\]
+课程两点公式：
+\[
+T=1.5\left(t_{63.2\%}-t_{28.3\%}\right)
+=1.5(12-8)=6.0\,\mathrm{min}.
+\]
+阶跃发生在 $t_0=5\,\mathrm{min}$，故纯滞后
+\[
+\tau=t_{63.2\%}-T-t_0=12-6-5=1.0\,\mathrm{min}.
+\]
+因此一阶惯性纯滞后模型为
+\[
+\boxed{G(s)=\frac{e^{-s}}{6s+1}}.
+\]
+若从图读数有小误差，$T\approx6\,\mathrm{min}$、$\tau\approx1\,\mathrm{min}$ 即可。
+
+\section*{(5) PID 离线整定（25 分）}
+辨识参数：
+\[
+K=1,\qquad T=6\,\mathrm{min},\qquad \tau=1\,\mathrm{min}.
+\]
+
+\subsection*{a) Ziegler--Nichols 反应曲线法}
+按课程使用的整定形式
+\[
+K_c=\frac{1}{K}\frac{T}{\tau},\qquad
+T_i=2\tau,\qquad
+T_d=\frac{\tau}{2}.
+\]
+代入：
+\[
+K_c=\frac{1}{1}\frac{6}{1}=6,
+\]
+\[
+T_i=2\times1=2\,\mathrm{min},\qquad
+T_d=0.5\times1=0.5\,\mathrm{min}.
+\]
+所以
+\[
+\boxed{K_c^{ZN}=6,\quad T_i^{ZN}=2\,\mathrm{min},\quad T_d^{ZN}=0.5\,\mathrm{min}}.
+\]
+TC21 已判断为反作用；在常用误差 $e=T_{sp}-T_m$ 定义下，$K_c>0$ 即实现上述反作用。
+
+\subsection*{b) Lambda 法}
+题目给定
+\[
+\lambda=0.2\tau=0.2\,\mathrm{min}.
+\]
+按课程使用的形式
+\[
+K_c=\frac{1}{K}\frac{T}{\tau+\lambda},\qquad
+T_i=T,\qquad
+T_d=\frac{\tau}{2}.
+\]
+故
+\[
+K_c=\frac{6}{1+0.2}=5,
+\]
+\[
+T_i=6\,\mathrm{min},\qquad T_d=0.5\,\mathrm{min}.
+\]
+所以
+\[
+\boxed{K_c^{\lambda}=5,\quad T_i^{\lambda}=6\,\mathrm{min},\quad T_d^{\lambda}=0.5\,\mathrm{min}}.
+\]
+
+\section*{最终答案速查}
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{>{\bfseries}p{35mm}p{105mm}}
+\toprule
+项目 & 标准结论 \\
+\midrule
+阀门 & 气开阀（失气关，防止持续加热） \\
+FC31 & 反作用 \\
+TC21 & 反作用 \\
+广义对象 & 输入 $F_{sp}$，输出 $T_m$；$K=1$，$T\approx6$ min，$\tau\approx1$ min \\
+ZN-PID & $K_c=6,\;T_i=2$ min，$T_d=0.5$ min \\
+Lambda-PID & $\lambda=0.2$ min；$K_c=5,\;T_i=6$ min，$T_d=0.5$ min \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{最容易丢分的 5 个点}
+\begin{enumerate}[leftmargin=2em,itemsep=2pt]
+\item 不按变送器量程归一化，直接用 $15/3$ 算 $K$；
+\item 把气开/气关按“正常运行时开还是关”理解，而不是按失气安全状态判断；
+\item 正反作用只写结论，不写方向链；
+\item 求纯滞后时忘记减去阶跃发生时刻 $t_0$；
+\item ZN 与 Lambda 的 $T_i$ 规则混用，或者忘记写单位。
+\end{enumerate}
+\end{document}
