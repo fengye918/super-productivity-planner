@@ -3545,12 +3545,12 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261004T034500Z
 DTSTAMP:20261004T034500Z
-DTSTART;TZID=Asia/Shanghai:20261005T093000
+DTSTART;TZID=Asia/Shanghai:20261005T083000
 DTEND;TZID=Asia/Shanghai:20261005T120000
 LAST-MODIFIED:20261004T034500Z
 SEQUENCE:1
-SUMMARY;LANGUAGE=zh-cn:[MARL] Docking 环境完善 + baseline 接通
-DESCRIPTION:补回 10/4 未完成的 MARL 块。先把 target geometry、observation/action、e_p/e_R、termination、metrics 与 reset→termination sanity check 跑通；若环境稳定，再接上 Hungarian + SE(3) non-learning baseline。输出：可重复运行环境 + baseline 首次完整跑通结果。
+SUMMARY;LANGUAGE=zh-cn:[MARL] Docking 环境补回 + baseline 接通
+DESCRIPTION:补回 10/4 上午未完成的 MARL。08:30-10:30 先把 target geometry、observation/action、e_p/e_R、termination、metrics 与 reset→termination sanity check 跑通；10:30-12:00 再接 Hungarian + SE(3) non-learning baseline。输出：可重复运行环境 + baseline 首次完整跑通结果。
 CATEGORIES:Research,MARL,Implementation,Baseline
 TRANSP:OPAQUE
 UID:planner-20261005-0930-marl-baseline2@chatgpt-planner
@@ -3736,11 +3736,11 @@ CLASS:PUBLIC
 CREATED:20261004T034500Z
 DTSTAMP:20261004T034500Z
 DTSTART;TZID=Asia/Shanghai:20261008T190000
-DTEND;TZID=Asia/Shanghai:20261008T201000
+DTEND;TZID=Asia/Shanghai:20261008T200000
 LAST-MODIFIED:20261004T034500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[过控小测] 模拟卷 01 闭卷
-DESCRIPTION:严格闭卷完成新生成的模拟卷，建议 60 分钟作答 + 10 分钟检查。题型只来自 2024/2025 第一次小测：串级控制、气开/气关、正反作用、28.3%/63.2% 两点辨识、ZN/Lambda PID 整定。试卷：course_materials/过程控制工程/solutions/小测模拟卷01.pdf
+SUMMARY;LANGUAGE=zh-cn:[过控小测] 模拟卷 A 限时
+DESCRIPTION:严格闭卷完成新生成的《第一次小测模拟卷 A》。45 分钟正式作答 + 15 分钟检查，不提前看答案。题型结构仿照你提供的 2024/2025 第一次小测：串级控制、气开/气关、正反作用、28.3%/63.2% 两点辨识、ZN/Lambda PID 整定。试卷：course_materials/过程控制工程/solutions/第一次小测_模拟卷A.pdf
 CATEGORIES:Course,ProcessControl,Quiz,Mock
 TRANSP:OPAQUE
 UID:planner-20261008-1900-process-mock01@chatgpt-planner
@@ -3754,14 +3754,33 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261004T034500Z
 DTSTAMP:20261004T034500Z
-DTSTART;TZID=Asia/Shanghai:20261008T202000
-DTEND;TZID=Asia/Shanghai:20261008T210000
+DTSTART;TZID=Asia/Shanghai:20261008T201000
+DTEND;TZID=Asia/Shanghai:20261008T205000
 LAST-MODIFIED:20261004T034500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[过控小测] 模拟卷 01 对答案与错因分类
-DESCRIPTION:对照标准答案，不重做整张卷。把错误分为：概念/方向链、方块图结构、量程归一化、K/T/tau 辨识、ZN/Lambda 公式与计算。将错因带到 10/9 的最终修补块。答案：course_materials/过程控制工程/solutions/小测模拟卷01_标准答案.pdf
+SUMMARY;LANGUAGE=zh-cn:[过控小测] 模拟卷 A 对答案 + 错因分类
+DESCRIPTION:对照《第一次小测模拟卷 A·标准答案》逐项评分，不重做整张卷。把错误归入：方块图结构、气开/气关与方向链、量程归一化、K/T/tau 辨识、ZN/Lambda 公式/计算。将错因带到 10/9 最终修补块。答案：course_materials/过程控制工程/solutions/第一次小测_模拟卷A_标准答案.pdf
 CATEGORIES:Course,ProcessControl,Quiz,Review
 TRANSP:OPAQUE
 UID:planner-20261008-2020-process-mock01-review@chatgpt-planner
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261004T044000Z
+DTSTAMP:20261004T044000Z
+DTSTART;TZID=Asia/Shanghai:20261010T190000
+DTEND;TZID=Asia/Shanghai:20261010T203000
+LAST-MODIFIED:20261004T044000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 10/10 课后复习理解
+DESCRIPTION:对应今天 08:00-09:35 实际上的现代控制理论课，单独安排 1.5 小时消化，不与作业混合。流程：闭卷知识骨架→核对 PPT/笔记→手推关键公式→1 道代表题→记录剩余疑点；以当天课堂真实内容为准。
+CATEGORIES:Course,ModernControl,Review
+TRANSP:OPAQUE
+UID:planner-20261010-1900-modern-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始现代控制课后复习
+END:VALARM
 END:VEVENT
 END:VCALENDAR
