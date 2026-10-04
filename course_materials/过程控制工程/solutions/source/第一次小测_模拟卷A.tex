@@ -1,0 +1,97 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,bm,geometry,fancyhdr,tikz,xcolor,array,booktabs,enumitem}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+\geometry{left=20mm,right=20mm,top=18mm,bottom=19mm}
+\definecolor{navy}{RGB}{35,63,112}
+\definecolor{soft}{RGB}{242,245,249}
+\definecolor{grid}{RGB}{210,216,224}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\color{navy}\bfseries 过程控制工程·第一次小测模拟卷 A}
+\rhead{建议用时 45 min}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 过程控制工程·第一次小测模拟卷 A}\\[4pt]
+{\large 串级控制 · 控制器作用方向 · 阶跃辨识 · PID 离线整定}
+\end{center}
+
+\vspace{2mm}
+\noindent\colorbox{soft}{\parbox{0.94\linewidth}{\textbf{说明：}本卷按所给 2024/2025 第一次小测的题型结构与难度仿制。请尽量闭卷完成；曲线读数允许少量误差，过程与判断依据计分。}}
+
+\section*{1. 串级温度控制系统（100 分）}
+某夹套加热罐采用\textbf{串级控制}维持罐内物料温度 $T$。主控制器 TC21 根据温度测量值 $T_m$ 调整蒸汽流量控制器 FC31 的设定值 $F_{sp}$；副回路通过调节蒸汽阀改变蒸汽流量 $F_s$。温度变送器量程为 $0\sim150\,^{\circ}\mathrm C$，蒸汽流量变送器量程为 $0\sim30\,\mathrm{t/h}$。
+
+在稳定工况下，$F_{sp}=12\,\mathrm{t/h}$、$T\approx60\,^{\circ}\mathrm C$。在 $t_0=5\,\mathrm{min}$ 时，将 $F_{sp}$ 从 $12\,\mathrm{t/h}$ 阶跃到 $15\,\mathrm{t/h}$，得到图 2 所示温度响应，最终稳定在约 $75\,^{\circ}\mathrm C$。
+
+\begin{enumerate}[label=\textbf{(\arabic*)},leftmargin=2.2em,itemsep=4pt]
+\item[\textbf{(1)}] 画出该串级控制系统的方块图，并标明 TC21、FC31、蒸汽阀/流量通道、加热过程、FT31、TT21 各方块的输入与输出信号。（20 分）
+\item[\textbf{(2)}] 从安全角度判断蒸汽控制阀应选\textbf{气开阀}还是\textbf{气关阀}，并说明理由。（15 分）
+\item[\textbf{(3)}] 判断 TC21 与 FC31 应采用正作用还是反作用，并写出判断方向链。（20 分）
+\item[\textbf{(4)}] 将“TC21 + FC31 + 蒸汽阀/流量通道 + 加热过程”视为 TC21 所对应的广义对象。指出广义对象的输入、输出；按量程归一化计算稳态增益 $K$，再用 $28.3\%$--$63.2\%$ 两点法由图 2 估计 $T$ 与纯滞后 $\tau$，写出一阶惯性纯滞后近似模型。（20 分）
+\item[\textbf{(5)}] 对 TC21 采用理想 PID 控制律。按课程中使用的离线整定规则分别给出：\\
+\quad a) Ziegler--Nichols 反应曲线法；\\
+\quad b) Lambda 法（取 $\lambda=0.2\tau$）。\\
+计算 $K_c,T_i,T_d$。（25 分）
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex, every node/.style={font=\small}]
+  \node[draw,rounded corners,minimum width=16mm,minimum height=9mm] (tc) at (0,0) {TC21};
+  \node[draw,rounded corners,minimum width=16mm,minimum height=9mm] (fc) at (2.5,0) {FC31};
+  \node[draw,minimum width=20mm,minimum height=9mm] (valve) at (5.1,0) {蒸汽阀};
+  \node[draw,minimum width=22mm,minimum height=14mm] (plant) at (8.2,0) {加热罐};
+  \draw[->] (-1.5,0) node[left]{$T_{sp}$} -- (tc);
+  \draw[->] (tc) -- node[above]{$F_{sp}$} (fc);
+  \draw[->] (fc) -- node[above]{$u$} (valve);
+  \draw[->] (valve) -- node[above]{$F_s$} (plant);
+  \draw[->] (plant) -- (9.8,0) node[right]{$T$};
+  \node[draw,minimum width=14mm,minimum height=7mm] (ft) at (4.2,-1.5) {FT31};
+  \node[draw,minimum width=14mm,minimum height=7mm] (tt) at (8.2,-1.5) {TT21};
+  \draw[->] (5.9,0) |- (ft.east);
+  \draw[->] (ft.west) -| (2.5,-0.45);
+  \draw[->] (9.1,0) |- (tt.east);
+  \draw[->] (tt.west) -| (0,-0.45);
+\end{tikzpicture}
+\caption{串级温度--蒸汽流量控制结构示意}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[x=0.42cm,y=0.13cm,>=Latex]
+  \draw[->] (0,58) -- (22,58) node[right]{$t/\mathrm{min}$};
+  \draw[->] (0,58) -- (0,78) node[above]{$T/^{\circ}\mathrm C$};
+  \foreach \x in {0,2,...,20} {\draw[grid] (\x,58) -- (\x,77); \node[below,font=\scriptsize] at (\x,58){\x};}
+  \foreach \y in {60,63,66,69,72,75} {\draw[grid] (0,\y) -- (21,\y); \node[left,font=\scriptsize] at (0,\y){\y};}
+  \draw[very thick,navy,smooth] plot coordinates {
+    (0,60)(1,60)(2,60)(3,60)(4,60)(5,60)(6,60)(7,62.30)(8,64.25)(9,65.90)(10,67.30)(11,68.48)(12,69.48)(13,70.33)(14,71.05)(15,71.65)(16,72.17)(17,72.60)(18,72.97)(19,73.28)(20,73.55)(21,73.77)
+  };
+  \draw[dashed,thick] (5,58) -- (5,76);
+  \node[anchor=south west,font=\small] at (5.2,58.5) {$F_{sp}$ 阶跃发生};
+  \draw[navy,densely dashed] (0,75) -- (21,75);
+  \node[navy,font=\small,anchor=south east] at (20.8,75) {$T_{\infty}\approx75^{\circ}\mathrm C$};
+\end{tikzpicture}
+\caption{TC21 广义对象对 $F_{sp}$ 阶跃的温度响应}
+\end{figure}
+
+\vspace{-1mm}
+\noindent\textbf{答题提醒：}\quad(4) 中请先按变送器量程归一化；(5) 中若作用方向已单独说明，可将 $K_c$ 写成增益大小并注明作用方向。
+
+\vspace{2mm}
+\noindent\colorbox{soft}{\parbox{0.94\linewidth}{\textbf{快速作答记录区（便于限时训练）}}}
+\vspace{2mm}
+
+\noindent\textbf{(2) 阀门：}\rule{35mm}{0.4pt}\quad \textbf{安全理由：}\rule{80mm}{0.4pt}\\[5mm]
+\noindent\textbf{(3) FC31：}\rule{28mm}{0.4pt}\quad \textbf{TC21：}\rule{28mm}{0.4pt}\quad \textbf{方向链：}\rule{55mm}{0.4pt}\\[5mm]
+\noindent\textbf{(4) }$K=$\rule{18mm}{0.4pt}\quad $t_{28.3\%}=$\rule{18mm}{0.4pt}\quad $t_{63.2\%}=$\rule{18mm}{0.4pt}\quad $T=$\rule{18mm}{0.4pt}\quad $\tau=$\rule{18mm}{0.4pt}\\[5mm]
+\noindent\textbf{模型：}\rule{125mm}{0.4pt}\\[6mm]
+\noindent\textbf{(5) ZN：}\quad $K_c=$\rule{18mm}{0.4pt}\quad $T_i=$\rule{18mm}{0.4pt}\quad $T_d=$\rule{18mm}{0.4pt}\\[5mm]
+\noindent\textbf{Lambda：}\quad $K_c=$\rule{18mm}{0.4pt}\quad $T_i=$\rule{18mm}{0.4pt}\quad $T_d=$\rule{18mm}{0.4pt}
+
+\vfill
+\begin{center}
+\color{gray}\small —— 模拟卷结束，请先独立完成后再查看答案 ——
+\end{center}
+\end{document}
