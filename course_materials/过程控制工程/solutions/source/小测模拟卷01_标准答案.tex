@@ -1,0 +1,143 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,geometry,fancyhdr,booktabs,array}
+\geometry{left=21mm,right=21mm,top=19mm,bottom=21mm}
+\pagestyle{fancy}\fancyhf{}
+\lhead{过程控制工程·小测模拟卷 01 标准答案}
+\rhead{串级控制 + 辨识 + PID 整定}
+\cfoot{\thepage}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 过程控制工程·小测模拟卷 01 标准答案}
+\end{center}
+
+\section*{（1）串级控制方块图}
+标准结构可写为
+\[
+T_{sp}\rightarrow \boxed{TC11}\rightarrow F_{sp}
+\rightarrow \boxed{FC12}\rightarrow u
+\rightarrow \boxed{冷却水阀}\rightarrow F_w
+\rightarrow \boxed{反应器}\rightarrow T.
+\]
+流量测量环节将 $F_w$ 负反馈至 FC12；温度测量环节将 $T$ 负反馈至 TC11。TC11 的输出是副回路设定值 $F_{sp}$；FC12 的输出才直接驱动阀门。
+
+\section*{（2）冷却水阀选择}
+放热反应器失气/失信号时，应优先避免冷却中断，因此希望冷却水阀故障时保持打开。故选\textbf{气关阀}（fail-open）：
+\[
+\boxed{\text{冷却水阀：气关阀}}
+\]
+
+\section*{（3）TC11 与 FC12 的作用方向}
+对 FC12，气关阀满足
+\[
+u\uparrow\Rightarrow\text{阀开度}\downarrow\Rightarrow F_w\downarrow.
+\]
+若 $F_w$ 偏高，应令 $u$ 增大使流量下降，所以
+\[
+F_w\uparrow\Rightarrow u\uparrow,
+\]
+故
+\[
+\boxed{FC12\text{ 为正作用}}.
+\]
+
+对 TC11，
+\[
+F_{sp}\uparrow\Rightarrow F_w\uparrow\Rightarrow\text{冷却增强}\Rightarrow T\downarrow.
+\]
+若 $T$ 偏高，应增大 $F_{sp}$，所以
+\[
+T\uparrow\Rightarrow F_{sp}\uparrow,
+\]
+故
+\[
+\boxed{TC11\text{ 为正作用}}.
+\]
+
+\section*{（4）广义对象辨识}
+TC11 对应广义对象的输入为 $F_{sp}$，输出为温度测量信号。
+
+温度变化量
+\[
+\Delta T=69-60=9\,^{\circ}\mathrm C,
+\]
+流量设定值变化量
+\[
+\Delta F_{sp}=15-18=-3\,\mathrm{m^3/h}.
+\]
+按量程归一化：
+\[
+\Delta y=\frac{9}{150}=0.06,\qquad
+\Delta u=\frac{-3}{30}=-0.10.
+\]
+所以
+\[
+\boxed{K=\frac{\Delta y}{\Delta u}=-0.6}.
+\]
+
+总温升为 $9\,^{\circ}\mathrm C$，故
+\[
+T_{28.3\%}=60+0.283\times 9=62.547\,^{\circ}\mathrm C,
+\]
+\[
+T_{63.2\%}=60+0.632\times 9=65.688\,^{\circ}\mathrm C.
+\]
+由表读得
+\[
+t_{28.3\%}\approx9.0\,\mathrm{min},\qquad
+t_{63.2\%}\approx12.0\,\mathrm{min}.
+\]
+课程两点法：
+\[
+T=1.5\left(t_{63.2\%}-t_{28.3\%}\right)=1.5(12-9)=4.5\,\mathrm{min}.
+\]
+输入阶跃发生在 $t_0=5\,\mathrm{min}$，因此
+\[
+\tau=t_{63.2\%}-T-t_0=12-4.5-5=2.5\,\mathrm{min}.
+\]
+所以
+\[
+\boxed{G(s)=\frac{-0.6e^{-2.5s}}{4.5s+1}}.
+\]
+
+\section*{（5）PID 参数整定}
+\subsection*{ZN 法}
+\[
+K_c=\frac{1}{K}\frac{T}{\tau}
+=\frac{1}{-0.6}\frac{4.5}{2.5}=-3.00,
+\]
+\[
+T_i=2\tau=5.0\,\mathrm{min},\qquad
+T_d=\frac{\tau}{2}=1.25\,\mathrm{min}.
+\]
+故
+\[
+\boxed{K_c^{ZN}=-3.00,\quad T_i^{ZN}=5.0\,\mathrm{min},\quad T_d^{ZN}=1.25\,\mathrm{min}}.
+\]
+
+\subsection*{Lambda 法}
+\[
+\lambda=0.2\tau=0.5\,\mathrm{min},
+\]
+\[
+K_c=\frac{1}{K}\frac{T}{\tau+\lambda}
+=\frac{1}{-0.6}\frac{4.5}{2.5+0.5}=-2.50,
+\]
+\[
+T_i=T=4.5\,\mathrm{min},\qquad
+T_d=\frac{\tau}{2}=1.25\,\mathrm{min}.
+\]
+故
+\[
+\boxed{K_c^{\lambda}=-2.50,\quad T_i^{\lambda}=4.5\,\mathrm{min},\quad T_d^{\lambda}=1.25\,\mathrm{min}}.
+\]
+
+\section*{考场易错点}
+\begin{enumerate}
+\item $K$ 要按题目给出的量程归一化，不能直接用 $9/(-3)$。
+\item 纯滞后要扣除输入阶跃时刻：$\tau=t_{63.2\%}-T-t_0$。
+\item 正反作用必须由“测量值变化后，控制器输出应该怎么变”判断。
+\item 若采用控制器增益大小表示，也可写 $|K_c|$，但必须同时标明作用方向；这里沿用历史小测手写解答的带符号写法。
+\end{enumerate}
+\end{document}
