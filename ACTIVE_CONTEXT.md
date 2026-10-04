@@ -90,3 +90,20 @@ Updated: 2026-09-27
   - hybrid semantic attribute ZSL under unknown working conditions as an optional comparison.
 - Keep the course project simpler than these papers: prefer a supervised baseline + a simple semantic zero-shot baseline + one testable extension, rather than reproducing a large VAE/GAN/LLM stack.
 - Personal-interest block added: **2026-10-03 11:15-12:15**, WALL-E voice-system architecture learning (audio front-end -> VAD -> ASR -> intent/LLM -> TTS).
+
+## 2026-10-04 progress update
+- User reports the planned 2026-10-03 work was not completed on time.
+- On 2026-10-04, the user has already completed both:
+  - Modern Control review/understanding;
+  - Process Control quiz concept review.
+  Do not schedule either review again immediately.
+- Rescheduled missed interest/research work:
+  - WALL-E voice-system learning moved to 2026-10-04 19:30-20:30;
+  - missed MARL environment work merged into 2026-10-05 09:30-12:00;
+  - missed Qizhen chain work merged into 2026-10-05 19:30-21:30.
+- A new Process Control mock quiz 01 and standard answer were generated from the 2024/2025 first-quiz patterns.
+- Mock-quiz flow:
+  - 2026-10-07: previous-quiz timed practice;
+  - 2026-10-08 19:00-20:10: mock quiz 01 closed-book;
+  - 2026-10-08 20:20-21:00: answer check + error classification;
+  - 2026-10-09: final error repair + one-page recall sheet.
