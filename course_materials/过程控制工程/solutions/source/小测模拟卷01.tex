@@ -1,0 +1,58 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,geometry,fancyhdr,booktabs,array,graphicx}
+\geometry{left=20mm,right=20mm,top=18mm,bottom=20mm}
+\pagestyle{fancy}\fancyhf{}
+\lhead{过程控制工程·小测模拟卷 01}
+\rhead{基于 2024/2025 第一次小测题型}
+\cfoot{\thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 过程控制工程·小测模拟卷 01}\\[4pt]
+{\large 建议用时：60 min \qquad 满分：100 分}
+\end{center}
+
+\textbf{说明：}本卷只模拟所给 2024/2025 第一次小测中已经出现的题型：串级控制结构、气开/气关与控制器作用方向、阶跃响应辨识、ZN/Lambda 离线 PID 整定。请尽量闭卷完成。
+
+\section*{第 1 题（100 分）}
+某放热搅拌反应器采用串级控制：主控制器 TC11 根据反应器温度 $T$ 调整冷却水流量设定值 $F_{sp}$；副控制器 FC12 根据冷却水流量测量值 $F_w$ 调节冷却水控制阀。温度变送器量程为 $0\sim150\,^{\circ}\mathrm C$，冷却水流量变送器量程为 $0\sim30\,\mathrm{m^3/h}$。
+
+为辨识 TC11 所对应的广义对象，在手动试验中，于 $t_0=5\,\mathrm{min}$ 将 $F_{sp}$ 从 $18\,\mathrm{m^3/h}$ 阶跃改变为 $15\,\mathrm{m^3/h}$。反应器温度记录如下：
+
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|rrrrrrrrrrrrrr}
+\toprule
+$t$/min & 5&6&7&8&9&10&11&12&13&14&16&18&20&24\\
+\midrule
+$T/^{\circ}\mathrm C$ &60.00&60.00&60.00&61.20&62.55&63.75&64.80&65.69&66.40&67.00&67.80&68.30&68.60&69.00\\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+稳态前温度约为 $60\,^{\circ}\mathrm C$，新稳态约为 $69\,^{\circ}\mathrm C$。
+
+\begin{enumerate}
+\item[(1)] （20 分）画出该串级控制系统的控制方块图，标出 TC11、FC12、冷却水控制阀、流量测量环节、温度测量环节、反应器以及各关键输入/输出信号。
+\item[(2)] （15 分）从安全角度判断冷却水控制阀应选气开阀还是气关阀，并说明理由。
+\item[(3)] （20 分）判断 TC11 与 FC12 应采用正作用还是反作用，并分别写出你的方向判断链。
+\item[(4)] （25 分）指出 TC11 所对应广义对象的输入与输出；采用量程归一化并使用 $28.3\%$--$63.2\%$ 两点法辨识其一阶惯性纯滞后模型
+\[
+G(s)=\frac{K e^{-\tau s}}{Ts+1}.
+\]
+要求给出 $K$、$T$、$\tau$。
+\item[(5)] （20 分）若 TC11 采用理想 PID 控制器，按课程中第一次小测使用的离线整定形式：
+\[
+\text{ZN: }K_c=\frac{1}{K}\frac{T}{\tau},\quad T_i=2\tau,\quad T_d=\frac{\tau}{2},
+\]
+\[
+\text{Lambda: }\lambda=0.2\tau,\quad K_c=\frac{1}{K}\frac{T}{\tau+\lambda},\quad T_i=T,\quad T_d=\frac{\tau}{2},
+\]
+分别求 ZN 与 Lambda 参数 $K_c,T_i,T_d$。
+\end{enumerate}
+\vfill
+\begin{center}
+\textit{做完再看答案。方向题建议先写物理因果链，不要靠记忆猜正反作用。}
+\end{center}
+\end{document}
