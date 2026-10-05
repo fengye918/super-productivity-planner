@@ -360,25 +360,7 @@ ACTION:DISPLAY
 DESCRIPTION:开始大数据大作业文献调研
 END:VALARM
 END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261003T023500Z
-DTSTAMP:20261003T023500Z
-DTSTART;TZID=Asia/Shanghai:20261006T193000
-DTEND;TZID=Asia/Shanghai:20261006T220000
-LAST-MODIFIED:20261003T023500Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 项目框架 + 数据可行性验证
-DESCRIPTION:把文献转成自己的两周课程项目。优先候选：工业时序“动态语义原语”驱动的 zero-shot fault diagnosis。产出必须包含：候选数据集；预处理/窗口化；seen/unseen split；故障语义来源（上升/下降/突变/振荡/变量关联等 + 文本描述）；监督 baseline；简单 zero-shot semantic baseline；评价指标；第一项可证伪实验。目标是决定“做不做得成”，而不是当天开始训练复杂 VAE/GAN/LLM。
-CATEGORIES:Course,BigData,Project,Design
-TRANSP:OPAQUE
-UID:planner-20261006-1930-bigdata-framing@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:开始大数据大作业框架设计
-END:VALARM
-END:VEVENT
+
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261004T034500Z
@@ -509,21 +491,116 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261005T005000Z
-DTSTAMP:20261005T005000Z
+CREATED:20261005T032500Z
+DTSTAMP:20261005T032500Z
 DTSTART;TZID=Asia/Shanghai:20261007T143000
-DTEND;TZID=Asia/Shanghai:20261007T163000
-LAST-MODIFIED:20261005T005000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 数据管线最小原型
-DESCRIPTION:在 10/5 方向筛选和 10/6 框架验证之后，真正做一个最小数据链：读取候选工业时序→预处理/窗口化→构造 seen/unseen split→生成或整理语义属性表→跑一个监督 baseline 的最小骨架。目标是验证项目入口跑得通，不追求完整模型。
-CATEGORIES:Course,BigData,Project,Implementation
+DTEND;TZID=Asia/Shanghai:20261007T173000
+LAST-MODIFIED:20261005T032500Z
+SEQUENCE:1
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] TEP 数据链 + XGBoost Baseline
+DESCRIPTION:第一块只保住数据主链。完成 TEP 数据读取与变量/故障整理；首版锁定约 6 类物理意义清楚的故障；按 simulation run 划分训练/验证/测试；只用正常训练数据做标准化；完成窗口统计特征并跑通 data-only XGBoost。Done：可重复脚本 + 一份 baseline 指标/混淆矩阵 + 数据划分说明。不要做知识规则。
+CATEGORIES:Course,BigData,Project,Baseline
 TRANSP:OPAQUE
-UID:planner-20261007-1430-bigdata-pipeline@chatgpt-planner
+UID:planner-20261007-1430-bigdata-tep-baseline@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:开始大数据最小数据管线
+DESCRIPTION:开始大数据 TEP baseline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T032500Z
+DTSTAMP:20261005T032500Z
+DTSTART;TZID=Asia/Shanghai:20261011T143000
+DTEND;TZID=Asia/Shanghai:20261011T173000
+LAST-MODIFIED:20261005T032500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 两类故障的事件-规则最小闭环
+DESCRIPTION:先选 2 个时序特征最清楚的故障，不扩到全数据。实现简化事件提取：HIGH/LOW/RISING/FALLING/DRIFT/OSCILLATING/STABLE；为两类故障手工审核结构化知识并转成最小可执行规则/匹配分数。Done：signal→event→rule→score 跑通，至少 2 张案例图能直观看出规则与真实时序对应。不要实现完整 STL parser。
+CATEGORIES:Course,BigData,Project,Knowledge
+TRANSP:OPAQUE
+UID:planner-20261011-1430-bigdata-twofault-loop@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始两类故障知识闭环
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T032500Z
+DTSTAMP:20261005T032500Z
+DTSTART;TZID=Asia/Shanghai:20261018T143000
+DTEND;TZID=Asia/Shanghai:20261018T180000
+LAST-MODIFIED:20261005T032500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 六类知识结构化 + 纯知识诊断
+DESCRIPTION:把最小闭环扩展到约 6 类故障。整理故障说明与变量含义；用 LLM 离线生成受约束 JSON，人工快速审核后固定版本；实现确定性 rule compiler / matcher 与 fault score。Done：六类规则表 + 每类关键变量/事件 + 一轮纯知识诊断结果和失败案例。LLM 不在线参与最终分类。
+CATEGORIES:Course,BigData,Project,Knowledge
+TRANSP:OPAQUE
+UID:planner-20261018-1430-bigdata-knowledge-scale@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始六类故障知识结构化
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T032500Z
+DTSTAMP:20261005T032500Z
+DTSTART;TZID=Asia/Shanghai:20261025T143000
+DTEND;TZID=Asia/Shanghai:20261025T180000
+LAST-MODIFIED:20261005T032500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 知识增强模型 + 5-shot 核心实验
+DESCRIPTION:实现主模型：统计特征 + rule matching score → XGBoost，并与纯数据 baseline 公平比较。核心只先做 5-shot；固定相同 run split、特征与评价指标，优先看 Macro-F1 / Accuracy 与类别级变化。Done：data-only vs knowledge-augmented 主结果表 + 至少一轮稳定复现；若没有提升，输出规则质量/阈值/事件提取的 failure analysis，而不是堆新模型。
+CATEGORIES:Course,BigData,Project,Experiment
+TRANSP:OPAQUE
+UID:planner-20261025-1430-bigdata-5shot@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始知识增强 5-shot 核心实验
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T032500Z
+DTSTAMP:20261005T032500Z
+DTSTART;TZID=Asia/Shanghai:20261031T143000
+DTEND;TZID=Asia/Shanghai:20261031T180000
+LAST-MODIFIED:20261005T032500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 正式实验 + Case Study
+DESCRIPTION:固定主模型后集中跑正式结果：Full-data + 5-shot 必做；若主链稳定再补 1-shot/10-shot。整理 Macro-F1、Accuracy、类别级结果、关键规则满足/违反与 2–3 个可解释案例。Zero-shot 仅在主实验已稳定且还有时间时冲刺 1–2 类，否则直接跳过。Done：最终主表/主图基本齐全。
+CATEGORIES:Course,BigData,Project,Experiment
+TRANSP:OPAQUE
+UID:planner-20261031-1430-bigdata-formal-exp@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始大数据正式实验
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T032500Z
+DTSTAMP:20261005T032500Z
+DTSTART;TZID=Asia/Shanghai:20261101T143000
+DTEND;TZID=Asia/Shanghai:20261101T173000
+LAST-MODIFIED:20261005T032500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 结果冻结 + 报告/Demo V1
+DESCRIPTION:课程结束前冻结结果，不再开新模型。整理完整链路图：Raw Time Series→Preprocess→Event Extraction→Executable Knowledge→Diagnosis；固定主结果表和 2–3 个案例；完成报告主体结构与约 20 页以上 Demo slides 第一版，并列出 11/2–11/4 只允许修补的短清单。Done：即使后面不再加实验，也已有可提交/可讲的完整版本。
+CATEGORIES:Course,BigData,Project,Writing
+TRANSP:OPAQUE
+UID:planner-20261101-1430-bigdata-freeze@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始冻结大数据结果与报告
 END:VALARM
 END:VEVENT
 END:VCALENDAR
