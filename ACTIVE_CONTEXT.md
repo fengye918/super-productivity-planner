@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-09-27
+Updated: 2026-10-05
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -145,3 +145,25 @@ Updated: 2026-09-27
 - Released MARL blocks are reassigned to:
   - 2026-10-06 14:30-16:00 AI/ML catch-up;
   - 2026-10-07 14:30-16:30 Big Data minimal data-pipeline prototype.
+
+
+## 2026-10-05 Big Data major-project direction locked
+- Final working title: **从文本知识到可执行时序语义：面向工业过程的知识增强故障诊断**.
+- Core question: convert human fault text into structured temporal knowledge that can be deterministically checked against industrial time series, then test whether those rule scores improve diagnosis under limited fault samples.
+- Dataset: prefer **Tennessee Eastman Process (TEP)**; first version uses about **6 fault classes** with clear physical meaning and temporal patterns.
+- Main chain: TEP raw time series -> run-level split / normal-only normalization -> window features -> event extraction -> constrained fault-knowledge JSON -> executable rules / match scores -> data-only / knowledge-only / knowledge-augmented diagnosis -> evidence output.
+- Keep implementation deliberately small:
+  - first event vocabulary: HIGH / LOW / RISING / FALLING / DRIFT / OSCILLATING / STABLE;
+  - do not build a full STL parser; use a small deterministic rule evaluator;
+  - LLM generates constrained JSON offline, followed by quick human review and a frozen rule set;
+  - **5-shot is the core experiment**; full-data is baseline context; 1/10-shot are secondary;
+  - zero-shot is a stretch item only after the main line is stable.
+- Compressed milestone blocks before the last visible Big Data class on 2026-11-04:
+  - 10/07 TEP data pipeline + XGBoost baseline;
+  - 10/11 two-fault event/rule minimal loop;
+  - 10/18 six-fault structured knowledge + knowledge-only diagnosis;
+  - 10/25 knowledge-augmented model + 5-shot;
+  - 10/31 formal experiment + case studies;
+  - 11/01 freeze results + report/demo V1.
+- This major project is an exception to the normal current-week-only planning horizon.
+- Current user status note: Qizhen is waiting for the experiment dependency; underwater MARL is waiting for guidance. Do not invent replacement research tasks merely to fill free time.
