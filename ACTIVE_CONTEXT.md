@@ -123,3 +123,9 @@ Updated: 2026-09-27
   - **2026-10-08 20:10-20:50** answer check + error classification;
   - errors feed into the existing **2026-10-09 19:00-20:00** final repair/recall-sheet block.
 - Modern Control class on **2026-10-10 08:00-09:35** receives a separate **19:00-20:30** review block.
+
+## 2026-10-05 completion update
+- User confirms **现代控制理论｜第3周作业** is completed.
+- Treat it as completed for planning even if 学在浙大 still returns activity 1192488 as an outstanding todo.
+- Do not schedule Modern Control week-3 homework again.
+- The currently scheduled 2026-10-05 14:30-17:00 Modern Control homework block is now available for reassignment once the next schedule update is confirmed.
