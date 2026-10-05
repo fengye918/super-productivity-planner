@@ -129,3 +129,19 @@ Updated: 2026-09-27
 - Treat it as completed for planning even if 学在浙大 still returns activity 1192488 as an outstanding todo.
 - Do not schedule Modern Control week-3 homework again.
 - The currently scheduled 2026-10-05 14:30-17:00 Modern Control homework block is now available for reassignment once the next schedule update is confirmed.
+
+## 2026-10-05 planning override
+- User confirms **现代控制理论｜第3周作业 is completed**. Activity 1192488 is manually suppressed from planner todos even if 学在浙大 still exposes it.
+- For the current 2026-10-05 to 2026-10-07 planning window, **underwater MARL is paused** and should not receive scheduled blocks unless the user reopens it.
+- 2026-10-05 morning priority is the **Big Data major project**, not MARL:
+  - literature/idea consolidation;
+  - dataset shortlist;
+  - seen/unseen split;
+  - dynamic semantic primitives / semantic prototype;
+  - supervised baseline + simple zero-shot baseline.
+- 2026-10-05 afternoon uses the freed Modern Control homework slot for optional long-term modules:
+  - 14:30-15:30 robot networking mental model;
+  - 15:45-17:00 WALL-E voice-system audio front-end.
+- Released MARL blocks are reassigned to:
+  - 2026-10-06 14:30-16:00 AI/ML catch-up;
+  - 2026-10-07 14:30-16:30 Big Data minimal data-pipeline prototype.
