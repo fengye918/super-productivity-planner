@@ -70,7 +70,8 @@
         {
           "upload_id": 21847974,
           "name": "作业3(2).pptx",
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/fe0c8fb77c6fb27757275bf535d01570494f99b0?timestamp=1791198000&nonce=36c1cac5924241589b427d0c95b6208e&token=f1fd2e67ef2e295219f0b8ed79959e2e&name=%E4%BD%9C%E4%B8%9A3%282%29.pptx (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7fc536846660>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60)'))"
+          "repo_path": "course_materials/过程控制工程/homework/1193679/作业3(2).pptx",
+          "bytes": 113557
         }
       ],
       "detail_fetch_error": null,
@@ -86,11 +87,71 @@
       "end_time": "2026-10-23T21:59:00Z",
       "is_locked": false,
       "detail_text": null,
-      "attachment_names": [],
-      "attachment_refs": [],
-      "attachment_contexts": [],
-      "downloaded_attachments": [],
-      "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
+      "attachment_names": [
+        "实验2_根轨迹校正(1).pdf"
+      ],
+      "attachment_refs": [
+        {
+          "id": 21834691,
+          "upload_id": null,
+          "name": "实验2_根轨迹校正(1).pdf",
+          "filename": null,
+          "file_name": null,
+          "title": null,
+          "url": null,
+          "download_url": null,
+          "size": 2083906,
+          "mime_type": null,
+          "content_type": null,
+          "type": "document",
+          "detected_name": "实验2_根轨迹校正(1).pdf"
+        }
+      ],
+      "attachment_contexts": [
+        {
+          "path": "$.uploads[0].name",
+          "filename": "实验2_根轨迹校正(1).pdf",
+          "container": {
+            "allow_aliyun_office_view": false,
+            "allow_download": true,
+            "allow_private_wps_office_view": true,
+            "audio": null,
+            "can_auto_relate_knowledge_node": false,
+            "created_at": "2026-09-29T11:30:48Z",
+            "created_by_id": 308639,
+            "deleted": false,
+            "enable_set_h5_courseware_completion": true,
+            "id": 21834691,
+            "is_cc_video": false,
+            "key": "11920eb232c5e27844f018ce4640aa2fd834ef0d",
+            "link": null,
+            "name": "实验2_根轨迹校正(1).pdf",
+            "origin_allow_download": true,
+            "owner_id": 0,
+            "reference_id": 18151191,
+            "referenced_at": "2026-09-29T11:31:30Z",
+            "scorm": null,
+            "size": 2083906,
+            "sort": 0,
+            "source": "",
+            "status": "ready",
+            "third_part_referrer_id": 0,
+            "thumbnail": null,
+            "type": "document",
+            "updated_at": "2026-09-29T11:30:49Z",
+            "video_src_type": "video/mp4"
+          }
+        }
+      ],
+      "downloaded_attachments": [
+        {
+          "upload_id": 21834691,
+          "name": "实验2_根轨迹校正(1).pdf",
+          "repo_path": "course_materials/现代控制理论/homework/1193398/实验2_根轨迹校正(1).pdf",
+          "bytes": 2083906
+        }
+      ],
+      "detail_fetch_error": null,
       "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1193398"
     },
     {
