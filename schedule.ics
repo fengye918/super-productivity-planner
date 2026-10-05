@@ -3543,40 +3543,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261004T034500Z
-DTSTAMP:20261004T034500Z
-DTSTART;TZID=Asia/Shanghai:20261005T083000
+CREATED:20261005T005000Z
+DTSTAMP:20261005T005000Z
+DTSTART;TZID=Asia/Shanghai:20261005T090000
 DTEND;TZID=Asia/Shanghai:20261005T120000
-LAST-MODIFIED:20261004T034500Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=zh-cn:[MARL] Docking 环境补回 + baseline 接通
-DESCRIPTION:补回 10/4 上午未完成的 MARL。08:30-10:30 先把 target geometry、observation/action、e_p/e_R、termination、metrics 与 reset→termination sanity check 跑通；10:30-12:00 再接 Hungarian + SE(3) non-learning baseline。输出：可重复运行环境 + baseline 首次完整跑通结果。
-CATEGORIES:Research,MARL,Implementation,Baseline
+LAST-MODIFIED:20261005T005000Z
+SEQUENCE:2
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 方向收敛 + 数据集筛选
+DESCRIPTION:上午优先研究大数据大作业，MARL 暂停。本块从文献启发落到可做的课程项目：对比 FDAT / generalized zero-shot / Signal-to-Semantic 路线；筛 2–3 个工业时序数据集；明确 seen/unseen fault 划分、动态语义原语、semantic prototype、监督 baseline 与简单 zero-shot baseline。结束时至少留一页项目框架 + 数据集候选表，不开始堆复杂模型。
+CATEGORIES:Course,BigData,Project,Research
 TRANSP:OPAQUE
-UID:planner-20261005-0930-marl-baseline2@chatgpt-planner
+UID:planner-20261005-0900-bigdata-research@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:开始 MARL 环境与 baseline
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261003T023000Z
-DTSTAMP:20261003T023000Z
-DTSTART;TZID=Asia/Shanghai:20261005T143000
-DTEND;TZID=Asia/Shanghai:20261005T170000
-LAST-MODIFIED:20261003T023000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[现代控制] 第3周作业
-DESCRIPTION:单独的作业时间，不与课后复习合并。完成习题七 7-13、7-19、7-20、7-21、7-27、7-30；先独立推导，再用 GitHub 标准解答核对。普通作业按 2.5 小时上限执行。标准解答：course_materials/现代控制理论/solutions/第三周作业_标准解答.pdf
-CATEGORIES:Course,ModernControl,Homework
-TRANSP:OPAQUE
-UID:planner-20261005-1430-modern-hw3@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:开始现代控制第3周作业
+DESCRIPTION:开始大数据大作业研究
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -3615,44 +3596,6 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:开始启真链路可靠性检查
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261003T023000Z
-DTSTAMP:20261003T023000Z
-DTSTART;TZID=Asia/Shanghai:20261006T143000
-DTEND;TZID=Asia/Shanghai:20261006T170000
-LAST-MODIFIED:20261003T023000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[MARL] 第一组可重复实验
-DESCRIPTION:基于前两次环境/baseline 工作做第一组真正可复现实验。固定 seeds、初始条件和 metrics，运行 baseline，记录成功/失败案例与 pose error；目标是得到 failure evidence，为后续是否进入 IPPO/MAPPO 提供依据。
-CATEGORIES:Research,MARL,Experiment
-TRANSP:OPAQUE
-UID:planner-20261006-1430-marl-first-experiment@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:开始 MARL 第一组实验
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261003T023000Z
-DTSTAMP:20261003T023000Z
-DTSTART;TZID=Asia/Shanghai:20261007T143000
-DTEND;TZID=Asia/Shanghai:20261007T163000
-LAST-MODIFIED:20261003T023000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[MARL] Failure 分析与下一步方法假设
-DESCRIPTION:整理 10/6 baseline 结果：区分环境 bug、控制失败、assignment 失败、观测/动作设计问题；挑 2–3 个代表失败案例。最后写出一个可证伪的下一步假设，决定是否值得进入 IPPO/MAPPO，而不是直接堆模型。
-CATEGORIES:Research,MARL,Analysis
-TRANSP:OPAQUE
-UID:planner-20261007-1430-marl-failure-analysis@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:开始 MARL failure 分析
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -3781,6 +3724,82 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:开始现代控制课后复习
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T005000Z
+DTSTAMP:20261005T005000Z
+DTSTART;TZID=Asia/Shanghai:20261005T143000
+DTEND;TZID=Asia/Shanghai:20261005T153000
+LAST-MODIFIED:20261005T005000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[兴趣学习] 机器人网络层：通信链路 Mental Model
+DESCRIPTION:用 1 小时建立 STM32↔Linux SBC/Orange Pi↔ROS 2/DDS↔PC 的整体通信链路。重点理解 UDP/TCP、application protocol、framing/serialization、sequence/timestamp、heartbeat/timeout 各自在真实机器人中解决什么问题。输出一张自己的机器人通信链路图，不背 API。
+CATEGORIES:Personal,Interest,Networking,Robotics
+TRANSP:OPAQUE
+UID:planner-20261005-1430-network-mental-model@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始机器人网络层学习
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T005000Z
+DTSTAMP:20261005T005000Z
+DTSTART;TZID=Asia/Shanghai:20261005T154500
+DTEND;TZID=Asia/Shanghai:20261005T170000
+LAST-MODIFIED:20261005T005000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[兴趣学习] 瓦力语音系统 II：音频前端
+DESCRIPTION:继续瓦力语音系统，不重复整条链路。重点搞懂 ReSpeaker / XVF3000 在麦克风阵列、AEC、波束形成、降噪中的实际位置，以及哪些处理放在前端、哪些放到 Orin。输出一张“麦克风→前端处理→VAD/ASR→LLM→TTS”的硬件/软件边界图，并记下下一步最小实验。
+CATEGORIES:Personal,Interest,Voice,Robotics
+TRANSP:OPAQUE
+UID:planner-20261005-1545-wall-e-audio-front-end@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始瓦力语音系统音频前端学习
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T005000Z
+DTSTAMP:20261005T005000Z
+DTSTART;TZID=Asia/Shanghai:20261006T143000
+DTEND;TZID=Asia/Shanghai:20261006T160000
+LAST-MODIFIED:20261005T005000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[AI/ML] 近期课程补齐
+DESCRIPTION:补齐人工智能与机器学习近期内容，优先线性模型、正则化及后续课堂衔接。流程：知识骨架→关键公式/假设→1 个代表例子→剩余疑点。目标是重新跟上课程，不重复已经完成的作业。
+CATEGORIES:Course,AIML,Review
+TRANSP:OPAQUE
+UID:planner-20261006-1430-aiml-catchup@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始 AI/ML 课程补齐
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261005T005000Z
+DTSTAMP:20261005T005000Z
+DTSTART;TZID=Asia/Shanghai:20261007T143000
+DTEND;TZID=Asia/Shanghai:20261007T163000
+LAST-MODIFIED:20261005T005000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 数据管线最小原型
+DESCRIPTION:在 10/5 方向筛选和 10/6 框架验证之后，真正做一个最小数据链：读取候选工业时序→预处理/窗口化→构造 seen/unseen split→生成或整理语义属性表→跑一个监督 baseline 的最小骨架。目标是验证项目入口跑得通，不追求完整模型。
+CATEGORIES:Course,BigData,Project,Implementation
+TRANSP:OPAQUE
+UID:planner-20261007-1430-bigdata-pipeline@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:开始大数据最小数据管线
 END:VALARM
 END:VEVENT
 END:VCALENDAR
