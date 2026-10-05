@@ -22,6 +22,7 @@ DATA_DIR = ROOT / "data"
 MATERIALS_DIR = ROOT / "course_materials"
 TODOS_FILE = DATA_DIR / "zju_todos.json"
 CHANGES_FILE = DATA_DIR / "zju_changes.json"
+COMPLETED_OVERRIDES_FILE = DATA_DIR / "zju_completed_overrides.json"
 
 USERNAME = os.environ.get("ZJU_USERNAME", "")
 PASSWORD = os.environ.get("ZJU_PASSWORD", "")
@@ -347,6 +348,14 @@ def read_previous() -> list[dict]:
         return []
 
 
+def read_completed_overrides() -> set[int]:
+    try:
+        obj = json.loads(COMPLETED_OVERRIDES_FILE.read_text(encoding="utf-8"))
+        return {int(x) for x in obj.get("source_ids", [])}
+    except Exception:
+        return set()
+
+
 def save(todos: list[dict]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     previous = read_previous()
@@ -525,12 +534,15 @@ def main() -> None:
     raw = payload.get("todo_list", []) if isinstance(payload, dict) else []
 
     reliable_homeworks, submitted_homework_ids = fetch_reliable_homework_todos(s)
+    manually_completed_ids = read_completed_overrides()
 
     combined = {}
     for item in raw:
         if not isinstance(item, dict):
             continue
         item_id = item.get("id")
+        if item_id in manually_completed_ids:
+            continue
         if str(item.get("type", "")).lower() == "homework" and item_id in submitted_homework_ids:
             continue
         combined[str(item_id or item.get("title") or "")] = item
@@ -538,6 +550,8 @@ def main() -> None:
     # Course enumeration supplements /api/todos, including published homework
     # whose start time is still in the future.
     for item in reliable_homeworks:
+        if item.get("id") in manually_completed_ids:
+            continue
         combined[str(item.get("id") or item.get("title") or "")] = item
 
     todos = [normalize_todo(s, x) for x in combined.values()]
