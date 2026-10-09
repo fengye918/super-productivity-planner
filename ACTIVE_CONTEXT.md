@@ -183,5 +183,12 @@ Updated: 2026-10-09
   - PID correction report: 2026-10-11 09:30-11:30 (cancel if already complete);
   - Root-locus report: 2026-10-14 19:00-21:00;
   - State-feedback report: 2026-10-28 19:00-21:00.
-- The Oct 13 and Oct 27 16:00-17:30 lab appointments **conflict with imported Modern Control class 16:15-17:50**. Preserve both and flag for coordination; do not silently delete the course.
+- **User correction (2026-10-09): Oct 13 and Oct 27 imported Modern Control class slots (16:15-17:50) are actually designated lab teaching time, not competing theory lectures. The reserved lab is 16:00-17:30, and no separate class coordination is required. The unified schedule should show the reserved lab rather than a duplicate generic class on those dates.**
 - Today's MATLAB experimental report is separate from these 3 booked lab reports.
+
+
+## 2026-10-09 upcoming-study planning preference
+- User wants a more committed but sustainable study rhythm and has meaningful capacity while Qizhen waits for experiment conditions and MARL waits for guidance.
+- Planning should emphasize exam-oriented Modern Control / Process Control and other course consolidation plus small independent robotics/WALL-E engineering practice, with concrete outputs.
+- Keep the six-week Big Data milestones already scheduled, rather than adding daily project work.
+- Per PLANNER_RULES.md, a new learning-block proposal remains discussion-only until the user approves with “落到日程”; corrections of erroneous existing calendar metadata are authorized now.
