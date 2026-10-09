@@ -192,3 +192,17 @@ Updated: 2026-10-09
 - Planning should emphasize exam-oriented Modern Control / Process Control and other course consolidation plus small independent robotics/WALL-E engineering practice, with concrete outputs.
 - Keep the six-week Big Data milestones already scheduled, rather than adding daily project work.
 - Per PLANNER_RULES.md, a new learning-block proposal remains discussion-only until the user approves with “落到日程”; corrections of erroneous existing calendar metadata are authorized now.
+
+
+## 2026-10-09 confirmed learning schedule (Oct 10–18)
+- User explicitly confirmed "落到日程" for the recently proposed Oct 10–18 study plan; ten additional concrete study / engineering / review blocks are included in planner_events.ics.
+- Preserve fixed classes, lab bookings, post-lab report writing, RoboCup meeting, group meeting, reimbursement, and the Big Data milestone blocks.
+- Newly scheduled study blocks:
+  - Oct 12 10:00–11:30 Modern Control class digestion;
+  - Oct 13 09:00–10:00 root-locus experiment pre-lab preparation;
+  - Oct 15 10:00–11:30 Modern Control Oct 14 class digestion; 19:30–21:30 WALL-E streaming voice MVP;
+  - Oct 16 14:30–16:00 AI/ML lesson recap; 19:30–21:00 Robot Networking UDP mini-lab;
+  - Oct 17 14:30–16:30 Process Control typical-problem practice; 19:30–20:30 open-ended robotics exploration;
+  - Oct 18 09:30–11:00 Modern Control topic reinforcement; 20:00–20:30 weekly review.
+- These are planned work blocks and are not evidence that any task is already done. The actual content for Modern Control class review and AI/ML catch-up should follow the user's most recent course materials/lessons.
+- Continue not scheduling underwater MARL until the user restarts it; Qizhen remains blocked by experiment dependencies. English is an unscheduled daily optional hour.
