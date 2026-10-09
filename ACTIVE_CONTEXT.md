@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-05
+Updated: 2026-10-09
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -167,3 +167,21 @@ Updated: 2026-10-05
   - 11/01 freeze results + report/demo V1.
 - This major project is an exception to the normal current-week-only planning horizon.
 - Current user status note: Qizhen is waiting for the experiment dependency; underwater MARL is waiting for guidance. Do not invent replacement research tasks merely to fill free time.
+
+
+## 2026-10-09 schedule and lab reservation update
+- 2026-10-09 afternoon priority: finish the Modern Control MATLAB experimental report. The previous 14:00-18:00 Process Control ten-question full exercise is superseded, not completed.
+- Process Control comprehensive quiz revision follows MATLAB report completion. Provisional 19:00-22:00 review on 2026-10-09; do not assume report is finished if still in progress.
+- 2026-10-11 Sunday 19:30: RoboCup regular meeting. End time 21:00 is provisional.
+- 2026-10-12 Monday 19:00: research group meeting. End time 20:30 is provisional.
+- 2026-10-13 Tuesday 10:30-11:30: reimbursement administration (about 1 hour).
+- Modern Control laboratory reservations from user's screenshot (team 1):
+  - PID correction: 2026-09-22 16:00-17:30, already in the past.
+  - Root-locus correction: 2026-10-13 16:00-17:30.
+  - State-feedback: 2026-10-27 16:00-17:30.
+- Explicitly reserve 2 hours **after each lab date** for its report:
+  - PID correction report: 2026-10-11 09:30-11:30 (cancel if already complete);
+  - Root-locus report: 2026-10-14 19:00-21:00;
+  - State-feedback report: 2026-10-28 19:00-21:00.
+- The Oct 13 and Oct 27 16:00-17:30 lab appointments **conflict with imported Modern Control class 16:15-17:50**. Preserve both and flag for coordination; do not silently delete the course.
+- Today's MATLAB experimental report is separate from these 3 booked lab reports.
