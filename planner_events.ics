@@ -707,7 +707,7 @@ DTEND;TZID=Asia/Shanghai:20261013T173000
 LAST-MODIFIED:20261009T070000Z
 SEQUENCE:0
 SUMMARY;LANGUAGE=zh-cn:[现代控制实验] 根轨迹校正实验（第1组）
-DESCRIPTION:按预约参加根轨迹校正实验，10月13日16:00-17:30，第1组。注意与课表中16:15-17:50现代控制理论课程重叠15:???，需自行协调本次课堂安排；实验报告安排在10月14日晚。
+DESCRIPTION:按预约参加根轨迹校正实验，10月13日16:00-17:30，第1组。注意与课表中16:15-17:50现代控制理论课程时间重叠（16:15-17:30），需自行协调本次课堂安排；实验报告安排在10月14日晚。
 CATEGORIES:Course,ModernControl,Lab
 TRANSP:OPAQUE
 UID:planner-20261013-root-locus-lab@chatgpt-planner
