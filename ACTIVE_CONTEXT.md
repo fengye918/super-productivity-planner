@@ -205,4 +205,13 @@ Updated: 2026-10-09
   - Oct 17 14:30–16:30 Process Control typical-problem practice; 19:30–20:30 open-ended robotics exploration;
   - Oct 18 09:30–11:00 Modern Control topic reinforcement; 20:00–20:30 weekly review.
 - These are planned work blocks and are not evidence that any task is already done. The actual content for Modern Control class review and AI/ML catch-up should follow the user's most recent course materials/lessons.
-- Continue not scheduling underwater MARL until the user restarts it; Qizhen remains blocked by experiment dependencies. English is an unscheduled daily optional hour.
+- 2026-10-09 21:19: user has now explicitly reopened underwater MARL and Qizhen for active research. Previous pause/wait-only state is superseded. Continue to protect MA735 from power-on tests if critical PCB component remains missing. English remains optional, without a fixed calendar slot.
+
+
+## 2026-10-09 late evening: research restarted
+- User explicitly asked to increase research workload immediately and over Oct 10–11, and says both Qizhen and underwater MARL can advance now.
+- New MARL blocks: Oct 9 21:30–22:20 project entrypoint/sanity; Oct 10 20:45–22:10 minimal MuJoCo docking and non-learning sanity baseline; Oct 11 08:00–09:10 reproducibility/error evidence.
+- New Qizhen blocks: Oct 10 16:10–18:00 check present hardware readiness, encoder/capture/control/data chain, gather safe evidence; Oct 11 11:45–13:00 logging evidence and next test.
+- The Oct 9 post-MATLAB Process Control review ends 21:25 instead of 22:00, enabling the first research block; quiz prep still takes priority if unfinished.
+- Maintain all preexisting Oct 10 classes, Modern Control review, Oct 11 PID report, Big Data project, and RoboCup meeting.
+- Research goal: evidence and reproducibility, not new untested model complexity or unsafe encoder experiments.
