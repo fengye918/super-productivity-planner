@@ -3845,11 +3845,11 @@ CLASS:PUBLIC
 CREATED:20261009T070000Z
 DTSTAMP:20261009T070000Z
 DTSTART;TZID=Asia/Shanghai:20261009T190000
-DTEND;TZID=Asia/Shanghai:20261009T220000
+DTEND;TZID=Asia/Shanghai:20261009T212500
 LAST-MODIFIED:20261009T070000Z
 SEQUENCE:0
 SUMMARY;LANGUAGE=zh-cn:[过控小测] 报告完成后综合复习 + 十题订正
-DESCRIPTION:仅在 MATLAB 实验报告完成后启动本复习块；若尚未完成，以报告收尾优先，再从完成时刻转入过控。参考综合十题与标准解答，系统过一遍串级、气开气关及正反作用、阶跃辨识/PID整定、三冲量、逻辑比值、选择/超驰、分程、解耦；重点做/订正难题，最后整理一页考前速查。原下午十题限时练习撤销，不视为已完成。
+DESCRIPTION:仅在 MATLAB 实验报告完成后启动本复习块；若尚未完成，以报告收尾优先，再从完成时刻转入过控。参考综合十题与标准解答，系统过一遍串级、气开气关及正反作用、阶跃辨识/PID整定、三冲量、逻辑比值、选择/超驰、分程、解耦；重点做/订正难题，最后整理一页考前速查。原下午十题限时练习撤销，不视为已完成。用户晚间反馈当前任务空闲，因此将原复习块缩至21:25；若考前复习实际上仍未完成，应优先保证复习，今晚MARL重启任务可灵活取消。
 CATEGORIES:Course,ProcessControl,Quiz,Review
 TRANSP:OPAQUE
 UID:planner-20261009-process-final-review@chatgpt-planner
@@ -4199,6 +4199,101 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:[每周复盘] 核对成果与下一周优先级
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261009T132000Z
+DTSTAMP:20261009T132000Z
+DTSTART;TZID=Asia/Shanghai:20261009T213000
+DTEND;TZID=Asia/Shanghai:20261009T222000
+LAST-MODIFIED:20261009T132000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[MARL] 今晚重启：现有 Docking 环境可运行性核对
+DESCRIPTION:立即开工，不做空泛规划。打开现有MARL工程/实验记录，确认依赖、可运行入口、MuJoCo docking目标位姿/状态表示；若有代码则运行最小reset/step或已有测试，保存一次日志/截图与确定的下一处阻塞；若入口尚不可运行则记录精确错误并明确下一次可执行修改。今夜只做50分钟，不扩新算法。若过控小测复习未完成则先完成复习。
+CATEGORIES:Research,MARL,Restart
+TRANSP:OPAQUE
+UID:planner-20261009-marl-reactivation@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[MARL] 今晚重启：现有 Docking 环境可运行性核对
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261009T132000Z
+DTSTAMP:20261009T132000Z
+DTSTART;TZID=Asia/Shanghai:20261010T161000
+DTEND;TZID=Asia/Shanghai:20261010T180000
+LAST-MODIFIED:20261009T132000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真] 重启实验链路：STM32/编码器/数据记录核对
+DESCRIPTION:以最小实验链路为主。确认MA735 PCB关键元件、机械夹具及实验平台当前可用性；审阅CubeMX PA0/PA8输入捕获、PWM编码器测速/闭环接口、STM32到Orange Pi及GUI数据链。能做的安全上电测试只在供电与关键器件都已核实后执行，条件不满足绝不让缺件MA735上电。Done：一项可复现实测或软件日志，加最重要blocker及下次测试条件。
+CATEGORIES:Research,Qizhen,Robotics,Experiment
+TRANSP:OPAQUE
+UID:planner-20261010-qizhen-chain-restart@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真] 重启实验链路：STM32/编码器/数据记录核对
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261009T132000Z
+DTSTAMP:20261009T132000Z
+DTSTART;TZID=Asia/Shanghai:20261010T204500
+DTEND;TZID=Asia/Shanghai:20261010T221000
+LAST-MODIFIED:20261009T132000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[MARL] Docking 最小可运行环境与非学习 Sanity Check
+DESCRIPTION:承接10/9诊断，不重做长篇方案。优先实现/验证MuJoCo docking最小场景：target pose、e_p/e_R、reset/step、observation/action及一个无学习控制/固定种子短rollout；保留一张轨迹或误差曲线、一次确定性运行日志。若环境仍未跑起来，只聚焦修复唯一最高优先级的启动错误，不加MARL训练网络。
+CATEGORIES:Research,MARL,Simulation,Baseline
+TRANSP:OPAQUE
+UID:planner-20261010-marl-docking-sanity@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[MARL] Docking 最小可运行环境与非学习 Sanity Check
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261009T132000Z
+DTSTAMP:20261009T132000Z
+DTSTART;TZID=Asia/Shanghai:20261011T080000
+DTEND;TZID=Asia/Shanghai:20261011T091000
+LAST-MODIFIED:20261009T132000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[MARL] 复核首轮轨迹：误差曲线与失败证据
+DESCRIPTION:复核昨天的最小仿真与非学习baseline。固定种子重复运行，保存位置/姿态误差随时间变化曲线，标出收敛/碰撞/数值异常等首个真实failure；若仍不能运行则输出可复现错误和最小修复清单。Done：一张可解释曲线或一份明确复现的failure记录，而非新方法脑暴。
+CATEGORIES:Research,MARL,Experiment,Analysis
+TRANSP:OPAQUE
+UID:planner-20261011-marl-baseline-evidence@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[MARL] 复核首轮轨迹：误差曲线与失败证据
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261009T132000Z
+DTSTAMP:20261009T132000Z
+DTSTART;TZID=Asia/Shanghai:20261011T114500
+DTEND;TZID=Asia/Shanghai:20261011T130000
+LAST-MODIFIED:20261009T132000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真] 最小数据证据链与下次实验清单
+DESCRIPTION:衔接10/10链路核对，检查命令/编码器角度或速度/时间戳/日志字段，尽可能形成STM32→上位机→CSV/图的最小可检查记录；若硬件仍缺关键元件，则用已有合法数据或离线仿真验证解析与日志，不对缺件MA735供电。Done：日志字段样例、1份测试输出或明确的下次实机测试清单。13:00结束，保留午饭及下午大数据任务。
+CATEGORIES:Research,Qizhen,Robotics,Data
+TRANSP:OPAQUE
+UID:planner-20261011-qizhen-data-readiness@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真] 最小数据证据链与下次实验清单
 END:VALARM
 END:VEVENT
 END:VCALENDAR
