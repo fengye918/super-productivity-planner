@@ -70,8 +70,7 @@
         {
           "upload_id": 21834691,
           "name": "实验2_根轨迹校正(1).pdf",
-          "repo_path": "course_materials/现代控制理论/homework/1193398/实验2_根轨迹校正(1).pdf",
-          "bytes": 2083906
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/11920eb232c5e27844f018ce4640aa2fd834ef0d?timestamp=1791572400&nonce=d4c93d3955a74696b892472a793c78e1&token=18dc84ab6435342d574e0c0d0b33e746&name=%E5%AE%9E%E9%AA%8C2_%E6%A0%B9%E8%BD%A8%E8%BF%B9%E6%A0%A1%E6%AD%A3%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f322ce51ca0>, 'Connection to tcmedia.zju.edu.cn timed out. (connect"
         }
       ],
       "detail_fetch_error": null,
