@@ -238,3 +238,11 @@ Updated: 2026-10-11
 - Preserve earlier MARL/PID report/Qizhen tasks already in today's calendar, while not treating any past block as proof of completion. Lunch buffer after 13:00, rest at 17:00–17:30, dinner break before 19:30 meeting, evening work ends before 22:30.
 - Major Big Data project is still active; evening blocks aim to restore the first two-fault prerequisite before the scheduled Oct 18 knowledge scaling block, not force unsupported results.
 - Workload for ordinary Process Control assignment capped at 2.5 hours initially. If harder than expected, record remaining work and adjust on user feedback instead of falsely marking submitted.
+
+
+## 2026-10-11 Process Control week-4 solution produced
+- The new assignment `过程控制工程｜第四周作业` (activity 1195568; source `作业4(4).pptx`) has a complete **reference solution PDF**, independently generated from the original slides and checked against their numeric model inputs.
+- Repository PDF: `course_materials/过程控制工程/solutions/第四周作业_标准解答.pdf`.
+- Editable TeX: `course_materials/过程控制工程/solutions/source/第四周作业_标准解答.tex`.
+- The GitHub Actions "Build course solution PDFs" workflow run 38111686814 completed successfully on 2026-10-11; the PDF was verified present in the repository.
+- The reference answer contains a *separate numerical simulation*, not MATLAB/Simulink screenshots. User still needs to reproduce or verify simulation curves in their Simulink model and submit their own completed homework; do not mark the LMS task as submitted.
