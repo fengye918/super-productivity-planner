@@ -1059,4 +1059,42 @@ ACTION:DISPLAY
 DESCRIPTION:[启真] 最小数据证据链与下次实验清单
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261011T040400Z
+DTSTAMP:20261011T040400Z
+DTSTART;TZID=Asia/Shanghai:20261011T180000
+DTEND;TZID=Asia/Shanghai:20261011T191500
+LAST-MODIFIED:20261011T040400Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[过程控制] 第四周作业：读题与主体求解
+DESCRIPTION:学在浙大新发布的过程控制工程第四周作业（activity 1195568，附件作业4(4).pptx；北京时间10月21日23:59截止）。先完整核对PPTX题目/所有小问/交付要求，再集中完成主要计算、建模或仿真内容（以课件实际要求为准）；保存推导、模型、截图或可提交草稿。若此前已完成同题仿真部分，优先核对并收尾，避免重复劳动。学在浙大：https://courses.zju.edu.cn/course/101919/learning-activity#/1195568
+CATEGORIES:Course,ProcessControl,Homework
+TRANSP:OPAQUE
+UID:planner-20261011-1800-process-hw4-main@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[过程控制] 第四周作业：读题与主体求解
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261011T040400Z
+DTSTAMP:20261011T040400Z
+DTSTART;TZID=Asia/Shanghai:20261011T211500
+DTEND;TZID=Asia/Shanghai:20261011T223000
+LAST-MODIFIED:20261011T040400Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[过程控制] 第四周作业：完成剩余小问 + 提交前核对
+DESCRIPTION:承接18:00作业主体，完成剩余小问，复查过程控制模型/推导、单位、参数、仿真图或关键控制结论是否与题目逐条对应；整理老师要求的文件形式，确认能否提交。若2.5小时未能完成，写清剩余问题与预计额外时长，不虚报完成。截止10月21日23:59（北京时间），不因学在浙大同步待办而重复安排已完成任务。
+CATEGORIES:Course,ProcessControl,Homework
+TRANSP:OPAQUE
+UID:planner-20261011-2115-process-hw4-finish@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[过程控制] 第四周作业：完成剩余小问 + 提交前核对
+END:VALARM
+END:VEVENT
 END:VCALENDAR
