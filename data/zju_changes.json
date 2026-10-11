@@ -12,6 +12,23 @@
         "end_time": "2026-10-21T15:59:00Z",
         "is_locked": false,
         "detail_text": null,
+        "attachment_names": [],
+        "attachment_refs": [],
+        "attachment_contexts": [],
+        "downloaded_attachments": [],
+        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
+        "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1195568"
+      },
+      "after": {
+        "source_id": 1195568,
+        "course_id": 101919,
+        "course_name": "过程控制工程",
+        "course_code": "(2026-2027-1)-CSE3003M-0005416-1A",
+        "title": "第四周作业",
+        "type": "homework",
+        "end_time": "2026-10-21T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
         "attachment_names": [
           "作业4(4).pptx"
         ],
@@ -77,23 +94,6 @@
           }
         ],
         "detail_fetch_error": null,
-        "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1195568"
-      },
-      "after": {
-        "source_id": 1195568,
-        "course_id": 101919,
-        "course_name": "过程控制工程",
-        "course_code": "(2026-2027-1)-CSE3003M-0005416-1A",
-        "title": "第四周作业",
-        "type": "homework",
-        "end_time": "2026-10-21T15:59:00Z",
-        "is_locked": false,
-        "detail_text": null,
-        "attachment_names": [],
-        "attachment_refs": [],
-        "attachment_contexts": [],
-        "downloaded_attachments": [],
-        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
         "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1195568"
       }
     },
@@ -168,8 +168,7 @@
           {
             "upload_id": 21834691,
             "name": "实验2_根轨迹校正(1).pdf",
-            "repo_path": "course_materials/现代控制理论/homework/1193398/实验2_根轨迹校正(1).pdf",
-            "bytes": 2083906
+            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/11920eb232c5e27844f018ce4640aa2fd834ef0d?timestamp=1791694800&nonce=3e70fb3990de49d09ddaad1488731323&token=ec995dd3886f6ebe42e3ea9333c18df8&name=%E5%AE%9E%E9%AA%8C2_%E6%A0%B9%E8%BD%A8%E8%BF%B9%E6%A0%A1%E6%AD%A3%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7ff10484ae70>, 'Connection to tcmedia.zju.edu.cn timed out. (connect"
           }
         ],
         "detail_fetch_error": null,
@@ -245,7 +244,8 @@
           {
             "upload_id": 21834691,
             "name": "实验2_根轨迹校正(1).pdf",
-            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/11920eb232c5e27844f018ce4640aa2fd834ef0d?timestamp=1791694800&nonce=3e70fb3990de49d09ddaad1488731323&token=ec995dd3886f6ebe42e3ea9333c18df8&name=%E5%AE%9E%E9%AA%8C2_%E6%A0%B9%E8%BD%A8%E8%BF%B9%E6%A0%A1%E6%AD%A3%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7ff10484ae70>, 'Connection to tcmedia.zju.edu.cn timed out. (connect"
+            "repo_path": "course_materials/现代控制理论/homework/1193398/实验2_根轨迹校正(1).pdf",
+            "bytes": 2083906
           }
         ],
         "detail_fetch_error": null,
