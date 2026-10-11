@@ -4279,40 +4279,59 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261011T040400Z
-DTSTAMP:20261011T040400Z
-DTSTART;TZID=Asia/Shanghai:20261011T180000
-DTEND;TZID=Asia/Shanghai:20261011T191500
-LAST-MODIFIED:20261011T040400Z
+CREATED:20261011T041100Z
+DTSTAMP:20261011T041100Z
+DTSTART;TZID=Asia/Shanghai:20261011T143000
+DTEND;TZID=Asia/Shanghai:20261011T170000
+LAST-MODIFIED:20261011T041100Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[过程控制] 第四周作业：读题与主体求解
-DESCRIPTION:学在浙大新发布的过程控制工程第四周作业（activity 1195568，附件作业4(4).pptx；北京时间10月21日23:59截止）。先完整核对PPTX题目/所有小问/交付要求，再集中完成主要计算、建模或仿真内容（以课件实际要求为准）；保存推导、模型、截图或可提交草稿。若此前已完成同题仿真部分，优先核对并收尾，避免重复劳动。学在浙大：https://courses.zju.edu.cn/course/101919/learning-activity#/1195568
+SUMMARY;LANGUAGE=zh-cn:[过程控制] 第四周作业：完成全部题目与提交核对
+DESCRIPTION:学在浙大新发的过程控制工程第四周作业，activity 1195568，附件为作业4(4).pptx，截止北京时间10/21 23:59。先核对PPTX每道题与交付要求，再使用本块完成各小问的计算/建模/仿真与报告整理；若之前已有同题成果则先核验避免重做。17:00前完成正确性检查并尽可能提交；若任务实际超过2.5h，留下明确未完成项，不声称已提交。原大数据下午块挪到17:30及21:10。
 CATEGORIES:Course,ProcessControl,Homework
 TRANSP:OPAQUE
-UID:planner-20261011-1800-process-hw4-main@chatgpt-planner
+UID:planner-20261011-1430-process-hw4-complete@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[过程控制] 第四周作业：读题与主体求解
+DESCRIPTION:[过程控制] 第四周作业：完成全部题目与提交核对
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261011T040400Z
-DTSTAMP:20261011T040400Z
-DTSTART;TZID=Asia/Shanghai:20261011T211500
-DTEND;TZID=Asia/Shanghai:20261011T223000
-LAST-MODIFIED:20261011T040400Z
+CREATED:20261011T041100Z
+DTSTAMP:20261011T041100Z
+DTSTART;TZID=Asia/Shanghai:20261011T173000
+DTEND;TZID=Asia/Shanghai:20261011T190000
+LAST-MODIFIED:20261011T041100Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[过程控制] 第四周作业：完成剩余小问 + 提交前核对
-DESCRIPTION:承接18:00作业主体，完成剩余小问，复查过程控制模型/推导、单位、参数、仿真图或关键控制结论是否与题目逐条对应；整理老师要求的文件形式，确认能否提交。若2.5小时未能完成，写清剩余问题与预计额外时长，不虚报完成。截止10月21日23:59（北京时间），不因学在浙大同步待办而重复安排已完成任务。
-CATEGORIES:Course,ProcessControl,Homework
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 两类故障知识闭环 I：事件与规则
+DESCRIPTION:从下午迁至晚间的两类故障最小闭环任务，第一段90分钟：挑选2个物理模式明确的TEP故障，确定变量及动态事件（HIGH/LOW/RISING/FALLING/DRIFT等），把故障知识写成可检查的结构化规则JSON。确认信号与规则有意义；不做泛化STL解析器。19:00结束，留出会前用餐/休息。
+CATEGORIES:Course,BigData,Project,Knowledge
 TRANSP:OPAQUE
-UID:planner-20261011-2115-process-hw4-finish@chatgpt-planner
+UID:planner-20261011-1730-bigdata-twofault-part1@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[过程控制] 第四周作业：完成剩余小问 + 提交前核对
+DESCRIPTION:[大数据大作业] 两类故障知识闭环 I：事件与规则
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261011T041100Z
+DTSTAMP:20261011T041100Z
+DTSTART;TZID=Asia/Shanghai:20261011T211000
+DTEND;TZID=Asia/Shanghai:20261011T222500
+LAST-MODIFIED:20261011T041100Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 两类故障知识闭环 II：匹配验证
+DESCRIPTION:RoboCup例会后衔接17:30的工作。实现简化signal→event→rule→score最小执行流程，验证两个故障案例，至少保存一张时序事件或规则触发图/日志与下次待办。若规则前置数据尚未准备好，则优先把可复现实验入口和失败原因明确下来，不硬凑实验指标；22:25收尾。
+CATEGORIES:Course,BigData,Project,Implementation
+TRANSP:OPAQUE
+UID:planner-20261011-2110-bigdata-twofault-part2@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[大数据大作业] 两类故障知识闭环 II：匹配验证
 END:VALARM
 END:VEVENT
 END:VCALENDAR
