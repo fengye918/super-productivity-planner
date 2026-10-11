@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-09
+Updated: 2026-10-11
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -215,3 +215,11 @@ Updated: 2026-10-09
 - The Oct 9 post-MATLAB Process Control review ends 21:25 instead of 22:00, enabling the first research block; quiz prep still takes priority if unfinished.
 - Maintain all preexisting Oct 10 classes, Modern Control review, Oct 11 PID report, Big Data project, and RoboCup meeting.
 - Research goal: evidence and reproducibility, not new untested model complexity or unsafe encoder experiments.
+
+
+## 2026-10-11 newly synced Process Control homework
+- ZJU LMS homework 1195568, course 过程控制工程, title 第四周作业; newly present in the 2026-10-10 13:46 Asia/Shanghai GitHub sync, absent in the preceding sync (confirming it is newly published).
+- Source attachment saved to `course_materials/过程控制工程/homework/1195568/作业4(4).pptx` in GitHub repo. Course activity: https://courses.zju.edu.cn/course/101919/learning-activity#/1195568
+- Deadline: 2026-10-21 23:59 Asia/Shanghai. Do not assume the task is complete before user confirms/submits.
+- Today Oct 11, preserve 14:30–17:30 Big Data milestone and 19:30 RoboCup meeting; schedule two focused blocks: 18:00–19:15 work through requirements/main solutions, and 21:15–22:30 finish/review/submission readiness. Total 2.5h ordinary-homework budget. Meal/recovery gap 17:30–18:00; meet buffer 19:15–19:30, 21:00–21:15.
+- The available ZJU metadata confirms title, attachment, due date but not detailed problem statements; do not assert specific Simulink or other content without inspecting the PPTX. User may have worked on related simulation assignment before; check status before redoing it.
