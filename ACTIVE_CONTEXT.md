@@ -229,3 +229,12 @@ Updated: 2026-10-11
 - User requests removing only the **2026-10-11 14:30–17:30 Big Data two-fault event/rule minimal-loop work block**, because of low energy today. This block is cancelled, **not completed**, and should not be automatically backfilled into today's free time.
 - This is not a cancellation of the whole Big Data course project. Later milestones including 2026-10-18 remain scheduled for now; reassess prerequisites before progressing to six-fault expansion, and reschedule two-fault work only if/when user requests.
 - Today's 18:00–19:15 and 21:15–22:30 Process Control week-4 homework and 19:30 RoboCup meeting are retained, though energy-sensitive adjustments may be discussed separately if needed.
+
+
+## 2026-10-11 12:11 revised priorities (most recent user instruction)
+- User now explicitly wants today's newly synced ZJU homework (Process Control Engineering week 4, activity 1195568, attachment 作业4(4).pptx, due Oct 21 23:59 Asia/Shanghai) handled in the former afternoon Big Data work period.
+- Most recent instruction supersedes the earlier Oct 11 Big Data rest-day cancellation, as well as the Oct 11 18:00–19:15 and 21:15–22:30 Process Control homework schedule.
+- New Oct 11 sequence: 14:30–17:00 Process Control week-4 homework; 17:30–19:00 Big Data two-fault executable-event/knowledge rules phase I; 19:30–21:00 RoboCup meeting (untouched); 21:10–22:25 Big Data event-rule match and verification phase II.
+- Preserve earlier MARL/PID report/Qizhen tasks already in today's calendar, while not treating any past block as proof of completion. Lunch buffer after 13:00, rest at 17:00–17:30, dinner break before 19:30 meeting, evening work ends before 22:30.
+- Major Big Data project is still active; evening blocks aim to restore the first two-fault prerequisite before the scheduled Oct 18 knowledge scaling block, not force unsupported results.
+- Workload for ordinary Process Control assignment capped at 2.5 hours initially. If harder than expected, record remaining work and adjust on user feedback instead of falsely marking submitted.
