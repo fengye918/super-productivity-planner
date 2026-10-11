@@ -223,3 +223,9 @@ Updated: 2026-10-11
 - Deadline: 2026-10-21 23:59 Asia/Shanghai. Do not assume the task is complete before user confirms/submits.
 - Today Oct 11, preserve 14:30–17:30 Big Data milestone and 19:30 RoboCup meeting; schedule two focused blocks: 18:00–19:15 work through requirements/main solutions, and 21:15–22:30 finish/review/submission readiness. Total 2.5h ordinary-homework budget. Meal/recovery gap 17:30–18:00; meet buffer 19:15–19:30, 21:00–21:15.
 - The available ZJU metadata confirms title, attachment, due date but not detailed problem statements; do not assert specific Simulink or other content without inspecting the PPTX. User may have worked on related simulation assignment before; check status before redoing it.
+
+
+## 2026-10-11 Big Data rest-day adjustment
+- User requests removing only the **2026-10-11 14:30–17:30 Big Data two-fault event/rule minimal-loop work block**, because of low energy today. This block is cancelled, **not completed**, and should not be automatically backfilled into today's free time.
+- This is not a cancellation of the whole Big Data course project. Later milestones including 2026-10-18 remain scheduled for now; reassess prerequisites before progressing to six-fault expansion, and reschedule two-fault work only if/when user requests.
+- Today's 18:00–19:15 and 21:15–22:30 Process Control week-4 homework and 19:30 RoboCup meeting are retained, though energy-sensitive adjustments may be discussed separately if needed.
