@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-11
+Updated: 2026-10-12
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -246,3 +246,11 @@ Updated: 2026-10-11
 - Editable TeX: `course_materials/过程控制工程/solutions/source/第四周作业_标准解答.tex`.
 - The GitHub Actions "Build course solution PDFs" workflow run 38111686814 completed successfully on 2026-10-11; the PDF was verified present in the repository.
 - The reference answer contains a *separate numerical simulation*, not MATLAB/Simulink screenshots. User still needs to reproduce or verify simulation curves in their Simulink model and submit their own completed homework; do not mark the LMS task as submitted.
+
+
+## 2026-10-12 meeting corrections and tonight's Modern Control review
+- Most recent user correction: group meeting on **Tuesday Oct 13 at 20:00**, not Monday Oct 12 at 19:00. Moved the old one-off calendar event; tentative end 21:30, ask the user to correct if different.
+- RoboCup meeting recurs **every Saturday at 19:30 starting Oct 17, 2026** (tentative end 21:00). The old Oct 11 Sunday one-off was historical, not a recurring rule.
+- Oct 17 19:30–20:30 robot-future-direction exploration moved to 16:45–17:45 to eliminate Saturday conflict.
+- Tonight Oct 12 **19:00–20:30** dedicated Modern Control practice: continuous state solution e^{At}, zero-order-hold discretization Ad and Bd, and (zI-Ad)^{-1} representative example, using the course's actual PPT scope.
+- Existing Oct 12 10:00–11:30 post-class review remains historical as scheduled; do not infer whether it was completed. Tonight's session is additional and distinct.
