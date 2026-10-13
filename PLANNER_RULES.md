@@ -33,6 +33,12 @@
 - Innovation should be meaningful, testable and tied to a clear benefit; do not force novelty for novelty’s sake.
 - Use milestone outputs: requirements → design/innovation → feasibility → implementation/experiment → draft → revision → final.
 
+## Weekly RoboCup and active robotics research
+- Every week reserve **at least one focused RoboCup project implementation/experiment block (default 2 hours)** before the Saturday 19:30 regular meeting. Preferred fixed block is **Friday 16:30-18:30**, with a recurring calendar event starting 2026-10-16. If a Friday conflict occurs, move that week's work earlier rather than dropping it. RoboCup meeting itself does not count as project work.
+- When Qizhen and MARL research are active, prioritize concrete research deliverables in remaining open deep-work windows before optional general-interest learning; preserve hard classes, due work, English buffer and at least three hours daily for eating, recovery, and recreation.
+- For Qizhen, track **CFD / physical flow-field validation** and **MA735 closed-loop servo angular-speed chain** as two independently testable workstreams. Workstreams should each leave a reproducible numerical case, measurement, code test or clear blocker. Never schedule electrical power-on of an incomplete MA735 PCB.
+- Short high-efficiency learning blocks: check actual lecture material, recall without notes, solve a representative problem independently, verify using course source, record an actionable error or next step. Reserve sufficient lecture-to-lecture comprehension time instead of counting passive reading as mastery.
+
 ## Research
 - Research blocks must name a concrete output/evidence, not vague “do research”.
 - Prefer end-to-end evidence: working chain, reproducible baseline, curve, experiment note, validated interface, etc.
