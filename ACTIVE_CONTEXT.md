@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-12
+Updated: 2026-10-13
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -254,3 +254,14 @@ Updated: 2026-10-12
 - Oct 17 19:30–20:30 robot-future-direction exploration moved to 16:45–17:45 to eliminate Saturday conflict.
 - Tonight Oct 12 **19:00–20:30** dedicated Modern Control practice: continuous state solution e^{At}, zero-order-hold discretization Ad and Bd, and (zI-Ad)^{-1} representative example, using the course's actual PPT scope.
 - Existing Oct 12 10:00–11:30 post-class review remains historical as scheduled; do not infer whether it was completed. Tonight's session is additional and distinct.
+
+
+## 2026-10-13 updated priorities: research intensity + evidence-first study
+- User reports current research schedule is too sparse. Current independent priorities are now Qizhen **CFD** and **MA735-based servo speed closed loop** in parallel, plus underwater MARL and a guaranteed weekly RoboCup project work block before Saturday 19:30 meeting. Do not convert all spare time into passive courses or optional hobbies while these lines are actionable.
+- Newly scheduled Oct 13–18 work (Asia/Shanghai): Tue 13:00–14:00 CFD case preflight; Tue 18:00–19:30 catch up **actual Oct 12 Modern Control lecture** before Wed 08:00 class; Wed 16:20–17:50 MA735 capture/angle/velocity interface audit; Thu 16:20–18:20 CFD baseline; Thu 19:30–21:30 MA735 PI & safety bench/offline validation; Fri 16:30–18:30 weekly RoboCup project delivery; Fri 19:30–21:30 underwater docking MARL baseline; Sun 11:15–12:45 CFD result/physical validity review.
+- The Thu 19:30 WALL-E interest and Fri 19:30 UDP Mini-Lab blocks are temporarily replaced with direct research, not marked completed; resume only if research capacity permits. All class/lab/report/meeting/Big Data hard commitments preserved.
+- Recurring RoboCup project block is **Fridays 16:30–18:30 starting Oct 16**, before **every Saturday 19:30** RoboCup meeting. RoboCup subproject details are unknown; use last meeting's actual allocated task, produce demonstrable evidence for weekly meeting, and update specifics when known.
+- Qizhen CFD: do not treat speculative flexible silicone membrane shape as confirmed; prioritize a reproducible physical CFD case, solver/mesh/time-step/BC checks, and future comparison to Fin-only actual membrane deformation/force. CFD progress and MA735 speed feedback are separate deliverables with integration later.
+- Qizhen MA735: user has PA0/PA8 PWM sensing on STM32 CubeMX; verify actual timer channels and firmware. Build PWM duty/period->absolute raw angle->unwrapping/signed speed->PI speed control/ramp/anti-windup/timeouts/logs. Preserve legacy signed PWM. MA735 PWM carrier frequency is not servo mechanical angular speed. Confirm critical PCB component and safe electrical conditions before any MA735 power-on.
+- Highest learning efficiency default: active recall of **actual class PPT first**, one or two independent worked examples, immediate self-check with error categorization, 10-min preview for the next class, spaced short retrieval on subsequent days. AI assists with explanations/debugging but does not replace user's first independent attempt or evidence checks. Use focused 90–120 min deep-work blocks and reserve meals/exercise/English/free time per PLANNER_RULES.
+- Process Control week-4 Simulink homework (due Oct 21) must not be marked complete absent confirmation; Oct 17 practice block may be used to finish it if pending. Big Data Oct 18 six-fault expansion requires validated two-fault predecessor or else is used to finish that step first.
