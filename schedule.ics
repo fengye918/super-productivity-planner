@@ -3735,7 +3735,7 @@ DTEND;TZID=Asia/Shanghai:20261018T180000
 LAST-MODIFIED:20261005T032500Z
 SEQUENCE:0
 SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 六类知识结构化 + 纯知识诊断
-DESCRIPTION:把最小闭环扩展到约 6 类故障。整理故障说明与变量含义；用 LLM 离线生成受约束 JSON，人工快速审核后固定版本；实现确定性 rule compiler / matcher 与 fault score。Done：六类规则表 + 每类关键变量/事件 + 一轮纯知识诊断结果和失败案例。LLM 不在线参与最终分类。
+DESCRIPTION:先检查10/11的两类故障 signal→event→rule→score 最小闭环是否完成并有验证图/日志；如未完成，本次先补前置条件而不是硬扩六类。如前置条件通过，再扩到约6类故障：文本→受约束JSON→人工审核→确定性规则匹配分数，并记录纯知识结果和失败案例。LLM不在线参与最终分类。
 CATEGORIES:Course,BigData,Project,Knowledge
 TRANSP:OPAQUE
 UID:planner-20261018-1430-bigdata-knowledge-scale@chatgpt-planner
@@ -4053,25 +4053,6 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261009T073000Z
 DTSTAMP:20261009T073000Z
-DTSTART;TZID=Asia/Shanghai:20261015T193000
-DTEND;TZID=Asia/Shanghai:20261015T213000
-LAST-MODIFIED:20261009T073000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[WALL-E] 流式语音软件实践 I
-DESCRIPTION:自主动手项目：搭建最小的音频流输入→VAD/ASR→对话接口→TTS输出的模块接口骨架；先用可得的音频设备或样例音频验证，不等待其他硬件；保存一次可追踪的端到端运行日志及下一步问题。避免扩成完整机器人项目。
-CATEGORIES:Personal,Interest,Robotics,Voice
-TRANSP:OPAQUE
-UID:planner-20261015-walle-voice-streaming-lab@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[WALL-E] 流式语音软件实践 I
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261009T073000Z
-DTSTAMP:20261009T073000Z
 DTSTART;TZID=Asia/Shanghai:20261016T143000
 DTEND;TZID=Asia/Shanghai:20261016T160000
 LAST-MODIFIED:20261009T073000Z
@@ -4091,31 +4072,12 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261009T073000Z
 DTSTAMP:20261009T073000Z
-DTSTART;TZID=Asia/Shanghai:20261016T193000
-DTEND;TZID=Asia/Shanghai:20261016T210000
-LAST-MODIFIED:20261009T073000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[机器人网络] UDP Mini-Lab：seq / timestamp / timeout
-DESCRIPTION:先在同一电脑模拟发送端与接收端，通过UDP传递带seq与timestamp的消息；故意停止发送、丢弃或延迟部分消息，观察超时/乱序/陈旧数据行为；输出可运行小程序和一份简短测试日志。优先理解系统行为，不要求改动真实机器人项目。
-CATEGORIES:Personal,Interest,Robotics,Networking
-TRANSP:OPAQUE
-UID:planner-20261016-robot-network-minilab@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[机器人网络] UDP Mini-Lab：seq / timestamp / timeout
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261009T073000Z
-DTSTAMP:20261009T073000Z
 DTSTART;TZID=Asia/Shanghai:20261017T143000
 DTEND;TZID=Asia/Shanghai:20261017T163000
 LAST-MODIFIED:20261009T073000Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[过程控制] 综合题：控制结构与方向判断
-DESCRIPTION:按本周过程控制课堂重点做2-3道综合典型题：画控制结构/信号流；判断气开气关与控制器正反作用；说明串级、选择/分程、比值/前馈等控制过程；对照答案归纳标准解题步骤与易错点。若10/10小测暴露薄弱点则优先补该部分。
+SUMMARY;LANGUAGE=zh-cn:[过程控制] 第四周仿真作业收尾或综合题训练
+DESCRIPTION:如果学在浙大第四周 Simulink 加热炉作业尚未完成/提交（截止10月21日23:59），优先在本块完成单回路 Z-N、串级内环 PI 与外环 Lambda 整定、Pgas/Ti 抗扰对比与抗积分饱和，检查曲线、参数及可交付文件。若该作业已完成则改为本周过控典型题2–3道，重点控制结构、正反作用、比值/串级/分程，归纳错误类型。不可将未完成的作业视为已提交。
 CATEGORIES:Course,ProcessControl,Practice
 TRANSP:OPAQUE
 UID:planner-20261017-process-practice-1017@chatgpt-planner
@@ -4371,6 +4333,159 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:[RoboCup] 每周六例会（19:30）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261013T040000Z
+DTSTAMP:20261013T040000Z
+DTSTART;TZID=Asia/Shanghai:20261013T130000
+DTEND;TZID=Asia/Shanghai:20261013T140000
+LAST-MODIFIED:20261013T040000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真 CFD] 核实算例、边界条件和可运行入口
+DESCRIPTION:午饭后1小时启动CFD工作。检查现有CFD项目的计算几何/流体域、网格、求解器、流体物性、边界条件和输出；明确本周可验证的Fin-only局部流场/推力问题与模型假设。当前硅胶膜动态变形尚需实测，不把假设运动边界当成已验证。Done：CFD可运行入口或精确错误、一个明确基准工况、下一步唯一关键阻塞。
+CATEGORIES:Research,Qizhen,CFD
+TRANSP:OPAQUE
+UID:planner-20261013-qizhen-cfd-preflight@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真 CFD] 核实算例、边界条件和可运行入口
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261013T040000Z
+DTSTAMP:20261013T040000Z
+DTSTART;TZID=Asia/Shanghai:20261013T180000
+DTEND;TZID=Asia/Shanghai:20261013T193000
+LAST-MODIFIED:20261013T040000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 补10/12课堂：例题与明早预习
+DESCRIPTION:明早08:00现代控制上课前，补学10/12真实课堂PPT。18:00–18:15闭卷写出昨天主要概念/公式；18:15–19:00对照PPT补关键推导，独立解1–2道代表题；19:00–19:20核对计算、记录错因；19:20–19:30浏览10/14下一讲的章节衔接。优先学习昨天实际上课内容，不能只凭先前复习计划猜授课范围。此前10/12复习块不视为已完成。19:30结束，为20:00组会留出时间。
+CATEGORIES:Course,ModernControl,Catchup
+TRANSP:OPAQUE
+UID:planner-20261013-modern-monday-catchup@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] 补10/12课堂：例题与明早预习
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261013T040000Z
+DTSTAMP:20261013T040000Z
+DTSTART;TZID=Asia/Shanghai:20261014T162000
+DTEND;TZID=Asia/Shanghai:20261014T175000
+LAST-MODIFIED:20261013T040000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真 MA735] PA0/PA8 捕获到速度估计链路审查
+DESCRIPTION:阅读工作空间README/.md、CubeMX .ioc与既有STM32代码，不从零重写。核实PA0/PA8实际TIM通道/计时单位、MA735 PWM高电平和周期解码→单圈raw angle→unwrap→带符号角速度、传感器异常与超时处理。先使用离线样例/录波或软件注入检查零位跨越和方向符号，保留原正负PWM指令。Done：最小编译/离线测试证据和一张待修正事项表；关键PCB元件未确认齐全时禁止对MA735上电。
+CATEGORIES:Research,Qizhen,Embedded,MA735
+TRANSP:OPAQUE
+UID:planner-20261014-qizhen-ma735-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真 MA735] PA0/PA8 捕获到速度估计链路审查
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261013T040000Z
+DTSTAMP:20261013T040000Z
+DTSTART;TZID=Asia/Shanghai:20261015T162000
+DTEND;TZID=Asia/Shanghai:20261015T182000
+LAST-MODIFIED:20261013T040000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真 CFD] 跑通一组可复现基准工况
+DESCRIPTION:承接周二CFD核对，使用现有真实case与已确认边界条件推进一个baseline：网格/时间步设置、求解器状态、残差/收敛、代表性速度或压力分布、可导出的推力/局部流场指标（能支持哪项就做哪项）。保存输入参数与运行日志；不把没有实验或运动边界验证的结果写成物理定论。Done：可复现case、结果图或明确solver错误。
+CATEGORIES:Research,Qizhen,CFD,Simulation
+TRANSP:OPAQUE
+UID:planner-20261015-qizhen-cfd-baseline@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真 CFD] 跑通一组可复现基准工况
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261013T040000Z
+DTSTAMP:20261013T040000Z
+DTSTART;TZID=Asia/Shanghai:20261015T193000
+DTEND;TZID=Asia/Shanghai:20261015T213000
+LAST-MODIFIED:20261013T040000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真 MA735] 速度 PI + 保护 + 最小测试
+DESCRIPTION:承接10/14角度和速度反馈接口审查，完善实际角速度/目标速度闭环（非MA735载波频率闭环），检查速度估计滤波、PI/ramp、饱和与积分保护、超时安全停止、原手动正负PWM模式共存、左右电机方向一致性，尽量只做最小模块修改。完成编译、静态/离线验证并保存log；只有关键PCB元件已补齐且供电确认安全才允许实机测试。Done：一条可复现实测/测试记录与下次实验条件。该时段临时替代WALL-E兴趣实践以保障科研优先。
+CATEGORIES:Research,Qizhen,MA735,Control
+TRANSP:OPAQUE
+UID:planner-20261015-qizhen-ma735-pi-guardrails@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真 MA735] 速度 PI + 保护 + 最小测试
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261013T040000Z
+DTSTAMP:20261013T040000Z
+DTSTART;TZID=Asia/Shanghai:20261016T163000
+DTEND;TZID=Asia/Shanghai:20261016T183000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+LAST-MODIFIED:20261013T040000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[RoboCup] 每周例会前项目推进（2h）
+DESCRIPTION:每周六19:30例会前的固定科研推进块，周五优先完成。RoboCup的具体模块/个人责任尚未明确记录，先核对上次会议分配给自己的真实事项，选一项最关键的实现或实验，进行开发→测试→保存可演示结果/PR/日志，再整理3条例会汇报：本周完成、实测证据、下周阻塞。不得以编造的任务替代真实团队决定。
+CATEGORIES:Research,RoboCup,Recurring
+TRANSP:OPAQUE
+UID:planner-20261016-robocup-project-weekly@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[RoboCup] 每周例会前项目推进（2h）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261013T040000Z
+DTSTAMP:20261013T040000Z
+DTSTART;TZID=Asia/Shanghai:20261016T193000
+DTEND;TZID=Asia/Shanghai:20261016T213000
+LAST-MODIFIED:20261013T040000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[水下 MARL] Docking 最小基线实验与失败证据
+DESCRIPTION:恢复MARL研究主线：复现已有MuJoCo水下docking最小环境，检查obs/action、reset/step、位置/姿态误差、seed和记录；运行已存在的非学习基线或最小短rollout，存1张轨迹/误差曲线，定位首个failure。若环境还不可运行则修最优先启动问题；没有baseline证据不添加新网络。该时段临时替代UDP兴趣Mini-Lab。
+CATEGORIES:Research,MARL,Simulation
+TRANSP:OPAQUE
+UID:planner-20261016-marl-docking-baseline-week@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[水下 MARL] Docking 最小基线实验与失败证据
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261013T040000Z
+DTSTAMP:20261013T040000Z
+DTSTART;TZID=Asia/Shanghai:20261018T111500
+DTEND;TZID=Asia/Shanghai:20261018T124500
+LAST-MODIFIED:20261013T040000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真 CFD] 基准结果复核与实验关联
+DESCRIPTION:复盘周二/周四CFD基准工况：检查残差、网格或时间步敏感性和边界条件一致性，确认能否获得Fin-only可解释的流场/受力证据。把模型简化与未来实测的膜形/MA735实际轨迹/推力数据对应起来；不拿猜测的柔性膜形变当真实CFD边界。Done：一页数值工况表、两张可核对的图或一个清晰failure+下一步验证计划。
+CATEGORIES:Research,Qizhen,CFD,Validation
+TRANSP:OPAQUE
+UID:planner-20261018-qizhen-cfd-evidence@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真 CFD] 基准结果复核与实验关联
 END:VALARM
 END:VEVENT
 END:VCALENDAR
