@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-13
+Updated: 2026-10-14
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -265,3 +265,12 @@ Updated: 2026-10-13
 - Qizhen MA735: user has PA0/PA8 PWM sensing on STM32 CubeMX; verify actual timer channels and firmware. Build PWM duty/period->absolute raw angle->unwrapping/signed speed->PI speed control/ramp/anti-windup/timeouts/logs. Preserve legacy signed PWM. MA735 PWM carrier frequency is not servo mechanical angular speed. Confirm critical PCB component and safe electrical conditions before any MA735 power-on.
 - Highest learning efficiency default: active recall of **actual class PPT first**, one or two independent worked examples, immediate self-check with error categorization, 10-min preview for the next class, spaced short retrieval on subsequent days. AI assists with explanations/debugging but does not replace user's first independent attempt or evidence checks. Use focused 90–120 min deep-work blocks and reserve meals/exercise/English/free time per PLANNER_RULES.
 - Process Control week-4 Simulink homework (due Oct 21) must not be marked complete absent confirmation; Oct 17 practice block may be used to finish it if pending. Big Data Oct 18 six-fault expansion requires validated two-fault predecessor or else is used to finish that step first.
+
+
+## 2026-10-14 latest learning / motivation / RoboCup / online lab update
+- User (Oct 14 evening Asia/Shanghai) expects **a Modern Control online MATLAB experiment on Thursday Oct 15**; this is the user's expected session date, not a date confirmed in the synchronized LMS metadata. Current ZJU todo includes **fifth experiment "1_1_Matlab实验2"**, activity 1193401, attachment `course_materials/现代控制理论/homework/1193401/1_1_Matlab实验2(1).pdf`, end_time `2026-11-03T22:59:00Z` (= 2026-11-04 06:59 Asia/Shanghai if interpreted literally). LMS also has historical fourth experiment Matlab 1 material (activity 1193400), which is not currently in the active todo list; user should confirm which experiment if needed. Do not falsely attribute online session date to the LMS.
+- Calendar now reserves **Oct 15 16:20–18:20 for an online MATLAB 2 experiment**, based on current LMS pending experiment, and **Oct 19 19:00–21:00 for its independent lab report/submit readiness** (both tentative until the exact activity match is verified).
+- The preexisting Oct 15 16:20–18:20 Qizhen CFD baseline was displaced, **not completed**; it is consolidated into Sun Oct 18 11:15–13:15, with both running a baseline and documenting results/failure. Oct 15 19:30–21:30 Qizhen MA735 speed-loop block remains untouched. Preserve all fixed course times.
+- User reports low motivation ("兴致缺缺") but the weekly RoboCup deliverable remains important, so protect work blocks with very low-friction entry rather than simply increasing hours: **Fri Oct 16 13:30–14:00 task definition/start; recurring Fridays 16:30–18:30 engineering/deliverable work; Sat Oct 17 16:45–17:45 final QA/rehearsal** before Sat 19:30 meeting. The previously planned Oct 17 robot directions exploration is conditional only if RoboCup delivery already completed; it is not priority this week.
+- RoboCup actual assigned work item is not yet in known context; when user supplies specific deliverable/task, revise descriptions and acceptance criteria. Never claim it is finished or invent team work.
+- Effective response to lower interest: 20-minute easy first action; one verified output; explicit stop point and maintain food/sleep/recovery; no diagnosis or guilt framing.
