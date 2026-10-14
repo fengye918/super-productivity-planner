@@ -858,9 +858,9 @@ DTSTART;TZID=Asia/Shanghai:20261017T164500
 DTEND;TZID=Asia/Shanghai:20261017T174500
 LAST-MODIFIED:20261009T073000Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[个人发展] 机器人自主系统方向开放探索
-DESCRIPTION:因新增每周六19:30 RoboCup例会，移至16:45-17:45。每周1小时开放探索：从真实机器人自主系统、具身智能、学习/规划控制或部署中选一个有兴趣的问题；回答为什么值得看、现有技术做到哪、若试一周该怎么验证。产出简短探索笔记，不强行收敛新主业。
-CATEGORIES:Personal,Exploration,Robotics
+SUMMARY;LANGUAGE=zh-cn:[RoboCup] 例会前交付验收与汇报准备
+DESCRIPTION:周六例会前最后1小时，验收周五RoboCup任务：重新运行最小测试、补关键截图/日志、核对代码提交或PR，把实际成果/卡点/下一步写成3条简短汇报。如果任务已全部完成，才将剩余时间用于机器人方向开放探索；本周不额外强塞兴趣任务。晚餐和交通缓冲17:45–19:30。
+CATEGORIES:Research,RoboCup,MeetingPreparation
 TRANSP:OPAQUE
 UID:planner-20261017-future-exploration-1017@chatgpt-planner
 BEGIN:VALARM
@@ -1155,25 +1155,7 @@ ACTION:DISPLAY
 DESCRIPTION:[启真 MA735] PA0/PA8 捕获到速度估计链路审查
 END:VALARM
 END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261013T040000Z
-DTSTAMP:20261013T040000Z
-DTSTART;TZID=Asia/Shanghai:20261015T162000
-DTEND;TZID=Asia/Shanghai:20261015T182000
-LAST-MODIFIED:20261013T040000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[启真 CFD] 跑通一组可复现基准工况
-DESCRIPTION:承接周二CFD核对，使用现有真实case与已确认边界条件推进一个baseline：网格/时间步设置、求解器状态、残差/收敛、代表性速度或压力分布、可导出的推力/局部流场指标（能支持哪项就做哪项）。保存输入参数与运行日志；不把没有实验或运动边界验证的结果写成物理定论。Done：可复现case、结果图或明确solver错误。
-CATEGORIES:Research,Qizhen,CFD,Simulation
-TRANSP:OPAQUE
-UID:planner-20261015-qizhen-cfd-baseline@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[启真 CFD] 跑通一组可复现基准工况
-END:VALARM
-END:VEVENT
+
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261013T040000Z
@@ -1203,7 +1185,7 @@ RRULE:FREQ=WEEKLY;BYDAY=FR
 LAST-MODIFIED:20261013T040000Z
 SEQUENCE:0
 SUMMARY;LANGUAGE=zh-cn:[RoboCup] 每周例会前项目推进（2h）
-DESCRIPTION:每周六19:30例会前的固定科研推进块，周五优先完成。RoboCup的具体模块/个人责任尚未明确记录，先核对上次会议分配给自己的真实事项，选一项最关键的实现或实验，进行开发→测试→保存可演示结果/PR/日志，再整理3条例会汇报：本周完成、实测证据、下周阻塞。不得以编造的任务替代真实团队决定。
+DESCRIPTION:每周五16:30–18:30项目交付核心时段，必须在周六19:30例会前有实际进展。先按队内上次明确的分工选择一个本周最关键且可独立完成的任务，优先工作代码/实验→快速测试→截图/日志/PR证据；最后写三条汇报：完成情况、验证证据、卡点。状态差时先做最小20分钟动作启动，不要求一开始就兴致高涨。团队具体交付内容未知，需用户提供或从队内任务文档获取，绝不猜测。
 CATEGORIES:Research,RoboCup,Recurring
 TRANSP:OPAQUE
 UID:planner-20261016-robocup-project-weekly@chatgpt-planner
@@ -1237,11 +1219,11 @@ CLASS:PUBLIC
 CREATED:20261013T040000Z
 DTSTAMP:20261013T040000Z
 DTSTART;TZID=Asia/Shanghai:20261018T111500
-DTEND;TZID=Asia/Shanghai:20261018T124500
+DTEND;TZID=Asia/Shanghai:20261018T131500
 LAST-MODIFIED:20261013T040000Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[启真 CFD] 基准结果复核与实验关联
-DESCRIPTION:复盘周二/周四CFD基准工况：检查残差、网格或时间步敏感性和边界条件一致性，确认能否获得Fin-only可解释的流场/受力证据。把模型简化与未来实测的膜形/MA735实际轨迹/推力数据对应起来；不拿猜测的柔性膜形变当真实CFD边界。Done：一页数值工况表、两张可核对的图或一个清晰failure+下一步验证计划。
+SUMMARY;LANGUAGE=zh-cn:[启真 CFD] 一组基准算例运行与复核
+DESCRIPTION:原10/15 16:20–18:20 CFD基准算例工作因线上现代控制MATLAB实验移到本时段，并与原周日CFD结果检查合并。承接已核实的case/网格/求解设置，完成至少1组可复现CFD基准工况并核对边界条件、残差、时间步和代表性流场/受力结果。输出输入参数、日志和一张有效图；如果还未跑通，记录唯一可复现solver问题和下一次修复方法。尚无真实柔性膜形变实测时不把假定边界当真实物理。
 CATEGORIES:Research,Qizhen,CFD,Validation
 TRANSP:OPAQUE
 UID:planner-20261018-qizhen-cfd-evidence@chatgpt-planner
@@ -1249,6 +1231,63 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:[启真 CFD] 基准结果复核与实验关联
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261014T111500Z
+DTSTAMP:20261014T111500Z
+DTSTART;TZID=Asia/Shanghai:20261015T162000
+DTEND;TZID=Asia/Shanghai:20261015T182000
+LAST-MODIFIED:20261014T111500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制线上实验] MATLAB实验2：逐项运行和结果记录
+DESCRIPTION:按用户确认的2026-10-15线上实验安排；学在浙大同步待办目前为第五次实验《1_1_Matlab实验2(1).pdf》（activity 1193401），但待办不包含实验实际授课日期/线上性质，若教师安排另一MATLAB实验应据原通知修订。开始先核对原实验PDF及交付要求，按小问在MATLAB运行，保存m脚本、数值结果、关键曲线和报错处理记录；不要把参考图当亲自实验结果。该块替代原10/15 CFD，CFD已合并到10/18。
+CATEGORIES:Course,ModernControl,OnlineLab
+TRANSP:OPAQUE
+UID:planner-20261015-modern-online-matlab2@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制线上实验] MATLAB实验2：逐项运行和结果记录
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261014T111500Z
+DTSTAMP:20261014T111500Z
+DTSTART;TZID=Asia/Shanghai:20261016T133000
+DTEND;TZID=Asia/Shanghai:20261016T140000
+LAST-MODIFIED:20261014T111500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[RoboCup] 30分钟启动：确定本周必交成果
+DESCRIPTION:最近兴致较低，采用低启动成本：先打开真实的RoboCup小组任务说明/上次例会记录，写出本周必须完成的1项交付、最低验收条件及阻塞；只做一个能在20分钟内起步的动作（打开工程、跑通测试或完成首处代码修改）。把具体实现留给16:30–18:30固定项目块，不先投入漫长计划。
+CATEGORIES:Research,RoboCup,Preparation
+TRANSP:OPAQUE
+UID:planner-20261016-robocup-easy-start@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[RoboCup] 30分钟启动：确定本周必交成果
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261014T111500Z
+DTSTAMP:20261014T111500Z
+DTSTART;TZID=Asia/Shanghai:20261019T190000
+DTEND;TZID=Asia/Shanghai:20261019T210000
+LAST-MODIFIED:20261014T111500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制线上实验] MATLAB实验2报告与提交检查（2h）
+DESCRIPTION:对应10/15线上MATLAB实验，安排实验后的独立2小时报告时间。按实验手册逐题整理目的、实际运行代码、关键输出/曲线、实验分析与结论，核对教师要求的文件格式并检查是否提交。学在浙大当前记录为活动1193401，截止字段换算为北京时间11月4日06:59，请以页面实际时间为准。若用户实际做的是MATLAB实验1，需同步更改标题和作业来源；不得自动视为已完成或提交。
+CATEGORIES:Course,ModernControl,OnlineLab,Report
+TRANSP:OPAQUE
+UID:planner-20261019-modern-matlab2-report@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制线上实验] MATLAB实验2报告与提交检查（2h）
 END:VALARM
 END:VEVENT
 END:VCALENDAR
