@@ -72,8 +72,7 @@
           {
             "upload_id": 21962158,
             "name": "作业4(4).pptx",
-            "repo_path": "course_materials/过程控制工程/homework/1195568/作业4(4).pptx",
-            "bytes": 274197
+            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/f9f0cdc2455f26c1e917af235624cd728c480115?timestamp=1792036800&nonce=6c04ee1cc2d84637a7ec5adf687bcc6c&token=5e88c8d867c7a1c0ae187731f29fcb97&name=%E4%BD%9C%E4%B8%9A4%284%29.pptx (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f27b7fd1040>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60)'))"
           }
         ],
         "detail_fetch_error": null,
@@ -149,7 +148,7 @@
           {
             "upload_id": 21962158,
             "name": "作业4(4).pptx",
-            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/f9f0cdc2455f26c1e917af235624cd728c480115?timestamp=1792036800&nonce=6c04ee1cc2d84637a7ec5adf687bcc6c&token=5e88c8d867c7a1c0ae187731f29fcb97&name=%E4%BD%9C%E4%B8%9A4%284%29.pptx (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f27b7fd1040>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60)'))"
+            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/f9f0cdc2455f26c1e917af235624cd728c480115?timestamp=1792054800&nonce=3db41359451b4c148c9d263b052f2843&token=e35c8bbe955f67a409e578c72eafdb6d&name=%E4%BD%9C%E4%B8%9A4%284%29.pptx (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f4c320360f0>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60)'))"
           }
         ],
         "detail_fetch_error": null,
@@ -158,6 +157,23 @@
     },
     {
       "before": {
+        "source_id": 1193399,
+        "course_id": 100211,
+        "course_name": "现代控制理论",
+        "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
+        "title": "第三次实验（固高实物实验3_状态反馈）",
+        "type": "homework",
+        "end_time": "2026-11-03T22:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [],
+        "attachment_refs": [],
+        "attachment_contexts": [],
+        "downloaded_attachments": [],
+        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
+        "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1193399"
+      },
+      "after": {
         "source_id": 1193399,
         "course_id": 100211,
         "course_name": "现代控制理论",
@@ -232,23 +248,6 @@
           }
         ],
         "detail_fetch_error": null,
-        "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1193399"
-      },
-      "after": {
-        "source_id": 1193399,
-        "course_id": 100211,
-        "course_name": "现代控制理论",
-        "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
-        "title": "第三次实验（固高实物实验3_状态反馈）",
-        "type": "homework",
-        "end_time": "2026-11-03T22:59:00Z",
-        "is_locked": false,
-        "detail_text": null,
-        "attachment_names": [],
-        "attachment_refs": [],
-        "attachment_contexts": [],
-        "downloaded_attachments": [],
-        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
         "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1193399"
       }
     }
