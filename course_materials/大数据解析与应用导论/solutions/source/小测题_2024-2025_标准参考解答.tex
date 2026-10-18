@@ -1,0 +1,308 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage[left=21mm,right=21mm,top=22mm,bottom=21mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,booktabs,tabularx,array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.misc}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr,lastpage,enumitem,hyperref,multicol,needspace,xcolor}
+\usepackage{fontspec}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setsansfont{DejaVu Sans}
+\setlength{\parindent}{1.7em}
+\setlength{\parskip}{3.7pt}
+\linespread{1.17}
+\raggedbottom
+\setlist[enumerate]{leftmargin=2.1em,itemsep=3pt,topsep=3pt}
+\setlist[itemize]{leftmargin=2em,itemsep=2pt,topsep=3pt}
+\definecolor{navy}{HTML}{1D3855}
+\definecolor{teal}{HTML}{177A79}
+\definecolor{muted}{HTML}{617082}
+\definecolor{light}{HTML}{EEF4F7}
+\definecolor{line}{HTML}{D4DEE7}
+\definecolor{gold}{HTML}{A66A2A}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=teal}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} 浙江大学｜大数据解析与应用导论}
+\rhead{\footnotesize\color{muted} 历年小测题参考解答}
+\cfoot{\footnotesize\color{muted} \thepage\ / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.35pt}
+\setlength{\headheight}{15pt}
+\newcommand{\A}[1]{{\bfseries\color{teal}#1}}
+\newcommand{\F}[1]{{\bfseries\color{navy}#1}}
+\newcommand{\Q}[1]{\par\needspace{5\baselineskip}\vspace{5pt}{\noindent\bfseries\color{navy}#1}\par\vspace{1pt}}
+\newtcolorbox{note}[1][]{enhanced,breakable,colback=light,colframe=line,boxrule=0.4pt,arc=2mm,left=3mm,right=3mm,top=1.8mm,bottom=1.8mm,#1}
+\newcommand{\ans}[1]{\noindent\A{参考答案：#1}\par}
+\newcommand{\tip}[1]{{\color{muted}\small #1}}
+\begin{document}
+\begin{center}
+{\sffamily\fontsize{20}{25}\selectfont\bfseries\color{navy}《大数据解析与应用》历年小测题}\\[3pt]
+{\sffamily\Large\bfseries\color{teal}标准参考解答与考前速查}\\[7pt]
+{\color{muted}\small 对应上传资料《小测题.pdf》共 5 页｜含 2024 与 2025 年题目｜整理日期：2026-10-18}
+\end{center}
+\vspace{2pt}
+\begin{note}
+\textbf{使用说明}\quad 本文按上传 PDF 的年份及页码逐题整理。原题中有截图、笔记和部分标注的参考答案；本文保留其考查方向，并用标准数学定义给出\textbf{独立解释}。对于语义含糊或需要前提的题目，会标明\emph{通常判法/成立条件}，并非教师官方标准答案。\textbf{考前建议：先闭卷做原题，再用本册订正。}
+\end{note}
+\section*{第一部分｜答案速查表}
+\subsection*{2025 年｜原 PDF 第 1--5 页}
+\noindent\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{18mm}X>{\centering\arraybackslash}p{25mm}}
+\toprule
+来源 & 题目核心 & 参考答案\\ \midrule
+P1-1 & 哪种场景适合回归分析？ & \A{B}（连续值天气预测）\\
+P1-2 & 数据归一化常用方法（多选） & \A{B、C}\\
+P2-3 & OLS→Ridge→Lasso→Elastic Net；PCR/PLSR & 详见发展图\\
+P3-1 & 两种典型拟合不佳（多选） & \A{A、B}\\
+P3-2 & CCA 典型变量正交关系（多选） & \A{A、B、C}\\
+P3-3 & PLS 的方法思想组合（多选） & \A{A、B、C}（概念意义）\\
+P3-4 & CCA 最多能提取多少对典型变量 & \A{两组秩的较小值}\\
+P4-1 & 样本顺序影响 K 均值结果 & \A{B／错}（标准批量版本）\\
+P4-2 & Fisher 判别与投影类中心距离 & \A{A／对}（需顾及类内散度）\\
+P4-3 & CCA 用于研究两组变量的关系 & \A{A／对}\\
+P4-4 & 在给定 $O(n^2)$ 前提下 SVM 不宜的数据规模 & \A{D／大规模}\\
+P5-5 & CCA 选择典型变量的目标 & \A{B／最大相关系数}\\
+\bottomrule
+\end{tabularx}
+\subsection*{2024 年｜原 PDF 第 1 页}
+\noindent\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{12mm}X>{\centering\arraybackslash}p{28mm}}
+\toprule
+题号 & 题目核心 & 参考结论\\ \midrule
+1 & 正交投影矩阵用于降维的优势 & 保证正交、稳定、易解释\\
+2 & PCA 约束条件 & 单位范数、两两正交\\
+3 & PCA 与慢特征分析区别 & 最大方差 vs 最小时间变化\\
+4 & 数据清洗具有数据降维的作用 & \A{错}（按一般定义）\\
+5 & 归一化可以消除量纲与取值范围差异 & \A{对}（注意方法差异）\\
+6 & 箱形图上下四分位间约占一半数据 & \A{对}\\
+7 & 构造新属性能够提升数据挖掘效果 & \A{对}（\emph{可能}提升）\\
+\bottomrule
+\end{tabularx}
+\vspace{5pt}
+\section*{第二部分｜2024 年题目逐题解答}
+\subsection*{A. 2024.10.10（原 PDF 第 1 页上半部分）}
+\Q{1. 正交投影矩阵用于降维的优点是什么？}
+\ans{无冗余方向、几何与数值性质清晰，能构成最优正交投影。}
+设 $X\in\mathbb{R}^{n\times p}$ 为中心化数据，降维方向矩阵 $W\in\mathbb{R}^{p\times k}$，$k<p$。常用约束是 $W^\top W=I_k$；对应投影算子 $P=WW^\top$ 满足 $P^\top=P$、$P^2=P$。其优势：
+\begin{enumerate}
+\item \F{消除方向冗余}：正交基不会重复描述同一个投影方向。
+\item \F{数值稳定}：列向量单位范数，避免投影坐标任意放大或缩小，便于后续计算。
+\item \F{几何清晰}：$\hat{x}=WW^\top x$ 是到给定子空间的最短欧氏距离投影。
+\item \F{便于优化}：PCA 选择合适的正交子空间后，能在给定维数下最大化保留的总方差，等价于最小化平方重构误差。
+\end{enumerate}
+\tip{易错：$W$ 是矩形\emph{列正交矩阵}，并不是方阵意义上的 $W^{-1}=W^\top$；降维后不会保留原空间所有信息或所有两两距离。}
+
+\Q{2. 主成分分析（PCA）的约束条件。}
+\ans{各主成分方向单位范数、两两正交；在这些约束下最大化投影方差。}
+令 $\Sigma=\frac1n X^\top X$，第 $j$ 个主成分方向满足
+\[
+\max_{w_j}\;w_j^\top\Sigma w_j,\quad
+w_j^\top w_j=1,\quad w_j^\top w_i=0\ (i<j).
+\]
+将 $k$ 个方向合并：$\max_{W^\top W=I_k}\operatorname{tr}(W^\top\Sigma W)$。最优解为协方差矩阵最大的 $k$ 个特征值对应的正交特征向量。由此不同主成分得分\emph{不相关}：$\operatorname{Cov}(Xw_i,Xw_j)=0$（$i\ne j$）。
+
+\Q{3. PCA 与慢特征分析（SFA）有何区别？}
+\ans{PCA 找“变化幅度大”的方向；SFA 找“随时间变化慢”的方向。}
+\noindent\begin{tabularx}{\textwidth}{>{\bfseries}p{24mm}XX}
+\toprule
+角度 & PCA & SFA\\ \midrule
+主要目标 & 最大化 $\operatorname{Var}(w^\top x)$ & 最小化 $\mathbb{E}[(\Delta y_t)^2]$\\
+主要约束 & 投影方向正交、单位范数 & 输出均值零、方差一、不同输出去相关\\
+是否利用时间顺序 & 一般不利用 & 必须利用样本时序关系\\
+典型用途 & 方差解释、压缩、降噪 & 缓慢状态提取、动态系统特征\\
+\bottomrule
+\end{tabularx}
+SFA 可记为 $\min\;\mathbb{E}[(y_t-y_{t-1})^2]$，其中 $\mathbb{E}[y]=0$、$\mathbb{E}[y^2]=1$；单位方差约束防止退化为常数输出。
+
+\Q{4--7. 判断题。}
+\begin{enumerate}[label=\arabic*.,start=4]
+\item \A{错。}数据清洗主要处理缺失、错误、异常及重复记录；\emph{降维}一般属于特征选择或特征提取。删除冗余特征也可能降低维数，但不能说清洗必然具有降维作用。
+\item \A{对。}归一化/标准化使特征按统一尺度表达，可消除量纲，缓解不同取值范围造成的数值不平衡。\emph{注意}：Z-score 不保证输出落在同一区间，Min--Max 才常映射到指定区间。
+\item \A{对。}箱线图 $Q_1$ 至 $Q_3$ 对应第 $25\%$ 到第 $75\%$ 分位，四分位距 $IQR=Q_3-Q_1$ 所覆盖的中心部分约占 $50\%$；大量相同数值时边界计数可能有差异。
+\item \A{对（作为可能性命题）。}特征构造可显露非线性关系、交互或物理意义，提高预测/挖掘效果；但无关或噪声特征也可能使性能下降，并\emph{不保证}一定提升。
+\end{enumerate}
+\subsection*{B. 2024 年最后一次课的小测选项（原 PDF 第 1 页中部）}
+\Q{选项 1（1）简述 PCA 算法。}
+\ans{标准化/中心化→协方差或 SVD→特征分解→选主成分→投影。}
+$X$ 按列中心化（量纲差异大时先标准化）；求 $\Sigma=X^\top X/n$，特征分解 $\Sigma w_j=\lambda_j w_j$，按照 $\lambda_1\ge\cdots\ge\lambda_p$ 排序；根据累计解释方差 $\sum_{i=1}^k\lambda_i/\sum_{i=1}^p\lambda_i$ 选 $k$；得到低维得分 $T=XW_k$。答题强调：\emph{PCA 无监督，以最大方差和正交性为核心}。
+
+\Q{选项 1（2）简述 OLS；何为多重共线性、如何改进？}
+\ans{最小化残差平方和；多重共线性指解释变量之间存在强线性依赖。}
+\[
+\hat{\beta}_{\mathrm{OLS}}=\arg\min_\beta\|y-X\beta\|_2^2,
+\quad X^\top X\text{ 可逆时 }\hat{\beta}=(X^\top X)^{-1}X^\top y.
+\]
+共线性使 $X^\top X$ 病态甚至不可逆，系数方差大、符号和数值可能不稳定，导致解释性受损。可用\textbf{岭回归}（$L_2$ 惩罚）、\textbf{LASSO}（$L_1$ 稀疏）、\textbf{弹性网络}（$L_1+L_2$）、\textbf{PCR/PLSR}（潜变量降维），或者删去冗余变量。\tip{若严格秩亏，可用广义逆求一组 OLS 解，但不意味着参数可唯一辨识。}
+
+\Q{选项 1（3）岭回归与 LASSO 的异同。}
+\[
+\hat\beta_{\rm ridge}=\arg\min_\beta \bigl(\|y-X\beta\|_2^2+\lambda\|\beta\|_2^2\bigr),\qquad
+\hat\beta_{\rm lasso}=\arg\min_\beta \bigl(\|y-X\beta\|_2^2+\lambda\|\beta\|_1\bigr).
+\]
+共同点：在 OLS 损失上加惩罚，缓解过拟合及共线性（通常先标准化特征；截距不惩罚）。区别：岭回归用 $L_2$ 连续收缩，一般\textbf{不产生精确零系数}、适合高度相关特征；LASSO 用 $L_1$ 可把部分系数压成\textbf{零}实现特征选择，但相关特征间的选择可能不稳定。弹性网络同时有 $L_1,L_2$，兼顾稀疏与稳定性。
+
+\Q{选项 1（4）回归分析的优点、缺点及改进方向。}
+\ans{优点：可解释、实现简单、训练快，可用系数定量描述变量关系。}
+缺点：经典线性模型难以刻画非线性和复杂交互；多重共线性使系数不稳定；离群点与不满足噪声假设的数据可能影响估计；复杂高维场景可能过拟合。改进：正则化、稳健回归、特征变换/非线性项、PCR/PLSR、交叉验证与特征筛选。\tip{不要把“回归”泛化为只适用于线性模型；题目常特指普通线性回归。}
+
+\Q{选项 1（5）典型相关分析（CCA）与偏最小二乘（PLS）的区别。}
+\noindent\begin{tabularx}{\textwidth}{>{\bfseries}p{24mm}XX}
+\toprule
+对象 & CCA & PLS / PLSR\\ \midrule
+核心目标 & 最大化两组投影的\textbf{相关系数} $\operatorname{Corr}(Xa,Yb)$ & 常以最大化两组潜变量\textbf{协方差}为核心，兼顾解释和预测\\
+侧重点 & 衡量 $X,Y$ 两组数据的相关结构 & 从 $X$ 提取对预测 $Y$ 有用的潜变量\\
+高维/共线性 & 原始 CCA 可能遇到奇异协方差，需降维/正则化 & PLSR 常用于高维、强共线性预测\\
+\bottomrule
+\end{tabularx}
+\tip{相关系数经方差归一化；协方差未必。PLS 与 CCA 在具体实现算法上有变体，记住“相关 vs 协方差/预测”的典型区别即可。}
+
+\Q{选项 2：把本课程学过的方法联系起来讲述。}
+\ans{按“预处理—目的—模型—检验”组织，比强行把所有算法连成一条链更合理。}
+\begin{enumerate}
+\item 数据清洗（异常/缺失/重复）与归一化，得到质量可控的数据；
+\item 数据特征处理：PCA/SFA（降维或动态特征），或者构造与任务有关的新特征；
+\item 根据任务分支：回归用 OLS、Ridge、LASSO、Elastic Net 或 PCR/PLSR；两组变量关联用 CCA；聚类用 K 均值；监督判别用 Fisher/LDA、SVM；
+\item 以测试集表现、泛化能力、稳定性与可解释性检验，不只看训练误差。
+\end{enumerate}
+\section*{第三部分｜2025 年题目逐题解答}
+\subsection*{A. 原 PDF 第 1 页：基础选择题}
+\Q{1. 下列场景适用于回归分析的是（单选）。}
+\ans{B．天气预报。}
+回归预测的是\textbf{连续数值}，例如气温、降水量、风速；水果分拣、人脸识别常为分类，信息浓缩常为降维。\tip{严格说“天气预报”也可以是晴雨\emph{分类}，因此原题语义不够精确；这里按预测连续气象量的常见出题意图选 B。}
+
+\Q{2. 一般常见的数据归一化方法是（多选）。}
+\ans{B．最小--最大规范化；C．零均值规范化。}
+\[
+\text{Min--Max: }x'=\frac{x-x_{\min}}{x_{\max}-x_{\min}},\qquad
+\text{Z-score: }x'=\frac{x-\mu}{\sigma}.
+\]
+A．替换填充法、D．回归填充法属于\textbf{缺失值处理}，不是归一化。\tip{注意零均值规范化通常是零均值单位标准差；标准差为零时要单独处理。}
+
+\subsection*{B. 原 PDF 第 2 页：6 分简答题（必练）}
+\Q{3. 绘制 OLS→Ridge→Lasso→Elastic Net 演进路线，并添加 PCR/PLSR 分支。}
+\ans{下面为符合题干要求的概念演进图，箭头表示“针对前一步局限的建模选择”，不是历史上严格线性替代关系。}
+\vspace{3pt}
+\begin{center}
+\begin{tikzpicture}[node distance=6mm and 4mm,>=Latex,box/.style={draw=navy!75,rounded corners=2mm,fill=light,minimum height=11mm,text width=26mm,align=center,font=\small}, arrow/.style={-Latex,thick,draw=teal}, nudge/.style={font=\scriptsize,align=center,text=muted}]
+\node[box] (ols) {OLS\\\footnotesize 最小二乘};
+\node[box,right=9mm of ols] (ridge) {Ridge\\\footnotesize $L_2$ 正则};
+\node[box,right=9mm of ridge] (lasso) {LASSO\\\footnotesize $L_1$ 正则};
+\node[box,right=9mm of lasso] (en) {Elastic Net\\\footnotesize $L_1+L_2$};
+\draw[arrow] (ols)--(ridge);
+\draw[arrow] (ridge)--(lasso);
+\draw[arrow] (lasso)--(en);
+\node[box,below=19mm of ridge] (pcr) {PCR\\\footnotesize PCA 后回归};
+\node[box,right=17mm of pcr] (plsr) {PLSR\\\footnotesize 监督潜变量回归};
+\draw[arrow] (ols.south) |- (pcr.west);
+\draw[arrow] (pcr)-- (plsr);
+\end{tikzpicture}
+\end{center}
+\noindent\F{每一步的局限与机制（考试写法）}
+\begin{enumerate}
+\item \textbf{OLS：} $\min\|y-X\beta\|_2^2$。共线性使估计高方差/不稳定，也可能过拟合。
+\item \textbf{Ridge：}加 $\lambda\|\beta\|_2^2$，收缩系数、改善病态问题；局限是\emph{一般不能自动筛掉无关变量}。
+\item \textbf{LASSO：}加 $\lambda\|\beta\|_1$，系数可被压为零，实现稀疏特征选择；强相关变量可能被不稳定地择一选入。
+\item \textbf{Elastic Net：} $\min\|y-X\beta\|_2^2+\lambda_1\|\beta\|_1+\lambda_2\|\beta\|_2^2$，同时获得稀疏性和相关变量的组效应/稳定性。
+\end{enumerate}
+\noindent\F{PCR 与 PLSR 分支（同属潜变量路线，但目标不同）}
+\begin{itemize}
+\item \textbf{PCR：}对 $X$ 做 PCA，选解释 $X$ 方差最大的 $k$ 个方向，再用这些得分回归 $Y$。优点是降维去共线性；缺点是\emph{高方差方向未必对预测 $Y$ 最有用}。
+\item \textbf{PLSR：}考虑 $X$ 与 $Y$ 的共同信息来提取潜变量，再进行回归；方向与预测目标更相关，适合多重共线性、高维及多输出预测。\emph{核心不是单纯追求 $X$ 方差最大}。
+\end{itemize}
+\begin{note}
+\textbf{6 分题拿分关键词：}\quad OLS 的共线性；Ridge 的 $L_2$ 收缩但不稀疏；LASSO 的 $L_1$ 稀疏但强相关选择不稳定；Elastic Net 联合惩罚；PCR 先无监督 PCA 再回归；PLSR 提取与 $Y$ 有关的潜变量。
+\end{note}
+
+\needspace{11\baselineskip}
+\subsection*{C. 原 PDF 第 3 页：拟合、CCA、PLS}
+\Q{1. 最典型的两种拟合不佳情况是（多选）。}
+\ans{A．欠拟合；B．过拟合。}
+欠拟合：模型容量不足，训练与测试误差可能都较高；过拟合：过度记忆训练数据，训练误差低而测试误差可能明显上升。C“强拟合”、D“弱拟合”不是常用的两类规范术语。
+
+\Q{2. CCA 的哪些“垂直（正交）”关系成立（多选）？}
+\ans{A、B、C；D 错。}
+令中心化后的两组数据为 $X,Y$，$U_i=a_i^\top X$、$V_i=b_i^\top Y$，协方差分别为 $\Sigma_{11},\Sigma_{22}$。在\textbf{标准 CCA 的典型变量归一化与排序约束}下，不同编号的典型变量满足：
+\[
+\operatorname{Cov}(U_i,U_j)=0,\quad
+\operatorname{Cov}(V_i,V_j)=0,\quad
+\operatorname{Cov}(U_i,V_j)=0\quad(i\ne j).
+\]
+因此 \A{A、B、C} 成立。权重向量的归一化/正交对应
+\[
+ a_i^\top\Sigma_{11}a_j=\delta_{ij},\qquad
+ b_i^\top\Sigma_{22}b_j=\delta_{ij},
+\]
+而不是 D 所说的 $a_i^\top\Sigma_{11}^{-1}a_j=0$。\textbf{D 把协方差度量误写成了其逆矩阵。}
+\tip{答题时区分：$U_i$ 的正交是“典型变量”的不相关；$a_i$ 的正交是按 $\Sigma_{11}$ 加权，不是普通欧氏正交。}
+
+\Q{3. PLS 可看作哪些方法思想的结合（多选）？}
+\ans{A．OLS；B．PCA；C．CCA。}
+PLSR 同时包含\textbf{回归预测}（与 OLS 目标有关）、\textbf{潜变量/降维}（与 PCA 思想有关）、\textbf{协调 $X,Y$ 信息}（与 CCA 思想有关）。D．RR 岭回归不是其直接的基本构成。\tip{“思想结合”不等于 PLS 在算法上恰好等于三者相加；具体教材表述可能略有区别。}
+
+\Q{4. CCA 可提取的典型变量对数最大受何限制？}
+\ans{两组变量各自秩中的较小值。}
+\[
+ \boxed{k_{\max}\le\min\bigl(\operatorname{rank}(X),\operatorname{rank}(Y)\bigr)}.
+\]
+如果协方差矩阵可逆，常简写为 $\min(p,q)$；中心化后还受样本数 $n-1$ 约束。\tip{若问“非零相关的典型对”数量，还受交叉协方差矩阵秩的进一步限制。}
+
+\subsection*{D. 原 PDF 第 4--5 页：判断及单选}
+\Q{第 4 页第 1 题．样本顺序会影响 K 均值聚类结果。}
+\ans{B．错误（与题源标注一致）。}
+固定初始中心、采用\textbf{标准批量 K-means} 且无特殊并列距离处理时，样本排列不会改变目标函数及赋类/均值更新。\emph{但}随机中心选取、在线/增量算法以及特定实现的先后处理，可能使最终结果不同。区分“样本顺序”与“初始化随机性”。
+
+\Q{第 4 页第 2 题．Fisher 判别以投影后各类中心点间距离衡量类间分离度。}
+\ans{A．正确（与题源参考答案一致）。}
+双类 Fisher 判别不仅鼓励投影后的均值分离，也抑制同类内部离散：
+\[
+ J(w)=\frac{w^\top S_b w}{w^\top S_w w}.
+\]
+类中心距离体现 $S_b$，完整目标是\textbf{类间散度大、类内散度小}。\tip{“只最大化中心距离”不是完整的 Fisher 目标。}
+
+\Q{第 4 页第 3 题．CCA 适用于分析两组变量之间的关系。}
+\ans{A．正确（与题源参考答案一致）。}
+CCA 寻找两组变量的线性组合，使对应典型变量的 Pearson 相关最大，可分析两组多变量数据间的相关结构。
+
+\Q{第 4 页第 4 题．给定 SVM 最小时间复杂度 $O(n^2)$，哪种数据集不适宜？}
+\ans{D．大规模数据集（与题源参考答案一致）。}
+按题干的二次复杂度前提，$n$ 增加时计算负担增长较快。\tip{题干给出的复杂度是特定前提，并非所有 SVM 求解器和场景都固定为 $O(n^2)$；大数据也可考虑近似线性 SVM 或其他优化策略。}
+
+\Q{第 5 页第 5 题．CCA 选择综合变量的目标是什么？}
+\ans{B．最大化两者的相关系数（与题源参考答案一致）。}
+\[
+\max_{a,b}\quad \rho(a,b)=\frac{a^\top\Sigma_{XY}b}{\sqrt{a^\top\Sigma_{XX}a}\sqrt{b^\top\Sigma_{YY}b}},
+\quad a^\top\Sigma_{XX}a=1,\ b^\top\Sigma_{YY}b=1.
+\]
+CCA 最大化的是经过方差归一化的\textbf{相关系数}，不是欧氏距离、也不是未经归一化的协方差。
+\newpage
+\section*{第四部分｜考前一页速记}
+\begin{note}
+\textbf{最值得先拿的分}\quad 2025 年第 2 页的\textbf{6 分回归演进简答}；第 3 页\textbf{CCA 正交多选}；2024 年的\textbf{PCA / OLS / Ridge--LASSO / SFA} 五道简答。\end{note}
+\noindent\begin{tabularx}{\textwidth}{>{\bfseries}p{28mm}X}
+\toprule
+考点 & 一句话识别 + 必背点\\ \midrule
+PCA & 最大投影方差；$W^\top W=I$；无监督；特征值最大方向。\\
+SFA & 最小输出\textbf{时间变化}，单位方差防常数解；需要时序。\\
+OLS & $\min\|y-X\beta\|_2^2$；多重共线性使系数不稳。\\
+Ridge & $L_2$：系数收缩、稳健，\textbf{通常不稀疏}。\\
+LASSO & $L_1$：\textbf{可稀疏选特征}，相关变量选择可能不稳。\\
+Elastic Net & $L_1+L_2$：兼顾稀疏与相关变量分组稳定性。\\
+PCR & PCA$(X)$ 之后再回归 $Y$，不考虑主成分与 $Y$ 的关联。\\
+PLSR & 选取与 $Y$ 有关的潜变量，再做回归；综合降维与预测。\\
+CCA & 两组投影\textbf{相关系数最大}；标准形式不同典型编号交叉不相关。\\
+CCA 约束 & $a_i^\top\Sigma_{XX}a_j=\delta_{ij}$，\textbf{不是} $\Sigma_{XX}^{-1}$。\\
+K-means & 标准批量算法固定初始中心时与样本顺序无关，\textbf{初始化影响解}。\\
+Fisher / LDA & 最大类间散度/类内散度之比，非仅增大均值距离。\\
+规范化 & Min--Max、Z-score；缺失值\textbf{填充}不是归一化。\\
+\bottomrule
+\end{tabularx}
+\vspace{8pt}
+\noindent\F{考前最后 3 个口述题}\quad 不看答案，能否在 60 秒内讲清楚：
+\begin{enumerate}
+\item 为什么 $\mathrm{Ridge}\to\mathrm{LASSO}\to\mathrm{Elastic\ Net}$ 可视作“从稳健到稀疏再兼顾相关组”的思路？
+\item 为什么 CCA 中 $U_i,U_j$ 不相关，并不意味着权重向量 $a_i,a_j$ 按普通欧氏内积或 $\Sigma_{XX}^{-1}$ 内积正交？
+\item PCR 与 PLSR 都用潜变量，为什么 PCR 可能丢掉对 $Y$ 有预测力的低方差方向？
+\end{enumerate}
+\vspace{4pt}
+\begin{note}
+\textbf{题源与边界}\quad 本册以用户上传的五页《小测题.pdf》为基础（2024 题型回忆、2025 小测题及部分题源参考答案/手写笔记）。2025 年第 1 页“天气预报”题、2024 数据清洗/特征构造判断、K-means 顺序题、Fisher 表述与 SVM 复杂度题均具有上下文限定；本文已说明通常考试判法与理论条件，请优先以任课教师课件的具体定义为准。\end{note}
+\end{document}
