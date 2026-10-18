@@ -147,7 +147,8 @@
         {
           "upload_id": 21834779,
           "name": "1_1_Matlab实验2(1).pdf",
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/50003ee1036db0b01c886c0fa492cd4aecdc390a?timestamp=1792314000&nonce=c757eef15d1e4542a13fbb44f2d4bbc3&token=c0ba57b9876f5e5268b7d938fb415f5f&name=1_1_Matlab%E5%AE%9E%E9%AA%8C2%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f23321a6f00>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60)'))"
+          "repo_path": "course_materials/现代控制理论/homework/1193401/1_1_Matlab实验2(1).pdf",
+          "bytes": 252748
         }
       ],
       "detail_fetch_error": null,
