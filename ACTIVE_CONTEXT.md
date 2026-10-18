@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-14
+Updated: 2026-10-18
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -274,3 +274,9 @@ Updated: 2026-10-14
 - User reports low motivation ("兴致缺缺") but the weekly RoboCup deliverable remains important, so protect work blocks with very low-friction entry rather than simply increasing hours: **Fri Oct 16 13:30–14:00 task definition/start; recurring Fridays 16:30–18:30 engineering/deliverable work; Sat Oct 17 16:45–17:45 final QA/rehearsal** before Sat 19:30 meeting. The previously planned Oct 17 robot directions exploration is conditional only if RoboCup delivery already completed; it is not priority this week.
 - RoboCup actual assigned work item is not yet in known context; when user supplies specific deliverable/task, revise descriptions and acceptance criteria. Never claim it is finished or invent team work.
 - Effective response to lower interest: 20-minute easy first action; one verified output; explicit stop point and maintain food/sleep/recovery; no diagnosis or guilt framing.
+
+
+## 2026-10-18 09:24 — Big Data quiz planned for 2026-10-19 afternoon
+- User explicitly states the Oct 19 afternoon Big Data course (16:15–17:50) has a quiz, and uploaded `小测题.pdf` containing 2024 and 2025 quiz/revision questions across PCA/SFA, OLS, Ridge/LASSO/Elastic Net, PCR/PLSR, CCA, normalization, k-means, LDA, SVM. User requested a standard answer PDF and schedule before the quiz.
+- Schedule added: Sunday Oct 18 19:00–19:45 2024/2025 closed-book warmup, Mon Oct 19 10:00–11:50 focused full-paper/diagram answer comparison, Mon 12:55–13:10 quick recall. Avoid overlaps with Modern Control 08:00–09:35, ideological course 13:25–15:50, Big Data 16:15–17:50, and evening MATLAB 19:00–21:00 report.
+- Ensure exam references follow user uploaded `小测题.pdf`. Distinguish source-printed reference answers from independently derived answers, flag ambiguous multiple-choice wording and conditional claims. Neither the quiz nor study plan is evidence quiz has been taken.
