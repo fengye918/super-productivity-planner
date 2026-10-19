@@ -21,9 +21,18 @@ CONFIRMED_LAB_CLASS_UIDS = {
     "331b624bd6a3fa0d0a5e65f461b818cc76c1f3b4",  # 2026-10-27
 }
 
-# Remove previously generated planner events while leaving imported course/exam events untouched.
+# Three specific imported class instances are deliberately hidden from the
+# user's actionable schedule: the user will not attend these sessions on
+# Oct 20 / Oct 23. They are NOT claims that the university cancelled class.
+USER_EXCUSED_CLASS_UIDS = {
+    "9d537c98c9be4ff392d11f33ecb43c551705b154",  # Oct 20 AI/ML 08:00
+    "1eb574dd58b834c1659f1ff099e7be94c5f55bbc",  # Oct 20 Modern Control 16:15
+    "68e8643ad16717ad17e1503a15a344b87ce4b13c",  # Oct 23 Sensors 08:00
+}
+
+# Remove previously generated planner events and user-excused class instances.
 for block in event_blocks(base):
-    if "@chatgpt-planner" in block or any(f"UID:{uid}" in block for uid in CONFIRMED_LAB_CLASS_UIDS):
+    if "@chatgpt-planner" in block or any(f"UID:{uid}" in block for uid in CONFIRMED_LAB_CLASS_UIDS | USER_EXCUSED_CLASS_UIDS):
         base = base.replace(block, "")
 
 new_events = "".join(event_blocks(planner))
