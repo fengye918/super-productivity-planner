@@ -1347,25 +1347,7 @@ ACTION:DISPLAY
 DESCRIPTION:[工程管理大作业] 成员交付核对 + Word/PPT总纲
 END:VALARM
 END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261019T032000Z
-DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261020T100000
-DTEND;TZID=Asia/Shanghai:20261020T120000
-LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[学在浙大] 过控第四周作业截止前检查 + 新作业复核
-DESCRIPTION:学在浙大最新同步到10/19凌晨没有新增第四项，今日先核对系统的最新消息/附件；重点检查10/21 23:59截止的过控第四周Simulink加热炉作业是否真正完成并提交：Z-N单回路、串级PI内环/Lambda外环、Pgas/Ti抗扰对比、主回路抗饱和、真实Simulink曲线和文件。若已经提交，则取消重复作业工作，把剩余时段转入工程管理Word或大数据STL主链。新作业如出现先识别题目和截止时间再安排，不假设题目已知。
-CATEGORIES:Course,ProcessControl,Homework,Deadline
-TRANSP:OPAQUE
-UID:planner-20261020-process-week4-submit-audit@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[学在浙大] 过控第四周作业截止前检查 + 新作业复核
-END:VALARM
-END:VEVENT
+
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261019T032000Z
@@ -1389,15 +1371,15 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261019T032000Z
 DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261021T161500
-DTEND;TZID=Asia/Shanghai:20261021T181500
+DTSTART;TZID=Asia/Shanghai:20261020T101500
+DTEND;TZID=Asia/Shanghai:20261020T121500
 LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] Word集成与关键数据核对
-DESCRIPTION:接成员2汇总的Word十模块初版，对照课程要求逐项检查：项目背景/范围、WBS与10周工期缓冲、成本32万元配置可行性、资源、风险、沟通、质量验收D1–D5的可量化标准；与PPT的数值、工期、职责保持一致。把问题按负责人分派修复，保存可追踪版本和图表清单。目标10/24终稿。
+SEQUENCE:1
+SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] Word整合与模块/数据核对
+DESCRIPTION:利用本周二上午释放的2小时提前完成原周三Word整合，接成员2汇总的Word十模块初版，对照课程要求逐项检查：项目背景/范围、WBS与10周工期缓冲、成本32万元配置可行性、资源、风险、沟通、质量验收D1–D5的可量化标准；与PPT的数值、工期、职责保持一致。把问题按负责人分派修复，保存可追踪版本和图表清单。目标10/24终稿。
 CATEGORIES:Course,EngineeringManagement,Project,Writing
 TRANSP:OPAQUE
-UID:planner-20261021-eng-management-word-gather@chatgpt-planner
+UID:planner-20261020-eng-management-word-gather@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
@@ -1594,23 +1576,119 @@ ACTION:DISPLAY
 DESCRIPTION:[CAC2026] 海报送印状态 + 交流问答最终核对
 END:VALARM
 END:VEVENT
+
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261019T032000Z
-DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261026T190000
-DTEND;TZID=Asia/Shanghai:20261026T192500
-LAST-MODIFIED:20261019T032000Z
+CREATED:20261019T034500Z
+DTSTAMP:20261019T034500Z
+DTSTART;TZID=Asia/Shanghai:20261020T083000
+DTEND;TZID=Asia/Shanghai:20261020T100000
+LAST-MODIFIED:20261019T034500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[现代控制] MATLAB实验2最终版提交（仅25分钟）
-DESCRIPTION:用户确认MATLAB实验2最终版已完成，等下周提交；本事件仅为2026-10-26上传/复核。检查文件版本、命名格式、课程活动1193401提交入口及是否成功提交；不再重写报告。学在浙大同步的截止时间字段为2026-11-03T22:59:00Z（北京时间2026-11-04 06:59），以网页显示为准。只有确认提交回执后才标完成。
-CATEGORIES:Course,ModernControl,Submission
+SUMMARY;LANGUAGE=zh-cn:[人工智能与机器学习] 上周落课补齐：核心公式+例题
+DESCRIPTION:10/20早八人工智能本次按用户要求不参加，下一次实际课堂10/22 13:25前完成补课。以10/13、10/15上周真正讲授的PPT为依据，先闭卷列知识骨架→对照讲义补模型目标、假设及关键推导→独立做1道典型计算/算法题→标出2个仍不会的点。不猜教材进度；以老师课堂讲义为准。Done：一页公式/概念骨架+一题完整解答。
+CATEGORIES:Course,AIML,Review
 TRANSP:OPAQUE
-UID:planner-20261026-modern-matlab2-submit-only@chatgpt-planner
+UID:planner-20261020-ai-ml-lastweek-bridge@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[现代控制] MATLAB实验2最终版提交（仅25分钟）
+DESCRIPTION:[人工智能与机器学习] 上周落课补齐：核心公式+例题
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T034500Z
+DTSTAMP:20261019T034500Z
+DTSTART;TZID=Asia/Shanghai:20261020T161500
+DTEND;TZID=Asia/Shanghai:20261020T174500
+LAST-MODIFIED:20261019T034500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[传感与检测] 上周没学好的内容：概念到典型题
+DESCRIPTION:10/20现代控制16:15-17:50按本周用户计划不参加，用于补传感与检测上周实际课堂内容，必须在10/23 10:00正课前完成。以最新课件、复习笔记和老师讲授为准；如果涉及光电/超声，优先梳理工作原理、公式、结构图和典型判断/计算题。步骤：闭卷回忆15min→按PPT修缺口35min→独立1-2题30min→纠错10min。Done：一页典型原理表+两道题。
+CATEGORIES:Course,Sensors,Review
+TRANSP:OPAQUE
+UID:planner-20261020-sensor-lastweek-bridge@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[传感与检测] 上周没学好的内容：概念到典型题
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T034500Z
+DTSTAMP:20261019T034500Z
+DTSTART;TZID=Asia/Shanghai:20261021T161500
+DTEND;TZID=Asia/Shanghai:20261021T181500
+LAST-MODIFIED:20261019T034500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真科研] 组会后集中2小时：CFD或MA735速度闭环实证
+DESCRIPTION:10/20启真线下组会后，按会上确定的最高优先级，在CFD基准算例或MA735速度闭环里只选一条问题链连续攻坚2小时，避免频繁切任务。CFD优先参数/网格/边界/残差可重复案例，或MA735优先捕获→角度→真实角速度→PI离线测试与日志。保存可复现实验结果或明确报错和下一步；MA735关键PCB器件及供电条件未确认前绝不上电。原本此时的工程管理Word块已提前到10/20上午。
+CATEGORIES:Research,Qizhen,CFD,MA735
+TRANSP:OPAQUE
+UID:planner-20261021-qizhen-after-meeting-research@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真科研] 组会后集中2小时：CFD或MA735速度闭环实证
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T034500Z
+DTSTAMP:20261019T034500Z
+DTSTART;TZID=Asia/Shanghai:20261023T081500
+DTEND;TZID=Asia/Shanghai:20261023T094500
+LAST-MODIFIED:20261019T034500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 10/21课堂课后消化：推导+1道计算题
+DESCRIPTION:周五8:00传感与检测按用户安排不参加，将其用于10/21实际参加的现代控制课堂课后复习。先从记忆画当堂知识脉络，再按10/21课件推导最关键公式，完整做1道老师风格的典型题、核对每一步并记录错误，避免只看AI讲解。课程实际讲了什么就复习什么，不编造章节；周五10:00传感正课正常参加。
+CATEGORIES:Course,ModernControl,Review
+TRANSP:OPAQUE
+UID:planner-20261023-modern-1021-postclass-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] 10/21课堂课后消化：推导+1道计算题
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T034500Z
+DTSTAMP:20261019T034500Z
+DTSTART;TZID=Asia/Shanghai:20261025T113000
+DTEND;TZID=Asia/Shanghai:20261025T130000
+LAST-MODIFIED:20261019T034500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 补强关键实验证据：STL R(t)与数据对齐
+DESCRIPTION:利用周日上午额外90分钟补本周STL动态鲁棒度R(t)与轻量GRU的核心证据。先检查run-level train/val/test划分、阈值来源和因果窗口；固定两类故障，保存一张正常与故障R(t)对比图、输入/标签对齐测试和一份可重跑日志。若主链仍不可运行，则只修最高优先级一处失败，不直接跳零样本/复杂网络。与14:30–18:00主实验组成可交付的完整研发日。
+CATEGORIES:Course,BigData,Project,Experiment
+TRANSP:OPAQUE
+UID:planner-20261025-bigdata-extra-core-evidence@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[大数据大作业] 补强关键实验证据：STL R(t)与数据对齐
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T034500Z
+DTSTAMP:20261019T034500Z
+DTSTART;TZID=Asia/Shanghai:20261025T193000
+DTEND;TZID=Asia/Shanghai:20261025T203000
+LAST-MODIFIED:20261019T034500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[课程复习] AI/ML + 传感与检测隔天回忆与易错题
+DESCRIPTION:恢复课程掌握的持续性，结合周二补课后实际参加的10/22人工智能和10/23传感与检测课堂内容，闭卷各25分钟回忆核心概念/公式和一道代表题，再10分钟核对错因，形成下周上课前需要补的3个具体点。若无实际课堂或新增进度则针对上周的薄弱点重复测验，不盲看新内容。
+CATEGORIES:Course,AIML,Sensors,SpacedReview
+TRANSP:OPAQUE
+UID:planner-20261025-learning-retrieval-weekly@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[课程复习] AI/ML + 传感与检测隔天回忆与易错题
 END:VALARM
 END:VEVENT
 END:VCALENDAR
