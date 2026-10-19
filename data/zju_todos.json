@@ -301,7 +301,8 @@
         {
           "upload_id": 21834725,
           "name": "实验3_状态反馈(1).pdf",
-          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/4e06ebe616711f5f6ebc9dddce03301edb583fe4?timestamp=1792429200&nonce=c10a1e58329c42258fd7a272f2b028e0&token=1d24ad56c3e25aaa4cfa47e88308d6d9&name=%E5%AE%9E%E9%AA%8C3_%E7%8A%B6%E6%80%81%E5%8F%8D%E9%A6%88%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f073db9b650>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout="
+          "repo_path": "course_materials/现代控制理论/homework/1193399/实验3_状态反馈(1).pdf",
+          "bytes": 1167727
         }
       ],
       "detail_fetch_error": null,
