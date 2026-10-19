@@ -3753,8 +3753,8 @@ DTSTART;TZID=Asia/Shanghai:20261025T143000
 DTEND;TZID=Asia/Shanghai:20261025T180000
 LAST-MODIFIED:20261005T032500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 知识增强模型 + 5-shot 核心实验
-DESCRIPTION:实现主模型：统计特征 + rule matching score → XGBoost，并与纯数据 baseline 公平比较。核心只先做 5-shot；固定相同 run split、特征与评价指标，优先看 Macro-F1 / Accuracy 与类别级变化。Done：data-only vs knowledge-augmented 主结果表 + 至少一轮稳定复现；若没有提升，输出规则质量/阈值/事件提取的 failure analysis，而不是堆新模型。
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] STL动态征兆 + GRU 对比实验
+DESCRIPTION:沿用10月14日讨论后的新方案：先确认TEP run-level划分、正常训练集标准化、STL候选规则和训练/验证集阈值标定是否可靠；在无测试泄漏前提下生成逐时间步动态robustness R(t)。用相同输入窗比较raw-only单层GRU与raw+R(t)单层GRU；先跑可复现Full-data或5-shot核心结果之一（看前置实现情况），记录Macro-F1与类别变化。若主链未跑通就优先修复并保存失败日志，不增加复杂网络；LLM只参与离线STL候选构建、测试阶段不参与推理。
 CATEGORIES:Course,BigData,Project,Experiment
 TRANSP:OPAQUE
 UID:planner-20261025-1430-bigdata-5shot@chatgpt-planner
@@ -4509,25 +4509,6 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261014T111500Z
-DTSTAMP:20261014T111500Z
-DTSTART;TZID=Asia/Shanghai:20261019T190000
-DTEND;TZID=Asia/Shanghai:20261019T210000
-LAST-MODIFIED:20261014T111500Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[现代控制线上实验] MATLAB实验2报告与提交检查（2h）
-DESCRIPTION:对应10/15线上MATLAB实验，安排实验后的独立2小时报告时间。按实验手册逐题整理目的、实际运行代码、关键输出/曲线、实验分析与结论，核对教师要求的文件格式并检查是否提交。学在浙大当前记录为活动1193401，截止字段换算为北京时间11月4日06:59，请以页面实际时间为准。若用户实际做的是MATLAB实验1，需同步更改标题和作业来源；不得自动视为已完成或提交。
-CATEGORIES:Course,ModernControl,OnlineLab,Report
-TRANSP:OPAQUE
-UID:planner-20261019-modern-matlab2-report@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[现代控制线上实验] MATLAB实验2报告与提交检查（2h）
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
 CREATED:20261018T012500Z
 DTSTAMP:20261018T012500Z
 DTSTART;TZID=Asia/Shanghai:20261018T190000
@@ -4581,6 +4562,291 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:[大数据小测] 课前15分钟闭卷回忆
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261019T190000
+DTEND;TZID=Asia/Shanghai:20261019T211500
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] 成员交付核对 + Word/PPT总纲
+DESCRIPTION:10/25之前必须完成；内部目标10/24提交。核对9人组各成员的实质交付：成员2负责Word总整合；成员3项目背景与范围；成员6 WBS/进度；成员5资源；成员8风险；成员7成本；成员9质量/验收；成员2还负责沟通等。按最新分工实际情况检查缺失文件并催交（不代发消息）；整理Word十模块目录、PPT约20页以上结构和缺项清单。输出：可审的Word集成版/目录、PPT提纲和每位成员待补一条。已完成模块只验收不重写。
+CATEGORIES:Course,EngineeringManagement,Project
+TRANSP:OPAQUE
+UID:planner-20261019-eng-management-integration-kickoff@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[工程管理大作业] 成员交付核对 + Word/PPT总纲
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261020T100000
+DTEND;TZID=Asia/Shanghai:20261020T120000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[学在浙大] 过控第四周作业截止前检查 + 新作业复核
+DESCRIPTION:学在浙大最新同步到10/19凌晨没有新增第四项，今日先核对系统的最新消息/附件；重点检查10/21 23:59截止的过控第四周Simulink加热炉作业是否真正完成并提交：Z-N单回路、串级PI内环/Lambda外环、Pgas/Ti抗扰对比、主回路抗饱和、真实Simulink曲线和文件。若已经提交，则取消重复作业工作，把剩余时段转入工程管理Word或大数据STL主链。新作业如出现先识别题目和截止时间再安排，不假设题目已知。
+CATEGORIES:Course,ProcessControl,Homework,Deadline
+TRANSP:OPAQUE
+UID:planner-20261020-process-week4-submit-audit@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[学在浙大] 过控第四周作业截止前检查 + 新作业复核
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261020T190000
+DTEND;TZID=Asia/Shanghai:20261020T221500
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真] 19:00打车出发 + 线下组会 + 返程预留
+DESCRIPTION:用户确认10/20晚上启真线下组会在19:30之后开始，必须19:00坐车出发才能赶到。19:00–19:30打车与抵达；19:30之后进行组会（实际开场与结束以通知为准）；暂占至22:15含返程缓冲，避免另外排晚间任务。会前准备两条研究线的实质进度：CFD算例/边界与MA735速度闭环；会中确定每线下一项负责人、数据/实验条件、验收时间。不假定已做完实测。
+CATEGORIES:Research,Qizhen,Meeting,Travel
+TRANSP:OPAQUE
+UID:planner-20261020-qizhen-taxi-onsite-meeting@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真] 19:00打车出发 + 线下组会 + 返程预留
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261021T161500
+DTEND;TZID=Asia/Shanghai:20261021T181500
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] Word集成与关键数据核对
+DESCRIPTION:接成员2汇总的Word十模块初版，对照课程要求逐项检查：项目背景/范围、WBS与10周工期缓冲、成本32万元配置可行性、资源、风险、沟通、质量验收D1–D5的可量化标准；与PPT的数值、工期、职责保持一致。把问题按负责人分派修复，保存可追踪版本和图表清单。目标10/24终稿。
+CATEGORIES:Course,EngineeringManagement,Project,Writing
+TRANSP:OPAQUE
+UID:planner-20261021-eng-management-word-gather@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[工程管理大作业] Word集成与关键数据核对
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261021T191500
+DTEND;TZID=Asia/Shanghai:20261021T211500
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[CAC2026海报] 论文一致性与必改项修复
+DESCRIPTION:从现有90×120cm竖版海报出发，不重新设计。先修正PairSwap条件：持有有效目标至少H_min连续步且交换判定时局部唯一；核对单位1完整名称和单位4正式名称；复核Token图例、BasicTail表述、统计口径/单位、论文的MATLAB与MuJoCo结果；优先替换有误/模糊图、补有效PairSwap示意并突出对比结论。输出：海报PPTX可审版本+修改清单，打印前与最新论文逐项核对。
+CATEGORIES:Research,CAC,Poster
+TRANSP:OPAQUE
+UID:planner-20261021-cac-poster-critical-corrections@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[CAC2026海报] 论文一致性与必改项修复
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261022T100000
+DTEND;TZID=Asia/Shanghai:20261022T120000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] STL候选规则 → 动态robustness数据链
+DESCRIPTION:优先排除旧版纯规则/XGBoost与10/14最新方案不符的问题。核对现有TEP数据按simulation run分割、训练集标准化、窗口长度与未来信息泄漏；LLM辅助离线生成/审核少量具有物理意义的STL候选，使用训练/验证集校准门限，只以当前及历史时序计算逐时刻鲁棒度R(t)。输出至少2类故障的一组R(t)曲线/可复现脚本，保留失败样例。暂不加复杂ResBlock/Agent。
+CATEGORIES:Course,BigData,Project,Implementation
+TRANSP:OPAQUE
+UID:planner-20261022-bigdata-stl-pipeline@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[大数据大作业] STL候选规则 → 动态robustness数据链
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261022T162000
+DTEND;TZID=Asia/Shanghai:20261022T182000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] PPT主体完成 + Word对齐
+DESCRIPTION:将9人组Word十模块提炼为可汇报的PPT主体（约20页以上以老师要求为准），重点结构与结果：背景、场地条件、WBS/进度、资金及资源配置、风险、验收与分工。统一数据/术语/图表，少堆文字，保存首轮可答辩PPT与需要成员反馈的问题。10/24之前全套定稿。
+CATEGORIES:Course,EngineeringManagement,PPT
+TRANSP:OPAQUE
+UID:planner-20261022-eng-management-ppt-v1@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[工程管理大作业] PPT主体完成 + Word对齐
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261022T193000
+DTEND;TZID=Asia/Shanghai:20261022T210000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[CAC2026海报] 最终尺寸/清晰度检查与送印准备
+DESCRIPTION:接10/21修正版：检查90×120cm竖版、版心与官方PPT模板、机构名称、logo清晰度、图片分辨率/矢量优先、公式符号/图例/参考文献及打印色彩与导出PDF尺寸；执行或准备纸质打印/电子提交动作，保存打印版PDF与最终PPTX。并核对CAC2026官方最新上传/打印要求，不能因本日排程而默认已打印。
+CATEGORIES:Research,CAC,Poster,Print
+TRANSP:OPAQUE
+UID:planner-20261022-cac-poster-print-ready@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[CAC2026海报] 最终尺寸/清晰度检查与送印准备
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261023T134500
+DTEND;TZID=Asia/Shanghai:20261023T154500
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] Word+PPT全量质检与团队反馈闭环
+DESCRIPTION:工程管理终稿前最后一次整包审查，核验所有表格/图/项目预算/10周工期和验收指标在Word和PPT间完全一致；收回成员2整合版本、各负责人的最终纠错，检查封面目录/参考文献/语言表述/格式，并在PPT中标清展示重点。输出可提交候选包与不超过5条剩余问题，所有问题10/24上午关闭。
+CATEGORIES:Course,EngineeringManagement,Quality
+TRANSP:OPAQUE
+UID:planner-20261023-eng-management-crosscheck@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[工程管理大作业] Word+PPT全量质检与团队反馈闭环
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261023T193000
+DTEND;TZID=Asia/Shanghai:20261023T213000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 单层GRU基线与STL动态征兆增强对照
+DESCRIPTION:建立原始工业时序X单层GRU baseline与X+时间对齐的STL动态robustness R(t)单层GRU模型，使用一致simulation run数据划分/归一化/训练预算和固定seed。先实现训练与评估入口，并产出第一份日志与类别级误差表；如果STL数据链未就绪就集中修复输入对齐/阈值，不为了出结果堆新网络。
+CATEGORIES:Course,BigData,Project,Experiment
+TRANSP:OPAQUE
+UID:planner-20261023-bigdata-gru-compare@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[大数据大作业] 单层GRU基线与STL动态征兆增强对照
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261024T093000
+DTEND;TZID=Asia/Shanghai:20261024T113000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] 10/24最终交付：Word/PPT与提交确认
+DESCRIPTION:用户硬约束是10/25之前完成，因此在10/24上午冻结并交付，不依赖10/25缓冲。复核Word/PPT、附图表、任务分工、工期/成本、最终答辩版本/附件是否齐全；由有权限者完成课程规定的提交，核验成功回执或交成员2/组长确认，记录未提交原因，不把文件准备好误写成已提交。Done：可核验的最终材料包+确切提交/收件状态。
+CATEGORIES:Course,EngineeringManagement,Deadline,Submit
+TRANSP:OPAQUE
+UID:planner-20261024-eng-management-final-delivery@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[工程管理大作业] 10/24最终交付：Word/PPT与提交确认
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261024T140000
+DTEND;TZID=Asia/Shanghai:20261024T163000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 两类故障R(t)核验 + 主模型实验
+DESCRIPTION:在10/22与10/23实现基础上，检查2类代表故障的STL R(t)是否真实对应现象，确认无未来信息/标签泄漏；完整跑raw-only与raw+STL两组对照，保存训练日志、Macro-F1/Accuracy与一张案例图。只有主链稳定才增加到约6类与5-shot，否则先修复核心失败。
+CATEGORIES:Course,BigData,Project,Experiment
+TRANSP:OPAQUE
+UID:planner-20261024-bigdata-stl-results@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[大数据大作业] 两类故障R(t)核验 + 主模型实验
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261024T170000
+DTEND;TZID=Asia/Shanghai:20261024T180000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[RoboCup SSL] 例会前1小时验收：运球器/FOC当前任务
+DESCRIPTION:承接周五16:30–18:30的每周RoboCup交付。以最新队内责任为准，当前重点为SSL机器人运球器的FOC速度模式和独立软件限扭，先核对是否仍是本周正式任务。对已有代码/测试结果做一次最小复跑，准备CAN指令/电流与速度限制/安全停机等证据（必要时离线安全验证）；整理3条例会汇报：已完成、实测证据、风险/下一步。不要在现场未知供电条件下贸然通电。
+CATEGORIES:Research,RoboCup,SSL,Quality
+TRANSP:OPAQUE
+UID:planner-20261024-robocup-premeeting-qa@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[RoboCup SSL] 例会前1小时验收：运球器/FOC当前任务
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261025T100000
+DTEND;TZID=Asia/Shanghai:20261025T110000
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[CAC2026] 海报送印状态 + 交流问答最终核对
+DESCRIPTION:检查已定稿的90×120竖版海报是否已真正送印/确认交付日期，避免错过10/30–11/01大会前的印刷运输；核实电子上传状态（若官方要求）；用英文快速口述方法要点：timestamp邻域拍卖、PairSwap、Token forwarding、completion time/total travel distance，答不出的问题补一句准确回答。不重写已定稿版面。
+CATEGORIES:Research,CAC,Poster,Conference
+TRANSP:OPAQUE
+UID:planner-20261025-cac-poster-final-followup@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[CAC2026] 海报送印状态 + 交流问答最终核对
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261019T032000Z
+DTSTAMP:20261019T032000Z
+DTSTART;TZID=Asia/Shanghai:20261026T190000
+DTEND;TZID=Asia/Shanghai:20261026T192500
+LAST-MODIFIED:20261019T032000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] MATLAB实验2最终版提交（仅25分钟）
+DESCRIPTION:用户确认MATLAB实验2最终版已完成，等下周提交；本事件仅为2026-10-26上传/复核。检查文件版本、命名格式、课程活动1193401提交入口及是否成功提交；不再重写报告。学在浙大同步的截止时间字段为2026-11-03T22:59:00Z（北京时间2026-11-04 06:59），以网页显示为准。只有确认提交回执后才标完成。
+CATEGORIES:Course,ModernControl,Submission
+TRANSP:OPAQUE
+UID:planner-20261026-modern-matlab2-submit-only@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] MATLAB实验2最终版提交（仅25分钟）
 END:VALARM
 END:VEVENT
 END:VCALENDAR
