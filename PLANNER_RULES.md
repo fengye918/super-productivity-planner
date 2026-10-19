@@ -22,6 +22,10 @@
 - Dedicated catch-up/reinforcement: **about 2 h max per course per week** by default.
 - Prefer concise, execution-oriented blocks over long planning sessions.
 
+## Protection of targeted course review
+- When the user reports missed or poorly understood course content, schedule a concrete 60-90 minute catch-up **before their next attended class** of that course, grounded in the actual lecture PPTs and finished by doing representative problems and correction notes. Do not automatically sacrifice these sessions when increasing project time.
+- User-confirmed full completion of a review or assignment means no duplicate future time block. An explicitly suppressed assignment is excluded from future scheduling even if the LMS still shows a todo; do not falsely mark a suppressed item as submitted.
+
 ## Exams
 - Every known exam gets dedicated review time.
 - Review titles must name specific content, not just “复习”.
