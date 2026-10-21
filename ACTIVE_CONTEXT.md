@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-19
+Updated: 2026-10-21
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -311,3 +311,14 @@ Updated: 2026-10-19
 - Oct 21 Wed 16:15–18:15 explicitly reserved for a separate **two-hour Qizhen research evidence block** following the Oct 20 19:00 taxi/in-person meeting, choosing the group's highest-priority CFD case or MA735 speed feedback chain. Never power incomplete MA735 PCB. The meeting itself does not count as research work.
 - Added extra Big Data Oct 25 Sun 11:30–13:00 STL trace verification / dataset alignment, beyond existing 10-hour week-long project blocks, so the two course projects retain substantial protected time.
 - Preserve CAC poster deadline and corrections, weekly Friday 16:30–18:30 RoboCup development, Saturday 17:00 QA and 19:30 meeting, meals/breaks and English buffer. User wants calendar reflecting study, not just project overload.
+
+
+## 2026-10-21 user-confirmed replanning: CAC complete / Engineering Management reduced / Modern Control review preserved
+- As of 2026-10-21 the user explicitly confirms **CAC2026 poster work is already completed**. All future CAC edits, printing, poster status and Q&A preparation should be **excluded from the calendar** until the user independently requests reopening.
+- User says future **Engineering Management** work needs ONLY two events: **Fri Oct 23 19:30–21:30 a two-hour team meeting**, and **Sat Oct 24 09:30–11:30 two-hour PPT oral script preparation** after that meeting and before Oct 26. All other future engineering management work and submission-check blocks were removed. Earlier historical work blocks are not retroactively reclassified.
+- User confirms **Oct 20 AI/ML and Sensors catch-up sessions never happened**. Their calendar events were MOVED (not duplicated): AI/ML to Wed Oct 21 19:15–20:45 before Thu Oct 22 13:25 class; Sensors to Thu Oct 22 19:30–21:00 before Fri Oct 23 10:00 class. Sun Oct 25 19:30–20:30 spaced recall remains, descriptions updated to actual study times. Do not imply sessions complete until user confirms.
+- **Modern Control every attended theory lecture must have its own 90-minute independent review**, not counted as time spent on chapter homework. Oct 21 lecture review retains Fri Oct 23 08:15–09:45; added Mon Oct 26 10:00–11:30, Wed Oct 28 16:15–17:45, Mon Nov 2 10:00–11:30, Tue Nov 3 19:00–20:30 (only if actually theory/attended), Wed Nov 4 16:15–17:45. Oct 27 state-feedback practical remains an experiment with its separately scheduled Oct 28 19:00–21:00 lab report; don't conflate experiment with theory lecture. User already completed Oct 19 Modern Control review; do not add duplicate.
+- Latest GitHub-synced 学在浙大 todo has **new Modern Control Chapter 8 homework 1**, activity 1199059, attachment 第8章-作业1.pdf, due Oct 26 23:59 China time, scheduled Fri Oct 23 13:45–15:45, and **Chapter 8 homework 2**, activity 1199436, attachment HW_5.pdf, deadline field 2026-10-31 22:59 UTC (= Nov 1 06:59 China time), scheduled Tue Oct 27 19:00–21:00. Both require real answer and submission checks. Do not resurrect suppressed Process Control week-4 homework or user-completed MATLAB experiment 2, even if LMS still displays them.
+- Original Fri Oct 23 19:30–21:30 Big Data GRU contrast block MOVED to Thu Oct 22 16:20–18:20 because Fri evening is now the Engineering Management meeting. Other Big Data milestones untouched.
+- Friday Oct 23 16:30–18:30 recurring RoboCup project block, Saturday 17:00–18:00 acceptance and Saturday 19:30 RoboCup recurring meeting remain protected. Wed Oct 21 16:15–18:15 Qizhen research also remains.
+- The current course schedule may change. Conditional theory review blocks for November should be removed/revised if class is officially canceled or a practical experiment is held instead.
