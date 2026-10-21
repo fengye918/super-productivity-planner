@@ -4925,4 +4925,138 @@ ACTION:DISPLAY
 DESCRIPTION:[现代控制] 11/4课堂单独复习（1.5小时）
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T025000Z
+DTSTAMP:20261021T025000Z
+DTSTART;TZID=Asia/Shanghai:20261105T180000
+DTEND;TZID=Asia/Shanghai:20261105T210000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=TH
+LAST-MODIFIED:20261021T025000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[过程控制实验] 双周周四晚实验（18:00–21:00）
+DESCRIPTION:用户确认从2026年11月5日周四开始，每两周的周四18:00–21:00安排过程控制实验。首两次为11/05与11/19，之后依次12/03、12/17等，直至后续提供学期/实验结束日期。实验前核对教师正式实验内容、实验室/签到与报告要求；现场记录实验参数和数据，不虚构实验结果。特别注意11/19 16:15–17:50的信息安全导论与实验只间隔10分钟，若需跨楼则务必提前协调。
+CATEGORIES:Course,ProcessControl,Lab,Recurring
+TRANSP:OPAQUE
+UID:planner-20261105-process-control-biweekly-lab@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[过程控制实验] 双周周四晚实验（18:00–21:00）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T025000Z
+DTSTAMP:20261021T025000Z
+DTSTART;TZID=Asia/Shanghai:20261107T090000
+DTEND;TZID=Asia/Shanghai:20261107T120000
+LAST-MODIFIED:20261021T025000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[人工智能实验] 第1项：实现 + 测试 + 结果记录（3h）
+DESCRIPTION:11/20之前要完成的4项人工智能实验之1，当前学在浙大同步待办未显示四个实验的正式名称/附件；届时先读真实实验要求，再完成程序/算法、运行检查、输出图与简短实验说明（报告以教师要求为准）。Done：第1项有可运行文件、结果及已知问题记录；若材料未发布就联系/核查具体要求，不能假称已完成。
+CATEGORIES:Course,AIML,Lab,Project
+TRANSP:OPAQUE
+UID:planner-20261107-aiml-experiment-1@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[人工智能实验] 第1项：实现 + 测试 + 结果记录（3h）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T025000Z
+DTSTAMP:20261021T025000Z
+DTSTART;TZID=Asia/Shanghai:20261110T140000
+DTEND;TZID=Asia/Shanghai:20261110T170000
+LAST-MODIFIED:20261021T025000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[人工智能实验] 第2项：实现与复现（3h）
+DESCRIPTION:11/20之前的人工智能实验2/4。核对实验手册中的实际算法/接口和输入输出要求，优先独立理解和运行一个最小例子，再用AI加速实现常规代码；固定环境与随机种子、保存输入配置/执行日志/关键结果，按要求形成提交材料。不要将未知实验题目预先当成确定内容。
+CATEGORIES:Course,AIML,Lab,Project
+TRANSP:OPAQUE
+UID:planner-20261110-aiml-experiment-2@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[人工智能实验] 第2项：实现与复现（3h）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T025000Z
+DTSTAMP:20261021T025000Z
+DTSTART;TZID=Asia/Shanghai:20261112T190000
+DTEND;TZID=Asia/Shanghai:20261112T220000
+LAST-MODIFIED:20261021T025000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[人工智能实验] 第3项：实现、调试与分析（3h）
+DESCRIPTION:11/20之前的人工智能实验3/4。先核对真实材料，再完成代码/仿真、最小验证、图表和必要实验报告；最后30分钟用于检查实验要求是否逐条覆盖。若前两项尚有同一阻塞，可优先修复最重要的一项，但要明确记录延期而不是默认第3项完成。
+CATEGORIES:Course,AIML,Lab,Project
+TRANSP:OPAQUE
+UID:planner-20261112-aiml-experiment-3@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[人工智能实验] 第3项：实现、调试与分析（3h）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T025000Z
+DTSTAMP:20261021T025000Z
+DTSTART;TZID=Asia/Shanghai:20261114T103000
+DTEND;TZID=Asia/Shanghai:20261114T120000
+LAST-MODIFIED:20261021T025000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 11/14正课课后复习（1.5h）
+DESCRIPTION:根据长期规则，11/14周六08:00–10:00实际上过的现代控制理论课结束后单独复习90分钟：闭卷知识骨架、核对当堂PPT、推导核心公式、独立做1道老师风格的代表题、整理错因。实验与家庭作业不计入课后复习。若课堂当天取消/用户没参加则按真实情况调整。
+CATEGORIES:Course,ModernControl,Review
+TRANSP:OPAQUE
+UID:planner-20261114-modern-1114-postclass-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] 11/14正课课后复习（1.5h）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T025000Z
+DTSTAMP:20261021T025000Z
+DTSTART;TZID=Asia/Shanghai:20261117T100000
+DTEND;TZID=Asia/Shanghai:20261117T130000
+LAST-MODIFIED:20261021T025000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[人工智能实验] 第4项：完成与自检（3h）
+DESCRIPTION:11/20之前的人工智能实验4/4。承接当天08:00–09:35人工智能正课，按真实任务完成最后实验，实现、测试、结果图/文字解释及需要的文档。不要依赖未验证的AI生成输出；在本日结束前建立4个实验的完成/缺项状态表，后续11/18总检查。
+CATEGORIES:Course,AIML,Lab,Project
+TRANSP:OPAQUE
+UID:planner-20261117-aiml-experiment-4@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[人工智能实验] 第4项：完成与自检（3h）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T025000Z
+DTSTAMP:20261021T025000Z
+DTSTART;TZID=Asia/Shanghai:20261118T190000
+DTEND;TZID=Asia/Shanghai:20261118T203000
+LAST-MODIFIED:20261021T025000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[人工智能实验] 四项验收、补缺与提交检查（1.5h）
+DESCRIPTION:距11/20目标日期仍留两天。逐一核对四个实验的程序、环境、运行结果、截图/报告和文件命名、提交入口及实际提交状态；用剩余时间修复最紧急一个问题并记录剩余阻塞。只有看到课程平台提交回执才标已提交；若老师未要求提交此时则完成材料归档待官方截止要求明确。
+CATEGORIES:Course,AIML,Lab,Deadline
+TRANSP:OPAQUE
+UID:planner-20261118-aiml-experiments-final-validation@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[人工智能实验] 四项验收、补缺与提交检查（1.5h）
+END:VALARM
+END:VEVENT
 END:VCALENDAR
