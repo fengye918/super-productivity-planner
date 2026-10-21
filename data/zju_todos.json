@@ -155,6 +155,23 @@
       "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1199059"
     },
     {
+      "source_id": 1199966,
+      "course_id": 103400,
+      "course_name": "大数据解析与应用导论",
+      "course_code": "(2026-2027-1)-CSE3022M-0012001-1",
+      "title": "MOOC成绩上传",
+      "type": "homework",
+      "end_time": "2026-10-28T15:59:00Z",
+      "is_locked": false,
+      "detail_text": "请同学们上传慕课的完成情况截图，只需要完成第一单元到第九单元的单元测验和作业即可。按照附件的形式对单元测验的完成情况进行截图，同时将9周的单元作业题按顺序汇集到一个word文档中即可。（上传文件包括一张或者多张完成单元测验的截图以及一个含有所有单元作业问答题的word即可）。 （成绩主要由完成情况评定，截图的时候展开可以看到完成情况）",
+      "attachment_names": [],
+      "attachment_refs": [],
+      "attachment_contexts": [],
+      "downloaded_attachments": [],
+      "detail_fetch_error": null,
+      "source_url": "https://courses.zju.edu.cn/course/103400/learning-activity#/1199966"
+    },
+    {
       "source_id": 1199436,
       "course_id": 100211,
       "course_name": "现代控制理论",
