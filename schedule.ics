@@ -4568,25 +4568,6 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261019T032000Z
 DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261021T191500
-DTEND;TZID=Asia/Shanghai:20261021T211500
-LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[CAC2026海报] 论文一致性与必改项修复
-DESCRIPTION:从现有90×120cm竖版海报出发，不重新设计。先修正PairSwap条件：持有有效目标至少H_min连续步且交换判定时局部唯一；核对单位1完整名称和单位4正式名称；复核Token图例、BasicTail表述、统计口径/单位、论文的MATLAB与MuJoCo结果；优先替换有误/模糊图、补有效PairSwap示意并突出对比结论。输出：海报PPTX可审版本+修改清单，打印前与最新论文逐项核对。
-CATEGORIES:Research,CAC,Poster
-TRANSP:OPAQUE
-UID:planner-20261021-cac-poster-critical-corrections@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[CAC2026海报] 论文一致性与必改项修复
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261019T032000Z
-DTSTAMP:20261019T032000Z
 DTSTART;TZID=Asia/Shanghai:20261022T100000
 DTEND;TZID=Asia/Shanghai:20261022T120000
 LAST-MODIFIED:20261019T032000Z
@@ -4608,93 +4589,17 @@ CREATED:20261019T032000Z
 DTSTAMP:20261019T032000Z
 DTSTART;TZID=Asia/Shanghai:20261022T162000
 DTEND;TZID=Asia/Shanghai:20261022T182000
-LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] PPT主体完成 + Word对齐
-DESCRIPTION:将9人组Word十模块提炼为可汇报的PPT主体（约20页以上以老师要求为准），重点结构与结果：背景、场地条件、WBS/进度、资金及资源配置、风险、验收与分工。统一数据/术语/图表，少堆文字，保存首轮可答辩PPT与需要成员反馈的问题。10/24之前全套定稿。
-CATEGORIES:Course,EngineeringManagement,PPT
-TRANSP:OPAQUE
-UID:planner-20261022-eng-management-ppt-v1@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[工程管理大作业] PPT主体完成 + Word对齐
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261019T032000Z
-DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261022T193000
-DTEND;TZID=Asia/Shanghai:20261022T210000
-LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[CAC2026海报] 最终尺寸/清晰度检查与送印准备
-DESCRIPTION:接10/21修正版：检查90×120cm竖版、版心与官方PPT模板、机构名称、logo清晰度、图片分辨率/矢量优先、公式符号/图例/参考文献及打印色彩与导出PDF尺寸；执行或准备纸质打印/电子提交动作，保存打印版PDF与最终PPTX。并核对CAC2026官方最新上传/打印要求，不能因本日排程而默认已打印。
-CATEGORIES:Research,CAC,Poster,Print
-TRANSP:OPAQUE
-UID:planner-20261022-cac-poster-print-ready@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[CAC2026海报] 最终尺寸/清晰度检查与送印准备
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261019T032000Z
-DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261023T134500
-DTEND;TZID=Asia/Shanghai:20261023T154500
-LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] Word+PPT全量质检与团队反馈闭环
-DESCRIPTION:工程管理终稿前最后一次整包审查，核验所有表格/图/项目预算/10周工期和验收指标在Word和PPT间完全一致；收回成员2整合版本、各负责人的最终纠错，检查封面目录/参考文献/语言表述/格式，并在PPT中标清展示重点。输出可提交候选包与不超过5条剩余问题，所有问题10/24上午关闭。
-CATEGORIES:Course,EngineeringManagement,Quality
-TRANSP:OPAQUE
-UID:planner-20261023-eng-management-crosscheck@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[工程管理大作业] Word+PPT全量质检与团队反馈闭环
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261019T032000Z
-DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261023T193000
-DTEND;TZID=Asia/Shanghai:20261023T213000
-LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:1
 SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 单层GRU基线与STL动态征兆增强对照
-DESCRIPTION:建立原始工业时序X单层GRU baseline与X+时间对齐的STL动态robustness R(t)单层GRU模型，使用一致simulation run数据划分/归一化/训练预算和固定seed。先实现训练与评估入口，并产出第一份日志与类别级误差表；如果STL数据链未就绪就集中修复输入对齐/阈值，不为了出结果堆新网络。
+DESCRIPTION:因10/23晚工程管理组会，原大数据两小时迁到10/22下午：完成单层GRU基线与STL动态征兆R(t)的X+R(t)对照实验入口；坚持相同simulation run划分/归一化/seed和训练预算，保存可重复日志或明确输入对齐失败。
 CATEGORIES:Course,BigData,Project,Experiment
 TRANSP:OPAQUE
-UID:planner-20261023-bigdata-gru-compare@chatgpt-planner
+UID:planner-20261022-bigdata-gru-compare@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:[大数据大作业] 单层GRU基线与STL动态征兆增强对照
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261019T032000Z
-DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261024T093000
-DTEND;TZID=Asia/Shanghai:20261024T113000
-LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[工程管理大作业] 10/24最终交付：Word/PPT与提交确认
-DESCRIPTION:用户硬约束是10/25之前完成，因此在10/24上午冻结并交付，不依赖10/25缓冲。复核Word/PPT、附图表、任务分工、工期/成本、最终答辩版本/附件是否齐全；由有权限者完成课程规定的提交，核验成功回执或交成员2/组长确认，记录未提交原因，不把文件准备好误写成已提交。Done：可核验的最终材料包+确切提交/收件状态。
-CATEGORIES:Course,EngineeringManagement,Deadline,Submit
-TRANSP:OPAQUE
-UID:planner-20261024-eng-management-final-delivery@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[工程管理大作业] 10/24最终交付：Word/PPT与提交确认
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -4737,36 +4642,17 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261019T032000Z
-DTSTAMP:20261019T032000Z
-DTSTART;TZID=Asia/Shanghai:20261025T100000
-DTEND;TZID=Asia/Shanghai:20261025T110000
-LAST-MODIFIED:20261019T032000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[CAC2026] 海报送印状态 + 交流问答最终核对
-DESCRIPTION:检查已定稿的90×120竖版海报是否已真正送印/确认交付日期，避免错过10/30–11/01大会前的印刷运输；核实电子上传状态（若官方要求）；用英文快速口述方法要点：timestamp邻域拍卖、PairSwap、Token forwarding、completion time/total travel distance，答不出的问题补一句准确回答。不重写已定稿版面。
-CATEGORIES:Research,CAC,Poster,Conference
-TRANSP:OPAQUE
-UID:planner-20261025-cac-poster-final-followup@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[CAC2026] 海报送印状态 + 交流问答最终核对
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
 CREATED:20261019T034500Z
 DTSTAMP:20261019T034500Z
-DTSTART;TZID=Asia/Shanghai:20261020T083000
-DTEND;TZID=Asia/Shanghai:20261020T100000
-LAST-MODIFIED:20261019T034500Z
-SEQUENCE:0
+DTSTART;TZID=Asia/Shanghai:20261021T191500
+DTEND;TZID=Asia/Shanghai:20261021T204500
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:1
 SUMMARY;LANGUAGE=zh-cn:[人工智能与机器学习] 上周落课补齐：核心公式+例题
-DESCRIPTION:10/20早八人工智能本次按用户要求不参加，下一次实际课堂10/22 13:25前完成补课。以10/13、10/15上周真正讲授的PPT为依据，先闭卷列知识骨架→对照讲义补模型目标、假设及关键推导→独立做1道典型计算/算法题→标出2个仍不会的点。不猜教材进度；以老师课堂讲义为准。Done：一页公式/概念骨架+一题完整解答。
+DESCRIPTION:此前10/20的人工智能补课尚未完成，改在10/22 13:25正课前完成。真实课件为准；15分钟闭卷写概念/公式框架、30分钟补难点、35分钟独立完成1-2道题、10分钟错误归纳。每道题先自行尝试再核对。
 CATEGORIES:Course,AIML,Review
 TRANSP:OPAQUE
-UID:planner-20261020-ai-ml-lastweek-bridge@chatgpt-planner
+UID:planner-20261021-ai-ml-lastweek-bridge@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
@@ -4777,15 +4663,15 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261019T034500Z
 DTSTAMP:20261019T034500Z
-DTSTART;TZID=Asia/Shanghai:20261020T161500
-DTEND;TZID=Asia/Shanghai:20261020T174500
-LAST-MODIFIED:20261019T034500Z
-SEQUENCE:0
+DTSTART;TZID=Asia/Shanghai:20261022T193000
+DTEND;TZID=Asia/Shanghai:20261022T210000
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:1
 SUMMARY;LANGUAGE=zh-cn:[传感与检测] 上周没学好的内容：概念到典型题
-DESCRIPTION:10/20现代控制16:15-17:50按本周用户计划不参加，用于补传感与检测上周实际课堂内容，必须在10/23 10:00正课前完成。以最新课件、复习笔记和老师讲授为准；如果涉及光电/超声，优先梳理工作原理、公式、结构图和典型判断/计算题。步骤：闭卷回忆15min→按PPT修缺口35min→独立1-2题30min→纠错10min。Done：一页典型原理表+两道题。
+DESCRIPTION:此前10/20传感与检测复习未完成，改在10/23 10:00课堂之前完成。依上周实际课件复习原理/结构/误差关系，完成一题计算和一题原理解释；最后写三条错因与待查知识。
 CATEGORIES:Course,Sensors,Review
 TRANSP:OPAQUE
-UID:planner-20261020-sensor-lastweek-bridge@chatgpt-planner
+UID:planner-20261022-sensor-lastweek-bridge@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
@@ -4858,7 +4744,7 @@ DTEND;TZID=Asia/Shanghai:20261025T203000
 LAST-MODIFIED:20261019T034500Z
 SEQUENCE:0
 SUMMARY;LANGUAGE=zh-cn:[课程复习] AI/ML + 传感与检测隔天回忆与易错题
-DESCRIPTION:恢复课程掌握的持续性，结合周二补课后实际参加的10/22人工智能和10/23传感与检测课堂内容，闭卷各25分钟回忆核心概念/公式和一道代表题，再10分钟核对错因，形成下周上课前需要补的3个具体点。若无实际课堂或新增进度则针对上周的薄弱点重复测验，不盲看新内容。
+DESCRIPTION:恢复课程掌握的持续性，结合周三19:15人工智能、周四19:30传感补课以及之后的正课实际内容，闭卷各25分钟回忆核心概念/公式和一道代表题，再10分钟核对错因，形成下周上课前需要补的3个具体点。若无实际课堂或新增进度则针对上周的薄弱点重复测验，不盲看新内容。
 CATEGORIES:Course,AIML,Sensors,SpacedReview
 TRANSP:OPAQUE
 UID:planner-20261025-learning-retrieval-weekly@chatgpt-planner
@@ -4866,6 +4752,177 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:[课程复习] AI/ML + 传感与检测隔天回忆与易错题
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261023T134500
+DTEND;TZID=Asia/Shanghai:20261023T154500
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现控作业] 第8章第1次作业（2小时）
+DESCRIPTION:学在浙大活动1199059，第8章-作业1.pdf；北京时间10/26 23:59截止。独立逐题计算、对照课件核对推导，完成后确认提交状态；不得与MATLAB实验2或课后复习混算。
+CATEGORIES:Course,ModernControl,Homework
+TRANSP:OPAQUE
+UID:planner-20261023-modern-ch8-hw1@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现控作业] 第8章第1次作业（2小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261023T193000
+DTEND;TZID=Asia/Shanghai:20261023T213000
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[工程管理] 10/23晚团队会议（2小时）
+DESCRIPTION:按用户最新要求工程管理只保留本周五19:30–21:30组会和会后一次讲稿准备。会议落实团队展示版本、分工与每人负责的PPT内容，形成需要修改的要点和分配；其他工程管理制作块不再安排。
+CATEGORIES:Course,EngineeringManagement,Meeting
+TRANSP:OPAQUE
+UID:planner-20261023-engineering-meeting@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[工程管理] 10/23晚团队会议（2小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261024T093000
+DTEND;TZID=Asia/Shanghai:20261024T113000
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[工程管理] PPT讲稿准备及计时演练（2小时）
+DESCRIPTION:23日组会之后、26日之前，依据会议确定的实际PPT版本和个人发言内容，写出逐页讲稿、每页关键词和过渡句，并完整计时演练一次，特别核查预算/工期/验收等被问到时的解释。仅此一块，不额外新增工程管理任务。
+CATEGORIES:Course,EngineeringManagement,Presentation
+TRANSP:OPAQUE
+UID:planner-20261024-engineering-ppt-talk@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[工程管理] PPT讲稿准备及计时演练（2小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261026T100000
+DTEND;TZID=Asia/Shanghai:20261026T113000
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 10/26课堂单独复习（1.5小时）
+DESCRIPTION:对应当日08:00-09:35实际上的现代控制课程：闭卷回忆讲课逻辑、课件核对、手推核心公式、完成一道标准计算题并纠错；不与任何作业合并。
+CATEGORIES:Course,ModernControl,Review
+TRANSP:OPAQUE
+UID:planner-20261026-modern-1026-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] 10/26课堂单独复习（1.5小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261027T190000
+DTEND;TZID=Asia/Shanghai:20261027T210000
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现控作业] 第8章第2次作业（2小时）
+DESCRIPTION:学在浙大活动1199436，附件HW_5.pdf；同步字段换算北京时间11/01 06:59截止，以平台显示为准。按原题逐题完成并验算与检查提交格式，避免和10/27状态反馈实验及10/28实验报告重复算时间。
+CATEGORIES:Course,ModernControl,Homework
+TRANSP:OPAQUE
+UID:planner-20261027-modern-ch8-hw2@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现控作业] 第8章第2次作业（2小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261028T161500
+DTEND;TZID=Asia/Shanghai:20261028T174500
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 10/28课堂单独复习（1.5小时）
+DESCRIPTION:针对当天08:00-09:35实际参加的现代控制正课，闭卷列知识骨架/关键公式，独立做一题并记录卡点；19:00-21:00状态反馈实验报告另行保留。
+CATEGORIES:Course,ModernControl,Review
+TRANSP:OPAQUE
+UID:planner-20261028-modern-1028-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] 10/28课堂单独复习（1.5小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261102T100000
+DTEND;TZID=Asia/Shanghai:20261102T113000
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 11/2课堂单独复习（1.5小时）
+DESCRIPTION:针对11/2上午实际现代控制授课内容独立复习：知识骨架→重要公式推导→一道完整代表题→错因清单；若停课或没有实际参加则按情况重排。
+CATEGORIES:Course,ModernControl,Review
+TRANSP:OPAQUE
+UID:planner-20261102-modern-1102-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] 11/2课堂单独复习（1.5小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261103T190000
+DTEND;TZID=Asia/Shanghai:20261103T203000
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 11/3课堂单独复习（1.5小时）
+DESCRIPTION:如11/3 16:15-17:50为正常现代控制正课且实际出席，晚间立即单独复习实际内容，完成课件重点推导及一道计算题；若该时段实际是实验，则按真实实验要求改为相应报告/检查，不虚构授课。
+CATEGORIES:Course,ModernControl,Review
+TRANSP:OPAQUE
+UID:planner-20261103-modern-1103-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] 11/3课堂单独复习（1.5小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261021T022600Z
+DTSTAMP:20261021T022600Z
+DTSTART;TZID=Asia/Shanghai:20261104T161500
+DTEND;TZID=Asia/Shanghai:20261104T174500
+LAST-MODIFIED:20261021T022600Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 11/4课堂单独复习（1.5小时）
+DESCRIPTION:针对11/4上午现代控制正课，先闭卷复述关键知识，再用一题完整计算和错题检查验收；依据课堂实际进度，不将作业与课堂消化混为一谈。
+CATEGORIES:Course,ModernControl,Review
+TRANSP:OPAQUE
+UID:planner-20261104-modern-1104-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[现代控制] 11/4课堂单独复习（1.5小时）
 END:VALARM
 END:VEVENT
 END:VCALENDAR
