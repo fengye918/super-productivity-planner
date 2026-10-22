@@ -1,5 +1,6 @@
 from pathlib import Path
 import fitz
+import subprocess
 from pptx import Presentation
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -36,6 +37,12 @@ for label, location in JOBS:
             md.append(page.get_text('text', sort=True))
             page.get_pixmap(matrix=fitz.Matrix(1.3, 1.3), alpha=False).save(str(work / f'page_{i + 1:02}.png'))
     else:
+        subprocess.run(['soffice', '-env:UserInstallation=file:///tmp/zju-homework-soffice', '--headless', '--convert-to', 'pdf', '--outdir', str(work), str(source)], check=True)
+        pdf = work / (source.stem + '.pdf')
+        slide_render = fitz.open(str(pdf))
+        for pi, pg in enumerate(slide_render):
+            pg.get_pixmap(matrix=fitz.Matrix(1.6, 1.6), alpha=False).save(str(work / f'slide_render_{pi + 1:02}.png'))
+        pdf.unlink(missing_ok=True)
         deck = Presentation(str(source))
         md.append(f'Slides: {len(deck.slides)}')
         for i, slide in enumerate(deck.slides):
