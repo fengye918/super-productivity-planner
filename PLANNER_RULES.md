@@ -73,3 +73,10 @@
 - Do not merge that review block into homework time. Homework and post-class understanding are separate purposes.
 - Preferred review flow: closed-book knowledge skeleton -> check PPT/notes -> hand-derive key formulas -> 1 representative problem -> remaining-gap list.
 - If a Modern Control class is explicitly skipped/cancelled, do not create a post-class review block for that class.
+
+
+## 学在浙大同步与标准解答（长期默认）
+- 用户明确要求：**以后每次检查或更新学在浙大作业时，同步处理适合解题的新增作业的标准参考答案 PDF**；不要只更新待办或日程。优先从课程平台同步到 `course_materials/<课程>/homework/` 的真实附件逐题读取，再求解、独立核算数值/符号、生成可编辑 TeX 和完整 PDF、渲染检查，并归档 `course_materials/<课程>/solutions/source/` 及 `solutions/`，更新 `course_materials/README.md`。
+- 若新增任务是**上传成绩证明、实机实验、在线提交、团队协作等非传统解题任务**，不能编造“标准答案”。应提供提交检查表、实验方案或可复现参考脚本；未实测或未经平台提交的状态不得伪称完成。
+- 学在浙大系统待办状态可能滞后，永远以用户确认的**已完成、已提交或不再排程**为优先。对新作业核对截止时间、是否需要做题、现有日程有无空档，普通作业默认不超过 2.5 小时；在指定截止前完成和自检。
+- 不要声称已自动后台生成；若需在对话之外定时检查与通知，必须由有效的计划任务或仓库自动流程支持。
