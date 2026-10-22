@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-21
+Updated: 2026-10-22
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -322,3 +322,10 @@ Updated: 2026-10-21
 - Original Fri Oct 23 19:30–21:30 Big Data GRU contrast block MOVED to Thu Oct 22 16:20–18:20 because Fri evening is now the Engineering Management meeting. Other Big Data milestones untouched.
 - Friday Oct 23 16:30–18:30 recurring RoboCup project block, Saturday 17:00–18:00 acceptance and Saturday 19:30 RoboCup recurring meeting remain protected. Wed Oct 21 16:15–18:15 Qizhen research also remains.
 - The current course schedule may change. Conditional theory review blocks for November should be removed/revised if class is officially canceled or a practical experiment is held instead.
+
+
+## 2026-10-22 学在浙大同步与三份参考答案
+- 在课程GitHub自动同步清单中确认：现代控制第8章第1次作业(1199059,截止10/26 23:59北京时间)、大数据 MOOC成绩上传(1199966,截止10/28 23:59)、现代控制第8章第2次作业(1199436,截止11/1 06:59)、现代控制状态反馈实验(1193399,截止11/4 06:59)、过程控制第七周作业(1200101,截止11/4 23:59)。新添加的可行动事项：MOOC成绩上传 10/26 19:00–19:30，过程控制第七周书面作业 10/29 19:00–21:30；先前两份现控第8章作业的做题时间维持不变。
+- 为两份现代控制第8章作业与过程控制第七周作业分别生成独立XeLaTeX参考解答，实题来自学在浙大GitHub附件，与题意相符，预期归档到课程答案库（工作流编译及文件同步状态另核实）。成绩上传不需作答PDF。
+- 用户明确要求**以后更新学在浙大作业时同步生成可解答作业的答案**，优先读取原附件并生成已验证PDF，而不是仅报作业名称。过程/实验任务不得编造运行成果。
+- 10/22用户发起手动新同步，曾发生工作流取消并尝试重跑；不要把最新待办列表未经核对时宣称为刚完成的刷新结果。仓库自动同步每天仍运行。
