@@ -12,6 +12,23 @@
         "end_time": "2026-10-26T15:59:00Z",
         "is_locked": false,
         "detail_text": null,
+        "attachment_names": [],
+        "attachment_refs": [],
+        "attachment_contexts": [],
+        "downloaded_attachments": [],
+        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
+        "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1199059"
+      },
+      "after": {
+        "source_id": 1199059,
+        "course_id": 100211,
+        "course_name": "现代控制理论",
+        "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
+        "title": "第8章第1次作业",
+        "type": "homework",
+        "end_time": "2026-10-26T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
         "attachment_names": [
           "第8章-作业1.pdf"
         ],
@@ -77,23 +94,6 @@
           }
         ],
         "detail_fetch_error": null,
-        "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1199059"
-      },
-      "after": {
-        "source_id": 1199059,
-        "course_id": 100211,
-        "course_name": "现代控制理论",
-        "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
-        "title": "第8章第1次作业",
-        "type": "homework",
-        "end_time": "2026-10-26T15:59:00Z",
-        "is_locked": false,
-        "detail_text": null,
-        "attachment_names": [],
-        "attachment_refs": [],
-        "attachment_contexts": [],
-        "downloaded_attachments": [],
-        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
         "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1199059"
       }
     },
@@ -168,8 +168,7 @@
           {
             "upload_id": 21834725,
             "name": "实验3_状态反馈(1).pdf",
-            "repo_path": "course_materials/现代控制理论/homework/1193399/实验3_状态反馈(1).pdf",
-            "bytes": 1167727
+            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/4e06ebe616711f5f6ebc9dddce03301edb583fe4?timestamp=1792767600&nonce=ba2786f6e406461fbbba3935cbc891b8&token=8a08f0a323e3519ee370d84f995afb0d&name=%E5%AE%9E%E9%AA%8C3_%E7%8A%B6%E6%80%81%E5%8F%8D%E9%A6%88%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7fc299d97560>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout="
           }
         ],
         "detail_fetch_error": null,
@@ -245,7 +244,8 @@
           {
             "upload_id": 21834725,
             "name": "实验3_状态反馈(1).pdf",
-            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/4e06ebe616711f5f6ebc9dddce03301edb583fe4?timestamp=1792767600&nonce=ba2786f6e406461fbbba3935cbc891b8&token=8a08f0a323e3519ee370d84f995afb0d&name=%E5%AE%9E%E9%AA%8C3_%E7%8A%B6%E6%80%81%E5%8F%8D%E9%A6%88%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7fc299d97560>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout="
+            "repo_path": "course_materials/现代控制理论/homework/1193399/实验3_状态反馈(1).pdf",
+            "bytes": 1167727
           }
         ],
         "detail_fetch_error": null,
