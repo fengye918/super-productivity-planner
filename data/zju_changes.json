@@ -1,83 +1,352 @@
 {
   "added": [],
-  "updated": [],
+  "updated": [
+    {
+      "before": {
+        "source_id": 1193399,
+        "course_id": 100211,
+        "course_name": "现代控制理论",
+        "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
+        "title": "第三次实验（固高实物实验3_状态反馈）",
+        "type": "homework",
+        "end_time": "2026-11-03T22:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [
+          "实验3_状态反馈(1).pdf"
+        ],
+        "attachment_refs": [
+          {
+            "id": 21834725,
+            "upload_id": null,
+            "name": "实验3_状态反馈(1).pdf",
+            "filename": null,
+            "file_name": null,
+            "title": null,
+            "url": null,
+            "download_url": null,
+            "size": 1167727,
+            "mime_type": null,
+            "content_type": null,
+            "type": "document",
+            "detected_name": "实验3_状态反馈(1).pdf"
+          }
+        ],
+        "attachment_contexts": [
+          {
+            "path": "$.uploads[0].name",
+            "filename": "实验3_状态反馈(1).pdf",
+            "container": {
+              "allow_aliyun_office_view": false,
+              "allow_download": true,
+              "allow_private_wps_office_view": true,
+              "audio": null,
+              "can_auto_relate_knowledge_node": false,
+              "created_at": "2026-09-29T11:32:14Z",
+              "created_by_id": 308639,
+              "deleted": false,
+              "enable_set_h5_courseware_completion": true,
+              "id": 21834725,
+              "is_cc_video": false,
+              "key": "4e06ebe616711f5f6ebc9dddce03301edb583fe4",
+              "link": null,
+              "name": "实验3_状态反馈(1).pdf",
+              "origin_allow_download": true,
+              "owner_id": 0,
+              "reference_id": 18151205,
+              "referenced_at": "2026-09-29T11:32:46Z",
+              "scorm": null,
+              "size": 1167727,
+              "sort": 0,
+              "source": "",
+              "status": "ready",
+              "third_part_referrer_id": 0,
+              "thumbnail": null,
+              "type": "document",
+              "updated_at": "2026-09-29T11:32:14Z",
+              "video_src_type": "video/mp4"
+            }
+          }
+        ],
+        "downloaded_attachments": [
+          {
+            "upload_id": 21834725,
+            "name": "实验3_状态反馈(1).pdf",
+            "repo_path": "course_materials/现代控制理论/homework/1193399/实验3_状态反馈(1).pdf",
+            "bytes": 1167727
+          }
+        ],
+        "detail_fetch_error": null,
+        "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1193399"
+      },
+      "after": {
+        "source_id": 1193399,
+        "course_id": 100211,
+        "course_name": "现代控制理论",
+        "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
+        "title": "第三次实验（固高实物实验3_状态反馈）",
+        "type": "homework",
+        "end_time": "2026-11-03T22:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [
+          "实验3_状态反馈(1).pdf"
+        ],
+        "attachment_refs": [
+          {
+            "id": 21834725,
+            "upload_id": null,
+            "name": "实验3_状态反馈(1).pdf",
+            "filename": null,
+            "file_name": null,
+            "title": null,
+            "url": null,
+            "download_url": null,
+            "size": 1167727,
+            "mime_type": null,
+            "content_type": null,
+            "type": "document",
+            "detected_name": "实验3_状态反馈(1).pdf"
+          }
+        ],
+        "attachment_contexts": [
+          {
+            "path": "$.uploads[0].name",
+            "filename": "实验3_状态反馈(1).pdf",
+            "container": {
+              "allow_aliyun_office_view": false,
+              "allow_download": true,
+              "allow_private_wps_office_view": true,
+              "audio": null,
+              "can_auto_relate_knowledge_node": false,
+              "created_at": "2026-09-29T11:32:14Z",
+              "created_by_id": 308639,
+              "deleted": false,
+              "enable_set_h5_courseware_completion": true,
+              "id": 21834725,
+              "is_cc_video": false,
+              "key": "4e06ebe616711f5f6ebc9dddce03301edb583fe4",
+              "link": null,
+              "name": "实验3_状态反馈(1).pdf",
+              "origin_allow_download": true,
+              "owner_id": 0,
+              "reference_id": 18151205,
+              "referenced_at": "2026-09-29T11:32:46Z",
+              "scorm": null,
+              "size": 1167727,
+              "sort": 0,
+              "source": "",
+              "status": "ready",
+              "third_part_referrer_id": 0,
+              "thumbnail": null,
+              "type": "document",
+              "updated_at": "2026-09-29T11:32:14Z",
+              "video_src_type": "video/mp4"
+            }
+          }
+        ],
+        "downloaded_attachments": [
+          {
+            "upload_id": 21834725,
+            "name": "实验3_状态反馈(1).pdf",
+            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/4e06ebe616711f5f6ebc9dddce03301edb583fe4?timestamp=1792918800&nonce=62d10a79374340389ff95a8491d40c16&token=35aa1687386ced6142f952651075ab69&name=%E5%AE%9E%E9%AA%8C3_%E7%8A%B6%E6%80%81%E5%8F%8D%E9%A6%88%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f9bfe9ca660>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout="
+          }
+        ],
+        "detail_fetch_error": null,
+        "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1193399"
+      }
+    },
+    {
+      "before": {
+        "source_id": 1200101,
+        "course_id": 101919,
+        "course_name": "过程控制工程",
+        "course_code": "(2026-2027-1)-CSE3003M-0005416-1A",
+        "title": "第七周作业",
+        "type": "homework",
+        "end_time": "2026-11-04T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [
+          "作业题(1).pptx"
+        ],
+        "attachment_refs": [
+          {
+            "id": 22233016,
+            "upload_id": null,
+            "name": "作业题(1).pptx",
+            "filename": null,
+            "file_name": null,
+            "title": null,
+            "url": null,
+            "download_url": null,
+            "size": 95619,
+            "mime_type": null,
+            "content_type": null,
+            "type": "document",
+            "detected_name": "作业题(1).pptx"
+          }
+        ],
+        "attachment_contexts": [
+          {
+            "path": "$.uploads[0].name",
+            "filename": "作业题(1).pptx",
+            "container": {
+              "allow_aliyun_office_view": false,
+              "allow_download": true,
+              "allow_private_wps_office_view": true,
+              "audio": null,
+              "can_auto_relate_knowledge_node": false,
+              "created_at": "2026-10-21T12:58:40Z",
+              "created_by_id": 193551,
+              "deleted": false,
+              "enable_set_h5_courseware_completion": true,
+              "id": 22233016,
+              "is_cc_video": false,
+              "key": "c01e2485dcb381243e71979b3b1e429b25b08cb0",
+              "link": null,
+              "name": "作业题(1).pptx",
+              "origin_allow_download": true,
+              "owner_id": 0,
+              "reference_id": 18416327,
+              "referenced_at": "2026-10-21T12:58:57Z",
+              "scorm": null,
+              "size": 95619,
+              "sort": 0,
+              "source": "",
+              "status": "ready",
+              "third_part_referrer_id": 0,
+              "thumbnail": null,
+              "type": "document",
+              "updated_at": "2026-10-21T12:58:41Z",
+              "video_src_type": "video/mp4"
+            }
+          }
+        ],
+        "downloaded_attachments": [
+          {
+            "upload_id": 22233016,
+            "name": "作业题(1).pptx",
+            "repo_path": "course_materials/过程控制工程/homework/1200101/作业题(1).pptx",
+            "bytes": 95619
+          }
+        ],
+        "detail_fetch_error": null,
+        "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1200101"
+      },
+      "after": {
+        "source_id": 1200101,
+        "course_id": 101919,
+        "course_name": "过程控制工程",
+        "course_code": "(2026-2027-1)-CSE3003M-0005416-1A",
+        "title": "第七周作业",
+        "type": "homework",
+        "end_time": "2026-11-04T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [],
+        "attachment_refs": [],
+        "attachment_contexts": [],
+        "downloaded_attachments": [],
+        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
+        "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1200101"
+      }
+    }
+  ],
   "removed": [
     {
-      "source_id": 1199059,
+      "source_id": 1199966,
+      "course_id": 103400,
+      "course_name": "大数据解析与应用导论",
+      "course_code": "(2026-2027-1)-CSE3022M-0012001-1",
+      "title": "MOOC成绩上传",
+      "type": "homework",
+      "end_time": "2026-10-28T15:59:00Z",
+      "is_locked": false,
+      "detail_text": "请同学们上传慕课的完成情况截图，只需要完成第一单元到第九单元的单元测验和作业即可。按照附件的形式对单元测验的完成情况进行截图，同时将9周的单元作业题按顺序汇集到一个word文档中即可。（上传文件包括一张或者多张完成单元测验的截图以及一个含有所有单元作业问答题的word即可）。 （成绩主要由完成情况评定，截图的时候展开可以看到完成情况）",
+      "attachment_names": [],
+      "attachment_refs": [],
+      "attachment_contexts": [],
+      "downloaded_attachments": [],
+      "detail_fetch_error": null,
+      "source_url": "https://courses.zju.edu.cn/course/103400/learning-activity#/1199966"
+    },
+    {
+      "source_id": 1199436,
       "course_id": 100211,
       "course_name": "现代控制理论",
       "course_code": "(2026-2027-1)-CSE3000M-0003225-1",
-      "title": "第8章第1次作业",
+      "title": "第8章第2次作业",
       "type": "homework",
-      "end_time": "2026-10-26T15:59:00Z",
+      "end_time": "2026-10-31T22:59:00Z",
       "is_locked": false,
       "detail_text": null,
       "attachment_names": [
-        "第8章-作业1.pdf"
+        "HW_5.pdf"
       ],
       "attachment_refs": [
         {
-          "id": 22159673,
+          "id": 22187469,
           "upload_id": null,
-          "name": "第8章-作业1.pdf",
+          "name": "HW_5.pdf",
           "filename": null,
           "file_name": null,
           "title": null,
           "url": null,
           "download_url": null,
-          "size": 324633,
+          "size": 300261,
           "mime_type": null,
           "content_type": null,
           "type": "document",
-          "detected_name": "第8章-作业1.pdf"
+          "detected_name": "HW_5.pdf"
         }
       ],
       "attachment_contexts": [
         {
           "path": "$.uploads[0].name",
-          "filename": "第8章-作业1.pdf",
+          "filename": "HW_5.pdf",
           "container": {
             "allow_aliyun_office_view": false,
             "allow_download": true,
             "allow_private_wps_office_view": true,
             "audio": null,
             "can_auto_relate_knowledge_node": false,
-            "created_at": "2026-10-19T02:48:29Z",
-            "created_by_id": 1261,
+            "created_at": "2026-10-19T16:31:08Z",
+            "created_by_id": 308639,
             "deleted": false,
             "enable_set_h5_courseware_completion": true,
-            "id": 22159673,
+            "id": 22187469,
             "is_cc_video": false,
-            "key": "6910115ec7d9c856753a85574f2d3f9ca3c67bc5",
+            "key": "285beef1b2e6cbb623071b1438f320f5b44168b9",
             "link": null,
-            "name": "第8章-作业1.pdf",
+            "name": "HW_5.pdf",
             "origin_allow_download": true,
             "owner_id": 0,
-            "reference_id": 18368549,
-            "referenced_at": "2026-10-19T02:49:05Z",
+            "reference_id": 18386852,
+            "referenced_at": "2026-10-19T16:31:57Z",
             "scorm": null,
-            "size": 324633,
+            "size": 300261,
             "sort": 0,
             "source": "",
             "status": "ready",
             "third_part_referrer_id": 0,
             "thumbnail": null,
             "type": "document",
-            "updated_at": "2026-10-19T02:48:29Z",
+            "updated_at": "2026-10-19T16:31:08Z",
             "video_src_type": "video/mp4"
           }
         }
       ],
       "downloaded_attachments": [
         {
-          "upload_id": 22159673,
-          "name": "第8章-作业1.pdf",
-          "repo_path": "course_materials/现代控制理论/homework/1199059/第8章-作业1.pdf",
-          "bytes": 324633
+          "upload_id": 22187469,
+          "name": "HW_5.pdf",
+          "repo_path": "course_materials/现代控制理论/homework/1199436/HW_5.pdf",
+          "bytes": 300261
         }
       ],
       "detail_fetch_error": null,
-      "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1199059"
+      "source_url": "https://courses.zju.edu.cn/course/100211/learning-activity#/1199436"
     }
   ]
 }
