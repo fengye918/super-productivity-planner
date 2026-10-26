@@ -18,6 +18,7 @@
 
 ## Homework and course catch-up
 - User-confirmed completion/submission **overrides** stale 学在浙大 todo state. Do not reschedule a task the user says is finished.
+- User-confirmed ZJU rule (2026-10-26): when an item disappears from 学在浙大's synced pending-homework list, treat it as **successfully submitted**. Remove redundant homework/submission reminders; no extra receipt verification is needed. This applies to 学在浙大 homework only, and explicit user updates take priority.
 - Ordinary homework: **max 2.5 h total per assignment** unless renegotiated.
 - Dedicated catch-up/reinforcement: **about 2 h max per course per week** by default.
 - Prefer concise, execution-oriented blocks over long planning sessions.
