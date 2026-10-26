@@ -531,15 +531,15 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261005T032500Z
 DTSTAMP:20261005T032500Z
-DTSTART;TZID=Asia/Shanghai:20261031T143000
-DTEND;TZID=Asia/Shanghai:20261031T180000
+DTSTART;TZID=Asia/Shanghai:20261027T083000
+DTEND;TZID=Asia/Shanghai:20261027T120000
 LAST-MODIFIED:20261005T032500Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 正式实验 + Case Study
-DESCRIPTION:固定主模型后集中跑正式结果：Full-data + 5-shot 必做；若主链稳定再补 1-shot/10-shot。整理 Macro-F1、Accuracy、类别级结果、关键规则满足/违反与 2–3 个可解释案例。Zero-shot 仅在主实验已稳定且还有时间时冲刺 1–2 类，否则直接跳过。Done：最终主表/主图基本齐全。
+SEQUENCE:1
+SUMMARY;LANGUAGE=zh-cn:[大数据] 出行前正式实验与故障诊断结果
+DESCRIPTION:从10月31日移至27日上午，真实数据与现有STL规则为准；复核动态robustness R(t)和小GRU训练、run划分与无泄漏评估，保存Macro-F1、类别结果、可复现日志或明确阻塞。原10月31日不再工作。
 CATEGORIES:Course,BigData,Project,Experiment
 TRANSP:OPAQUE
-UID:planner-20261031-1430-bigdata-formal-exp@chatgpt-planner
+UID:planner-20261027-bigdata-formal-exp-pretrip@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
@@ -550,15 +550,15 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261005T032500Z
 DTSTAMP:20261005T032500Z
-DTSTART;TZID=Asia/Shanghai:20261101T143000
-DTEND;TZID=Asia/Shanghai:20261101T173000
+DTSTART;TZID=Asia/Shanghai:20261029T100000
+DTEND;TZID=Asia/Shanghai:20261029T123000
 LAST-MODIFIED:20261005T032500Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[大数据大作业] 结果冻结 + 报告/Demo V1
-DESCRIPTION:课程结束前冻结结果，不再开新模型。整理完整链路图：Raw Time Series→Preprocess→Event Extraction→Executable Knowledge→Diagnosis；固定主结果表和 2–3 个案例；完成报告主体结构与约 20 页以上 Demo slides 第一版，并列出 11/2–11/4 只允许修补的短清单。Done：即使后面不再加实验，也已有可提交/可讲的完整版本。
+SEQUENCE:1
+SUMMARY;LANGUAGE=zh-cn:[大数据] 出行前结果冻结与报告Demo草稿
+DESCRIPTION:从11月1日下午提前到10月29上午，紧接27日的实际实验结果，核对STL动态征兆到轻量时序诊断的主图/表/案例，形成报告与演示V1；时间适当缩短30分钟以保证午餐和下午正课，出行期间不安排科研。
 CATEGORIES:Course,BigData,Project,Writing
 TRANSP:OPAQUE
-UID:planner-20261101-1430-bigdata-freeze@chatgpt-planner
+UID:planner-20261029-bigdata-freeze-pretrip@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
@@ -1644,12 +1644,12 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261021T022600Z
 DTSTAMP:20261021T022600Z
-DTSTART;TZID=Asia/Shanghai:20261026T100000
-DTEND;TZID=Asia/Shanghai:20261026T113000
+DTSTART;TZID=Asia/Shanghai:20261026T194500
+DTEND;TZID=Asia/Shanghai:20261026T211500
 LAST-MODIFIED:20261021T022600Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[现代控制] 10/26课堂单独复习（1.5小时）
-DESCRIPTION:对应当日08:00-09:35实际上的现代控制课程：闭卷回忆讲课逻辑、课件核对、手推核心公式、完成一道标准计算题并纠错；不与任何作业合并。
+SEQUENCE:1
+SUMMARY;LANGUAGE=zh-cn:[现代控制] 补今天上午未完成的1.5小时复习
+DESCRIPTION:10月26日上午原复习未做，用户当时处理启真科研。今晚补当天现控课堂：先闭卷回忆、再对照PPT推导关键公式、独立解一题并记录错误。不与习题作业混算。
 CATEGORIES:Course,ModernControl,Review
 TRANSP:OPAQUE
 UID:planner-20261026-modern-1026-review@chatgpt-planner
