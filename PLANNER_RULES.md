@@ -4,6 +4,7 @@
 - Time zone: `Asia/Shanghai`.
 - Normal earliest work start: **08:00**; public holidays: **08:30**.
 - Latest planned work end: **22:30**.
+- For an explicitly requested pre-deadline sprint, evenings on non-travel-eve days may extend to **23:00** if the user asks; keep this an exception, not a default. Preserve meals/recovery, and on the night before an early flight stop by 22:00 (preferably earlier). No work inside an explicit travel blackout.
 - Prefer **19:00-22:00** as a normal work window.
 - Weekends are treated like weekdays unless the user says otherwise.
 - Fixed classes/exams are hard constraints; avoid overlaps and keep transition buffer.
