@@ -340,3 +340,8 @@ Updated: 2026-10-26
 - Kept the hard deadlines work before departure: Modern Control chapter 8 homework 2 Tue Oct 27 19:00-21:00 (if already submitted, immediately repurpose), state-feedback real lab Tue Oct 27 16:00-17:30 and report Wed Oct 28 19:00-21:00, Modern Control Oct 28 post-class review Wed 16:15-17:45, Process Control week7 written homework Thu Oct 29 19:00-21:30. Mon Oct 26 19:00-19:30 MOOC grade proof task still present pending user confirmation.
 - Thu Oct 29 21:30-22:00 is personal flight preflight/packing, then stop working; Friday early departure requires real sleep.
 - Avoid any work in personal calendar during Oct 30-Nov 1, including unexpanded recurring meetings. Preserving actual classes or team events in external systems does not oblige attendance. Always favor user-confirmed travel blackout.
+
+
+## 2026-10-26 ZJU todo disappearance means successful submission
+- User confirms that when an assignment disappears from their 学在浙大 synced **pending** list, it is **successfully submitted**. Do not hedge about verification or ask for receipts solely because it is absent.
+- Latest todo list has only Modern Control state-feedback experiment 1193399 and Process Control week-seven homework 1200101. Absent Modern Control Ch8 homework 1/2 and Big Data MOOC proof upload are treated as successfully submitted. Removed 2026-10-26 19:00-19:30 MOOC and 2026-10-27 19:00-21:00 Ch8 homework 2 follow-up blocks, preserving Oct 26 19:45-21:15 Modern Control review and remaining live homework.
