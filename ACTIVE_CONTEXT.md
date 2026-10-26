@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-22
+Updated: 2026-10-26
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -329,3 +329,14 @@ Updated: 2026-10-22
 - 为两份现代控制第8章作业与过程控制第七周作业分别生成独立XeLaTeX参考解答，实题来自学在浙大GitHub附件，与题意相符，预期归档到课程答案库（工作流编译及文件同步状态另核实）。成绩上传不需作答PDF。
 - 用户明确要求**以后更新学在浙大作业时同步生成可解答作业的答案**，优先读取原附件并生成已验证PDF，而不是仅报作业名称。过程/实验任务不得编造运行成果。
 - 10/22用户发起手动新同步，曾发生工作流取消并尝试重跑；不要把最新待办列表未经核对时宣称为刚完成的刷新结果。仓库自动同步每天仍运行。
+
+
+## 2026-10-26 reschedule: missed Modern Control review and Beijing trip
+- User reports that **the Oct 26 Monday 10:00-11:30 Modern Control theory post-class review was NOT done**, because they handled Qizhen research instead. Rebooked the full 90-min lecture-specific review to **Oct 26 19:45-21:15** after 19:00-19:30 Big Data MOOC proof check. Never infer review completion from a past calendar event.
+- Travel: user has flight **Fri Oct 30 08:30 to Beijing, arrives 10:55**. User returns **Sun Nov 1 afternoon**, exact return flight time and departure airport unspecified. Reserve **all days Oct 30, Oct 31, Nov 1 (inclusive) as zero-work Beijing travel** for airport transfers, meeting, return and recovery. Do not invent taxi departure time or return flight number. Travel all-day VEVENT has DTSTART;VALUE=DATE 20261030 and exclusive DTEND 20261102.
+- Two school classes Fri Oct 30 are user-excused only: Process Control 08:00-09:35 and Sensors 10:00-12:25. Both exact imported UIDs are suppressed in the personal merged calendar, not the school's class schedule. Make-up Oct 30 Process Control class Tue Nov 3 10:00-11:15 before Nov 4 class and make-up Oct 30 Sensors Thu Nov 5 10:00-11:15 before Nov 6 class, using the actual latest PPT/notes.
+- Moved Big Data originally Sat Oct 31 14:30-18:00 to **Tue Oct 27 08:30-12:00** for full run/reproducible results, and originally Sun Nov 1 14:30-17:30 to **Thu Oct 29 10:00-12:30** for result freezing and report/demo draft (30 min shorter for lunch/class buffer). Follow latest user-approved industrial STL method: dynamic robustness R(t) only into small GRU as core, fair raw-only benchmark and no leakage; do not revert to old fixed-dimensional semantic features.
+- RoboCup weekly Friday Oct 30 16:30-18:30 project block and Saturday Oct 31 19:30 meeting are excluded for user's personal calendar by recurrence EXDATE, not cancelled for the team. Added **Thu Oct 29 16:20-18:20** RoboCup work and an evidence-backed update/absence notice before weekend. Next weeks' normal Fri/Sat recurring commitments resume unchanged.
+- Kept the hard deadlines work before departure: Modern Control chapter 8 homework 2 Tue Oct 27 19:00-21:00 (if already submitted, immediately repurpose), state-feedback real lab Tue Oct 27 16:00-17:30 and report Wed Oct 28 19:00-21:00, Modern Control Oct 28 post-class review Wed 16:15-17:45, Process Control week7 written homework Thu Oct 29 19:00-21:30. Mon Oct 26 19:00-19:30 MOOC grade proof task still present pending user confirmation.
+- Thu Oct 29 21:30-22:00 is personal flight preflight/packing, then stop working; Friday early departure requires real sleep.
+- Avoid any work in personal calendar during Oct 30-Nov 1, including unexpanded recurring meetings. Preserving actual classes or team events in external systems does not oblige attendance. Always favor user-confirmed travel blackout.
