@@ -1085,8 +1085,9 @@ DTSTAMP:20261012T092800Z
 DTSTART;TZID=Asia/Shanghai:20261017T193000
 DTEND;TZID=Asia/Shanghai:20261017T210000
 RRULE:FREQ=WEEKLY;BYDAY=SA
+EXDATE;TZID=Asia/Shanghai:20261031T193000
 LAST-MODIFIED:20261012T092800Z
-SEQUENCE:0
+SEQUENCE:1
 SUMMARY;LANGUAGE=zh-cn:[RoboCup] 每周六例会（19:30）
 DESCRIPTION:从2026年10月17日周六开始，每周六19:30召开RoboCup例会。结束时间暂按21:00预留，实际以通知为准。过去10月11日周日的单次例会保留为历史事件，不代表未来固定在周日。
 CATEGORIES:Meeting,RoboCup,Recurring
@@ -1182,8 +1183,9 @@ DTSTAMP:20261013T040000Z
 DTSTART;TZID=Asia/Shanghai:20261016T163000
 DTEND;TZID=Asia/Shanghai:20261016T183000
 RRULE:FREQ=WEEKLY;BYDAY=FR
+EXDATE;TZID=Asia/Shanghai:20261030T163000
 LAST-MODIFIED:20261013T040000Z
-SEQUENCE:0
+SEQUENCE:1
 SUMMARY;LANGUAGE=zh-cn:[RoboCup] 每周例会前项目推进（2h）
 DESCRIPTION:每周五16:30–18:30项目交付核心时段，必须在周六19:30例会前有实际进展。先按队内上次明确的分工选择一个本周最关键且可独立完成的任务，优先工作代码/实验→快速测试→截图/日志/PR证据；最后写三条汇报：完成情况、验证证据、卡点。状态差时先做最小20分钟动作启动，不要求一开始就兴致高涨。团队具体交付内容未知，需用户提供或从队内任务文档获取，绝不猜测。
 CATEGORIES:Research,RoboCup,Recurring
