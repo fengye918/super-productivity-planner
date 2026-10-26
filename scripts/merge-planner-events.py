@@ -21,13 +21,15 @@ CONFIRMED_LAB_CLASS_UIDS = {
     "331b624bd6a3fa0d0a5e65f461b818cc76c1f3b4",  # 2026-10-27
 }
 
-# Three specific imported class instances are deliberately hidden from the
+# Specific imported class instances are deliberately hidden from the
 # user's actionable schedule: the user will not attend these sessions on
-# Oct 20 / Oct 23. They are NOT claims that the university cancelled class.
+# Oct 20, Oct 23 and Oct 30. They are NOT claims that the university cancelled class.
 USER_EXCUSED_CLASS_UIDS = {
     "9d537c98c9be4ff392d11f33ecb43c551705b154",  # Oct 20 AI/ML 08:00
     "1eb574dd58b834c1659f1ff099e7be94c5f55bbc",  # Oct 20 Modern Control 16:15
     "68e8643ad16717ad17e1503a15a344b87ce4b13c",  # Oct 23 Sensors 08:00
+    "5ed21943c028517c65cd8a96b13c0f545c963ca5",  # Oct 30 Process Control 08:00 (Beijing travel)
+    "7153736ce887603585b2e2a26558dd5332c620aa",  # Oct 30 Sensors 10:00 (Beijing travel)
 }
 
 # Remove previously generated planner events and user-excused class instances.
