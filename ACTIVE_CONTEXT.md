@@ -345,3 +345,12 @@ Updated: 2026-10-26
 ## 2026-10-26 ZJU todo disappearance means successful submission
 - User confirms that when an assignment disappears from their 学在浙大 synced **pending** list, it is **successfully submitted**. Do not hedge about verification or ask for receipts solely because it is absent.
 - Latest todo list has only Modern Control state-feedback experiment 1193399 and Process Control week-seven homework 1200101. Absent Modern Control Ch8 homework 1/2 and Big Data MOOC proof upload are treated as successfully submitted. Removed 2026-10-26 19:00-19:30 MOOC and 2026-10-27 19:00-21:00 Ch8 homework 2 follow-up blocks, preserving Oct 26 19:45-21:15 Modern Control review and remaining live homework.
+
+
+## 2026-10-26 evening research push before Beijing travel
+- User wants MORE meaningful work in the immediate days and explicitly permits longer evenings. Previous default 22:30 may exceptionally extend to 23:00 for Oct26-28; **Oct29 night still ends 22:00 due to Oct30 08:30 flight**, and Oct30-Nov1 is fully work-free travel.
+- Added **Oct26 Mon 21:30-23:00** Qizhen MA735 capture/angle/velocity-feedback offline test (no electrical tests until missing critical PCB part and safe power are confirmed).
+- Added **Oct27 Tue 19:00-21:30** Qizhen CFD reproducible numerical baseline and flow/force evidence with saved case parameters and failure logs. Maintains original Oct27 Big Data morning, Modern Control state-feedback 16-17:30.
+- Added **Oct28 Wed 21:15-22:45** RoboCup SSL dribbler FOC software improvement or limit/watchdog validation with a concrete safe test/log; joins preserved **Oct29 Thu 16:20-18:20** RoboCup preparation before skipped Oct30/31 team events.
+- Total newly scheduled **5.5 hours**, Qizhen **4 hours** and RoboCup **1.5 hours**, additional to existing Thu RoboCup 2h. No new tasks added during trip or after Oct29 22:00.
+- Maintain dedicated modern control reviews and lab report, Big Data concentrated windows, and Process Control week7 homework. Do not claim planned research outcomes as completed until logs/tests are provided.
