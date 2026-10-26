@@ -1980,4 +1980,61 @@ CATEGORIES:Personal,Travel,OutOfOffice
 TRANSP:OPAQUE
 UID:planner-20261030-20261101-beijing-travel@chatgpt-planner
 END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261026T035700Z
+DTSTAMP:20261026T035700Z
+DTSTART;TZID=Asia/Shanghai:20261026T213000
+DTEND;TZID=Asia/Shanghai:20261026T230000
+LAST-MODIFIED:20261026T035700Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真 MA735] 速度反馈链路：代码核验与离线测试
+DESCRIPTION:启真Cephalo-Ring速度闭环专项90分钟。先核对实际STM32工程和PA0/PA8对应的定时器/捕获通道，再检查MA735 PWM周期/高电平解码→原始角度→跨圈展开→有符号速度估计的逻辑。最少完成1组跨零位/正反转/失帧输入的离线测试和编译记录，列出反馈给PI的接口与一个最关键错误。只有确认MA735 PCB关键元件齐全、供电安全后才考虑上电；不把载波PWM频率误当机械速度。20分钟起步，最后10分钟保存log。
+CATEGORIES:Research,Qizhen,MA735,Control
+TRANSP:OPAQUE
+UID:planner-20261026-qizhen-ma735-offline-speed-chain@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真 MA735] 速度反馈链路：代码核验与离线测试
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261026T035700Z
+DTSTAMP:20261026T035700Z
+DTSTART;TZID=Asia/Shanghai:20261027T190000
+DTEND;TZID=Asia/Shanghai:20261027T213000
+LAST-MODIFIED:20261026T035700Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[启真 CFD] 跑通基准流场与推力证据（2.5h）
+DESCRIPTION:启真CFD连续研究150分钟。承接现有Case，不随意重造模型；确认geometry/fluid domain、网格尺度、时间步/求解器、物性与边界条件，运行至少一组基准工况。验收：保存case参数、求解残差/稳定性、1张速度或涡量图以及可获得的力/推力输出；若阻塞则留下可复现错误日志、一次定位尝试和唯一下一步。假定的硅胶膜形变不是已实测的物理边界。与上午大数据任务分离，不顺延到23点。
+CATEGORIES:Research,Qizhen,CFD,Simulation
+TRANSP:OPAQUE
+UID:planner-20261027-qizhen-cfd-repro-baseline@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[启真 CFD] 跑通基准流场与推力证据（2.5h）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261026T035700Z
+DTSTAMP:20261026T035700Z
+DTSTART;TZID=Asia/Shanghai:20261028T211500
+DTEND;TZID=Asia/Shanghai:20261028T224500
+LAST-MODIFIED:20261026T035700Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[RoboCup SSL] 运球器FOC控制：一项可验收改动
+DESCRIPTION:RoboCup 2027 SSL组会前90分钟增量开发。先检查本周真实团队分工及当前FOC dribbler分支，在既有速度/吸球模式与独立限扭逻辑中优先选1个最小缺陷或接口改进，保持旧接口；完成最小编译/静态或安全台架测试，保存CAN指令、速度/电流限制和watchdog证据。没有真实硬件条件时离线验证，不冒险通电。产出一项改动及其失败/成功日志，供周四16:20-18:20继续复测并在周六远程汇报。
+CATEGORIES:Research,RoboCup,SSL,Embedded
+TRANSP:OPAQUE
+UID:planner-20261028-robocup-dribbler-foc-evidence@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[RoboCup SSL] 运球器FOC控制：一项可验收改动
+END:VALARM
+END:VEVENT
 END:VCALENDAR
