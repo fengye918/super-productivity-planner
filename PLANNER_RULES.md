@@ -43,6 +43,11 @@
 - For Qizhen, track **CFD / physical flow-field validation** and **MA735 closed-loop servo angular-speed chain** as two independently testable workstreams. Workstreams should each leave a reproducible numerical case, measurement, code test or clear blocker. Never schedule electrical power-on of an incomplete MA735 PCB.
 - Short high-efficiency learning blocks: check actual lecture material, recall without notes, solve a representative problem independently, verify using course source, record an actionable error or next step. Reserve sufficient lecture-to-lecture comprehension time instead of counting passive reading as mastery.
 
+## Declared travel blackout
+- When the user explicitly blocks travel dates, treat the entire inclusive date range as **no academic/research/project work** and create an all-day absence block; move existing optional work before departure or after return.
+- Do not delete official class source records or cancel team-wide meetings: hide only the user's conflicting imported class occurrences and use recurrence exceptions for their personal standing meetings. Record any genuine missed-class catch-up before the next attended session.
+- Never infer flight airport, return flight clock time or ground transportation departure without explicit evidence. Reserve reasonable packing and transit preparation, plus sleep before early flights.
+
 ## Research
 - Research blocks must name a concrete output/evidence, not vague “do research”.
 - Prefer end-to-end evidence: working chain, reproducible baseline, curve, experiment note, validated interface, etc.
