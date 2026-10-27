@@ -72,8 +72,7 @@
           {
             "upload_id": 21834725,
             "name": "实验3_状态反馈(1).pdf",
-            "repo_path": "course_materials/现代控制理论/homework/1193399/实验3_状态反馈(1).pdf",
-            "bytes": 1167727
+            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/4e06ebe616711f5f6ebc9dddce03301edb583fe4?timestamp=1793073600&nonce=271da3ad2a3b4560ae98b3e93b4b1bde&token=88972207bfd8982b465a3dca43b9f473&name=%E5%AE%9E%E9%AA%8C3_%E7%8A%B6%E6%80%81%E5%8F%8D%E9%A6%88%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f7b03807ad0>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout="
           }
         ],
         "detail_fetch_error": null,
@@ -149,7 +148,8 @@
           {
             "upload_id": 21834725,
             "name": "实验3_状态反馈(1).pdf",
-            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/4e06ebe616711f5f6ebc9dddce03301edb583fe4?timestamp=1793073600&nonce=271da3ad2a3b4560ae98b3e93b4b1bde&token=88972207bfd8982b465a3dca43b9f473&name=%E5%AE%9E%E9%AA%8C3_%E7%8A%B6%E6%80%81%E5%8F%8D%E9%A6%88%281%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f7b03807ad0>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout="
+            "repo_path": "course_materials/现代控制理论/homework/1193399/实验3_状态反馈(1).pdf",
+            "bytes": 1167727
           }
         ],
         "detail_fetch_error": null,
@@ -158,6 +158,23 @@
     },
     {
       "before": {
+        "source_id": 1200101,
+        "course_id": 101919,
+        "course_name": "过程控制工程",
+        "course_code": "(2026-2027-1)-CSE3003M-0005416-1A",
+        "title": "第七周作业",
+        "type": "homework",
+        "end_time": "2026-11-04T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [],
+        "attachment_refs": [],
+        "attachment_contexts": [],
+        "downloaded_attachments": [],
+        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
+        "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1200101"
+      },
+      "after": {
         "source_id": 1200101,
         "course_id": 101919,
         "course_name": "过程控制工程",
@@ -232,23 +249,6 @@
           }
         ],
         "detail_fetch_error": null,
-        "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1200101"
-      },
-      "after": {
-        "source_id": 1200101,
-        "course_id": 101919,
-        "course_name": "过程控制工程",
-        "course_code": "(2026-2027-1)-CSE3003M-0005416-1A",
-        "title": "第七周作业",
-        "type": "homework",
-        "end_time": "2026-11-04T15:59:00Z",
-        "is_locked": false,
-        "detail_text": null,
-        "attachment_names": [],
-        "attachment_refs": [],
-        "attachment_contexts": [],
-        "downloaded_attachments": [],
-        "detail_fetch_error": "ReadTimeout: HTTPSConnectionPool(host='courses.zju.edu.cn', port=443): Read timed out. (read timeout=30)",
         "source_url": "https://courses.zju.edu.cn/course/101919/learning-activity#/1200101"
       }
     }
