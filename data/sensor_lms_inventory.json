@@ -1,12 +1,820 @@
 {
-  "course": null,
-  "course_count": 0,
-  "activities": [],
-  "errors": [
+  "course": {
+    "id": 101075,
+    "name": "传感与检测",
+    "course_code": "(2026-2027-1)-CSE3001M-0098076-1A"
+  },
+  "course_count": 10,
+  "activities": [
     {
-      "fatal": "HTTPError",
-      "description": "401 Client Error: UNAUTHORIZED for url: https://courses.zju.edu.cn/user/index"
+      "id": 1187740,
+      "title": "课件",
+      "type": "material",
+      "created_at": "2026-09-18T00:36:41Z",
+      "updated_at": "2026-09-18T00:36:41Z",
+      "start_time": null,
+      "end_time": null,
+      "published": true,
+      "course_id": 101075,
+      "sort": 1,
+      "files": [
+        {
+          "id": 21653224,
+          "name": "1 检测仪表基本概念(6).pdf",
+          "size": 3794825
+        }
+      ]
+    },
+    {
+      "id": 1195031,
+      "title": "课件",
+      "type": "material",
+      "created_at": "2026-10-08T23:56:01Z",
+      "updated_at": "2026-10-08T23:56:01Z",
+      "start_time": null,
+      "end_time": null,
+      "published": true,
+      "course_id": 101075,
+      "sort": 1,
+      "files": [
+        {
+          "id": 21940154,
+          "name": "1.3 误差基础(1).pdf",
+          "size": 1018186
+        },
+        {
+          "id": 10028616,
+          "name": "2.5  热电式.pdf",
+          "size": 1737995
+        }
+      ]
+    },
+    {
+      "id": 1198186,
+      "title": "课件",
+      "type": "material",
+      "created_at": "2026-10-15T23:56:08Z",
+      "updated_at": "2026-10-15T23:56:08Z",
+      "start_time": null,
+      "end_time": null,
+      "published": true,
+      "course_id": 101075,
+      "sort": 1,
+      "files": [
+        {
+          "id": 6812287,
+          "name": "2.12  超声传感器.pdf",
+          "size": 1745031
+        },
+        {
+          "id": 22094761,
+          "name": "2.7 光电.pdf",
+          "size": 1976220
+        }
+      ]
+    },
+    {
+      "id": 1199023,
+      "title": "机械式/电阻式检测元件",
+      "type": "material",
+      "created_at": "2026-10-19T02:14:24Z",
+      "updated_at": "2026-10-23T00:02:54Z",
+      "start_time": null,
+      "end_time": null,
+      "published": true,
+      "course_id": 101075,
+      "sort": 1,
+      "files": [
+        {
+          "id": 22158796,
+          "name": "传感与检测 2.2 机械式检测元件.pdf",
+          "size": 1877758
+        },
+        {
+          "id": 22271464,
+          "name": "传感与检测 2.3 电阻式检测元件(1).pdf",
+          "size": 2628393
+        }
+      ]
     }
   ],
-  "file_candidates": []
+  "errors": [],
+  "file_candidates": [
+    {
+      "activity": {
+        "id": 1187740,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-09-18T00:36:41Z",
+        "updated_at": "2026-09-18T00:36:41Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 21653224,
+            "name": "1 检测仪表基本概念(6).pdf",
+            "size": 3794825
+          }
+        ]
+      },
+      "file": {
+        "id": 21653224,
+        "name": "1 检测仪表基本概念(6).pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1195031,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-08T23:56:01Z",
+        "updated_at": "2026-10-08T23:56:01Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 21940154,
+            "name": "1.3 误差基础(1).pdf",
+            "size": 1018186
+          },
+          {
+            "id": 10028616,
+            "name": "2.5  热电式.pdf",
+            "size": 1737995
+          }
+        ]
+      },
+      "file": {
+        "id": 21940154,
+        "name": "1.3 误差基础(1).pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1195031,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-08T23:56:01Z",
+        "updated_at": "2026-10-08T23:56:01Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 21940154,
+            "name": "1.3 误差基础(1).pdf",
+            "size": 1018186
+          },
+          {
+            "id": 10028616,
+            "name": "2.5  热电式.pdf",
+            "size": 1737995
+          }
+        ]
+      },
+      "file": {
+        "id": 10028616,
+        "name": "2.5  热电式.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1198186,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-15T23:56:08Z",
+        "updated_at": "2026-10-15T23:56:08Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 6812287,
+            "name": "2.12  超声传感器.pdf",
+            "size": 1745031
+          },
+          {
+            "id": 22094761,
+            "name": "2.7 光电.pdf",
+            "size": 1976220
+          }
+        ]
+      },
+      "file": {
+        "id": 6812287,
+        "name": "2.12  超声传感器.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1198186,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-15T23:56:08Z",
+        "updated_at": "2026-10-15T23:56:08Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 6812287,
+            "name": "2.12  超声传感器.pdf",
+            "size": 1745031
+          },
+          {
+            "id": 22094761,
+            "name": "2.7 光电.pdf",
+            "size": 1976220
+          }
+        ]
+      },
+      "file": {
+        "id": 22094761,
+        "name": "2.7 光电.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1199023,
+        "title": "机械式/电阻式检测元件",
+        "type": "material",
+        "created_at": "2026-10-19T02:14:24Z",
+        "updated_at": "2026-10-23T00:02:54Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 22158796,
+            "name": "传感与检测 2.2 机械式检测元件.pdf",
+            "size": 1877758
+          },
+          {
+            "id": 22271464,
+            "name": "传感与检测 2.3 电阻式检测元件(1).pdf",
+            "size": 2628393
+          }
+        ]
+      },
+      "file": {
+        "id": 22158796,
+        "name": "传感与检测 2.2 机械式检测元件.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1199023,
+        "title": "机械式/电阻式检测元件",
+        "type": "material",
+        "created_at": "2026-10-19T02:14:24Z",
+        "updated_at": "2026-10-23T00:02:54Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 22158796,
+            "name": "传感与检测 2.2 机械式检测元件.pdf",
+            "size": 1877758
+          },
+          {
+            "id": 22271464,
+            "name": "传感与检测 2.3 电阻式检测元件(1).pdf",
+            "size": 2628393
+          }
+        ]
+      },
+      "file": {
+        "id": 22271464,
+        "name": "传感与检测 2.3 电阻式检测元件(1).pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1199023,
+        "title": "机械式/电阻式检测元件",
+        "type": "material",
+        "created_at": "2026-10-19T02:14:24Z",
+        "updated_at": "2026-10-23T00:02:54Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 22158796,
+        "name": "传感与检测 2.2 机械式检测元件.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1199023,
+        "title": "机械式/电阻式检测元件",
+        "type": "material",
+        "created_at": "2026-10-19T02:14:24Z",
+        "updated_at": "2026-10-23T00:02:54Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 22271464,
+        "name": "传感与检测 2.3 电阻式检测元件(1).pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1198186,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-15T23:56:08Z",
+        "updated_at": "2026-10-15T23:56:08Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 6812287,
+        "name": "2.12  超声传感器.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1198186,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-15T23:56:08Z",
+        "updated_at": "2026-10-15T23:56:08Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 22094761,
+        "name": "2.7 光电.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1195031,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-08T23:56:01Z",
+        "updated_at": "2026-10-08T23:56:01Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 21940154,
+        "name": "1.3 误差基础(1).pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1195031,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-08T23:56:01Z",
+        "updated_at": "2026-10-08T23:56:01Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 10028616,
+        "name": "2.5  热电式.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1187740,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-09-18T00:36:41Z",
+        "updated_at": "2026-09-18T00:36:41Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 21653224,
+        "name": "1 检测仪表基本概念(6).pdf"
+      }
+    }
+  ],
+  "activity_payload_keys": [
+    "activities"
+  ],
+  "activity_count": 4,
+  "detail_survey": [
+    {
+      "activity": {
+        "id": 1199023,
+        "title": "机械式/电阻式检测元件",
+        "type": "material",
+        "created_at": "2026-10-19T02:14:24Z",
+        "updated_at": "2026-10-23T00:02:54Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "payload_keys": [
+        "announce_answer_and_explanation",
+        "assign_group_ids",
+        "assign_student_ids",
+        "average_score",
+        "can_show_score",
+        "completion_criterion",
+        "completion_criterion_key",
+        "completion_criterion_value",
+        "course_id",
+        "created_at",
+        "data",
+        "enable_edit",
+        "end_time",
+        "group_set_id",
+        "group_set_name",
+        "has_assign_group",
+        "has_assign_student",
+        "has_score_count",
+        "highest_score",
+        "id",
+        "imported_from",
+        "imported_track_id",
+        "inter_review_named",
+        "inter_score_map",
+        "interaction_activity_attributes",
+        "intra_rubric_id",
+        "intra_rubric_instance",
+        "intra_rubric_instance_id",
+        "intra_score_map",
+        "is_assigned_to_all",
+        "is_closed",
+        "is_in_progress",
+        "is_inter_review_by_submitter",
+        "is_opened_catalog",
+        "is_review_homework",
+        "is_started",
+        "knowledge_node_ids",
+        "knowledge_node_reference",
+        "late_submission_count",
+        "lowest_score",
+        "module_id",
+        "non_submit_times",
+        "prerequisites",
+        "published",
+        "rubric_id",
+        "rubric_instance",
+        "rubric_instance_id",
+        "score_percentage",
+        "score_published",
+        "score_type",
+        "sort",
+        "start_time",
+        "sub_meetings",
+        "submit_by_group",
+        "submit_times",
+        "syllabus_id",
+        "teaching_model",
+        "teaching_unit_id",
+        "tencent_meeting_type",
+        "title",
+        "type",
+        "unique_key",
+        "updated_at",
+        "uploads",
+        "using_phase",
+        "version",
+        "visible_end_at",
+        "visible_start_at"
+      ],
+      "files": [
+        {
+          "id": 22158796,
+          "name": "传感与检测 2.2 机械式检测元件.pdf",
+          "size": 1877758
+        },
+        {
+          "id": 22271464,
+          "name": "传感与检测 2.3 电阻式检测元件(1).pdf",
+          "size": 2628393
+        }
+      ]
+    },
+    {
+      "activity": {
+        "id": 1198186,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-15T23:56:08Z",
+        "updated_at": "2026-10-15T23:56:08Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "payload_keys": [
+        "announce_answer_and_explanation",
+        "assign_group_ids",
+        "assign_student_ids",
+        "average_score",
+        "can_show_score",
+        "completion_criterion",
+        "completion_criterion_key",
+        "completion_criterion_value",
+        "course_id",
+        "created_at",
+        "data",
+        "enable_edit",
+        "end_time",
+        "group_set_id",
+        "group_set_name",
+        "has_assign_group",
+        "has_assign_student",
+        "has_score_count",
+        "highest_score",
+        "id",
+        "imported_from",
+        "imported_track_id",
+        "inter_review_named",
+        "inter_score_map",
+        "interaction_activity_attributes",
+        "intra_rubric_id",
+        "intra_rubric_instance",
+        "intra_rubric_instance_id",
+        "intra_score_map",
+        "is_assigned_to_all",
+        "is_closed",
+        "is_in_progress",
+        "is_inter_review_by_submitter",
+        "is_opened_catalog",
+        "is_review_homework",
+        "is_started",
+        "knowledge_node_ids",
+        "knowledge_node_reference",
+        "late_submission_count",
+        "lowest_score",
+        "module_id",
+        "non_submit_times",
+        "prerequisites",
+        "published",
+        "rubric_id",
+        "rubric_instance",
+        "rubric_instance_id",
+        "score_percentage",
+        "score_published",
+        "score_type",
+        "sort",
+        "start_time",
+        "sub_meetings",
+        "submit_by_group",
+        "submit_times",
+        "syllabus_id",
+        "teaching_model",
+        "teaching_unit_id",
+        "tencent_meeting_type",
+        "title",
+        "type",
+        "unique_key",
+        "updated_at",
+        "uploads",
+        "using_phase",
+        "version",
+        "visible_end_at",
+        "visible_start_at"
+      ],
+      "files": [
+        {
+          "id": 6812287,
+          "name": "2.12  超声传感器.pdf",
+          "size": 1745031
+        },
+        {
+          "id": 22094761,
+          "name": "2.7 光电.pdf",
+          "size": 1976220
+        }
+      ]
+    },
+    {
+      "activity": {
+        "id": 1195031,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-10-08T23:56:01Z",
+        "updated_at": "2026-10-08T23:56:01Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "payload_keys": [
+        "announce_answer_and_explanation",
+        "assign_group_ids",
+        "assign_student_ids",
+        "average_score",
+        "can_show_score",
+        "completion_criterion",
+        "completion_criterion_key",
+        "completion_criterion_value",
+        "course_id",
+        "created_at",
+        "data",
+        "enable_edit",
+        "end_time",
+        "group_set_id",
+        "group_set_name",
+        "has_assign_group",
+        "has_assign_student",
+        "has_score_count",
+        "highest_score",
+        "id",
+        "imported_from",
+        "imported_track_id",
+        "inter_review_named",
+        "inter_score_map",
+        "interaction_activity_attributes",
+        "intra_rubric_id",
+        "intra_rubric_instance",
+        "intra_rubric_instance_id",
+        "intra_score_map",
+        "is_assigned_to_all",
+        "is_closed",
+        "is_in_progress",
+        "is_inter_review_by_submitter",
+        "is_opened_catalog",
+        "is_review_homework",
+        "is_started",
+        "knowledge_node_ids",
+        "knowledge_node_reference",
+        "late_submission_count",
+        "lowest_score",
+        "module_id",
+        "non_submit_times",
+        "prerequisites",
+        "published",
+        "rubric_id",
+        "rubric_instance",
+        "rubric_instance_id",
+        "score_percentage",
+        "score_published",
+        "score_type",
+        "sort",
+        "start_time",
+        "sub_meetings",
+        "submit_by_group",
+        "submit_times",
+        "syllabus_id",
+        "teaching_model",
+        "teaching_unit_id",
+        "tencent_meeting_type",
+        "title",
+        "type",
+        "unique_key",
+        "updated_at",
+        "uploads",
+        "using_phase",
+        "version",
+        "visible_end_at",
+        "visible_start_at"
+      ],
+      "files": [
+        {
+          "id": 21940154,
+          "name": "1.3 误差基础(1).pdf",
+          "size": 1018186
+        },
+        {
+          "id": 10028616,
+          "name": "2.5  热电式.pdf",
+          "size": 1737995
+        }
+      ]
+    },
+    {
+      "activity": {
+        "id": 1187740,
+        "title": "课件",
+        "type": "material",
+        "created_at": "2026-09-18T00:36:41Z",
+        "updated_at": "2026-09-18T00:36:41Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "payload_keys": [
+        "announce_answer_and_explanation",
+        "assign_group_ids",
+        "assign_student_ids",
+        "average_score",
+        "can_show_score",
+        "completion_criterion",
+        "completion_criterion_key",
+        "completion_criterion_value",
+        "course_id",
+        "created_at",
+        "data",
+        "enable_edit",
+        "end_time",
+        "group_set_id",
+        "group_set_name",
+        "has_assign_group",
+        "has_assign_student",
+        "has_score_count",
+        "highest_score",
+        "id",
+        "imported_from",
+        "imported_track_id",
+        "inter_review_named",
+        "inter_score_map",
+        "interaction_activity_attributes",
+        "intra_rubric_id",
+        "intra_rubric_instance",
+        "intra_rubric_instance_id",
+        "intra_score_map",
+        "is_assigned_to_all",
+        "is_closed",
+        "is_in_progress",
+        "is_inter_review_by_submitter",
+        "is_opened_catalog",
+        "is_review_homework",
+        "is_started",
+        "knowledge_node_ids",
+        "knowledge_node_reference",
+        "late_submission_count",
+        "lowest_score",
+        "module_id",
+        "non_submit_times",
+        "prerequisites",
+        "published",
+        "rubric_id",
+        "rubric_instance",
+        "rubric_instance_id",
+        "score_percentage",
+        "score_published",
+        "score_type",
+        "sort",
+        "start_time",
+        "sub_meetings",
+        "submit_by_group",
+        "submit_times",
+        "syllabus_id",
+        "teaching_model",
+        "teaching_unit_id",
+        "tencent_meeting_type",
+        "title",
+        "type",
+        "unique_key",
+        "updated_at",
+        "uploads",
+        "using_phase",
+        "version",
+        "visible_end_at",
+        "visible_start_at"
+      ],
+      "files": [
+        {
+          "id": 21653224,
+          "name": "1 检测仪表基本概念(6).pdf",
+          "size": 3794825
+        }
+      ]
+    }
+  ]
 }
