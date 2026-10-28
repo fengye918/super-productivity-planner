@@ -738,25 +738,6 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261009T070000Z
-DTSTAMP:20261009T070000Z
-DTSTART;TZID=Asia/Shanghai:20261028T190000
-DTEND;TZID=Asia/Shanghai:20261028T210000
-LAST-MODIFIED:20261009T070000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[现代控制实验] 状态反馈实验报告（2h）
-DESCRIPTION:对应10月27日状态反馈实验，整理状态反馈设计、增益计算/参数、波形与性能分析、结论和必要截图。仅在实验完成后写报告。
-CATEGORIES:Course,ModernControl,Lab,Report
-TRANSP:OPAQUE
-UID:planner-20261028-state-feedback-report@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[现代控制实验] 状态反馈实验报告（2h）
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
 CREATED:20261009T073000Z
 DTSTAMP:20261009T073000Z
 DTSTART;TZID=Asia/Shanghai:20261012T100000
@@ -2035,6 +2016,63 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:[RoboCup SSL] 运球器FOC控制：一项可验收改动
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261028T031500Z
+DTSTAMP:20261028T031500Z
+DTSTART;TZID=Asia/Shanghai:20261028T130500
+DTEND;TZID=Asia/Shanghai:20261028T140500
+LAST-MODIFIED:20261028T031500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[传感与检测] 上周知识巩固深化（1小时）
+DESCRIPTION:用户明确要求独立增加1小时巩固上周传感与检测内容。以10/23实际课件和笔记为依据，优先检测元件的工作原理、等效模型/灵敏度与测量误差等真正学过的知识。13:05–13:20闭卷画知识骨架；13:20–13:45对照原PPT补两处理解缺口；13:45–14:05完整完成一道原理分析或计算题并记录错因。与最新PPT末两页作业任务分开，不假定昨天的复习已完成。
+CATEGORIES:Course,Sensors,Review
+TRANSP:OPAQUE
+UID:planner-20261028-sensor-reinforce-lastweek@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[传感与检测] 上周知识巩固深化（1小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261028T031500Z
+DTSTAMP:20261028T031500Z
+DTSTART;TZID=Asia/Shanghai:20261028T190000
+DTEND;TZID=Asia/Shanghai:20261028T210000
+LAST-MODIFIED:20261028T031500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[传感与检测] 最新课件末两页作业：逐题完成与检查
+DESCRIPTION:原19:00–21:00状态反馈实验报告已由用户确认提交，从日程删除并转给传感作业。本块在周五10/30出行前完成：先核对学在浙大最新课件标题和最后两页原题/图片，逐题独立分析，按要求完成公式推导、必要示意图与答案，再对照已核实原题的参考答案PDF自查。若课件尚无法通过平台取得，应以真实课件为前置阻塞，不得用旧课件/猜测题目伪装已完成。
+CATEGORIES:Course,Sensors,Homework
+TRANSP:OPAQUE
+UID:planner-20261028-sensor-new-ppt-last-two-pages-homework@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[传感与检测] 最新课件末两页作业：逐题完成与检查
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261028T031500Z
+DTSTAMP:20261028T031500Z
+DTSTART;TZID=Asia/Shanghai:20261104T190000
+DTEND;TZID=Asia/Shanghai:20261104T203000
+LAST-MODIFIED:20261028T031500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[RoboCup SSL] 周中开发与集成验证（1.5小时）
+DESCRIPTION:恢复北京出行后常态RoboCup投入，每周例会之外设一个周中深度工作块。本次针对当前运球器吸球不稳定及ZFOC v2/f-control接口审查，先确认实际代码版本（v2可能已具备FOC速度/转矩限幅，而主控此前按20/10帧切换模式），选择一个实质性接口问题完成修改和最小验证：连续速度模式、只调整软件限扭、CAN时序/失联安全或1个P-only/PI记录。必须记录现有状态→改动→离线/实测证据与剩余故障；不能认定此前问题仍未解决。与周五16:30–18:30固定RoboCup块互补。
+CATEGORIES:Research,RoboCup,SSL,Validation
+TRANSP:OPAQUE
+UID:planner-20261104-robocup-midweek-dev-check@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:[RoboCup SSL] 周中开发与集成验证（1.5小时）
 END:VALARM
 END:VEVENT
 END:VCALENDAR
