@@ -11,7 +11,7 @@ spec=importlib.util.spec_from_file_location("zju_sync",ROOT/"scripts"/"fetch-zju
 z=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(z)
 s=requests.Session()
-s.headers.update({"User-Agent":z.UA,"Accept":"application/json, text/plain, */*"})
+s.headers.update({"User-Agent":z.UA,"Accept-Language":"zh-CN,zh;q=0.9,en;q=0.7"})
 report={"course":None,"course_count":0,"activities":[],"errors":[],"file_candidates":[]}
 
 def safe_json(path):
@@ -43,7 +43,7 @@ try:
             # Last attempt: new session, fresh CAS cookies and a fresh SSO ticket.
             print("Retrying with a fresh CAS session.")
             s=requests.Session()
-            s.headers.update({"User-Agent":z.UA,"Accept":"application/json, text/plain, */*"})
+            s.headers.update({"User-Agent":z.UA,"Accept-Language":"zh-CN,zh;q=0.9,en;q=0.7"})
             z.login_zjuam(s)
             second=s.get(u,allow_redirects=True,timeout=45)
             print("Fresh explicit SSO status:",second.status_code,second.url.split("?")[0])
