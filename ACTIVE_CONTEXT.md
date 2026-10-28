@@ -1,6 +1,6 @@
 # Active Planning Context
 
-Updated: 2026-10-26
+Updated: 2026-10-28
 
 ## Assignment status
 - Latest 学在浙大 refresh: **2026-09-28 20:23 Asia/Shanghai**.
@@ -354,3 +354,12 @@ Updated: 2026-10-26
 - Added **Oct28 Wed 21:15-22:45** RoboCup SSL dribbler FOC software improvement or limit/watchdog validation with a concrete safe test/log; joins preserved **Oct29 Thu 16:20-18:20** RoboCup preparation before skipped Oct30/31 team events.
 - Total newly scheduled **5.5 hours**, Qizhen **4 hours** and RoboCup **1.5 hours**, additional to existing Thu RoboCup 2h. No new tasks added during trip or after Oct29 22:00.
 - Maintain dedicated modern control reviews and lab report, Big Data concentrated windows, and Process Control week7 homework. Do not claim planned research outcomes as completed until logs/tests are provided.
+
+
+## 2026-10-28 Sensor Detection official homework + RoboCup and submitted lab
+- User confirmed Modern Control third state-feedback lab **already submitted**; canceled future Oct 28 19:00–21:00 report. It no longer appears in the LMS pending todo list. Keep past practical as historical only; no duplicate future work.
+- Authenticated from ZJU LMS course **传感与检测** course ID **101075**. Newest available published material activity **1199023** “机械式/电阻式检测元件”, updated 2026-10-23 00:02:54Z, currently has two official PDFs: `course_materials/传感与检测/课件/传感与检测 2.2 机械式检测元件.pdf` (upload 22158796) and `course_materials/传感与检测/课件/传感与检测 2.3 电阻式检测元件(1).pdf` (upload 22271464). PDF 2.3 last page contains formal homework at original slides **26 and 27**: Pt R(t)=R0(1+At+Bt²) linearization error, strain gauge K=2.05/R=120Ω/epsilon=800 microstrain with single/half/full Wheatstone bridge 3V and nonlinearity, and metal RTD thermal flow sensor design / measurement modes. PDF 2.2 final slide **22** has two “讨论” prompts on examples of mechanical sensors and ways to improve accuracy. These are distinct from formal homework and belong only in appendix.
+- Verified 3-page PDF generated locally as `/mnt/data/传感与检测_最新课件作业_标准参考解答.pdf` with XeLaTeX source archived in `course_materials/传感与检测/solutions/source/传感与检测_最新课件作业_标准参考解答.tex`; GitHub build workflow can generate `.../solutions/传感与检测_最新课件作业_标准参考解答.pdf` (verify workflow/path before claiming repository PDF live). Numeric checks: Pt with supplemental IEC A=3.9083e-3, B=-5.775e-7 yields 1.4776°C max in literal unchanged-A linearization, strain ΔR=0.1968Ω, single bridge 1.228992mV, nonlinearity ~0.08193%, ideal half 2.46mV and full 4.92mV. PPT never gives A/B numbers, so differentiate supplemental example.
+- Current schedule: Oct28 **13:05–14:05** 1-hour sensor last-week reinforcement (active recall + example), **19:00–21:00** sensor homework from official slides; Oct28 21:15–22:45 RoboCup FOC delivery protected; Oct29 16:20–18:20 RoboCup verification protected; Nov4 19:00–20:30 extra RoboCup midweek development. Oct30–Nov1 Beijing work-free travel continues.
+- RoboCup recent evidence: user is ZJUNlict SSL 2027; dribbler intake still unstable; earlier Oct23 review of ZFOC v2 suggests speed control and adjustable torque limits already exist but main f-control had mode-switching at 20/10 frames. Must verify the current code state first rather than assume unresolved. Normal weeks aim 3.5–5h of verified SSL implementation, midweek+Friday block and async report on travel weeks.
+- Sensor official LMS material retrieval workflow in GitHub: `scripts/survey-sensor-lms.py`, `scripts/fetch-sensor-lesson.py`, respective GitHub workflows; actual files are now checked into course_materials. Do not claim latest lecture material is a PPTX; official published source is PDF slides.
