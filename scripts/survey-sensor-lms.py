@@ -26,7 +26,28 @@ def meta(a):
 
 try:
     z.login_zjuam(s)
-    z.login_courses(s)
+    try:
+        z.login_courses(s)
+    except requests.HTTPError as login_error:
+        # Course SSO occasionally returns HTTP 401 after CAS login.
+        # Retry the explicit CAS service flow without exposing tokens.
+        print("Courses SSO initial retry:", type(login_error).__name__)
+        from urllib.parse import quote
+        service="https://courses.zju.edu.cn/user/index"
+        u="https://zjuam.zju.edu.cn/cas/login?service="+quote(service,safe="")
+        step=s.get(u,allow_redirects=True,timeout=45)
+        print("Explicit service SSO status:",step.status_code,step.url.split("?")[0])
+        try:
+            z.login_courses(s)
+        except requests.HTTPError:
+            # Last attempt: new session, fresh CAS cookies and a fresh SSO ticket.
+            print("Retrying with a fresh CAS session.")
+            s=requests.Session()
+            s.headers.update({"User-Agent":z.UA,"Accept":"application/json, text/plain, */*"})
+            z.login_zjuam(s)
+            second=s.get(u,allow_redirects=True,timeout=45)
+            print("Fresh explicit SSO status:",second.status_code,second.url.split("?")[0])
+            z.login_courses(s)
     sem=safe_json("https://courses.zju.edu.cn/api/my-semesters?fields=id,name,sort,is_active,code")
     semesters=sem.get("semesters",[])
     ids=[]
