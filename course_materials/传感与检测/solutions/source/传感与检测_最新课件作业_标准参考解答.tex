@@ -1,0 +1,148 @@
+\documentclass[11pt,a4paper,fontset=none]{ctexart}
+\usepackage[margin=22mm,top=22mm,bottom=19mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,tabularx,multicol,enumitem,xcolor,hyperref,fancyhdr,tikz,needspace,array}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\definecolor{navy}{HTML}{16384A}
+\definecolor{teal}{HTML}{177C82}
+\definecolor{muted}{HTML}{546571}
+\hypersetup{colorlinks=true,linkcolor=teal,urlcolor=teal}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{muted}\small 浙江大学《传感与检测》课件作业参考解答}
+\fancyhead[R]{\color{muted}\small 2026.10.28}
+\fancyfoot[C]{\color{muted}\small \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{5pt}
+\linespread{1.17}
+\setlist[enumerate]{leftmargin=2.4em,itemsep=3pt,topsep=3pt}
+\setlist[itemize]{leftmargin=2.0em,itemsep=3pt,topsep=3pt}
+\newcommand{\key}[1]{\textcolor{teal}{\bfseries #1}}
+\newcommand{\result}[1]{\par\noindent\color{navy}\fbox{\parbox{0.94\linewidth}{\textbf{结论：}#1}}\color{black}\par}
+\newcommand{\stitle}[1]{\needspace{6\baselineskip}\vspace{8pt}{\noindent\Large\bfseries\color{navy}#1\color{black}}\par\vspace{4pt}\hrule\vspace{8pt}}
+\begin{document}
+\begin{center}
+{\Huge\bfseries\color{navy}传感与检测｜最新课件作业}\par\vspace{5pt}
+{\Large 标准参考解答（含推导与误差口径）}\par\vspace{7pt}
+{\small\color{muted}学在浙大课程 101075 · 最新资料单元 1199023 · 核对时间：2026-10-28}\par
+\end{center}
+\vspace{5pt}
+\noindent\textbf{原题来源：}《传感与检测 2.3 电阻式检测元件(1).pdf》，\textbf{第 26、27 张幻灯片}（课件 PDF 第 7 页）。最新资料中另附《传感与检测 2.2 机械式检测元件.pdf》，其第 22 张幻灯片为“讨论”题，见本文末尾补充。
+
+\noindent\textcolor{muted}{\small 注：原 PPT 明确给出题意和符号，但第 1 题未给系数 $A,B$ 的数值；本文先按原题提供符号解，数值示例采用标准铂电阻常用系数并清楚标注。}
+
+\stitle{第 1 题　铂电阻线性化导致的温度误差}
+\textbf{题意。}在 $0\sim850\,^\circ\mathrm C$ 内，铂电阻满足
+\[
+R_t=R_0\left(1+At+Bt^2\right),
+\]
+但在 $0\sim100\,^\circ\mathrm C$ 内用 $R_t\approx R_0(1+At)$ 近似。求由此造成的最大温度偏差。
+
+\textbf{步骤 1｜把实际电阻代入线性测温算法。}仪表仍按线性模型由电阻反推温度，故显示温度
+\begin{align*}
+t_{\mathrm{lin}}&=\frac{R_t/R_0-1}{A}\\
+&=\frac{At+Bt^2}{A}=t+\frac{B}{A}t^2.
+\end{align*}
+因此测量温度与实际温度的差为
+\[
+\Delta t=t_{\mathrm{lin}}-t=\frac{B}{A}t^2.
+\]
+\textbf{步骤 2｜在指定范围内取最大绝对值。}对通常的铂电阻，$A>0$、$B<0$，$|\Delta t|$ 随 $t^2$ 增大；故 $0\le t\le100$ 内最大值在 $100\,^\circ\mathrm C$ 处：
+\[
+\boxed{\max |\Delta t|=\left|\frac{B}{A}\right|\times10^4\ {^\circ\mathrm C}.}
+\]
+\textbf{数值示例（原题未给参数）。}若采用 IEC 60751 型铂电阻常用参数 $A=3.9083\times10^{-3}\,\mathrm{^\circ C^{-1}}$、$B=-5.775\times10^{-7}\,\mathrm{^\circ C^{-2}}$，则
+\[
+\boxed{\Delta t(100)\approx-1.478\,^\circ\mathrm C,\quad \max|\Delta t|\approx1.48\,^\circ\mathrm C.}
+\]
+例如 $R_0=100\,\Omega$ 时，$100\,^\circ\mathrm C$ 处真实 $R_t=138.5055\,\Omega$，线性近似给出 $139.083\,\Omega$，电阻差 $0.5775\,\Omega$。
+
+\noindent\textbf{易错点：}此题规定线性近似仍使用\emph{同一个系数} $A$，因此最大误差出现在端点。若\emph{另外}通过 $0\,^\circ\mathrm C$ 与 $100\,^\circ\mathrm C$ 两端重新标定直线，误差函数与最大位置会改变（此时约为 $0.375\,^\circ\mathrm C$，在 $50\,^\circ\mathrm C$ 附近）；\textbf{不能把两种校准约定混用}。
+
+\stitle{第 2 题　金属电阻应变片与电桥非线性}
+\textbf{已知：}$K=2.05$，$R=120\,\Omega$，$\varepsilon=800\,\mu\mathrm m/\mathrm m=8\times10^{-4}$，电桥直流供电 $U_s=3\,\mathrm V$。
+
+\textbf{(1) 电阻相对变化量和绝对变化量。}
+由金属应变片灵敏系数定义 $K=(\Delta R/R)/\varepsilon$：
+\[
+\boxed{\frac{\Delta R}{R}=K\varepsilon=0.00164=0.164\%,\qquad
+\Delta R=120\times0.00164=0.1968\,\Omega.}
+\]
+\textbf{(2) 单臂等臂电桥的输出电压。}
+设一臂从 $R$ 变为 $R+\Delta R$，其余三臂保持 $R$；电压极性随输出端定义而异，下式取正向幅值：
+\begin{align*}
+|U_o|&=U_s\left(\frac{R+\Delta R}{2R+\Delta R}-\frac12\right)
+=\frac{U_s\Delta R}{4R+2\Delta R}\\
+&=\frac{U_s}{4}\frac{x}{1+x/2},\qquad x=\frac{\Delta R}{R}=0.00164.
+\end{align*}
+一阶线性近似为 $U_{\mathrm{lin}}=U_s x/4$。代入得
+\[
+\boxed{|U_o|\approx1.228992\,\mathrm{mV},\quad
+|U_{\mathrm{lin}}|=1.230000\,\mathrm{mV}.}
+\]
+\textbf{非线性误差的口径。}若把“线性近似输出”作为比较基准，
+\[
+\gamma_{\mathrm{NL}}=\frac{|U_{\mathrm{lin}}-U_o|}{|U_{\mathrm{lin}}|}\times100\%
+=\frac{x}{2+x}\times100\%\approx\boxed{0.08193\%}.
+\]
+对应\emph{绝对输出误差} $\approx1.008\,\mu\mathrm V$。若改用真实输出 $|U_o|$ 作分母，则为 $x/2\times100\%=0.082\%$；两者口径略有区别，均应写清分母。
+
+\stitle{第 2 题（续）　如何消除一阶电桥非线性}
+\textbf{(3) 采用差动半桥，或进一步采用全桥。}关键是使用受相反应变的两个（或四个）工作应变片，并正确排列在桥臂，使输出叠加而每组分压分母保持常量。
+
+\begin{center}
+\renewcommand{\arraystretch}{1.45}
+\begin{tabularx}{0.97\linewidth}{>{\raggedright\arraybackslash}p{30mm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{26mm}}
+\toprule
+\textbf{方案} & \textbf{精确输出幅值（理想对称变形）} & \textbf{非线性误差}\\
+\midrule
+单臂测量（对照） & $\displaystyle\frac{U_s x}{4+2x}\approx1.228992\,\mathrm{mV}$ & $0.08193\%$\\
+半桥差动：同一分压支路相邻臂 $R+\Delta R$ 与 $R-\Delta R$ & $\displaystyle U_s\left|\frac{R+\Delta R}{2R}-\frac12\right|=\frac{U_s x}{2}=\boxed{2.460\,\mathrm{mV}}$ & $\boxed{0}$（理想）\\
+全桥差动：四臂分别为 $R\pm\Delta R$，交替布置 & $\displaystyle \frac{U_s(1+x)}{2}-\frac{U_s(1-x)}{2}=U_s x=\boxed{4.920\,\mathrm{mV}}$ & $\boxed{0}$（理想）\\
+\bottomrule
+\end{tabularx}
+\end{center}
+\textbf{解释：}半桥同一分压支路的两个电阻和恒为 $2R$；全桥两个分压支路分别呈对称变化，因而在上述理想假设下输出对 $\Delta R/R$ 严格线性。实际应变片的应变、灵敏系数与粘贴条件难以完全对称，仍可能有残余非线性。\emph{仅添加一枚不受应变的温度补偿片，不等于自动消除单臂电桥的全部非线性。}
+
+\result{(1) $\Delta R/R=0.164\%$、$\Delta R=0.1968\,\Omega$；(2) 单臂桥精确 $\lvert U_o\rvert\approx1.22899\,\mathrm{mV}$，线性化误差约 $0.082\%$；(3) 理想半桥 $2.46\,\mathrm{mV}$、全桥 $4.92\,\mathrm{mV}$，一阶电桥非线性为零。}
+
+\stitle{第 3 题　利用金属热电阻设计流量传感器}
+\textbf{题意。}原课件仅引用教材“P98（P85）2.7”，并询问：\textbf{原理？测什么流量？有哪些测量方式？} 未提供额外数值或特定传感器结构。
+
+\textbf{（一）基本原理：热耗散/强迫对流。}将金属热电阻（如铂电阻、铂丝或金属薄膜）放入流体，作为受热敏感元件。流体流过时带走热量，流速越大，对流换热通常越强，从而改变元件的稳态温度与电阻，或改变保持其恒温所需的加热功率。理想化热平衡可写为
+\[
+P_{\mathrm{elec}}=I^2R\approx h(v,\rho,\mu,k,\ldots)A_s\,(T_w-T_f)+P_{\mathrm{other}},
+\]
+式中 $T_w$ 为热敏元件温度，$T_f$ 为流体温度，$h$ 为随流速与物性变化的对流换热系数，$P_{\mathrm{other}}$ 为导热、辐射等附加散热。经标定，便能由电阻/温升/电功率推得流速或流量。
+
+\textbf{（二）测量对象：}最直接的可测量是\textbf{局部流速}（或标定后的质量流量），尤其适合气体的微小流量/流速；满足适当封装、校准时也可用于某些液体。若得到截面平均流速 $\bar v$ 与截面积 $S$，则
+\[
+Q_V=S\bar v\quad(\mathrm{m^3/s}),\qquad \dot m=\rho Q_V\quad(\mathrm{kg/s}).
+\]
+热式流量计\emph{并不无条件直接测得体积流量或质量流量}；具体显示何种量，取决于结构、温压/物性补偿及标定方式。
+
+\textbf{（三）常见测量方式：}
+\begin{enumerate}
+\item \textbf{恒电流/近恒功率法（CCA/CPA）。}给热电阻近似固定电流或功率，测受流体冷却引起的温度（从而电阻或桥压）变化。优点是电路直观；温度可能变化较大，动态响应受热惯性影响。
+\item \textbf{恒温法（CTA）。}利用反馈桥路让 $T_w-T_f$ 保持既定值，测维持恒温所需电流或加热功率。速度响应较快、工作温差可控，但需要稳定反馈与温度补偿。
+\item \textbf{热量传输/温差法。}使用加热器及上下游金属热电阻，测温差、热分布或热脉冲传播时间/相位，并通过标定反推出流量；适合小流量微通道等结构。
+\end{enumerate}
+\textbf{工程注意：}应补偿来流温度；流体成分和密度、表面污染、元件安装和导热损失均会改变热平衡，需标定。温度测量中不希望出现的\emph{自热效应}，在热式流量传感器中恰恰成为测量机理。
+
+\result{工作机理是“流动改变对流散热”；根据恒电流（恒功率）、恒温反馈或上下游温差/热传播方法，可反推出流速或经标定的体积/质量流量。}
+
+\stitle{附：2.2《机械式检测元件》末页两道讨论题}
+\textbf{讨论 1｜还有哪些机械式检测元件？}可举例：波登管、膜片/膜盒、波纹管、弹性悬臂梁、弹簧、扭杆（通过可重复机械位移/应变感受压力/力/位移/力矩）；振弦、振筒、音叉谐振元件（把被测量转换为固有频率的改变）。这份材料将“弹性式”和“振动式”作为典型类别，应围绕这两类作答。
+
+\textbf{讨论 2｜如何提高机械式检测元件精度？}可按误差来源说明：
+\begin{itemize}
+\item \textbf{结构材料：}选用弹性滞后与蠕变小、温漂小的材料；优化结构，使工作区远离过载、摩擦与机械间隙。
+\item \textbf{差动/补偿：}采用对称、差动结构减小共模扰动，补偿温度、预应力与零点漂移；避免机械横向载荷干扰。
+\item \textbf{标定/使用：}多点标定线性度与迟滞，周期校准；改善安装、防振与隔热，使用合适量程并避开超限和高频共振。
+\end{itemize}
+
+\end{document}
