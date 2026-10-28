@@ -40,6 +40,7 @@
 - Use milestone outputs: requirements → design/innovation → feasibility → implementation/experiment → draft → revision → final.
 
 ## Weekly RoboCup and active robotics research
+- For active SSL control or hardware responsibility, target **3.5-5 hours/week** of personal implementation and evidence-based validation in ordinary weeks: preferably a 1.5-hour midweek block plus the protected 2-hour Friday block. A weekly meeting is coordination, not engineering delivery. On travel weeks, rearrange work before departure and report asynchronously rather than work during declared blackout dates; do not fill hours with aimless browsing.
 - Every week reserve **at least one focused RoboCup project implementation/experiment block (default 2 hours)** before the Saturday 19:30 regular meeting. Preferred fixed block is **Friday 16:30-18:30**, with a recurring calendar event starting 2026-10-16. If a Friday conflict occurs, move that week's work earlier rather than dropping it. RoboCup meeting itself does not count as project work.
 - When Qizhen and MARL research are active, prioritize concrete research deliverables in remaining open deep-work windows before optional general-interest learning; preserve hard classes, due work, English buffer and at least three hours daily for eating, recovery, and recreation.
 - For Qizhen, track **CFD / physical flow-field validation** and **MA735 closed-loop servo angular-speed chain** as two independently testable workstreams. Workstreams should each leave a reproducible numerical case, measurement, code test or clear blocker. Never schedule electrical power-on of an incomplete MA735 PCB.
@@ -83,6 +84,7 @@
 
 
 ## 学在浙大同步与标准解答（长期默认）
+- 传感与检测等课程的最新课件若在末页布置“作业/讨论”，即使独立的学在浙大待办列表没有列出，也应从当期课程官方 material 活动读取原始幻灯片，严格区分明确“作业”和“讨论”，只依据确切的 PPT 内容撰写、计算与核验参考解答，不可用旧版文档代替最新版本。
 - 用户明确要求：**以后每次检查或更新学在浙大作业时，同步处理适合解题的新增作业的标准参考答案 PDF**；不要只更新待办或日程。优先从课程平台同步到 `course_materials/<课程>/homework/` 的真实附件逐题读取，再求解、独立核算数值/符号、生成可编辑 TeX 和完整 PDF、渲染检查，并归档 `course_materials/<课程>/solutions/source/` 及 `solutions/`，更新 `course_materials/README.md`。
 - 若新增任务是**上传成绩证明、实机实验、在线提交、团队协作等非传统解题任务**，不能编造“标准答案”。应提供提交检查表、实验方案或可复现参考脚本；未实测或未经平台提交的状态不得伪称完成。
 - 学在浙大系统待办状态可能滞后，永远以用户确认的**已完成、已提交或不再排程**为优先。对新作业核对截止时间、是否需要做题、现有日程有无空档，普通作业默认不超过 2.5 小时；在指定截止前完成和自检。
