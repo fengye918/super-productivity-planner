@@ -1,0 +1,42 @@
+name: Survey sensor lecture materials
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/survey-sensor-lms.py"
+      - ".github/workflows/survey-sensor-lms.yml"
+      - ".github/sensor-materials-trigger"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-sensor-lms
+  cancel-in-progress: false
+
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check requests pycryptodome
+      - name: Scan current sensor PPT materials
+        env:
+          ZJU_USERNAME: ${{ secrets.ZJU_USERNAME }}
+          ZJU_PASSWORD: ${{ secrets.ZJU_PASSWORD }}
+        run: python scripts/survey-sensor-lms.py
+      - name: Commit metadata only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/sensor_lms_inventory.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "chore(zju): inventory latest sensor course materials"
+          git pull --rebase origin main
+          git push origin HEAD:main
