@@ -1,0 +1,12 @@
+{
+  "course": null,
+  "course_count": 0,
+  "activities": [],
+  "errors": [
+    {
+      "fatal": "HTTPError",
+      "description": "401 Client Error: UNAUTHORIZED for url: https://courses.zju.edu.cn/user/index"
+    }
+  ],
+  "file_candidates": []
+}
