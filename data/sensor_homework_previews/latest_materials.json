@@ -1,0 +1,62 @@
+{
+  "course": {
+    "id": 101075,
+    "name": "传感与检测",
+    "course_code": "(2026-2027-1)-CSE3001M-0098076-1A"
+  },
+  "activity": {
+    "id": 1199023,
+    "title": "机械式/电阻式检测元件",
+    "updated_at": "2026-10-23T00:02:54Z"
+  },
+  "materials": [
+    {
+      "name": "传感与检测 2.2 机械式检测元件.pdf",
+      "upload_id": 22158796,
+      "repo_path": "course_materials/传感与检测/课件/传感与检测 2.2 机械式检测元件.pdf",
+      "size": 1877758,
+      "total_pages": 6,
+      "last_pages": [
+        {
+          "page_num": 4,
+          "page_png": "data/sensor_homework_previews/22158796_p04.png",
+          "text": "            § 薄壁圆筒                                                                                          § 波纹管\n          ？\n\n\n\n\n\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n13                                                                      14\n\n\n\n\n\n            § 膜片、膜盒                                                                   § 提高弹性式传感器精度的方法？\n\n\n\n\n\n                    平圆膜片\n\n\n                    波纹圆膜片\n\n\n\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n15                                                                      16\n\n\n                                                                                                       4"
+        },
+        {
+          "page_num": 5,
+          "page_png": "data/sensor_homework_previews/22158796_p05.png",
+          "text": "   振动式检测元件\n\n                                    振弦式\n        振弦式       振筒式\n\n\n       被测量（如力、压力、密度等）的变化转换为\n       谐振元件的固有频率的变化\n\n\n\n\n\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n17                                                                      18\n\n\n\n\n\n       § 差动式振弦传感器\n\n\n                     $%!     !\"!\n\n\n                                                                                                                      !! •!\n\n\n                              #\"!\n\n\n\n              &!'(\"\")*+,!\n\n                                                                                                                                                                                                                                                                                                                                                          https://www.bsil.com.cn\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n19                                                                      20\n\n\n                                                                                                       5"
+        },
+        {
+          "page_num": 6,
+          "page_png": "data/sensor_homework_previews/22158796_p06.png",
+          "text": "   振筒式                                   §讨论\n                                                                                          § 其它形式的机械式检测元件有哪些？\n                                                                                          § 提高机械式检测元件精度的方法？\n\n\n\n\n\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n21                                                                      22\n\n\n\n\n\n                                                                                                       6"
+        }
+      ]
+    },
+    {
+      "name": "传感与检测 2.3 电阻式检测元件(1).pdf",
+      "upload_id": 22271464,
+      "repo_path": "course_materials/传感与检测/课件/传感与检测 2.3 电阻式检测元件(1).pdf",
+      "size": 2628393,
+      "total_pages": 7,
+      "last_pages": [
+        {
+          "page_num": 5,
+          "page_png": "data/sensor_homework_previews/22271464_p05.png",
+          "text": "   热敏电阻\n\n       § 由金属氧化物或半导体材料制成                             热敏电阻温度特性曲线\n    的热敏元件\n                                                                                            NTC\n       § 测温范围（-50～300℃）\n                                                                                                                                                                   B：1500-6000K       § 分类\n          § 负温度系数（NTC）热敏电阻\n          § 正温度系数（PTC）热敏电阻\n          § 临界温度（CTR）热敏电阻：\n      具有很好的开关特性，常作为                                                                        PTC  应用？\n      温度控制元件\n\n\n\n\n\n                                                                                                                                              https://amwei.com\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n17                                                                      18\n\n\n\n\n\n        § Electrical Specifications\n\n             § Operating voltage : 110V- 240 V\n\n             § PTC Thermistor Surface\n              Temperature @220V:\n           260C±10C\n\n             § Insulation voltage 3750V/1\n            Second\n\n             § Maximum Power watt: 950W\n\n                                PTC Thermistor Surface Heater                      PTC Thermistor Current Protect\n                                                                                                          Resettable Fuse\n\n                                                                                                                               https://amwei.com                                                                                                                                                                            https://amwei.com\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n19                                                                      20\n\n\n                                                                                                       5"
+        },
+        {
+          "page_num": 6,
+          "page_png": "data/sensor_homework_previews/22271464_p06.png",
+          "text": "   讨论                               其它电阻式检测元件\n\n       § 金属热电阻材料要求？                                                          § 湿敏电阻：电阻值随湿度而变化\n                                                                                                                § 湿度：空气中水蒸气含量       § 金属热电阻使用注意事项？\n                                                                                                                § 绝对湿度：g/m3\n       § 金属热电阻? 半导体热敏电阻? 如何选择？                                                     § 相对湿度：%RH\n       § 如果需要金属热电阻实现快速测量，有什么办法？\n       § 如何实现金属热电阻的准确测量？\n\n\n\n\n\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n21                                                                      22\n\n\n\n\n\n       § 气敏电阻\n            § 主要用于测量可燃性气体的浓度\n            § 原理：半导体与特定气体接触时，其电阻值发生变化，变化量与气体\n      浓度有关\n            § N型半导体：氧化锡(SnO2) 、氧化锌(ZnO)\n\n\n\n\n\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n23                                                                      24\n\n\n                                                                                                       6"
+        },
+        {
+          "page_num": 7,
+          "page_png": "data/sensor_homework_previews/22271464_p07.png",
+          "text": "                                    作业\n\n                                                                                                          1. 铂电阻在0～850℃范围内的电阻值与温度的关系为：\n      § 氧化锡（SnO2）200~400℃                                                                                                                 𝑅( = 𝑅) 1 + 𝐴𝑡+ 𝐵𝑡*\n          § 测量O2或NOx等氧化性气体时，其电阻值随浓度增加而增大；                    其中，R0和Rt分别为温度在0 ℃和t℃时铂电阻的电阻值；为了方便\n          § 测量H2、CO等还原性气体时电阻值随浓度上升而减少。                    起见，在0～100℃范围内采用近似的线性关系：\n      § 氧化锌（ZnO）                                                                                            𝑅( = 𝑅)(1 + 𝐴𝑡)\n                                            问由此引起的最大偏差可能是多少（温度）？          § 加入适当的催化剂可提高元件的选择性；\n          § 在ZnO与Cr2O3构成的元件中，使用铂Pt作为催化剂时，对乙\n     烷、丙烷、异丁烷相当敏感，对氢、一氧化碳、甲烷不敏感；\n          § 加入钯 Pd作为催化剂时，特性刚好相反，可提高对氢、一氧\n     化碳、甲烷灵敏度。而对乙烷、丙烷、异丁烷不敏感。\n\n\n\n http://cse.zju.edu.cn                                                                                                                          http://cse.zju.edu.cn\n25                                                                      26\n\n\n\n\n\n         2. 一金属电阻应变片，其灵敏度系数为𝐾= 2.05，不工作时，电阻值\n    𝑅= 120Ω。当工作时，其应变𝜀= 800 𝜇𝑚/𝑚。试求：\n     1）应变片电阻变化量Δ𝑅和电阻相对变化量Δ𝑅/𝑅。\n    2）将该电阻应变片𝑅置于等臂测量电桥，电桥电源电压为直流3𝑉，\n    求电桥输出电压及其非线性误差。\n    3）如果要减小非线性误差，应采取何种措施？试分析其电桥输出电\n    压及非线性误差大小。\n\n         3. P98（P85）2.7 试讨论用金属热电阻设计流量传感器。原理？测\n    什么流量？有哪些测量方式？\n\n\n\n http://cse.zju.edu.cn\n27\n\n\n                                                                                                       7"
+        }
+      ]
+    }
+  ]
+}
