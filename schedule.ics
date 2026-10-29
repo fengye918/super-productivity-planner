@@ -4987,21 +4987,40 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261022T032000Z
-DTSTAMP:20261022T032000Z
+CREATED:20261029T072500Z
+DTSTAMP:20261029T072500Z
 DTSTART;TZID=Asia/Shanghai:20261029T190000
-DTEND;TZID=Asia/Shanghai:20261029T213000
-LAST-MODIFIED:20261022T032000Z
+DTEND;TZID=Asia/Shanghai:20261029T204500
+LAST-MODIFIED:20261029T072500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[过程控制] 第七周作业：锅炉双交叉控制画图与解答
-DESCRIPTION:新同步的过程控制工程第七周书面作业，活动1200101，附件作业题(1).pptx，截止2026-11-04 23:59北京时间。将原锅炉比值控制结构改为双交叉限幅：燃料设定MIN(M\,Am/K_AF)，空气设定MAX(K_AF*M\,K_AF*Fm)；先独立画流量测量交叉链路与高低选，再解释蒸汽压力设定升/降时空气与燃料先后顺序；完成后对照同名标准参考答案PDF检查，按要求形成书面版并确认提交。只在看到提交回执后标完成。
-CATEGORIES:Course,ProcessControl,Homework
+SUMMARY;LANGUAGE=zh-cn:[水下MARL] Docking基线复现与失败证据（105分钟）
+DESCRIPTION:替换已写完的过程控制第七周书面作业。进入现有水下Docking工程，不重新搭环境、不先改RL算法；检查可运行入口和position/attitude误差定义，复现一次非学习基线sanity check。结束前保存运行配置与日志、轨迹或位置/姿态误差曲线；若不能运行，保留最小复现命令与首个准确报错，列出可立即修复的一项阻塞。
+CATEGORIES:Research,MARL,Implementation
 TRANSP:OPAQUE
-UID:planner-20261029-process-week7-homework@chatgpt-planner
+UID:planner-20261029-1900-marl-docking-evidence@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[过程控制] 第七周作业：锅炉双交叉控制画图与解答
+DESCRIPTION:开始水下MARL基线复现
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261029T072500Z
+DTSTAMP:20261029T072500Z
+DTSTART;TZID=Asia/Shanghai:20261029T204500
+DTEND;TZID=Asia/Shanghai:20261029T213000
+LAST-MODIFIED:20261029T072500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[CAC2026] 海报英文讲解与现场问答演练（45分钟）
+DESCRIPTION:明早北京出行前轻量口语训练。用实际CAC海报进行1分钟英文简介；口头完整回答PairSwap/Token forwarding各自作用、completion time与total distance指标、有限通信下timestamp维护信息新鲜度等3-4个常见问题。仅根据实际研究结果表述，不新造实验数据。最后整理英文答题关键词与一个暂时答不清的问题。21:30准时结束并准备航班行李。
+CATEGORIES:Academic,Conference,English,Preparation
+TRANSP:OPAQUE
+UID:planner-20261029-2045-cac-poster-qa@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:CAC海报英文讲解与问答演练
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
