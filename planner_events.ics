@@ -13,9 +13,9 @@ DTEND;TZID=Asia/Shanghai:20260928T155000
 LAST-MODIFIED:20260928T023100Z
 SEQUENCE:0
 SUMMARY;LANGUAGE=zh-cn:[启真] 实验链路完善 I
-DESCRIPTION:利用本周不上的毛概时段推进启真实验链路。目标：把机械/打印件→执行运动→动捕/传感→角度/数据输出→记录整条链逐项检查；能测的当场测，结束时留 blocker 清单和下一步动作。
+DESCRIPTION:10月30日08:30航班飞北京，10:55抵达；11月1日下午返航（精确时间未提供）。会议、交通、休息和睡眠优先。用户10月29日确认随身带电脑，可以在不影响实际行程时完成少量柔性软件/理论学习工作，故全天出行条目仅为透明日程背景，不锁死全天；已单独安排五段电脑端工作，均可因大会日程或返程平移或取消。不安排硬件上电、实机实验或远程RoboCup例会。
 CATEGORIES:Qizhen,Research,Experiment
-TRANSP:OPAQUE
+TRANSP:TRANSPARENT
 UID:planner-20260928-1325-qizhen-chain@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
@@ -2092,6 +2092,101 @@ BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
 DESCRIPTION:[RoboCup SSL] 周中开发与集成验证（1.5小时）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261029T073000Z
+DTSTAMP:20261029T073000Z
+DTSTART;TZID=Asia/Shanghai:20261030T200000
+DTEND;TZID=Asia/Shanghai:20261030T214500
+LAST-MODIFIED:20261029T073000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[出行电脑任务·现控] 描述函数与奈奎斯特典型题（可移动）
+DESCRIPTION:复习非线性自激振荡判别、-1/N(A)与奈奎斯特交点条件；完成2道考试格式计算/判断题，写完整推导与误判点。优先完成CAC会议现场活动；本块仅在晚间确有空档且不影响休息时执行，否则顺延。无需硬件。
+CATEGORIES:Course,ModernControl,Review,TravelPortable
+TRANSP:TRANSPARENT
+UID:planner-20261030-portable-modern-nyquist@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:可选电脑工作（先确认大会和交通空档）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261029T073000Z
+DTSTAMP:20261029T073000Z
+DTSTART;TZID=Asia/Shanghai:20261031T083000
+DTEND;TZID=Asia/Shanghai:20261031T100000
+LAST-MODIFIED:20261029T073000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[出行电脑任务·大数据] STL规则v2至v3证据复核（可移动）
+DESCRIPTION:复核candidates_v2、round_1、calibration_v2及知识事实：连续robustness分布、分支瓶颈、跨井差异、正常误触发和故障响应延迟；记录3条有证据的逻辑结构修正/保留决策。无必要不跑大规模训练，大会安排优先。
+CATEGORIES:Course,BigData,Research,TravelPortable
+TRANSP:TRANSPARENT
+UID:planner-20261031-portable-stl-refine@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:可选电脑工作（先确认大会和交通空档）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261029T073000Z
+DTSTAMP:20261029T073000Z
+DTSTART;TZID=Asia/Shanghai:20261031T193000
+DTEND;TZID=Asia/Shanghai:20261031T220000
+LAST-MODIFIED:20261029T073000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[出行电脑任务·启真CFD] 已有流场与推力结果复核（可移动）
+DESCRIPTION:笔记本离线审查现有CFD case参数、边界、网格收敛、残差和力/推力数据；整理可复现性与物理合理性检查表和一项待验证问题。仅处理现有工程和数据，不安排实验室仿真工作站或硬件测试。出行大会活动优先。
+CATEGORIES:Research,Qizhen,CFD,TravelPortable
+TRANSP:TRANSPARENT
+UID:planner-20261031-portable-qizhen-cfd@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:可选电脑工作（先确认大会和交通空档）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261029T073000Z
+DTSTAMP:20261029T073000Z
+DTSTART;TZID=Asia/Shanghai:20261101T090000
+DTEND;TZID=Asia/Shanghai:20261101T103000
+LAST-MODIFIED:20261029T073000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[出行电脑任务·RoboCup] 运球器FOC软件代码审查（可移动）
+DESCRIPTION:基于现有ZFOC/SSL代码审查速度模式、扭矩限幅、CAN消息时序与watchdog，确认已有实现和潜在边界条件；产出一份可提交的修改清单/PR草稿或静态测试用例。不连接电机或控制板，返程交通优先。
+CATEGORIES:Research,RoboCup,SSL,TravelPortable
+TRANSP:TRANSPARENT
+UID:planner-20261101-portable-ssl-foc-review@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:可选电脑工作（先确认大会和交通空档）
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261029T073000Z
+DTSTAMP:20261029T073000Z
+DTSTART;TZID=Asia/Shanghai:20261101T193000
+DTEND;TZID=Asia/Shanghai:20261101T221500
+LAST-MODIFIED:20261029T073000Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[出行电脑任务·MARL] Docking软件复现与误差诊断（可移动）
+DESCRIPTION:仅用笔记本已有环境与日志核验Docking baseline可运行入口、初始状态、位置/姿态误差定义及一条非学习参考轨迹；条件不足则对既有记录做复盘并明确首个可复现阻塞。返回旅途及休息优先，可平移或缩短。
+CATEGORIES:Research,MARL,TravelPortable
+TRANSP:TRANSPARENT
+UID:planner-20261101-portable-marl-docking@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:可选电脑工作（先确认大会和交通空档）
 END:VALARM
 END:VEVENT
 END:VCALENDAR
