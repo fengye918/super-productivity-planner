@@ -5107,10 +5107,10 @@ DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261102
 LAST-MODIFIED:20261026T040000Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[北京出行] 10/30至11/1不安排工作
-DESCRIPTION:10月30日北京时间08:30航班飞北京，10:55抵达；11月1日下午返航，具体航班时刻待补充。三天全天用作往返交通、会议和休息，不安排复习、实验、科研、RoboCup工作或例会；10月30日过控及传感校内正课仅从个人行动日历隐藏，不代表学校停课。提前确认实际出发机场、航站楼和地面交通时间。
+SUMMARY;LANGUAGE=zh-cn:[北京出行] 10/30至11/1会议与交通（电脑任务弹性）
+DESCRIPTION:10月30日08:30航班赴北京10:55抵达，11月1日下午返回（具体返程时间未知）。会议、往返交通、休息优先。用户现同意带笔记本处理少量软件和理论工作，已安排5个可移动时段，实际行程冲突则顺延/取消；不做实机硬件测试、不参加10月31日个人例会。此全天日程为透明行程信息，不封锁空档。
 CATEGORIES:Personal,Travel,OutOfOffice
-TRANSP:OPAQUE
+TRANSP:TRANSPARENT
 UID:planner-20261030-20261101-beijing-travel@chatgpt-planner
 END:VEVENT
 BEGIN:VEVENT
