@@ -363,3 +363,12 @@ Updated: 2026-10-28
 - Current schedule: Oct28 **13:05–14:05** 1-hour sensor last-week reinforcement (active recall + example), **19:00–21:00** sensor homework from official slides; Oct28 21:15–22:45 RoboCup FOC delivery protected; Oct29 16:20–18:20 RoboCup verification protected; Nov4 19:00–20:30 extra RoboCup midweek development. Oct30–Nov1 Beijing work-free travel continues.
 - RoboCup recent evidence: user is ZJUNlict SSL 2027; dribbler intake still unstable; earlier Oct23 review of ZFOC v2 suggests speed control and adjustable torque limits already exist but main f-control had mode-switching at 20/10 frames. Must verify the current code state first rather than assume unresolved. Normal weeks aim 3.5–5h of verified SSL implementation, midweek+Friday block and async report on travel weeks.
 - Sensor official LMS material retrieval workflow in GitHub: `scripts/survey-sensor-lms.py`, `scripts/fetch-sensor-lesson.py`, respective GitHub workflows; actual files are now checked into course_materials. Do not claim latest lecture material is a PPTX; official published source is PDF slides.
+
+
+## 2026-10-29 用户确认第七周过控书面作业已写完；北京出行改为允许轻量电脑工作
+- 用户明确确认**过程控制工程第七周作业已经写完**。不再安排完成、重复画方块图、重复解答等工作；这是“完成”，如无学在浙大提交状态证据，不额外声称已提交。2026-10-29 19:00–21:30 原作业块此前已经重新用途为 19:00–20:45 水下 MARL 基线核验和 20:45–21:30 CAC 海报英文问答，保留。
+- 用户觉得本周现场可用学习日只有周一至周四，想尽量恢复前几周的课外学习/科研强度，同时主动确认 10/30–11/1 北京出行带电脑，可以进行有限的**软件、算法、数据、理论课程**任务，不要安排过多硬件。新指令覆盖 10/26 的“三天完全零工作”旧假设，但保留机票、CAC 会议、必要往返交通和休息优先权。
+- 对比已有 planner 日历：10/12–10/18 非正式课程时间约 38.25h（含当周 recurring RoboCup），10/19–10/25 约 39.08h（含 Fri/Sat recurring），本周原来有约 24h（不含外部课程、会议实际时长）。新增 10h 旅行中电脑工作后合计约 34h；这只是**计划时间**，不意味着已实际完成。
+- 新增 5 个可调整的出行工作块，均按**北京时间**：10/30 20:00–21:45 现代控制描述函数与奈奎斯特题 1h45；10/31 08:30–10:00 工业 STL v2→v3 结构审查 1h30；10/31 19:30–22:00 启真 CFD 数值结果离线核对 2h30；11/1 09:00–10:30 RoboCup SSL FOC/CAN/watchdog 代码审查 1h30；11/1 19:30–22:15 水下 MARL Docking baseline 软件验证与错误证据 2h45。
+- 会议现场活动/实际返程交通优先，柔性块若和大会日程冲突可先平移，而不是压缩睡眠或占用硬件平台。北京出行全天事件改为透明说明，不再写“禁止一切工作”。仍保留 RoboCup 10/31 个人例会 recurrence exception 和 10/30 开发 exception，周四 10/29 16:20–18:20 的本周 RoboCup 主交付不变；不擅自加入远程例会。
+- **硬件安全**：所有旅行工作禁止控制板/电机通电、编码器物理测试、实机或 CFD 平台现场实验；MATLAB/代码阅读、已有日志处理、可在笔记本安全执行的离线模拟可以进行。计算资源不具备时，转换为现有数据和脚本审查，记录准确 blocker。
