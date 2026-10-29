@@ -47,7 +47,7 @@
 - Short high-efficiency learning blocks: check actual lecture material, recall without notes, solve a representative problem independently, verify using course source, record an actionable error or next step. Reserve sufficient lecture-to-lecture comprehension time instead of counting passive reading as mastery.
 
 ## Declared travel blackout
-- When the user explicitly blocks travel dates, treat the entire inclusive date range as **no academic/research/project work** and create an all-day absence block; move existing optional work before departure or after return.
+- When the user explicitly blocks travel dates, treat the entire inclusive date range as **no academic/research/project work** and create an all-day absence block; move existing optional work before departure or after return. **Exception:** if the user subsequently explicitly authorizes some laptop-based work during those days, the newer authorization supersedes the blackout for those personal work sessions only. Keep the trip itself shown as an all-day *transparent* informational event (not a blocking opaque event), preserve flights/conference/transport and rest, schedule portable software/reading/analysis tasks in flexible windows, and avoid hardware power-on or on-site experiments.
 - Do not delete official class source records or cancel team-wide meetings: hide only the user's conflicting imported class occurrences and use recurrence exceptions for their personal standing meetings. Record any genuine missed-class catch-up before the next attended session.
 - Never infer flight airport, return flight clock time or ground transportation departure without explicit evidence. Reserve reasonable packing and transit preparation, plus sleep before early flights.
 
