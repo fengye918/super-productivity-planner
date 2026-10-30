@@ -2153,122 +2153,182 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261030T054000Z
-DTSTAMP:20261030T054000Z
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
 DTSTART;TZID=Asia/Shanghai:20261030T133000
 DTEND;TZID=Asia/Shanghai:20261030T174000
-LAST-MODIFIED:20261030T054000Z
+LAST-MODIFIED:20261030T060500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[ARTS 2026] 下午主旨报告：许华哲、窦琪（老师标注）
-DESCRIPTION:老师圈定两场：报告《通用机器人，就一定要实现》，许华哲（清华大学/破壳机器人）；报告《手术机器人具身智能》，窦琪（香港中文大学）。两场报告同属13:30–17:40下午主会场时段；截图未给单独开讲时刻，实际时间顺序以会程为准。10:55抵京后先完成交通签到。来源：老师标注ARTS日程图片第5张。
-LOCATION:北京首都国际会议中心（首都国际会议中心C1栋；具体厅以ARTS现场会程为准）
-CATEGORIES:Academic,Conference,ARTS,CAC
+SUMMARY;LANGUAGE=zh-cn:[ARTS] 下午主报告｜许华哲、窦琪
+DESCRIPTION:老师圈选：许华哲《通用机器人，就一定要实现》、窦琪《手术机器人具身智能》。13:30–17:40是10/30下午主旨报告总体时段，不是两位嘉宾各自的准确时刻；具体顺序和开讲时间依现场程序册。主办方确认ARTS地点为C1栋9号楼，来源 https://www.roboarts.cn/detail/81
+LOCATION:北京市顺义区裕东路55号院9号楼 · 首都国际会议中心C1栋 · 主会场（具体房间号现场确认）
+CATEGORIES:Academic,Conference
 TRANSP:OPAQUE
 UID:planner-20261030-arts-afternoon-marked@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:老师标注会议场次，核对会场及当天安排
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261030T054000Z
-DTSTAMP:20261030T054000Z
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
 DTSTART;TZID=Asia/Shanghai:20261031T090000
 DTEND;TZID=Asia/Shanghai:20261031T123000
-LAST-MODIFIED:20261030T054000Z
+LAST-MODIFIED:20261030T060500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[ARTS 2026] 上午并行候选：引导向量场 / 触觉操作 / 博士生论坛
-DESCRIPTION:老师圈定：①《基于引导向量场的受限移动机器人运动规划与控制》姚伟嘉（湖南大学），属无人驾驶与移动机器人分会场；②《机器人多模态触觉感知与操作智能》马道林（上海交通大学），属具身智能与大模型分会场；③[分会场五]博士生论坛（标注整组5个博士生报告，含自主手术机器人/微机器人集群导航/眼内手术/仿生机器人刚度可编程/医疗机器人感知）。以上是并行场次，不保证全部听完。截图未显示报告精确起止，09:00–12:30为暂占上午场，现场核对后按报告时间换场。来源：ARTS截图第6至7张。
-LOCATION:北京首都国际会议中心（首都国际会议中心C1栋；具体厅以ARTS现场会程为准）
-CATEGORIES:Academic,Conference,ARTS,CAC
+SUMMARY;LANGUAGE=zh-cn:[ARTS] 上午并行论坛｜姚伟嘉、马道林、博士生论坛
+DESCRIPTION:老师圈选：姚伟嘉《基于引导向量场的受限移动机器人运动规划与控制》（无人驾驶与移动机器人分论坛）；马道林《机器人多模态触觉感知与操作智能》（具身智能与大模型分论坛）；博士生论坛整组。09:00–12:30是上午论坛预留时段，三个并行会场无法同时全程参加。各报告准确开讲时间和分会场房间号尚未从公开文字取得，应看现场ARTS会刊。
+LOCATION:北京市顺义区裕东路55号院9号楼 · 首都国际会议中心C1栋 · 分会场待核实
+CATEGORIES:Academic,Conference
 TRANSP:OPAQUE
 UID:planner-20261031-arts-parallel-marked@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:老师标注会议场次，核对会场及当天安排
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261030T054000Z
-DTSTAMP:20261030T054000Z
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
 DTSTART;TZID=Asia/Shanghai:20261031T133000
 DTEND;TZID=Asia/Shanghai:20261031T170000
-LAST-MODIFIED:20261030T054000Z
+LAST-MODIFIED:20261030T060500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[CAC 2026] 具身智能与共融机器人技术｜二层206
-DESCRIPTION:老师圈定《具身智能与共融机器人技术》，场地二层206。日期页眉在提供截图中被裁掉：依据CAC大会平行会议前后排列，暂排为10月31日下午13:30–17:00，入场后须核对官方现场会程。与ARTS下午13:30–16:00互动交流时段可能重合，优先听这场老师特别标记的CAC分会场。来源：CAC截图第3张。
-LOCATION:北京首都国际会议中心·二层206
-CATEGORIES:Academic,Conference,ARTS,CAC
+SUMMARY;LANGUAGE=zh-cn:[CAC] 具身智能与共融机器人技术｜二层206
+DESCRIPTION:老师截图明确论坛名称及二层206；10月31日13:30–17:00为依据CAC分论坛日程组别安排的整场时段，截图没有日期页眉，需要现场再次核实。非单篇报告时间。
+LOCATION:北京市顺义区裕东路55号院 · 首都国际会议中心 · 二层206
+CATEGORIES:Academic,Conference
 TRANSP:OPAQUE
 UID:planner-20261031-cac-cobotic@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:老师标注会议场次，核对会场及当天安排
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261030T054000Z
-DTSTAMP:20261030T054000Z
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
 DTSTART;TZID=Asia/Shanghai:20261101T090000
 DTEND;TZID=Asia/Shanghai:20261101T120000
-LAST-MODIFIED:20261030T054000Z
+LAST-MODIFIED:20261030T060500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[CAC 2026] 上午标注候选会场：具身服务 / 集群 / 感知
-DESCRIPTION:根据老师圈定CAC第二张截图提取：①《具身智能与服务机器人》，一层105；②《集群智能前沿技术》，一层107；③《检测与具身感知技术》，三层305；④《控制美...助力科技女性成长、勇立时代发展潮头》（标题前半截图不够清楚），三层302。另有CAA博士生论坛（全天，三层301）单独作全天候选事件。并行会场不可全部同时参加，优先现场挑选报告。该截图日期/时段页眉被截掉：暂按11月1日上午09:00–12:00占位，须以当日现场会程核实。11月1日下午返程航班信息未明确，赴机场时间优先。来源：CAC截图第2张。
-LOCATION:北京首都国际会议中心·一层105/107、三层302/305
-CATEGORIES:Academic,Conference,ARTS,CAC
+SUMMARY;LANGUAGE=zh-cn:[CAC·并行候选] 具身智能与服务机器人｜一层105
+DESCRIPTION:老师截图明确会场一层105；截图无日期页眉，暂按11月1日上午09:00–12:00安排整场分论坛。与其他候选会场并行；逐篇报告时间未核实。
+LOCATION:北京市顺义区裕东路55号院 · 首都国际会议中心 · 一层105
+CATEGORIES:Academic,Conference
 TRANSP:TRANSPARENT
-UID:planner-20261101-cac-morning-options@chatgpt-planner
+UID:planner-20261101-cac-service@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:老师标注会议场次，核对会场及当天安排
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261030T054000Z
-DTSTAMP:20261030T054000Z
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
+DTSTART;TZID=Asia/Shanghai:20261101T090000
+DTEND;TZID=Asia/Shanghai:20261101T120000
+LAST-MODIFIED:20261030T060500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[CAC·并行候选] 集群智能前沿技术｜一层107
+DESCRIPTION:老师截图明确会场一层107；日期页眉裁掉，暂按11月1日上午09:00–12:00整场时段。与其他上午会场并行，实际看现场会刊。
+LOCATION:北京市顺义区裕东路55号院 · 首都国际会议中心 · 一层107
+CATEGORIES:Academic,Conference
+TRANSP:TRANSPARENT
+UID:planner-20261101-cac-swarm@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
+DTSTART;TZID=Asia/Shanghai:20261101T090000
+DTEND;TZID=Asia/Shanghai:20261101T120000
+LAST-MODIFIED:20261030T060500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[CAC·并行候选] 检测与具身感知技术｜三层305
+DESCRIPTION:老师截图明确会场三层305；暂按11月1日上午09:00–12:00所属整场时段。日期页眉与逐位嘉宾开始时刻未从截图取得，现场核对。
+LOCATION:北京市顺义区裕东路55号院 · 首都国际会议中心 · 三层305
+CATEGORIES:Academic,Conference
+TRANSP:TRANSPARENT
+UID:planner-20261101-cac-perception@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
 DTSTART;TZID=Asia/Shanghai:20261101T090000
 DTEND;TZID=Asia/Shanghai:20261101T170000
-LAST-MODIFIED:20261030T054000Z
+LAST-MODIFIED:20261030T060500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[CAC 2026] CAA博士生论坛（全天候选）｜三层301
-DESCRIPTION:老师在CAC第二张截图圈定《CAA博士生论坛（全天）》三层301。该截图未显示日期页眉，暂参照CAC其他平行会议顺序作11月1日全天候选；全天并不等于必须全程参加，且与其他候选场次并行。用户11月1日下午返程，不能同时保证参加下午论坛；实际当天报告单和返程航班优先。来源：CAC截图第2张。
-LOCATION:北京首都国际会议中心·三层301
-CATEGORIES:Academic,Conference,ARTS,CAC
+SUMMARY;LANGUAGE=zh-cn:[CAC·并行候选] CAA博士生论坛（全天）｜三层301
+DESCRIPTION:老师截图标注CAA博士生论坛（全天），会场三层301。日期页眉未显示，暂按11月1日登记为全天候选；并行其他论坛，可只听重点报告。11月1日下午返程优先。
+LOCATION:北京市顺义区裕东路55号院 · 首都国际会议中心 · 三层301
+CATEGORIES:Academic,Conference
 TRANSP:TRANSPARENT
 UID:planner-20261101-cac-phd-full-day@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:老师标注会议场次，核对会场及当天安排
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20261030T054000Z
-DTSTAMP:20261030T054000Z
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
 DTSTART;TZID=Asia/Shanghai:20261101T133000
 DTEND;TZID=Asia/Shanghai:20261101T170000
-LAST-MODIFIED:20261030T054000Z
+LAST-MODIFIED:20261030T060500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[CAC 2026] 下午两场候选：无人自主系统 / 多智能体决策
-DESCRIPTION:原图明确页眉：11月1日13:30–17:00。老师圈定①《轻量/无人自主智能系统》，一层106；②《群智能：多智能体自主决策的理论前沿与系统应用》，二层207。两个并行会场，只能选其一或按报告切换。重要：已知用户11月1日下午返程，具体返航时刻未提供，本块仅作候选资料备忘，严禁视作已确认能够出席；不影响机场交通。来源：CAC截图第1张。
-LOCATION:北京首都国际会议中心·一层106 / 二层207（返程冲突待核对）
-CATEGORIES:Academic,Conference,ARTS,CAC
+SUMMARY;LANGUAGE=zh-cn:[CAC·返程冲突候选] 轻量/无人自主智能系统｜一层106
+DESCRIPTION:11月1日13:30–17:00由老师截图明确，分论坛会场一层106。该时间是论坛整场，个人报告开讲时间未核实。因同日下午返程，仅作候选，交通优先。
+LOCATION:北京市顺义区裕东路55号院 · 首都国际会议中心 · 一层106
+CATEGORIES:Academic,Conference
 TRANSP:TRANSPARENT
-UID:planner-20261101-cac-afternoon-options@chatgpt-planner
+UID:planner-20261101-cac-autonomous@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:老师标注会议场次，核对会场及当天安排
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261030T060500Z
+DTSTAMP:20261030T060500Z
+DTSTART;TZID=Asia/Shanghai:20261101T133000
+DTEND;TZID=Asia/Shanghai:20261101T170000
+LAST-MODIFIED:20261030T060500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[CAC·返程冲突候选] 群智能多智能体自主决策｜二层207
+DESCRIPTION:11月1日13:30–17:00由老师截图明确。全称《群智能：多智能体自主决策的理论前沿与系统应用》，会场二层207；与一层106并行，且用户当日下午返程，不能承诺出席。
+LOCATION:北京市顺义区裕东路55号院 · 首都国际会议中心 · 二层207
+CATEGORIES:Academic,Conference
+TRANSP:TRANSPARENT
+UID:planner-20261101-cac-multiagent@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:会议报告开始前核对具体会场与报告时间
 END:VALARM
 END:VEVENT
 END:VCALENDAR
