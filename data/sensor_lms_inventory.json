@@ -96,6 +96,30 @@
           "size": 2628393
         }
       ]
+    },
+    {
+      "id": 1202604,
+      "title": "电容式检测元件",
+      "type": "material",
+      "created_at": "2026-10-30T00:46:35Z",
+      "updated_at": "2026-10-30T00:49:26Z",
+      "start_time": null,
+      "end_time": null,
+      "published": true,
+      "course_id": 101075,
+      "sort": 1,
+      "files": [
+        {
+          "id": 22437490,
+          "name": "传感与检测 2.3 思考题.pdf",
+          "size": 6474744
+        },
+        {
+          "id": 22437463,
+          "name": "传感与检测 2.4 电容式检测元件.pdf",
+          "size": 1070403
+        }
+      ]
     }
   ],
   "errors": [],
@@ -307,6 +331,102 @@
     },
     {
       "activity": {
+        "id": 1202604,
+        "title": "电容式检测元件",
+        "type": "material",
+        "created_at": "2026-10-30T00:46:35Z",
+        "updated_at": "2026-10-30T00:49:26Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 22437490,
+            "name": "传感与检测 2.3 思考题.pdf",
+            "size": 6474744
+          },
+          {
+            "id": 22437463,
+            "name": "传感与检测 2.4 电容式检测元件.pdf",
+            "size": 1070403
+          }
+        ]
+      },
+      "file": {
+        "id": 22437490,
+        "name": "传感与检测 2.3 思考题.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1202604,
+        "title": "电容式检测元件",
+        "type": "material",
+        "created_at": "2026-10-30T00:46:35Z",
+        "updated_at": "2026-10-30T00:49:26Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1,
+        "files": [
+          {
+            "id": 22437490,
+            "name": "传感与检测 2.3 思考题.pdf",
+            "size": 6474744
+          },
+          {
+            "id": 22437463,
+            "name": "传感与检测 2.4 电容式检测元件.pdf",
+            "size": 1070403
+          }
+        ]
+      },
+      "file": {
+        "id": 22437463,
+        "name": "传感与检测 2.4 电容式检测元件.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1202604,
+        "title": "电容式检测元件",
+        "type": "material",
+        "created_at": "2026-10-30T00:46:35Z",
+        "updated_at": "2026-10-30T00:49:26Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 22437490,
+        "name": "传感与检测 2.3 思考题.pdf"
+      }
+    },
+    {
+      "activity": {
+        "id": 1202604,
+        "title": "电容式检测元件",
+        "type": "material",
+        "created_at": "2026-10-30T00:46:35Z",
+        "updated_at": "2026-10-30T00:49:26Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "file": {
+        "id": 22437463,
+        "name": "传感与检测 2.4 电容式检测元件.pdf"
+      }
+    },
+    {
+      "activity": {
         "id": 1199023,
         "title": "机械式/电阻式检测元件",
         "type": "material",
@@ -435,8 +555,104 @@
   "activity_payload_keys": [
     "activities"
   ],
-  "activity_count": 4,
+  "activity_count": 5,
   "detail_survey": [
+    {
+      "activity": {
+        "id": 1202604,
+        "title": "电容式检测元件",
+        "type": "material",
+        "created_at": "2026-10-30T00:46:35Z",
+        "updated_at": "2026-10-30T00:49:26Z",
+        "start_time": null,
+        "end_time": null,
+        "published": true,
+        "course_id": 101075,
+        "sort": 1
+      },
+      "payload_keys": [
+        "announce_answer_and_explanation",
+        "assign_group_ids",
+        "assign_student_ids",
+        "average_score",
+        "can_show_score",
+        "completion_criterion",
+        "completion_criterion_key",
+        "completion_criterion_value",
+        "course_id",
+        "created_at",
+        "data",
+        "enable_edit",
+        "end_time",
+        "group_set_id",
+        "group_set_name",
+        "has_assign_group",
+        "has_assign_student",
+        "has_score_count",
+        "highest_score",
+        "id",
+        "imported_from",
+        "imported_track_id",
+        "inter_review_named",
+        "inter_score_map",
+        "interaction_activity_attributes",
+        "intra_rubric_id",
+        "intra_rubric_instance",
+        "intra_rubric_instance_id",
+        "intra_score_map",
+        "is_assigned_to_all",
+        "is_closed",
+        "is_in_progress",
+        "is_inter_review_by_submitter",
+        "is_opened_catalog",
+        "is_review_homework",
+        "is_started",
+        "knowledge_node_ids",
+        "knowledge_node_reference",
+        "late_submission_count",
+        "lowest_score",
+        "module_id",
+        "non_submit_times",
+        "prerequisites",
+        "published",
+        "rubric_id",
+        "rubric_instance",
+        "rubric_instance_id",
+        "score_percentage",
+        "score_published",
+        "score_type",
+        "sort",
+        "start_time",
+        "sub_meetings",
+        "submit_by_group",
+        "submit_times",
+        "syllabus_id",
+        "teaching_model",
+        "teaching_unit_id",
+        "tencent_meeting_type",
+        "title",
+        "type",
+        "unique_key",
+        "updated_at",
+        "uploads",
+        "using_phase",
+        "version",
+        "visible_end_at",
+        "visible_start_at"
+      ],
+      "files": [
+        {
+          "id": 22437490,
+          "name": "传感与检测 2.3 思考题.pdf",
+          "size": 6474744
+        },
+        {
+          "id": 22437463,
+          "name": "传感与检测 2.4 电容式检测元件.pdf",
+          "size": 1070403
+        }
+      ]
+    },
     {
       "activity": {
         "id": 1199023,
