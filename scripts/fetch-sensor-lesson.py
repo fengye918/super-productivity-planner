@@ -13,8 +13,8 @@ spec.loader.exec_module(z)
 inv=json.loads((ROOT/"data"/"sensor_lms_inventory.json").read_text(encoding="utf-8"))
 assert inv["course"]["id"]==101075 and inv["course"]["name"]=="传感与检测"
 latest=max(inv["activities"],key=lambda a:a.get("updated_at") or a.get("created_at") or "")
-assert latest["id"]==1199023 and latest["type"]=="material",latest
-assert len(latest.get("files",[]))==2
+assert latest["type"]=="material" and latest["course_id"]==101075,latest
+assert 1 <= len(latest.get("files",[])) <= 8
 s=requests.Session()
 s.headers.update({"User-Agent":z.UA,"Accept-Language":"zh-CN,zh;q=0.9,en;q=0.7"})
 z.login_zjuam(s)
