@@ -30,6 +30,11 @@ USER_EXCUSED_CLASS_UIDS = {
     "68e8643ad16717ad17e1503a15a344b87ce4b13c",  # Oct 23 Sensors 08:00
     "5ed21943c028517c65cd8a96b13c0f545c963ca5",  # Oct 30 Process Control 08:00 (Beijing travel)
     "7153736ce887603585b2e2a26558dd5332c620aa",  # Oct 30 Sensors 10:00 (Beijing travel)
+    # Nov 3: user says the morning AI class is off and they personally have a full free day.
+    # Hide from the personal ACTION calendar only; not a claim that all university classes were cancelled.
+    "0d0691bd67ce6a6e9525841535a5df03c4ade1c7",  # Nov 3 AI/ML 08:00 (user says no class)
+    "acb544e43245588f90ff216c89b44767019279a2",  # Nov 3 Engineering Management 14:15 (user day off)
+    "79c8113b3bbdf93de0ea66aa84d2b4302266b46e",  # Nov 3 Modern Control 16:15 (user day off)
 }
 
 # Remove previously generated planner events and user-excused class instances.
