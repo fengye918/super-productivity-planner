@@ -241,8 +241,7 @@
         {
           "upload_id": 22505154,
           "name": "第八周作业(3).pdf",
-          "repo_path": "course_materials/现代控制理论/homework/1203384/第八周作业(3).pdf",
-          "bytes": 134197
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/2ad8dcf61e87497d5ec8294163e160474ec752e7?timestamp=1793793600&nonce=f22c53353832483fa5a6600313887e71&token=7b0880fcd26d984a6c88af5d1093e136&name=%E7%AC%AC%E5%85%AB%E5%91%A8%E4%BD%9C%E4%B8%9A%283%29.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f58b7acb7d0>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60)'))"
         }
       ],
       "detail_fetch_error": null,
