@@ -1,5 +1,23 @@
 {
   "added": [],
   "updated": [],
-  "removed": []
+  "removed": [
+    {
+      "source_id": 1158563,
+      "course_id": 99632,
+      "course_name": "人工智能与机器学习",
+      "course_code": "(2026-2027-1)-CSE3002M-0014045-1",
+      "title": "算法评估与比较",
+      "type": "homework",
+      "end_time": "2026-11-12T15:59:00Z",
+      "is_locked": false,
+      "detail_text": "Ø 1. 简述准确率、精确率、召回率、 F1 值、 AUC 的定义与适用场景，并分析为什么单一准确率在类别极度不平衡时可能失效？ Ø 2. 假设两个模型在测试集准确率差异为 2% ，请说明如何利用假设检验判断该差异是否具有统计显著性，并选择合适的检验方法。 Ø 3. 给定以下混淆矩阵（ TP=50, FP=10, FN=5, TN=100 ），计算 Accuracy 、 Precision 、 Recall 、 F1 值，并解释这些指标的含义。",
+      "attachment_names": [],
+      "attachment_refs": [],
+      "attachment_contexts": [],
+      "downloaded_attachments": [],
+      "detail_fetch_error": null,
+      "source_url": "https://courses.zju.edu.cn/course/99632/learning-activity#/1158563"
+    }
+  ]
 }
