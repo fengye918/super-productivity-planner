@@ -2715,31 +2715,12 @@ BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261109T073100Z
 DTSTAMP:20261109T073100Z
-DTSTART;TZID=Asia/Shanghai:20261109T161500
-DTEND;TZID=Asia/Shanghai:20261109T174500
-LAST-MODIFIED:20261109T073100Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[现代控制] 第八周作业完整书写、核验与准备提交
-DESCRIPTION:学在浙大第8周习题8-28（③为全维状态观测器）、9-11、9-16②仍在待办；先确认是否已完成。若未完成则按考试标准逐步手写、核对独立推导；若已完成改为复核有无漏题和评分点，并完成同类型状态反馈/非线性稳定变式。不得把参考答案PDF当作已经提交。截止换算北京时间11月14日06:59，应在11月12日前提交或确定提交状态。
-CATEGORIES:Course,ModernControl,Homework,ExamPrep
-TRANSP:OPAQUE
-UID:planner-20261109-modern-week8-pending@chatgpt-planner
-BEGIN:VALARM
-TRIGGER:-PT10M
-ACTION:DISPLAY
-DESCRIPTION:[现代控制] 第八周作业完整书写、核验与准备提交
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261109T073100Z
-DTSTAMP:20261109T073100Z
 DTSTART;TZID=Asia/Shanghai:20261110T204000
-DTEND;TZID=Asia/Shanghai:20261110T205500
+DTEND;TZID=Asia/Shanghai:20261110T205000
 LAST-MODIFIED:20261109T073100Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[课程作业] 核对过控第八周与现控第八周的提交状态（15分钟）
-DESCRIPTION:过控第八周：用户已确认完成，但11月9日最新学在浙大仍显示该项待办，可能尚未提交；只检查是否需要上传和平台状态，不再重新仿真。现控第八周仍在待办，如已完成则按要求提交并确保格式完整。用户确认完成优先，不伪称已提交。
+SUMMARY;LANGUAGE=zh-cn:[过程控制] 核对第八周仿真作业上传状态（10分钟）
+DESCRIPTION:用户11月9日已确认过控第八周液氨冷却器超驰仿真作业完成，但当前学在浙大待办仍列出，核对是否已上传及是否需要补交材料，防止11月11日23:59截止遗漏。无需再次搭建或运行仿真。现控第八周用户已明确确认提交，此处不再要求再次核对。
 CATEGORIES:Course,Homework,SubmissionCheck
 TRANSP:OPAQUE
 UID:planner-20261110-completed-check@chatgpt-planner
