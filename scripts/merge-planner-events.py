@@ -35,6 +35,7 @@ USER_EXCUSED_CLASS_UIDS = {
     "0d0691bd67ce6a6e9525841535a5df03c4ade1c7",  # Nov 3 AI/ML 08:00 (user says no class)
     "acb544e43245588f90ff216c89b44767019279a2",  # Nov 3 Engineering Management 14:15 (user day off)
     "79c8113b3bbdf93de0ea66aa84d2b4302266b46e",  # Nov 3 Modern Control 16:15 (user day off)
+    "64e32f11eaa863b5a6d27f442d564387a59e7c11",  # Nov 11 InfoSec 16:15 (user attends Party meeting)
 }
 
 # Remove previously generated planner events and user-excused class instances.
