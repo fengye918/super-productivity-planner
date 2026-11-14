@@ -1,23 +1,5 @@
 {
-  "added": [
-    {
-      "source_id": 103401,
-      "course_id": 101075,
-      "course_name": "传感与检测",
-      "course_code": "(2026-2027-1)-CSE3001M-0098076-1A",
-      "title": "仪表结构、热电偶     复习测试题",
-      "type": "exam",
-      "end_time": "2026-11-19T15:59:00Z",
-      "is_locked": false,
-      "detail_text": null,
-      "attachment_names": [],
-      "attachment_refs": [],
-      "attachment_contexts": [],
-      "downloaded_attachments": [],
-      "detail_fetch_error": null,
-      "source_url": "https://courses.zju.edu.cn/course/101075/learning-activity#/103401"
-    }
-  ],
+  "added": [],
   "updated": [],
   "removed": []
 }
