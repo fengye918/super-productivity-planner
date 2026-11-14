@@ -10,6 +10,8 @@ JOBS = [
     ('mc_ch8_2', 'course_materials/现代控制理论/homework/1199436/HW_5.pdf'),
     ('pc_week7', 'course_materials/过程控制工程/homework/1200101/作业题(1).pptx'),
     ('pc_week8', 'course_materials/过程控制工程/homework/1202067/作业.pdf'),
+    ('ai_week9', 'course_materials/人工智能与机器学习/homework/1158565/第九章 搜索与优化基础 作业.pdf'),
+    ('smart_hierarchy', 'course_materials/智能控制技术/homework/1204488/递阶控制作业 - 2026-2027.pdf'),
 ]
 
 def extract_shape(shape):
