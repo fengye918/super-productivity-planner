@@ -62,6 +62,7 @@
   - editable source under `course_materials/<课程>/solutions/source/`
 - Keep `course_materials/README.md` as the cross-course index.
 - Formal solution style: standard exam-answer format, clear derivation, numbered subproblems, concise reasoning, final answers clearly marked.
+- PDF filenames default to Chinese (as the user explicitly requested). Use English-only filenames solely when a real compatibility issue requires it.
 
 ## Personal development exploration
 - Reserve about **1 hour every week** for deliberate exploration of the user's longer-term study/research/career direction.
