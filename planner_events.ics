@@ -2734,20 +2734,20 @@ END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261111T054500Z
-DTSTAMP:20261111T054500Z
-DTSTART;TZID=Asia/Shanghai:20261116T193000
-DTEND;TZID=Asia/Shanghai:20261116T210000
-LAST-MODIFIED:20261111T054500Z
+DTSTAMP:20261116T101000Z
+DTSTART;TZID=Asia/Shanghai:20261117T100000
+DTEND;TZID=Asia/Shanghai:20261117T113000
+LAST-MODIFIED:20261116T101000Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[AI实验·启动] 四项实验要求梳理、环境与基线
-DESCRIPTION:用户11/11确认四项实验均未开始，新截止日期按用户通知为12/20 23:59（未通过当前LMS独立核实）。核查四项任务原题、评分要求/提交格式、数据、运行环境、依赖；搭建工程目录并确保至少一个最小示例可执行，列每个实验验收标准和风险清单。不要虚构实验结果。
+SUMMARY;LANGUAGE=zh-cn:[AI实验·启动] 四项实验要求与环境基线（顺延90分钟）
+DESCRIPTION:为今晚完整做传感试卷，原11/16 19:30–21:00人工智能四实验启动，顺延到11/17 10:00–11:30；用户明确四个实验尚未开始、DDL更新12/20。检查四项原始题目、依赖与数据，至少打通一项的最小运行入口，写验收清单和运行日志。11/17 08:00–09:35 AI正课后留25分钟转换，14:15智能控制作业、19:00–21:00传感3.2/3.3书面作业保持不变。
 CATEGORIES:Course,AIML,Experiment
 TRANSP:OPAQUE
 UID:planner-20261111-replan-04@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[AI实验·启动] 四项实验要求梳理、环境与基线
+DESCRIPTION:[AI实验·启动] 四项实验要求与环境基线（顺延90分钟）
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -2962,20 +2962,20 @@ END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261114T125000Z
-DTSTAMP:20261116T024500Z
-DTSTART;TZID=Asia/Shanghai:20261116T163000
-DTEND;TZID=Asia/Shanghai:20261116T180000
-LAST-MODIFIED:20261116T024500Z
+DTSTAMP:20261116T101000Z
+DTSTART;TZID=Asia/Shanghai:20261116T190000
+DTEND;TZID=Asia/Shanghai:20261116T203000
+LAST-MODIFIED:20261116T101000Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[传感与检测·试卷] 补11/15未做试卷（90分钟）
-DESCRIPTION:11/15未完成的90分钟传感试卷挪到11/16。按实际试卷题面完整作答、核对关键计算并记录错题。学在浙大新显示《仪表结构、热电偶 复习测试题》（活动103401，截止北京时间11/19 23:59），可能是同一测试但尚未经题面核验；若是线上测试须按平台实际进入并在截止前提交，不可认为这90分钟等于已完成或已交。当天10–12:25智能控制课程及13:25–15:50毛概课不变，之后留40分钟转换休息。
+SUMMARY;LANGUAGE=zh-cn:[传感与检测] 今晚独立完成整份复习试卷（90分钟）
+DESCRIPTION:用户提供四页实体试卷原图：10道单选、6道简答、1道压力表选型计算题。今晚19:00–20:30完整独立作答：19:00–19:20单选题，19:20–20:08六道简答，20:08–20:23压力表计算，20:23–20:30按生成的《传感与检测_复习试卷_完整标准答案.pdf》核对并记录错题。17:57后留晚餐与准备。学在浙大另有《仪表结构、热电偶 复习测试题》活动103401 截止11/19 23:59，但不能未经核对断定与用户照片的试卷为同一任务；如是线上活动需另外确认平台是否已完成。
 CATEGORIES:Course,Sensors,ExamPaper
 TRANSP:OPAQUE
 UID:planner-20261114-newplan-01@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[传感与检测·试卷] 补11/15未做试卷（90分钟）
+DESCRIPTION:[传感与检测] 今晚独立完成整份复习试卷（90分钟）
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
