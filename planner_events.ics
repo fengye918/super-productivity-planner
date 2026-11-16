@@ -2714,13 +2714,13 @@ END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261111T054500Z
-DTSTAMP:20261111T054500Z
-DTSTART;TZID=Asia/Shanghai:20261115T140000
-DTEND;TZID=Asia/Shanghai:20261115T170000
-LAST-MODIFIED:20261111T054500Z
+DTSTAMP:20261116T024500Z
+DTSTART;TZID=Asia/Shanghai:20261121T140000
+DTEND;TZID=Asia/Shanghai:20261121T170000
+LAST-MODIFIED:20261116T024500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[启真] 波动鳍模具更新：测量、修整与验证
-DESCRIPTION:在启真实验室检查现有波动鳍模具版本及装配干涉、重点对照鳍片轮廓/尺寸/固定界面，完成可实施的CAD或模具局部更新，保存修改版本、现场照片、尺寸复核记录及下一步试注模/装配阻塞。时间安排在11/14 08:00现控期末之后周日，不占考前复习。具体实验设备、工艺和材料遵守实验室安全规范。
+SUMMARY;LANGUAGE=zh-cn:[启真] 补11/15波动鳍模具现场更新（3小时）
+DESCRIPTION:用户11/16说明昨天未完成的内容，原11/15启真波动鳍模具现场3h安排顺延至11/21周六14–17。先核对现有CAD和模具版本，再按现场安全规范执行尺寸测量、修整或更新、装配干涉验证；留修改照片、关键尺寸、CAD版本/工艺记录和需复测问题。不得当作11/15已完成，也不在未确认安全的情况下操作设备。11:30–14:00留午饭和往返时间，17:00–19:30留晚饭，19:30周期RoboCup例会按实际参加。
 LOCATION:启真实验室（具体楼栋/工位以实际场地为准）
 CATEGORIES:Research,Qizhen,Mold
 TRANSP:OPAQUE
@@ -2728,7 +2728,7 @@ UID:planner-20261111-replan-03@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[启真] 波动鳍模具更新：测量、修整与验证
+DESCRIPTION:[启真] 补11/15波动鳍模具现场更新（3小时）
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -2962,72 +2962,58 @@ END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261114T125000Z
-DTSTAMP:20261114T125000Z
-DTSTART;TZID=Asia/Shanghai:20261115T083000
-DTEND;TZID=Asia/Shanghai:20261115T100000
-LAST-MODIFIED:20261114T125000Z
+DTSTAMP:20261116T024500Z
+DTSTART;TZID=Asia/Shanghai:20261116T163000
+DTEND;TZID=Asia/Shanghai:20261116T180000
+LAST-MODIFIED:20261116T024500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[传感与检测·试卷] 本周试卷完整作答（1.5小时）
-DESCRIPTION:用户11月14日确认本周有一份传感试卷，专门保留90分钟；按教师正式试卷闭卷/限时作答，标记不会和不确定的题，结束时留下重点错因。当前学在浙大待办未显示该试卷，具体题号、平台截止时间尚待原题/教师通知核实；不能以此前课程讨论题替代这份新试卷。
+SUMMARY;LANGUAGE=zh-cn:[传感与检测·试卷] 补11/15未做试卷（90分钟）
+DESCRIPTION:11/15未完成的90分钟传感试卷挪到11/16。按实际试卷题面完整作答、核对关键计算并记录错题。学在浙大新显示《仪表结构、热电偶 复习测试题》（活动103401，截止北京时间11/19 23:59），可能是同一测试但尚未经题面核验；若是线上测试须按平台实际进入并在截止前提交，不可认为这90分钟等于已完成或已交。当天10–12:25智能控制课程及13:25–15:50毛概课不变，之后留40分钟转换休息。
 CATEGORIES:Course,Sensors,ExamPaper
 TRANSP:OPAQUE
 UID:planner-20261114-newplan-01@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[传感与检测·试卷] 本周试卷完整作答（1.5小时）
+DESCRIPTION:[传感与检测·试卷] 补11/15未做试卷（90分钟）
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261114T125000Z
-DTSTAMP:20261114T125000Z
-DTSTART;TZID=Asia/Shanghai:20261115T101500
-DTEND;TZID=Asia/Shanghai:20261115T121500
-LAST-MODIFIED:20261114T125000Z
+DTSTAMP:20261116T024500Z
+DTSTART;TZID=Asia/Shanghai:20261117T190000
+DTEND;TZID=Asia/Shanghai:20261117T210000
+LAST-MODIFIED:20261116T024500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[传感与检测·作业] 本周书面作业解题与自检（2小时）
-DESCRIPTION:与试卷严格区分的第二个独立任务。按本周老师实际布置的作业逐题推导，规范写测量原理、公式、量纲与误差分析；最后15分钟完整检查是否需要上传。当前学在浙大待办没有该正式作业记录，题目内容与精确截止时间不能假设，待取得原题后补充。
+SUMMARY;LANGUAGE=zh-cn:[传感与检测·作业] 最新课件3.2/3.3完整书面解答（2小时）
+DESCRIPTION:补11/15未完成的2小时传感书面作业。已核对学在浙大最新官方上传课件《3.1-检测系统-概述.pdf》（2026-11-13发布），第37页真正布置3.2（差动式与参比式比较）和3.3（闭环平衡式为什么响应快、线性和精度改善，同时灵敏度/稳定性与结构取舍）。按已经生成的4页正式解答PDF独立书写，逐项核对泰勒展开、反馈闭环K'=K1/(1+K1β)、T'=T1/(1+K1β)及稳定性条件；最后检查老师是否另有提交要求。此题不同于早期传感讨论题，也不同于独立试卷。
 CATEGORIES:Course,Sensors,Homework
 TRANSP:OPAQUE
 UID:planner-20261114-newplan-02@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[传感与检测·作业] 本周书面作业解题与自检（2小时）
+DESCRIPTION:[传感与检测·作业] 最新课件3.2/3.3完整书面解答（2小时）
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 CLASS:PUBLIC
 CREATED:20261114T125000Z
-DTSTAMP:20261114T125000Z
-DTSTART;TZID=Asia/Shanghai:20261115T171500
-DTEND;TZID=Asia/Shanghai:20261115T220000
-LAST-MODIFIED:20261114T125000Z
+DTSTAMP:20261116T024500Z
+DTSTART;TZID=Asia/Shanghai:20261122T111500
+DTEND;TZID=Asia/Shanghai:20261122T124500
+LAST-MODIFIED:20261116T024500Z
 SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[个人安排·弹性] 聚餐/外出/休息（明晚留白）
-DESCRIPTION:用户表示11月15日晚可能出去玩、吃晚餐。保留17:15–22:00为社交、交通、用餐和恢复的弹性时间，不在此时段插入作业、科研或竞赛任务。如果不出去也可用来休息；这是个人意向不是已经确认的约会。
-CATEGORIES:Personal,Rest,Optional
-TRANSP:TRANSPARENT
-UID:planner-20261114-newplan-03@chatgpt-planner
-END:VEVENT
-BEGIN:VEVENT
-CLASS:PUBLIC
-CREATED:20261114T125000Z
-DTSTAMP:20261114T125000Z
-DTSTART;TZID=Asia/Shanghai:20261116T163000
-DTEND;TZID=Asia/Shanghai:20261116T180000
-LAST-MODIFIED:20261114T125000Z
-SEQUENCE:0
-SUMMARY;LANGUAGE=zh-cn:[启真·科研] 波动鳍模具更新后CAD和尺寸复核
-DESCRIPTION:跟进11月15日启真模具更新：整理照片、模具接触/装配干涉尺寸、CAD修改版本与待验证清单；用一次明确的尺寸对照或装配验证作为交付，不假设此前现场修改已经成功。
+SUMMARY;LANGUAGE=zh-cn:[启真·科研] 模具现场更新后的CAD与装配复核（90分钟）
+DESCRIPTION:原11/16的启真模具更新后复核工作不适合先于现场更新，因11/15原模具现场工作未做。顺延至11/22周日11:15–12:45，以上周六11/21实际完成的模具调整、测量照片和尺寸表为依据复核CAD、装配干涉、变化的鳍片轮廓；若周六尚未完成则先列出可执行的设计修正任务，不能虚构现场验证。完成后有1小时15分钟午饭缓冲再进行14:00水下MARL工作。
 CATEGORIES:Research,Qizhen,Mechanical
 TRANSP:OPAQUE
 UID:planner-20261114-newplan-04@chatgpt-planner
 BEGIN:VALARM
 TRIGGER:-PT10M
 ACTION:DISPLAY
-DESCRIPTION:[启真·科研] 波动鳍模具更新后CAD和尺寸复核
+DESCRIPTION:[启真·科研] 模具现场更新后的CAD与装配复核（90分钟）
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
