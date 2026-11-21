@@ -1,40 +1,6 @@
 {
   "todos": [
     {
-      "source_id": 1158567,
-      "course_id": 99632,
-      "course_name": "人工智能与机器学习",
-      "course_code": "(2026-2027-1)-CSE3002M-0014045-1",
-      "title": "HW 10",
-      "type": "homework",
-      "end_time": "2026-11-26T02:00:00Z",
-      "is_locked": false,
-      "detail_text": "Ø 1. 简述 RTA* 算法的核心思想，并说明它与传统 A* 的主要区别； Ø 2. 对以下任务选择合适的方法（可使用多阶段决策、逻辑推理或学习结合搜索），并说明理由： 1. 场景 A ：复杂生产调度问题，需要同时考虑时间窗口、资源冲突和优先级 2. 场景 B ：基于游戏规则和限制条件求解多解法的填字游戏 3. 场景 C ：无人仓库机器人根据历史交通数据优化货物配送路径",
-      "attachment_names": [],
-      "attachment_refs": [],
-      "attachment_contexts": [],
-      "downloaded_attachments": [],
-      "detail_fetch_error": null,
-      "source_url": "https://courses.zju.edu.cn/course/99632/learning-activity#/1158567"
-    },
-    {
-      "source_id": 103563,
-      "course_id": 101075,
-      "course_name": "传感与检测",
-      "course_code": "(2026-2027-1)-CSE3001M-0098076-1A",
-      "title": "温度检测仪表",
-      "type": "exam",
-      "end_time": "2026-11-26T15:59:00Z",
-      "is_locked": false,
-      "detail_text": null,
-      "attachment_names": [],
-      "attachment_refs": [],
-      "attachment_contexts": [],
-      "downloaded_attachments": [],
-      "detail_fetch_error": null,
-      "source_url": "https://courses.zju.edu.cn/course/101075/learning-activity#/103563"
-    },
-    {
       "source_id": 1204486,
       "course_id": 105089,
       "course_name": "智能控制技术",
