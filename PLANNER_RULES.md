@@ -2,14 +2,14 @@
 
 ## Schedule
 - Time zone: `Asia/Shanghai`.
-- Normal earliest work start: **08:00**; public holidays: **08:30**.
-- Latest planned work end: **22:30**.
-- For an explicitly requested pre-deadline sprint, evenings on non-travel-eve days may extend to **23:00** if the user asks; keep this an exception, not a default. Preserve meals/recovery, and on the night before an early flight stop by 22:00 (preferably earlier). No work inside an explicit travel blackout.
+- User-confirmed daily workday begins at **08:00** from 2026-11-22 onward, including weekends and holidays. Fixed classes or declared personal/travel blackouts count as occupied time; do not invent a study event inside them just to mark 08:00.
+- User-confirmed **hard daily stop: 22:30**. End all studying, research, RoboCup and other optional productive work no later than this time; calendar events should end at or before 22:30 unless the user explicitly changes this rule.
+- Do not extend productivity past 22:30 to recover missed work or meet a deadline without a **new explicit user override**. Preserve meals, recovery and adequate sleep, especially before exams or flights. No work inside an explicit travel blackout.
 - Prefer **19:00-22:00** as a normal work window.
 - Weekends are treated like weekdays unless the user says otherwise.
 - Fixed classes/exams are hard constraints; avoid overlaps and keep transition buffer.
 - Keep at least **3 hours/day** for meals, entertainment and recovery.
-- Keep **one additional unscheduled hour/day** for English practice; routine English is not written into Schedule by default.
+- From 2026-11-22, English is **an explicit mandatory daily calendar training item**, not hidden free time. Through 2026-12-12 prioritize written **CET-6** score: listening (weakness), timed reading, translation/writing and error review, typically 60–75 min each day plus full-length mocks when feasible. Protect daily completion, do not count ordinary coursework or spoken technical English as CET-6 practice. Make a realistic special-case time for declared blackouts; never schedule over a fixed course. Reassess post-exam English plan afterward.
 
 ## Authorization and horizon
 - Before the user says **“落到日程”** / **“落实日程”**: discuss and negotiate only.
