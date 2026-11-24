@@ -7082,4 +7082,23 @@ ACTION:DISPLAY
 DESCRIPTION:[过程控制大作业] 证据盘点与下一步计划（60分钟）
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20261124T084500Z
+DTSTAMP:20261124T084500Z
+DTSTART;TZID=Asia/Shanghai:20261125T151000
+DTEND;TZID=Asia/Shanghai:20261125T152000
+LAST-MODIFIED:20261124T084500Z
+SEQUENCE:0
+SUMMARY;LANGUAGE=zh-cn:[课程协调] 确认周五工控新楼现场教学与传感实验是否同一场
+DESCRIPTION:11月27日已知两个事件实际撞期：传感与检测实验13:30–16:00，工控新楼现场教学14:00开始、结束未知。联系班委/实验教师确认它们是否实际上是同一活动；如不是，明确哪一个必须到场、怎样补另一项，确认集合地点、具体结束时刻。结果确定后及时改日历；不要擅自将学校课程缺席标成取消。
+CATEGORIES:Course,ConflictCheck,Action
+TRANSP:OPAQUE
+UID:planner-20261125-confirm-friday-field-study@chatgpt-planner
+BEGIN:VALARM
+TRIGGER:-PT5M
+ACTION:DISPLAY
+DESCRIPTION:[课程协调] 确认周五工控新楼现场教学与传感实验是否同一场
+END:VALARM
+END:VEVENT
 END:VCALENDAR
