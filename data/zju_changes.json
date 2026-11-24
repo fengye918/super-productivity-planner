@@ -1,5 +1,316 @@
 {
   "added": [],
-  "updated": [],
+  "updated": [
+    {
+      "before": {
+        "source_id": 1204490,
+        "course_id": 105089,
+        "course_name": "智能控制技术",
+        "course_code": "(2026-2027-1)-CSE3024M-0095027-1",
+        "title": "专家控制作业",
+        "type": "homework",
+        "end_time": "2026-12-07T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [
+          "专家控制作业 - 2026-2027.pdf"
+        ],
+        "attachment_refs": [
+          {
+            "id": 22985684,
+            "upload_id": null,
+            "name": "专家控制作业 - 2026-2027.pdf",
+            "filename": null,
+            "file_name": null,
+            "title": null,
+            "url": null,
+            "download_url": null,
+            "size": 213235,
+            "mime_type": null,
+            "content_type": null,
+            "type": "document",
+            "detected_name": "专家控制作业 - 2026-2027.pdf"
+          }
+        ],
+        "attachment_contexts": [
+          {
+            "path": "$.uploads[0].name",
+            "filename": "专家控制作业 - 2026-2027.pdf",
+            "container": {
+              "allow_aliyun_office_view": false,
+              "allow_download": true,
+              "allow_private_wps_office_view": true,
+              "audio": null,
+              "can_auto_relate_knowledge_node": false,
+              "created_at": "2026-11-22T13:07:20Z",
+              "created_by_id": 4238,
+              "deleted": false,
+              "enable_set_h5_courseware_completion": true,
+              "id": 22985684,
+              "is_cc_video": false,
+              "key": "f512c43de07a4dff19c832c8d80d754398587a01",
+              "link": null,
+              "name": "专家控制作业 - 2026-2027.pdf",
+              "origin_allow_download": true,
+              "owner_id": 0,
+              "reference_id": 18929555,
+              "referenced_at": "2026-11-22T13:07:39Z",
+              "scorm": null,
+              "size": 213235,
+              "sort": 0,
+              "source": "",
+              "status": "ready",
+              "third_part_referrer_id": 0,
+              "thumbnail": null,
+              "type": "document",
+              "updated_at": "2026-11-22T13:07:20Z",
+              "video_src_type": "video/mp4"
+            }
+          }
+        ],
+        "downloaded_attachments": [
+          {
+            "upload_id": 22985684,
+            "name": "专家控制作业 - 2026-2027.pdf",
+            "repo_path": "course_materials/智能控制技术/homework/1204490/专家控制作业 - 2026-2027.pdf",
+            "bytes": 213235
+          }
+        ],
+        "detail_fetch_error": null,
+        "source_url": "https://courses.zju.edu.cn/course/105089/learning-activity#/1204490"
+      },
+      "after": {
+        "source_id": 1204490,
+        "course_id": 105089,
+        "course_name": "智能控制技术",
+        "course_code": "(2026-2027-1)-CSE3024M-0095027-1",
+        "title": "专家控制作业",
+        "type": "homework",
+        "end_time": "2026-12-07T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [
+          "专家控制作业 - 2026-2027.pdf"
+        ],
+        "attachment_refs": [
+          {
+            "id": 22985684,
+            "upload_id": null,
+            "name": "专家控制作业 - 2026-2027.pdf",
+            "filename": null,
+            "file_name": null,
+            "title": null,
+            "url": null,
+            "download_url": null,
+            "size": 213235,
+            "mime_type": null,
+            "content_type": null,
+            "type": "document",
+            "detected_name": "专家控制作业 - 2026-2027.pdf"
+          }
+        ],
+        "attachment_contexts": [
+          {
+            "path": "$.uploads[0].name",
+            "filename": "专家控制作业 - 2026-2027.pdf",
+            "container": {
+              "allow_aliyun_office_view": false,
+              "allow_download": true,
+              "allow_private_wps_office_view": true,
+              "audio": null,
+              "can_auto_relate_knowledge_node": false,
+              "created_at": "2026-11-22T13:07:20Z",
+              "created_by_id": 4238,
+              "deleted": false,
+              "enable_set_h5_courseware_completion": true,
+              "id": 22985684,
+              "is_cc_video": false,
+              "key": "f512c43de07a4dff19c832c8d80d754398587a01",
+              "link": null,
+              "name": "专家控制作业 - 2026-2027.pdf",
+              "origin_allow_download": true,
+              "owner_id": 0,
+              "reference_id": 18929555,
+              "referenced_at": "2026-11-22T13:07:39Z",
+              "scorm": null,
+              "size": 213235,
+              "sort": 0,
+              "source": "",
+              "status": "ready",
+              "third_part_referrer_id": 0,
+              "thumbnail": null,
+              "type": "document",
+              "updated_at": "2026-11-22T13:07:20Z",
+              "video_src_type": "video/mp4"
+            }
+          }
+        ],
+        "downloaded_attachments": [
+          {
+            "upload_id": 22985684,
+            "name": "专家控制作业 - 2026-2027.pdf",
+            "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/f512c43de07a4dff19c832c8d80d754398587a01?timestamp=1795532400&nonce=f70d6ee49d05484e8f194d98b9288b9b&token=fdeb0ffe06a58409ef56f8151ed694ed&name=%E4%B8%93%E5%AE%B6%E6%8E%A7%E5%88%B6%E4%BD%9C%E4%B8%9A%20-%202026-2027.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7ea3c513cb90>, 'Connection to tcmedia.zju.edu.cn timed out. (connect t"
+          }
+        ],
+        "detail_fetch_error": null,
+        "source_url": "https://courses.zju.edu.cn/course/105089/learning-activity#/1204490"
+      }
+    },
+    {
+      "before": {
+        "source_id": 1204486,
+        "course_id": 105089,
+        "course_name": "智能控制技术",
+        "course_code": "(2026-2027-1)-CSE3024M-0095027-1",
+        "title": "期末大作业",
+        "type": "homework",
+        "end_time": "2027-01-17T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [
+          "期末大作业 - 2026-2027.pdf"
+        ],
+        "attachment_refs": [
+          {
+            "id": 22675032,
+            "upload_id": null,
+            "name": "期末大作业 - 2026-2027.pdf",
+            "filename": null,
+            "file_name": null,
+            "title": null,
+            "url": null,
+            "download_url": null,
+            "size": 117139,
+            "mime_type": null,
+            "content_type": null,
+            "type": "document",
+            "detected_name": "期末大作业 - 2026-2027.pdf"
+          }
+        ],
+        "attachment_contexts": [
+          {
+            "path": "$.uploads[0].name",
+            "filename": "期末大作业 - 2026-2027.pdf",
+            "container": {
+              "allow_aliyun_office_view": false,
+              "allow_download": true,
+              "allow_private_wps_office_view": true,
+              "audio": null,
+              "can_auto_relate_knowledge_node": false,
+              "created_at": "2026-11-08T10:23:26Z",
+              "created_by_id": 4238,
+              "deleted": false,
+              "enable_set_h5_courseware_completion": true,
+              "id": 22675032,
+              "is_cc_video": false,
+              "key": "abca435d186387b1519073a8fe5160ae6d0ba6e8",
+              "link": null,
+              "name": "期末大作业 - 2026-2027.pdf",
+              "origin_allow_download": true,
+              "owner_id": 0,
+              "reference_id": 18715553,
+              "referenced_at": "2026-11-08T10:23:34Z",
+              "scorm": null,
+              "size": 117139,
+              "sort": 0,
+              "source": "",
+              "status": "ready",
+              "third_part_referrer_id": 0,
+              "thumbnail": null,
+              "type": "document",
+              "updated_at": "2026-11-08T10:23:26Z",
+              "video_src_type": "video/mp4"
+            }
+          }
+        ],
+        "downloaded_attachments": [
+          {
+            "upload_id": 22675032,
+            "name": "期末大作业 - 2026-2027.pdf",
+            "repo_path": "course_materials/智能控制技术/homework/1204486/期末大作业 - 2026-2027.pdf",
+            "bytes": 117139
+          }
+        ],
+        "detail_fetch_error": null,
+        "source_url": "https://courses.zju.edu.cn/course/105089/learning-activity#/1204486"
+      },
+      "after": {
+        "source_id": 1204486,
+        "course_id": 105089,
+        "course_name": "智能控制技术",
+        "course_code": "(2026-2027-1)-CSE3024M-0095027-1",
+        "title": "期末大作业",
+        "type": "homework",
+        "end_time": "2027-01-17T15:59:00Z",
+        "is_locked": false,
+        "detail_text": null,
+        "attachment_names": [
+          "期末大作业 - 2026-2027.pdf"
+        ],
+        "attachment_refs": [
+          {
+            "id": 22675032,
+            "upload_id": null,
+            "name": "期末大作业 - 2026-2027.pdf",
+            "filename": null,
+            "file_name": null,
+            "title": null,
+            "url": null,
+            "download_url": null,
+            "size": 117139,
+            "mime_type": null,
+            "content_type": null,
+            "type": "document",
+            "detected_name": "期末大作业 - 2026-2027.pdf"
+          }
+        ],
+        "attachment_contexts": [
+          {
+            "path": "$.uploads[0].name",
+            "filename": "期末大作业 - 2026-2027.pdf",
+            "container": {
+              "allow_aliyun_office_view": false,
+              "allow_download": true,
+              "allow_private_wps_office_view": true,
+              "audio": null,
+              "can_auto_relate_knowledge_node": false,
+              "created_at": "2026-11-08T10:23:26Z",
+              "created_by_id": 4238,
+              "deleted": false,
+              "enable_set_h5_courseware_completion": true,
+              "id": 22675032,
+              "is_cc_video": false,
+              "key": "abca435d186387b1519073a8fe5160ae6d0ba6e8",
+              "link": null,
+              "name": "期末大作业 - 2026-2027.pdf",
+              "origin_allow_download": true,
+              "owner_id": 0,
+              "reference_id": 18715553,
+              "referenced_at": "2026-11-08T10:23:34Z",
+              "scorm": null,
+              "size": 117139,
+              "sort": 0,
+              "source": "",
+              "status": "ready",
+              "third_part_referrer_id": 0,
+              "thumbnail": null,
+              "type": "document",
+              "updated_at": "2026-11-08T10:23:26Z",
+              "video_src_type": "video/mp4"
+            }
+          }
+        ],
+        "downloaded_attachments": [
+          {
+            "upload_id": 22675032,
+            "name": "期末大作业 - 2026-2027.pdf",
+            "error": "ReadTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Read timed out. (read timeout=60)"
+          }
+        ],
+        "detail_fetch_error": null,
+        "source_url": "https://courses.zju.edu.cn/course/105089/learning-activity#/1204486"
+      }
+    }
+  ],
   "removed": []
 }

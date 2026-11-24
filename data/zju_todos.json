@@ -70,8 +70,7 @@
         {
           "upload_id": 22985684,
           "name": "专家控制作业 - 2026-2027.pdf",
-          "repo_path": "course_materials/智能控制技术/homework/1204490/专家控制作业 - 2026-2027.pdf",
-          "bytes": 213235
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/f512c43de07a4dff19c832c8d80d754398587a01?timestamp=1795532400&nonce=f70d6ee49d05484e8f194d98b9288b9b&token=fdeb0ffe06a58409ef56f8151ed694ed&name=%E4%B8%93%E5%AE%B6%E6%8E%A7%E5%88%B6%E4%BD%9C%E4%B8%9A%20-%202026-2027.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7ea3c513cb90>, 'Connection to tcmedia.zju.edu.cn timed out. (connect t"
         }
       ],
       "detail_fetch_error": null,
@@ -147,8 +146,7 @@
         {
           "upload_id": 22675032,
           "name": "期末大作业 - 2026-2027.pdf",
-          "repo_path": "course_materials/智能控制技术/homework/1204486/期末大作业 - 2026-2027.pdf",
-          "bytes": 117139
+          "error": "ReadTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Read timed out. (read timeout=60)"
         }
       ],
       "detail_fetch_error": null,
