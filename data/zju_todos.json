@@ -164,8 +164,7 @@
         {
           "upload_id": 22675032,
           "name": "期末大作业 - 2026-2027.pdf",
-          "repo_path": "course_materials/智能控制技术/homework/1204486/期末大作业 - 2026-2027.pdf",
-          "bytes": 117139
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='tcmedia.zju.edu.cn', port=443): Max retries exceeded with url: /download/file/abca435d186387b1519073a8fe5160ae6d0ba6e8?timestamp=1795849200&nonce=47d2743cb5964a77b854d7080cc93983&token=ff2cffc04726f309af9cc907cdd6d4d6&name=%E6%9C%9F%E6%9C%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A%20-%202026-2027.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='tcmedia.zju.edu.cn', port=443) at 0x7f43bbd1a2d0>, 'Connection to tcmedia.zju.edu.cn timed out. (connect timeout=60"
         }
       ],
       "detail_fetch_error": null,
